@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1881A20A1D0FCD8000192BD1 /* CategoriesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1881A2091D0FCD8000192BD1 /* CategoriesTableViewController.m */; };
+		1881A20D1D0FD20B00192BD1 /* CategoriesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1881A20C1D0FD20B00192BD1 /* CategoriesCell.m */; };
+		1881A20F1D0FD22F00192BD1 /* CategoriesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1881A20E1D0FD22F00192BD1 /* CategoriesCell.xib */; };
 		188F51D91D0F08ED0083169D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F51D81D0F08ED0083169D /* main.m */; };
 		188F51DC1D0F08ED0083169D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F51DB1D0F08ED0083169D /* AppDelegate.m */; };
 		188F51E21D0F08ED0083169D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188F51E01D0F08ED0083169D /* Main.storyboard */; };
@@ -34,6 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1881A2081D0FCD8000192BD1 /* CategoriesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoriesTableViewController.h; path = ../CategoriesTableViewController.h; sourceTree = "<group>"; };
+		1881A2091D0FCD8000192BD1 /* CategoriesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoriesTableViewController.m; path = ../CategoriesTableViewController.m; sourceTree = "<group>"; };
+		1881A20B1D0FD20B00192BD1 /* CategoriesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesCell.h; sourceTree = "<group>"; };
+		1881A20C1D0FD20B00192BD1 /* CategoriesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesCell.m; sourceTree = "<group>"; };
+		1881A20E1D0FD22F00192BD1 /* CategoriesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoriesCell.xib; sourceTree = "<group>"; };
 		188F51D41D0F08ED0083169D /* TechTatva '16.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TechTatva '16.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		188F51D81D0F08ED0083169D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		188F51DA1D0F08ED0083169D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -101,6 +109,11 @@
 				188F51DA1D0F08ED0083169D /* AppDelegate.h */,
 				188F51DB1D0F08ED0083169D /* AppDelegate.m */,
 				188F51E01D0F08ED0083169D /* Main.storyboard */,
+				1881A2081D0FCD8000192BD1 /* CategoriesTableViewController.h */,
+				1881A2091D0FCD8000192BD1 /* CategoriesTableViewController.m */,
+				1881A20B1D0FD20B00192BD1 /* CategoriesCell.h */,
+				1881A20C1D0FD20B00192BD1 /* CategoriesCell.m */,
+				1881A20E1D0FD22F00192BD1 /* CategoriesCell.xib */,
 				188F51E31D0F08ED0083169D /* Assets.xcassets */,
 				188F51E51D0F08ED0083169D /* LaunchScreen.storyboard */,
 				188F51E81D0F08ED0083169D /* Info.plist */,
@@ -239,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				188F51E71D0F08ED0083169D /* LaunchScreen.storyboard in Resources */,
+				1881A20F1D0FD22F00192BD1 /* CategoriesCell.xib in Resources */,
 				188F51E41D0F08ED0083169D /* Assets.xcassets in Resources */,
 				188F51E21D0F08ED0083169D /* Main.storyboard in Resources */,
 			);
@@ -266,7 +280,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				188F51DC1D0F08ED0083169D /* AppDelegate.m in Sources */,
+				1881A20D1D0FD20B00192BD1 /* CategoriesCell.m in Sources */,
 				188F51D91D0F08ED0083169D /* main.m in Sources */,
+				1881A20A1D0FCD8000192BD1 /* CategoriesTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +508,7 @@
 				188F52031D0F08ED0083169D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		188F52041D0F08ED0083169D /* Build configuration list for PBXNativeTarget "TechTatva '16Tests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +517,7 @@
 				188F52061D0F08ED0083169D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		188F52071D0F08ED0083169D /* Build configuration list for PBXNativeTarget "TechTatva '16UITests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +526,7 @@
 				188F52091D0F08ED0083169D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
