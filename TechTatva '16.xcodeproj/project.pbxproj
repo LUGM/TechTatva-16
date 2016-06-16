@@ -10,6 +10,7 @@
 		1881A20A1D0FCD8000192BD1 /* CategoriesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1881A2091D0FCD8000192BD1 /* CategoriesTableViewController.m */; };
 		1881A20D1D0FD20B00192BD1 /* CategoriesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1881A20C1D0FD20B00192BD1 /* CategoriesCell.m */; };
 		1881A20F1D0FD22F00192BD1 /* CategoriesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1881A20E1D0FD22F00192BD1 /* CategoriesCell.xib */; };
+		1881A2151D13085800192BD1 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1881A2141D13085800192BD1 /* EventsViewController.m */; };
 		188F51D91D0F08ED0083169D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F51D81D0F08ED0083169D /* main.m */; };
 		188F51DC1D0F08ED0083169D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F51DB1D0F08ED0083169D /* AppDelegate.m */; };
 		188F51E21D0F08ED0083169D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188F51E01D0F08ED0083169D /* Main.storyboard */; };
@@ -42,6 +43,8 @@
 		1881A20B1D0FD20B00192BD1 /* CategoriesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesCell.h; sourceTree = "<group>"; };
 		1881A20C1D0FD20B00192BD1 /* CategoriesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesCell.m; sourceTree = "<group>"; };
 		1881A20E1D0FD22F00192BD1 /* CategoriesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoriesCell.xib; sourceTree = "<group>"; };
+		1881A2131D13085800192BD1 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
+		1881A2141D13085800192BD1 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
 		188F51D41D0F08ED0083169D /* TechTatva '16.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TechTatva '16.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		188F51D81D0F08ED0083169D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		188F51DA1D0F08ED0083169D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -109,6 +112,8 @@
 				188F51DA1D0F08ED0083169D /* AppDelegate.h */,
 				188F51DB1D0F08ED0083169D /* AppDelegate.m */,
 				188F51E01D0F08ED0083169D /* Main.storyboard */,
+				1881A2131D13085800192BD1 /* EventsViewController.h */,
+				1881A2141D13085800192BD1 /* EventsViewController.m */,
 				1881A2081D0FCD8000192BD1 /* CategoriesTableViewController.h */,
 				1881A2091D0FCD8000192BD1 /* CategoriesTableViewController.m */,
 				1881A20B1D0FD20B00192BD1 /* CategoriesCell.h */,
@@ -280,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				188F51DC1D0F08ED0083169D /* AppDelegate.m in Sources */,
+				1881A2151D13085800192BD1 /* EventsViewController.m in Sources */,
 				1881A20D1D0FD20B00192BD1 /* CategoriesCell.m in Sources */,
 				188F51D91D0F08ED0083169D /* main.m in Sources */,
 				1881A20A1D0FCD8000192BD1 /* CategoriesTableViewController.m in Sources */,
