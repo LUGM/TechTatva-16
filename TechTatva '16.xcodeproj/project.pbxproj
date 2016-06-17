@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18749BC01D13F17600858B85 /* MoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18749BBF1D13F17600858B85 /* MoreTableViewController.m */; };
+		18749BC41D13F1E600858B85 /* MoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18749BC21D13F1E600858B85 /* MoreTableViewCell.m */; };
+		18749BC51D13F1E600858B85 /* MoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18749BC31D13F1E600858B85 /* MoreTableViewCell.xib */; };
+		18749BC71D13F8FC00858B85 /* thumb_IMG_7632_1024.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18749BC61D13F8FC00858B85 /* thumb_IMG_7632_1024.jpg */; };
 		1881A20A1D0FCD8000192BD1 /* CategoriesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1881A2091D0FCD8000192BD1 /* CategoriesTableViewController.m */; };
 		1881A20D1D0FD20B00192BD1 /* CategoriesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1881A20C1D0FD20B00192BD1 /* CategoriesCell.m */; };
 		1881A20F1D0FD22F00192BD1 /* CategoriesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1881A20E1D0FD22F00192BD1 /* CategoriesCell.xib */; };
@@ -38,6 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18749BBE1D13F17600858B85 /* MoreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreTableViewController.h; sourceTree = "<group>"; };
+		18749BBF1D13F17600858B85 /* MoreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreTableViewController.m; sourceTree = "<group>"; };
+		18749BC11D13F1E600858B85 /* MoreTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreTableViewCell.h; sourceTree = "<group>"; };
+		18749BC21D13F1E600858B85 /* MoreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreTableViewCell.m; sourceTree = "<group>"; };
+		18749BC31D13F1E600858B85 /* MoreTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreTableViewCell.xib; sourceTree = "<group>"; };
+		18749BC61D13F8FC00858B85 /* thumb_IMG_7632_1024.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = thumb_IMG_7632_1024.jpg; sourceTree = "<group>"; };
 		1881A2081D0FCD8000192BD1 /* CategoriesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoriesTableViewController.h; path = ../CategoriesTableViewController.h; sourceTree = "<group>"; };
 		1881A2091D0FCD8000192BD1 /* CategoriesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoriesTableViewController.m; path = ../CategoriesTableViewController.m; sourceTree = "<group>"; };
 		1881A20B1D0FD20B00192BD1 /* CategoriesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesCell.h; sourceTree = "<group>"; };
@@ -114,6 +124,11 @@
 				188F51E01D0F08ED0083169D /* Main.storyboard */,
 				1881A2131D13085800192BD1 /* EventsViewController.h */,
 				1881A2141D13085800192BD1 /* EventsViewController.m */,
+				18749BBE1D13F17600858B85 /* MoreTableViewController.h */,
+				18749BBF1D13F17600858B85 /* MoreTableViewController.m */,
+				18749BC11D13F1E600858B85 /* MoreTableViewCell.h */,
+				18749BC21D13F1E600858B85 /* MoreTableViewCell.m */,
+				18749BC31D13F1E600858B85 /* MoreTableViewCell.xib */,
 				1881A2081D0FCD8000192BD1 /* CategoriesTableViewController.h */,
 				1881A2091D0FCD8000192BD1 /* CategoriesTableViewController.m */,
 				1881A20B1D0FD20B00192BD1 /* CategoriesCell.h */,
@@ -122,6 +137,7 @@
 				188F51E31D0F08ED0083169D /* Assets.xcassets */,
 				188F51E51D0F08ED0083169D /* LaunchScreen.storyboard */,
 				188F51E81D0F08ED0083169D /* Info.plist */,
+				18749BC61D13F8FC00858B85 /* thumb_IMG_7632_1024.jpg */,
 				188F51D71D0F08ED0083169D /* Supporting Files */,
 			);
 			path = "TechTatva '16";
@@ -257,7 +273,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				188F51E71D0F08ED0083169D /* LaunchScreen.storyboard in Resources */,
+				18749BC51D13F1E600858B85 /* MoreTableViewCell.xib in Resources */,
 				1881A20F1D0FD22F00192BD1 /* CategoriesCell.xib in Resources */,
+				18749BC71D13F8FC00858B85 /* thumb_IMG_7632_1024.jpg in Resources */,
 				188F51E41D0F08ED0083169D /* Assets.xcassets in Resources */,
 				188F51E21D0F08ED0083169D /* Main.storyboard in Resources */,
 			);
@@ -288,7 +306,9 @@
 				1881A2151D13085800192BD1 /* EventsViewController.m in Sources */,
 				1881A20D1D0FD20B00192BD1 /* CategoriesCell.m in Sources */,
 				188F51D91D0F08ED0083169D /* main.m in Sources */,
+				18749BC01D13F17600858B85 /* MoreTableViewController.m in Sources */,
 				1881A20A1D0FCD8000192BD1 /* CategoriesTableViewController.m in Sources */,
+				18749BC41D13F1E600858B85 /* MoreTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
