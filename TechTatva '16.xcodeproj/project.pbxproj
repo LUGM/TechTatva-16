@@ -11,6 +11,9 @@
 		18749BC41D13F1E600858B85 /* MoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18749BC21D13F1E600858B85 /* MoreTableViewCell.m */; };
 		18749BC51D13F1E600858B85 /* MoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18749BC31D13F1E600858B85 /* MoreTableViewCell.xib */; };
 		18749BC71D13F8FC00858B85 /* thumb_IMG_7632_1024.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18749BC61D13F8FC00858B85 /* thumb_IMG_7632_1024.jpg */; };
+		18749BCA1D14094700858B85 /* ResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18749BC91D14094700858B85 /* ResultsTableViewController.m */; };
+		18749BCE1D140AC600858B85 /* ResultsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18749BCC1D140AC600858B85 /* ResultsTableViewCell.m */; };
+		18749BCF1D140AC600858B85 /* ResultsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18749BCD1D140AC600858B85 /* ResultsTableViewCell.xib */; };
 		1881A20A1D0FCD8000192BD1 /* CategoriesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1881A2091D0FCD8000192BD1 /* CategoriesTableViewController.m */; };
 		1881A20D1D0FD20B00192BD1 /* CategoriesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1881A20C1D0FD20B00192BD1 /* CategoriesCell.m */; };
 		1881A20F1D0FD22F00192BD1 /* CategoriesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1881A20E1D0FD22F00192BD1 /* CategoriesCell.xib */; };
@@ -48,6 +51,11 @@
 		18749BC21D13F1E600858B85 /* MoreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreTableViewCell.m; sourceTree = "<group>"; };
 		18749BC31D13F1E600858B85 /* MoreTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreTableViewCell.xib; sourceTree = "<group>"; };
 		18749BC61D13F8FC00858B85 /* thumb_IMG_7632_1024.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = thumb_IMG_7632_1024.jpg; sourceTree = "<group>"; };
+		18749BC81D14094700858B85 /* ResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsTableViewController.h; sourceTree = "<group>"; };
+		18749BC91D14094700858B85 /* ResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsTableViewController.m; sourceTree = "<group>"; };
+		18749BCB1D140AC600858B85 /* ResultsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsTableViewCell.h; sourceTree = "<group>"; };
+		18749BCC1D140AC600858B85 /* ResultsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsTableViewCell.m; sourceTree = "<group>"; };
+		18749BCD1D140AC600858B85 /* ResultsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultsTableViewCell.xib; sourceTree = "<group>"; };
 		1881A2081D0FCD8000192BD1 /* CategoriesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoriesTableViewController.h; path = ../CategoriesTableViewController.h; sourceTree = "<group>"; };
 		1881A2091D0FCD8000192BD1 /* CategoriesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoriesTableViewController.m; path = ../CategoriesTableViewController.m; sourceTree = "<group>"; };
 		1881A20B1D0FD20B00192BD1 /* CategoriesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesCell.h; sourceTree = "<group>"; };
@@ -124,6 +132,11 @@
 				188F51E01D0F08ED0083169D /* Main.storyboard */,
 				1881A2131D13085800192BD1 /* EventsViewController.h */,
 				1881A2141D13085800192BD1 /* EventsViewController.m */,
+				18749BC81D14094700858B85 /* ResultsTableViewController.h */,
+				18749BC91D14094700858B85 /* ResultsTableViewController.m */,
+				18749BCB1D140AC600858B85 /* ResultsTableViewCell.h */,
+				18749BCC1D140AC600858B85 /* ResultsTableViewCell.m */,
+				18749BCD1D140AC600858B85 /* ResultsTableViewCell.xib */,
 				18749BBE1D13F17600858B85 /* MoreTableViewController.h */,
 				18749BBF1D13F17600858B85 /* MoreTableViewController.m */,
 				18749BC11D13F1E600858B85 /* MoreTableViewCell.h */,
@@ -278,6 +291,7 @@
 				18749BC71D13F8FC00858B85 /* thumb_IMG_7632_1024.jpg in Resources */,
 				188F51E41D0F08ED0083169D /* Assets.xcassets in Resources */,
 				188F51E21D0F08ED0083169D /* Main.storyboard in Resources */,
+				18749BCF1D140AC600858B85 /* ResultsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,9 +316,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18749BCA1D14094700858B85 /* ResultsTableViewController.m in Sources */,
 				188F51DC1D0F08ED0083169D /* AppDelegate.m in Sources */,
 				1881A2151D13085800192BD1 /* EventsViewController.m in Sources */,
 				1881A20D1D0FD20B00192BD1 /* CategoriesCell.m in Sources */,
+				18749BCE1D140AC600858B85 /* ResultsTableViewCell.m in Sources */,
 				188F51D91D0F08ED0083169D /* main.m in Sources */,
 				18749BC01D13F17600858B85 /* MoreTableViewController.m in Sources */,
 				1881A20A1D0FCD8000192BD1 /* CategoriesTableViewController.m in Sources */,
