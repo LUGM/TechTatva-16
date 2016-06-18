@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ResultsTableViewCell : UITableViewCell
-@property (nonatomic, weak) IBOutlet UILabel *nameLabel1;
-@property (nonatomic, weak) IBOutlet UILabel *nameLabel2;
-@property (nonatomic, weak) IBOutlet UIImageView *thumbnailImageView;
+@property (nonatomic, strong) IBOutlet UILabel *nameLabel1;
+@property (nonatomic, strong) IBOutlet UILabel *nameLabel2;
+@property (nonatomic, strong) IBOutlet UIImageView *thumbnailImageView;
 
 
 

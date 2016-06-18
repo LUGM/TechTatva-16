@@ -25,7 +25,7 @@
     label2Array = [[NSArray alloc] init];
     
     label1Array = @[@"Yash", @"Manas", @"Abhishek"];
-    label2Array = @[@"Coordinator", @"Organiser1", @"Organiser2"];
+    label2Array = @[@"Cathead hain :P", @"Organiser1", @"Organiser2"];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelect/Users/apple/Desktop/TechTatva-16/TechTatva '16/ResultsTableViewController.mionOnViewWillAppear = NO;
@@ -53,9 +53,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *simpleTableIdentifier = @"resultsCell";
     ResultsTableViewCell *cell = (ResultsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"ResultsTableViewCell" owner:self options:nil];
+    cell = [nib objectAtIndex:0];
     if (cell == nil) {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"resultsCell" owner:self options:nil];
-        cell = [nib objectAtIndex:0];
+        cell = [[ResultsTableViewCell alloc] init];
     }
     
     cell.nameLabel1.text = [label1Array objectAtIndex:indexPath.row];
@@ -69,7 +70,8 @@
     return cell;
 }
 
--(int)heightForRowAtIndexPath:(ResultsTableViewCell *)ResultsTableViewCell{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     return 68;
 }
 

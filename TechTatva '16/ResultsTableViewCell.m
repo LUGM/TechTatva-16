@@ -9,9 +9,6 @@
 #import "ResultsTableViewCell.h"
 
 @implementation ResultsTableViewCell
-@synthesize nameLabel1 = _nameLabel1;
-@synthesize nameLabel2 = _nameLabel2;
-@synthesize thumbnailImageView = _thumbnailImageView;
 
 
 - (void)awakeFromNib {
