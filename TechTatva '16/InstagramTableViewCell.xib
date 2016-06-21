@@ -50,14 +50,26 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jEv-hk-Agi">
                         <rect key="frame" x="74" y="425" width="37" height="38"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="try-jR-zxx">
-                        <rect key="frame" x="112" y="34" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfb-w8-Ooi">
+                        <rect key="frame" x="134" y="34" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="appLogo" destination="7St-Nl-2FK" id="lxJ-ZF-NkS"/>
+                <outlet property="commentLabel" destination="Fag-2X-Uvt" id="m7t-ch-KcP"/>
+                <outlet property="comment_image" destination="jEv-hk-Agi" id="z2u-NQ-5NP"/>
+                <outlet property="descriptionLabel" destination="waU-I4-vH7" id="gg7-Vd-EkU"/>
+                <outlet property="imageUploaderLabel" destination="qfb-w8-Ooi" id="fts-4a-H1O"/>
+                <outlet property="likeLabel" destination="PV3-Tj-4LX" id="6yu-JX-NTs"/>
+                <outlet property="like_img" destination="ycy-Nc-c1x" id="Tgv-KX-R9e"/>
+                <outlet property="mainImage" destination="sXO-7E-mdM" id="C7o-cw-dxY"/>
+                <outlet property="usernameLabel" destination="IdA-8N-2no" id="PU3-Mo-jlt"/>
+            </connections>
+            <point key="canvasLocation" x="-208" y="299"/>
         </tableViewCell>
     </objects>
 </document>
