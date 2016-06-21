@@ -25,6 +25,12 @@
 		188F51E71D0F08ED0083169D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188F51E51D0F08ED0083169D /* LaunchScreen.storyboard */; };
 		188F51F21D0F08ED0083169D /* TechTatva__16Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F51F11D0F08ED0083169D /* TechTatva__16Tests.m */; };
 		188F51FD1D0F08ED0083169D /* TechTatva__16UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F51FC1D0F08ED0083169D /* TechTatva__16UITests.m */; };
+		D6C5949E1D1831E9006F19D0 /* likepic.png in Resources */ = {isa = PBXBuildFile; fileRef = D6C5949B1D1831E9006F19D0 /* likepic.png */; };
+		D6C5949F1D1831E9006F19D0 /* techtatvalogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6C5949C1D1831E9006F19D0 /* techtatvalogo.jpg */; };
+		D6C594A01D1831E9006F19D0 /* Comment.png in Resources */ = {isa = PBXBuildFile; fileRef = D6C5949D1D1831E9006F19D0 /* Comment.png */; };
+		D6C594D91D1976F8006F19D0 /* InstagramTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C594D81D1976F8006F19D0 /* InstagramTableViewController.m */; };
+		D6C594DD1D19771C006F19D0 /* InstagramTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C594DB1D19771C006F19D0 /* InstagramTableViewCell.m */; };
+		D6C594DE1D19771C006F19D0 /* InstagramTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C594DC1D19771C006F19D0 /* InstagramTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +83,14 @@
 		188F51F81D0F08ED0083169D /* TechTatva '16UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TechTatva '16UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		188F51FC1D0F08ED0083169D /* TechTatva__16UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TechTatva__16UITests.m; sourceTree = "<group>"; };
 		188F51FE1D0F08ED0083169D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6C5949B1D1831E9006F19D0 /* likepic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = likepic.png; sourceTree = "<group>"; };
+		D6C5949C1D1831E9006F19D0 /* techtatvalogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = techtatvalogo.jpg; sourceTree = "<group>"; };
+		D6C5949D1D1831E9006F19D0 /* Comment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Comment.png; sourceTree = "<group>"; };
+		D6C594D71D1976F8006F19D0 /* InstagramTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramTableViewController.h; sourceTree = "<group>"; };
+		D6C594D81D1976F8006F19D0 /* InstagramTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramTableViewController.m; sourceTree = "<group>"; };
+		D6C594DA1D19771C006F19D0 /* InstagramTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramTableViewCell.h; sourceTree = "<group>"; };
+		D6C594DB1D19771C006F19D0 /* InstagramTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramTableViewCell.m; sourceTree = "<group>"; };
+		D6C594DC1D19771C006F19D0 /* InstagramTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InstagramTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,8 +162,16 @@
 				1881A20C1D0FD20B00192BD1 /* CategoriesCell.m */,
 				1881A20E1D0FD22F00192BD1 /* CategoriesCell.xib */,
 				188F51E31D0F08ED0083169D /* Assets.xcassets */,
+				D6C594D71D1976F8006F19D0 /* InstagramTableViewController.h */,
+				D6C594D81D1976F8006F19D0 /* InstagramTableViewController.m */,
+				D6C594DC1D19771C006F19D0 /* InstagramTableViewCell.xib */,
+				D6C594DA1D19771C006F19D0 /* InstagramTableViewCell.h */,
+				D6C594DB1D19771C006F19D0 /* InstagramTableViewCell.m */,
 				188F51E51D0F08ED0083169D /* LaunchScreen.storyboard */,
 				188F51E81D0F08ED0083169D /* Info.plist */,
+				D6C5949B1D1831E9006F19D0 /* likepic.png */,
+				D6C5949C1D1831E9006F19D0 /* techtatvalogo.jpg */,
+				D6C5949D1D1831E9006F19D0 /* Comment.png */,
 				18749BC61D13F8FC00858B85 /* thumb_IMG_7632_1024.jpg */,
 				188F51D71D0F08ED0083169D /* Supporting Files */,
 			);
@@ -286,12 +308,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				188F51E71D0F08ED0083169D /* LaunchScreen.storyboard in Resources */,
+				D6C594DE1D19771C006F19D0 /* InstagramTableViewCell.xib in Resources */,
 				18749BC51D13F1E600858B85 /* MoreTableViewCell.xib in Resources */,
+				D6C5949E1D1831E9006F19D0 /* likepic.png in Resources */,
 				1881A20F1D0FD22F00192BD1 /* CategoriesCell.xib in Resources */,
+				D6C594A01D1831E9006F19D0 /* Comment.png in Resources */,
 				18749BC71D13F8FC00858B85 /* thumb_IMG_7632_1024.jpg in Resources */,
 				188F51E41D0F08ED0083169D /* Assets.xcassets in Resources */,
 				188F51E21D0F08ED0083169D /* Main.storyboard in Resources */,
 				18749BCF1D140AC600858B85 /* ResultsTableViewCell.xib in Resources */,
+				D6C5949F1D1831E9006F19D0 /* techtatvalogo.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,9 +344,11 @@
 			files = (
 				18749BCA1D14094700858B85 /* ResultsTableViewController.m in Sources */,
 				188F51DC1D0F08ED0083169D /* AppDelegate.m in Sources */,
+				D6C594D91D1976F8006F19D0 /* InstagramTableViewController.m in Sources */,
 				1881A2151D13085800192BD1 /* EventsViewController.m in Sources */,
 				1881A20D1D0FD20B00192BD1 /* CategoriesCell.m in Sources */,
 				18749BCE1D140AC600858B85 /* ResultsTableViewCell.m in Sources */,
+				D6C594DD1D19771C006F19D0 /* InstagramTableViewCell.m in Sources */,
 				188F51D91D0F08ED0083169D /* main.m in Sources */,
 				18749BC01D13F17600858B85 /* MoreTableViewController.m in Sources */,
 				1881A20A1D0FCD8000192BD1 /* CategoriesTableViewController.m in Sources */,
