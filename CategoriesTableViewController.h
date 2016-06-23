@@ -10,5 +10,4 @@
 
 @interface CategoriesTableViewController : UITableViewController
 
-
 @end
