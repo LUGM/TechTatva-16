@@ -7,7 +7,6 @@
 //
 
 #import "CategoriesTableViewController.h"
-#import "EventsPopupViewController.h"
 #import "CategoriesCell.h"
 
 @interface CategoriesTableViewController(){
@@ -34,9 +33,6 @@ NSArray *categoriesArray ;
 {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    // trial code here
-    UIView *customView = (UIView *)[[[NSBundle mainBundle] loadNibNamed:@"EventsPopupViewController" owner:nil options:nil] objectAtIndex:0];
-    [self.view addSubView:customView];
 
 }
 

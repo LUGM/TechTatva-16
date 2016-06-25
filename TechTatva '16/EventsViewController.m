@@ -7,18 +7,36 @@
 //
 
 #import "EventsViewController.h"
+#import "EventsPopupView.h"
 
 @interface EventsViewController ()
-
+{
+    UIView *overlay;
+    EventsPopupView *Event;     //object of main xib class
+}
+    
 @end
 
 @implementation EventsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
     eventsArray = [[NSArray alloc]init];
+    
+    //added to set default selection
+    
+    Event.eventsAndInfoSegmentedview.selectedSegmentIndex = 1;      //initialising not working
+    [Event segmentControl:Event.eventsAndInfoSegmentedview];
+
+    daycontrol.selectedSegmentIndex = 0;
+    if (daycontrol.selectedSegmentIndex == 0) {
+        eventsArray = @[@"one", @"two"];
+    }
+    if (daycontrol.selectedSegmentIndex == 1) {
+        eventsArray = @[@"two", @"one"];
+    }
+    [eventsTable reloadData];
 }
 
 -(IBAction)segmentSwitch{
@@ -45,6 +63,18 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UIView *customView = (UIView *)[[[NSBundle mainBundle] loadNibNamed:@"EventsPopupView" owner:nil options:nil] objectAtIndex:0];
+    [eventsTable addSubview:customView];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+}
+
+
+
 
 /*
 #pragma mark - Navigation

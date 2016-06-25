@@ -25,8 +25,6 @@
 		188F51E71D0F08ED0083169D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188F51E51D0F08ED0083169D /* LaunchScreen.storyboard */; };
 		188F51F21D0F08ED0083169D /* TechTatva__16Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F51F11D0F08ED0083169D /* TechTatva__16Tests.m */; };
 		188F51FD1D0F08ED0083169D /* TechTatva__16UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F51FC1D0F08ED0083169D /* TechTatva__16UITests.m */; };
-		D699EEB51D1AF8680093F9CC /* EventsPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D699EEB31D1AF8680093F9CC /* EventsPopupViewController.m */; };
-		D699EEB61D1AF8680093F9CC /* EventsPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D699EEB41D1AF8680093F9CC /* EventsPopupViewController.xib */; };
 		D699EEC81D1BFF380093F9CC /* InfoDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = D699EEC71D1BFF380093F9CC /* InfoDetailsView.m */; };
 		D699EECA1D1BFF4D0093F9CC /* InfoDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D699EEC91D1BFF4D0093F9CC /* InfoDetailsView.xib */; };
 		D699EECD1D1BFF670093F9CC /* EventsDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = D699EECC1D1BFF670093F9CC /* EventsDetailsView.m */; };
@@ -37,6 +35,8 @@
 		D6C594D91D1976F8006F19D0 /* InstagramTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C594D81D1976F8006F19D0 /* InstagramTableViewController.m */; };
 		D6C594DD1D19771C006F19D0 /* InstagramTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C594DB1D19771C006F19D0 /* InstagramTableViewCell.m */; };
 		D6C594DE1D19771C006F19D0 /* InstagramTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C594DC1D19771C006F19D0 /* InstagramTableViewCell.xib */; };
+		D6DCA1C61D1C58BC00496F9D /* EventsPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DCA1C51D1C58BC00496F9D /* EventsPopupView.m */; };
+		D6DCA1CA1D1C58E000496F9D /* EventsPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6DCA1C91D1C58E000496F9D /* EventsPopupView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,9 +89,6 @@
 		188F51F81D0F08ED0083169D /* TechTatva '16UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TechTatva '16UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		188F51FC1D0F08ED0083169D /* TechTatva__16UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TechTatva__16UITests.m; sourceTree = "<group>"; };
 		188F51FE1D0F08ED0083169D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D699EEB21D1AF8680093F9CC /* EventsPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsPopupViewController.h; sourceTree = "<group>"; };
-		D699EEB31D1AF8680093F9CC /* EventsPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsPopupViewController.m; sourceTree = "<group>"; };
-		D699EEB41D1AF8680093F9CC /* EventsPopupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventsPopupViewController.xib; sourceTree = "<group>"; };
 		D699EEC61D1BFF380093F9CC /* InfoDetailsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoDetailsView.h; sourceTree = "<group>"; };
 		D699EEC71D1BFF380093F9CC /* InfoDetailsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoDetailsView.m; sourceTree = "<group>"; };
 		D699EEC91D1BFF4D0093F9CC /* InfoDetailsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoDetailsView.xib; sourceTree = "<group>"; };
@@ -106,6 +103,9 @@
 		D6C594DA1D19771C006F19D0 /* InstagramTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramTableViewCell.h; sourceTree = "<group>"; };
 		D6C594DB1D19771C006F19D0 /* InstagramTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramTableViewCell.m; sourceTree = "<group>"; };
 		D6C594DC1D19771C006F19D0 /* InstagramTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InstagramTableViewCell.xib; sourceTree = "<group>"; };
+		D6DCA1C41D1C58BC00496F9D /* EventsPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsPopupView.h; sourceTree = "<group>"; };
+		D6DCA1C51D1C58BC00496F9D /* EventsPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsPopupView.m; sourceTree = "<group>"; };
+		D6DCA1C91D1C58E000496F9D /* EventsPopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EventsPopupView.xib; path = ../EventsPopupView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,9 +177,9 @@
 				D699EEC61D1BFF380093F9CC /* InfoDetailsView.h */,
 				D699EEC71D1BFF380093F9CC /* InfoDetailsView.m */,
 				D699EEC91D1BFF4D0093F9CC /* InfoDetailsView.xib */,
-				D699EEB21D1AF8680093F9CC /* EventsPopupViewController.h */,
-				D699EEB31D1AF8680093F9CC /* EventsPopupViewController.m */,
-				D699EEB41D1AF8680093F9CC /* EventsPopupViewController.xib */,
+				D6DCA1C41D1C58BC00496F9D /* EventsPopupView.h */,
+				D6DCA1C51D1C58BC00496F9D /* EventsPopupView.m */,
+				D6DCA1C91D1C58E000496F9D /* EventsPopupView.xib */,
 				1881A2081D0FCD8000192BD1 /* CategoriesTableViewController.h */,
 				1881A2091D0FCD8000192BD1 /* CategoriesTableViewController.m */,
 				1881A20B1D0FD20B00192BD1 /* CategoriesCell.h */,
@@ -331,10 +331,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6DCA1CA1D1C58E000496F9D /* EventsPopupView.xib in Resources */,
 				D699EECA1D1BFF4D0093F9CC /* InfoDetailsView.xib in Resources */,
 				188F51E71D0F08ED0083169D /* LaunchScreen.storyboard in Resources */,
 				D6C594DE1D19771C006F19D0 /* InstagramTableViewCell.xib in Resources */,
-				D699EEB61D1AF8680093F9CC /* EventsPopupViewController.xib in Resources */,
 				18749BC51D13F1E600858B85 /* MoreTableViewCell.xib in Resources */,
 				D6C5949E1D1831E9006F19D0 /* likepic.png in Resources */,
 				1881A20F1D0FD22F00192BD1 /* CategoriesCell.xib in Resources */,
@@ -376,10 +376,10 @@
 				D699EECD1D1BFF670093F9CC /* EventsDetailsView.m in Sources */,
 				1881A20D1D0FD20B00192BD1 /* CategoriesCell.m in Sources */,
 				18749BCE1D140AC600858B85 /* ResultsTableViewCell.m in Sources */,
-				D699EEB51D1AF8680093F9CC /* EventsPopupViewController.m in Sources */,
 				D6C594DD1D19771C006F19D0 /* InstagramTableViewCell.m in Sources */,
 				D699EEC81D1BFF380093F9CC /* InfoDetailsView.m in Sources */,
 				188F51D91D0F08ED0083169D /* main.m in Sources */,
+				D6DCA1C61D1C58BC00496F9D /* EventsPopupView.m in Sources */,
 				18749BC01D13F17600858B85 /* MoreTableViewController.m in Sources */,
 				1881A20A1D0FCD8000192BD1 /* CategoriesTableViewController.m in Sources */,
 				18749BC41D13F1E600858B85 /* MoreTableViewCell.m in Sources */,
