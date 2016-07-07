@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Tech Tatva '16-->
@@ -71,7 +72,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hd0-hV-e9B">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hd0-hV-e9B">
                                 <rect key="frame" x="0.0" y="91" width="375" height="576"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -89,7 +90,7 @@
                                     <outlet property="delegate" destination="eBJ-IY-SG3" id="WJZ-WM-Jga"/>
                                 </connections>
                             </tableView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" momentary="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qiZ-J3-zox">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" momentary="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qiZ-J3-zox">
                                 <rect key="frame" x="0.0" y="64" width="375" height="29"/>
                                 <segments>
                                     <segment title="First"/>
@@ -101,6 +102,15 @@
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="qiZ-J3-zox" secondAttribute="trailing" constant="-20" id="EpE-cC-Xsu"/>
+                            <constraint firstItem="hd0-hV-e9B" firstAttribute="top" secondItem="7Jq-wl-G3v" secondAttribute="bottom" constant="10" id="Kso-ne-8rd"/>
+                            <constraint firstItem="qiZ-J3-zox" firstAttribute="leading" secondItem="73M-5g-9Iy" secondAttribute="leadingMargin" constant="-20" id="P5Y-PW-5pi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hd0-hV-e9B" secondAttribute="trailing" constant="-20" id="b9i-yZ-4AD"/>
+                            <constraint firstItem="CRZ-CJ-7Uh" firstAttribute="top" secondItem="hd0-hV-e9B" secondAttribute="bottom" id="ePn-LP-6Tt"/>
+                            <constraint firstItem="qiZ-J3-zox" firstAttribute="top" secondItem="7Jq-wl-G3v" secondAttribute="bottom" id="kJ5-ZS-eqB"/>
+                            <constraint firstItem="hd0-hV-e9B" firstAttribute="leading" secondItem="73M-5g-9Iy" secondAttribute="leadingMargin" constant="-20" id="lYP-2l-Q6k"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Tech Tatva '16" id="gPF-1j-abf"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -111,7 +121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mcv-mn-TjT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3352.5" y="-201.5"/>
+            <point key="canvasLocation" x="3371.5" y="-201.5"/>
         </scene>
         <!--Tech Tatva '16-->
         <scene sceneID="IAp-FG-C83">

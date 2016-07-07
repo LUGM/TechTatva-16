@@ -26,8 +26,7 @@
     
     //added to set default selection
     
-    Event.eventsAndInfoSegmentedview.selectedSegmentIndex = 1;      //initialising not working
-    [Event segmentControl:Event.eventsAndInfoSegmentedview];
+    [Event segmentController:Event.eventsAndInfoSegmentedview];
 
     daycontrol.selectedSegmentIndex = 0;
     if (daycontrol.selectedSegmentIndex == 0) {
@@ -67,6 +66,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UIView *customView = (UIView *)[[[NSBundle mainBundle] loadNibNamed:@"EventsPopupView" owner:nil options:nil] objectAtIndex:0];
+    
     [eventsTable addSubview:customView];
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

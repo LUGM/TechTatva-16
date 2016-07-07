@@ -11,37 +11,59 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QX9-KW-d9E">
-                    <rect key="frame" x="210" y="87" width="42" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QX9-KW-d9E">
+                    <rect key="frame" x="153" y="48" width="139" height="20.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="139" id="GBR-s5-53d"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Amb-wc-ZFH">
-                    <rect key="frame" x="0.0" y="204" width="375" height="396"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uj2-hm-naO">
-                    <rect key="frame" x="42" y="59" width="103" height="77"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uj2-hm-naO">
+                    <rect key="frame" x="20" y="20" width="103" height="77"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="77" id="DQT-wh-ZGz"/>
+                        <constraint firstAttribute="width" constant="103" id="u40-xK-RiP"/>
+                    </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRX-2u-WQk">
-                    <rect key="frame" x="345" y="27" width="16" height="17"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRX-2u-WQk">
+                    <rect key="frame" x="325" y="20" width="30" height="30"/>
                     <state key="normal" title="x"/>
                     <connections>
                         <action selector="closeButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="Qca-bL-74w"/>
                     </connections>
                 </button>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="i8Y-UE-7PC">
-                    <rect key="frame" x="0.0" y="173" width="375" height="29"/>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="i8Y-UE-7PC">
+                    <rect key="frame" x="0.0" y="127" width="375" height="29"/>
                     <segments>
                         <segment title="Events Details"/>
                         <segment title="Info"/>
                     </segments>
                     <connections>
-                        <action selector="segmentControl:" destination="iN0-l3-epB" eventType="valueChanged" id="0im-p8-Gyn"/>
+                        <action selector="segmentController:" destination="iN0-l3-epB" eventType="valueChanged" id="cBL-E5-w1a"/>
                     </connections>
                 </segmentedControl>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Amb-wc-ZFH">
+                    <rect key="frame" x="0.0" y="160" width="375" height="399"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="rRX-2u-WQk" secondAttribute="trailing" constant="20" id="6vN-kz-Lhz"/>
+                <constraint firstItem="i8Y-UE-7PC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Anb-oc-o8R"/>
+                <constraint firstItem="QX9-KW-d9E" firstAttribute="leading" secondItem="Uj2-hm-naO" secondAttribute="trailing" constant="30" id="AuW-ps-bfe"/>
+                <constraint firstAttribute="trailing" secondItem="i8Y-UE-7PC" secondAttribute="trailing" id="AxM-ot-tHd"/>
+                <constraint firstItem="Amb-wc-ZFH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Bo4-QJ-hvl"/>
+                <constraint firstItem="Uj2-hm-naO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="Di2-MN-8gP"/>
+                <constraint firstItem="Amb-wc-ZFH" firstAttribute="top" secondItem="i8Y-UE-7PC" secondAttribute="bottom" constant="5" id="FbS-Lx-GPu"/>
+                <constraint firstAttribute="bottom" secondItem="Amb-wc-ZFH" secondAttribute="bottom" constant="108" id="TXO-cS-I8B"/>
+                <constraint firstItem="rRX-2u-WQk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="gmp-5s-ScW"/>
+                <constraint firstItem="Uj2-hm-naO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="hIY-Ak-MuB"/>
+                <constraint firstItem="i8Y-UE-7PC" firstAttribute="top" secondItem="Uj2-hm-naO" secondAttribute="bottom" constant="30" id="oGT-eR-ppg"/>
+                <constraint firstItem="QX9-KW-d9E" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="48" id="sX0-cW-LdQ"/>
+                <constraint firstAttribute="trailing" secondItem="Amb-wc-ZFH" secondAttribute="trailing" id="tIM-nP-gdr"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <connections>
                 <outlet property="eventLogo" destination="Uj2-hm-naO" id="0AH-nZ-cVS"/>
@@ -49,7 +71,7 @@
                 <outlet property="eventsAndInfoSegmentedview" destination="i8Y-UE-7PC" id="OBd-UM-g9y"/>
                 <outlet property="infoDisplayView" destination="Amb-wc-ZFH" id="JFs-B8-QqZ"/>
             </connections>
-            <point key="canvasLocation" x="673.5" y="340.5"/>
+            <point key="canvasLocation" x="620.5" y="339.5"/>
         </view>
     </objects>
 </document>

@@ -18,6 +18,6 @@
 
 @property (weak, nonatomic) IBOutlet UIView *infoDisplayView;
 
-- (IBAction)segmentControl:(id)sender;
+- (IBAction)segmentController:(UISegmentedControl *)sender;
 
 @end

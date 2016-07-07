@@ -25,6 +25,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        self.eventsAndInfoSegmentedview.selectedSegmentIndex = 0;
         // Initialization code
         [self loadNib];
     }
@@ -35,17 +36,18 @@
 {
     NSArray * subviewArray = [[NSBundle mainBundle] loadNibNamed:@"EventsPopupView" owner:self options:nil];
     UIView * mainView = [subviewArray objectAtIndex:0];
+    eventsAndInfoSegmentedview.selectedSegmentIndex = 1;
     [self addSubview:mainView];
+    
 }
 
 - (IBAction)closeButton:(id)sender {
     [self removeFromSuperview];
 }
 
-- (IBAction)segmentControl:(id)sender {
+- (IBAction)segmentController:(UISegmentedControl *)sender {
     if (eventsAndInfoSegmentedview.selectedSegmentIndex == 0) {
-        
-         NSArray * subviewArray1 = [[NSBundle mainBundle] loadNibNamed:@"EventsDetailsView" owner:self options:nil];
+        NSArray * subviewArray1 = [[NSBundle mainBundle] loadNibNamed:@"EventsDetailsView" owner:self options:nil];
         UIView * view1 = [subviewArray1 objectAtIndex:0];
         [self.infoDisplayView addSubview:view1];
     }
