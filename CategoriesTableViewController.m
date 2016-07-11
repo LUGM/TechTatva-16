@@ -7,7 +7,6 @@
 //
 
 #import "CategoriesTableViewController.h"
-#import "CategoriesCell.h"
 
 @interface CategoriesTableViewController(){
 NSArray *categoriesArray ;

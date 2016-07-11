@@ -69,7 +69,7 @@
 }
 
 -(int)heightForRowAtIndexPath:(MoreTableViewCell *)MoreTableViewCell{
-    return 44;
+    return 120;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
