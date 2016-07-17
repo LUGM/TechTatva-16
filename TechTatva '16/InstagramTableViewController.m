@@ -8,8 +8,12 @@
 
 #import "InstagramTableViewController.h"
 #import "InstagramTableViewCell.h"
+#import "instagramJsonModel.h"
 
 @interface InstagramTableViewController ()
+{
+    NSMutableArray *instaArray;
+}
 
 @end
 
@@ -18,11 +22,37 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    NSURL *mainInstagramUrl = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.instagram.com/v1/tags/techtatva16/media/recent?access_token=630237785.f53975e.8dcfa635acf14fcbb99681c60519d04c"]];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        @try {
+            NSData *mydata = [NSData dataWithContentsOfURL:mainInstagramUrl];
+            NSError *error;
+            
+            if (mydata!=nil)
+            {
+                id jsonData = [NSJSONSerialization JSONObjectWithData:mydata options:kNilOptions error:&error];
+                id requiredArray = [jsonData valueForKey:@"data"];
+                instaArray = [instagramJsonModel getArrayFromJson:requiredArray];
+                //NSLog(@"%@",jsonData);
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.tableView reloadData];
+                });
+            }
+            
+            
+        }
+        @catch (NSException *exception) {
+            
+        }
+        @finally {
+            
+        }
+    });
+
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,7 +67,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return instaArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -51,11 +81,16 @@
         cell = [[InstagramTableViewCell alloc] init];
     }
     
-    cell.appLogo.image = [UIImage imageNamed:[NSString stringWithFormat:@"techtatvalogo.jpg"]];
+    instagramJsonModel *model = [instaArray objectAtIndex:indexPath.row];
     cell.like_img.image = [UIImage imageNamed:[NSString stringWithFormat:@"likepic.png"]];
     cell.comment_image.image = [UIImage imageNamed:[NSString stringWithFormat:@"Comment.png"]];
     cell.mainImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"thumb_IMG_7632_1024.jpg"]];
-    
+    cell.likeLabel.text = [NSString stringWithFormat:@"%ld likes", (long)model.numberOfLikes];
+    cell.commentLabel.text = [NSString stringWithFormat:@"%ld comments", (long)model.numberOfComments];
+    cell.imageUploaderLabel.text = model.postingUserName;
+    cell.descriptionLabel.text = model.captionText;
+    NSURL *senderImage = [NSURL URLWithString:model.postingUserImageUrl];
+    cell.appLogo.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:senderImage]];        
     return cell;
     
 }

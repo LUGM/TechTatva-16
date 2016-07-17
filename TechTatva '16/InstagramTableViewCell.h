@@ -22,7 +22,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *commentLabel;
 
-@property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
+//@property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 
