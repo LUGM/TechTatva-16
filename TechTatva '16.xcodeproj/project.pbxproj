@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18541FE01D6DD9370046EAD0 /* Favourites.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18541FDE1D6DD9370046EAD0 /* Favourites.xcdatamodeld */; };
+		18541FF11D6DE04F0046EAD0 /* Entity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 18541FEE1D6DE04F0046EAD0 /* Entity+CoreDataProperties.m */; };
+		18541FF21D6DE04F0046EAD0 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = 18541FF01D6DE04F0046EAD0 /* Entity.m */; };
 		18749BC01D13F17600858B85 /* MoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18749BBF1D13F17600858B85 /* MoreTableViewController.m */; };
 		18749BC41D13F1E600858B85 /* MoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18749BC21D13F1E600858B85 /* MoreTableViewCell.m */; };
 		18749BC51D13F1E600858B85 /* MoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18749BC31D13F1E600858B85 /* MoreTableViewCell.xib */; };
@@ -57,6 +60,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18541FDF1D6DD9370046EAD0 /* Favourites.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Favourites.xcdatamodel; sourceTree = "<group>"; };
+		18541FED1D6DE04F0046EAD0 /* Entity+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Entity+CoreDataProperties.h"; sourceTree = "<group>"; };
+		18541FEE1D6DE04F0046EAD0 /* Entity+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Entity+CoreDataProperties.m"; sourceTree = "<group>"; };
+		18541FEF1D6DE04F0046EAD0 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
+		18541FF01D6DE04F0046EAD0 /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entity.m; sourceTree = "<group>"; };
 		18749BBE1D13F17600858B85 /* MoreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreTableViewController.h; sourceTree = "<group>"; };
 		18749BBF1D13F17600858B85 /* MoreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreTableViewController.m; sourceTree = "<group>"; };
 		18749BC11D13F1E600858B85 /* MoreTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreTableViewCell.h; sourceTree = "<group>"; };
@@ -161,6 +169,11 @@
 				D61DBBC71D38AC9D001BA98D /* Instagram MODEL */,
 				188F51DA1D0F08ED0083169D /* AppDelegate.h */,
 				188F51DB1D0F08ED0083169D /* AppDelegate.m */,
+				18541FDE1D6DD9370046EAD0 /* Favourites.xcdatamodeld */,
+				18541FED1D6DE04F0046EAD0 /* Entity+CoreDataProperties.h */,
+				18541FEE1D6DE04F0046EAD0 /* Entity+CoreDataProperties.m */,
+				18541FEF1D6DE04F0046EAD0 /* Entity.h */,
+				18541FF01D6DE04F0046EAD0 /* Entity.m */,
 				188F51E01D0F08ED0083169D /* Main.storyboard */,
 				1881A2131D13085800192BD1 /* EventsViewController.h */,
 				1881A2141D13085800192BD1 /* EventsViewController.m */,
@@ -390,9 +403,12 @@
 				18749BCA1D14094700858B85 /* ResultsTableViewController.m in Sources */,
 				188F51DC1D0F08ED0083169D /* AppDelegate.m in Sources */,
 				D640BF531D4FD5B4006BA67C /* EventsDetailsJSONModel.m in Sources */,
+				18541FF11D6DE04F0046EAD0 /* Entity+CoreDataProperties.m in Sources */,
 				D6C594D91D1976F8006F19D0 /* InstagramTableViewController.m in Sources */,
+				18541FF21D6DE04F0046EAD0 /* Entity.m in Sources */,
 				1881A2151D13085800192BD1 /* EventsViewController.m in Sources */,
 				D699EECD1D1BFF670093F9CC /* EventsDetailsView.m in Sources */,
+				18541FE01D6DD9370046EAD0 /* Favourites.xcdatamodeld in Sources */,
 				18749BCE1D140AC600858B85 /* ResultsTableViewCell.m in Sources */,
 				D6C594DD1D19771C006F19D0 /* InstagramTableViewCell.m in Sources */,
 				D699EEC81D1BFF380093F9CC /* InfoDetailsView.m in Sources */,
@@ -647,6 +663,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		18541FDE1D6DD9370046EAD0 /* Favourites.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				18541FDF1D6DD9370046EAD0 /* Favourites.xcdatamodel */,
+			);
+			currentVersion = 18541FDF1D6DD9370046EAD0 /* Favourites.xcdatamodel */;
+			path = Favourites.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 188F51CC1D0F08ED0083169D /* Project object */;
 }
