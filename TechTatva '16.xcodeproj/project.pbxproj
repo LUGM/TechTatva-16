@@ -142,6 +142,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1868992C1D6E34F800B82923 /* Favourites Core Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				18541FDE1D6DD9370046EAD0 /* Favourites.xcdatamodeld */,
+				18541FED1D6DE04F0046EAD0 /* Entity+CoreDataProperties.h */,
+				18541FEE1D6DE04F0046EAD0 /* Entity+CoreDataProperties.m */,
+				18541FEF1D6DE04F0046EAD0 /* Entity.h */,
+				18541FF01D6DE04F0046EAD0 /* Entity.m */,
+			);
+			name = "Favourites Core Data Model";
+			sourceTree = "<group>";
+		};
+		1868992D1D6E350500B82923 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				188F51DA1D0F08ED0083169D /* AppDelegate.h */,
+				188F51DB1D0F08ED0083169D /* AppDelegate.m */,
+			);
+			name = "App Delegate";
+			sourceTree = "<group>";
+		};
 		188F51CB1D0F08ED0083169D = {
 			isa = PBXGroup;
 			children = (
@@ -166,14 +187,9 @@
 			isa = PBXGroup;
 			children = (
 				D640BF541D4FD67D006BA67C /* Events Model */,
-				D61DBBC71D38AC9D001BA98D /* Instagram MODEL */,
-				188F51DA1D0F08ED0083169D /* AppDelegate.h */,
-				188F51DB1D0F08ED0083169D /* AppDelegate.m */,
-				18541FDE1D6DD9370046EAD0 /* Favourites.xcdatamodeld */,
-				18541FED1D6DE04F0046EAD0 /* Entity+CoreDataProperties.h */,
-				18541FEE1D6DE04F0046EAD0 /* Entity+CoreDataProperties.m */,
-				18541FEF1D6DE04F0046EAD0 /* Entity.h */,
-				18541FF01D6DE04F0046EAD0 /* Entity.m */,
+				D61DBBC71D38AC9D001BA98D /* Instagram Model */,
+				1868992D1D6E350500B82923 /* App Delegate */,
+				1868992C1D6E34F800B82923 /* Favourites Core Data Model */,
 				188F51E01D0F08ED0083169D /* Main.storyboard */,
 				1881A2131D13085800192BD1 /* EventsViewController.h */,
 				1881A2141D13085800192BD1 /* EventsViewController.m */,
@@ -205,11 +221,6 @@
 				D6C594DB1D19771C006F19D0 /* InstagramTableViewCell.m */,
 				D6C594DC1D19771C006F19D0 /* InstagramTableViewCell.xib */,
 				188F51E51D0F08ED0083169D /* LaunchScreen.storyboard */,
-				188F51E81D0F08ED0083169D /* Info.plist */,
-				D6C5949B1D1831E9006F19D0 /* likepic.png */,
-				D6C5949C1D1831E9006F19D0 /* techtatvalogo.jpg */,
-				D6C5949D1D1831E9006F19D0 /* Comment.png */,
-				18749BC61D13F8FC00858B85 /* thumb_IMG_7632_1024.jpg */,
 				188F51D71D0F08ED0083169D /* Supporting Files */,
 			);
 			path = "TechTatva '16";
@@ -218,6 +229,11 @@
 		188F51D71D0F08ED0083169D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				188F51E81D0F08ED0083169D /* Info.plist */,
+				D6C5949B1D1831E9006F19D0 /* likepic.png */,
+				D6C5949C1D1831E9006F19D0 /* techtatvalogo.jpg */,
+				D6C5949D1D1831E9006F19D0 /* Comment.png */,
+				18749BC61D13F8FC00858B85 /* thumb_IMG_7632_1024.jpg */,
 				188F51D81D0F08ED0083169D /* main.m */,
 			);
 			name = "Supporting Files";
@@ -241,13 +257,13 @@
 			path = "TechTatva '16UITests";
 			sourceTree = "<group>";
 		};
-		D61DBBC71D38AC9D001BA98D /* Instagram MODEL */ = {
+		D61DBBC71D38AC9D001BA98D /* Instagram Model */ = {
 			isa = PBXGroup;
 			children = (
 				D61DBBC81D38ACBF001BA98D /* instagramJsonModel.h */,
 				D61DBBC91D38ACBF001BA98D /* instagramJsonModel.m */,
 			);
-			name = "Instagram MODEL";
+			name = "Instagram Model";
 			sourceTree = "<group>";
 		};
 		D640BF541D4FD67D006BA67C /* Events Model */ = {

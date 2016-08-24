@@ -25,7 +25,7 @@
     label2Array = [[NSArray alloc] init];
     
     label1Array = @[@"Yash", @"Manas", @"Abhishek"];
-    label2Array = @[@"Cathead hain :P", @"Organiser1", @"Organiser2"];
+    label2Array = @[@"Cathead", @"Organiser1", @"Organiser2"];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelect/Users/apple/Desktop/TechTatva-16/TechTatva '16/ResultsTableViewController.mionOnViewWillAppear = NO;
