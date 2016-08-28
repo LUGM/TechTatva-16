@@ -26,6 +26,17 @@
 		188F51E71D0F08ED0083169D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188F51E51D0F08ED0083169D /* LaunchScreen.storyboard */; };
 		188F51F21D0F08ED0083169D /* TechTatva__16Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F51F11D0F08ED0083169D /* TechTatva__16Tests.m */; };
 		188F51FD1D0F08ED0083169D /* TechTatva__16UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F51FC1D0F08ED0083169D /* TechTatva__16UITests.m */; };
+		D60BB7B41D70C0120083D0C9 /* EventsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D60BB7B21D70C0120083D0C9 /* EventsTableViewCell.m */; };
+		D60BB7B51D70C0120083D0C9 /* EventsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60BB7B31D70C0120083D0C9 /* EventsTableViewCell.xib */; };
+		D60BB7BB1D70C3A40083D0C9 /* Calendar-50.png in Resources */ = {isa = PBXBuildFile; fileRef = D60BB7B61D70C3A40083D0C9 /* Calendar-50.png */; };
+		D60BB7BC1D70C3A40083D0C9 /* Marker Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = D60BB7B71D70C3A40083D0C9 /* Marker Filled-50.png */; };
+		D60BB7BD1D70C3A40083D0C9 /* Phone Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = D60BB7B81D70C3A40083D0C9 /* Phone Filled-50.png */; };
+		D60BB7BE1D70C3A40083D0C9 /* Time Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = D60BB7B91D70C3A40083D0C9 /* Time Filled-50.png */; };
+		D60BB7BF1D70C3A40083D0C9 /* User Group Man Man-50.png in Resources */ = {isa = PBXBuildFile; fileRef = D60BB7BA1D70C3A40083D0C9 /* User Group Man Man-50.png */; };
+		D60BB7C51D72EF290083D0C9 /* Events@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60BB7C11D72EF290083D0C9 /* Events@2x.png */; };
+		D60BB7C61D72EF290083D0C9 /* Instagram@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60BB7C21D72EF290083D0C9 /* Instagram@2x.png */; };
+		D60BB7C71D72EF290083D0C9 /* Results@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60BB7C31D72EF290083D0C9 /* Results@2x.png */; };
+		D60BB7C91D72F08B0083D0C9 /* Category@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60BB7C81D72F08B0083D0C9 /* Category@2x.png */; };
 		D61DBBCA1D38ACBF001BA98D /* instagramJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D61DBBC91D38ACBF001BA98D /* instagramJsonModel.m */; };
 		D640BF531D4FD5B4006BA67C /* EventsDetailsJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D640BF521D4FD5B4006BA67C /* EventsDetailsJSONModel.m */; };
 		D699EEC81D1BFF380093F9CC /* InfoDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = D699EEC71D1BFF380093F9CC /* InfoDetailsView.m */; };
@@ -94,6 +105,18 @@
 		188F51F81D0F08ED0083169D /* TechTatva '16UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TechTatva '16UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		188F51FC1D0F08ED0083169D /* TechTatva__16UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TechTatva__16UITests.m; sourceTree = "<group>"; };
 		188F51FE1D0F08ED0083169D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D60BB7B11D70C0120083D0C9 /* EventsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsTableViewCell.h; sourceTree = "<group>"; };
+		D60BB7B21D70C0120083D0C9 /* EventsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsTableViewCell.m; sourceTree = "<group>"; };
+		D60BB7B31D70C0120083D0C9 /* EventsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventsTableViewCell.xib; sourceTree = "<group>"; };
+		D60BB7B61D70C3A40083D0C9 /* Calendar-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Calendar-50.png"; sourceTree = "<group>"; };
+		D60BB7B71D70C3A40083D0C9 /* Marker Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marker Filled-50.png"; sourceTree = "<group>"; };
+		D60BB7B81D70C3A40083D0C9 /* Phone Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Phone Filled-50.png"; sourceTree = "<group>"; };
+		D60BB7B91D70C3A40083D0C9 /* Time Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Time Filled-50.png"; sourceTree = "<group>"; };
+		D60BB7BA1D70C3A40083D0C9 /* User Group Man Man-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "User Group Man Man-50.png"; sourceTree = "<group>"; };
+		D60BB7C11D72EF290083D0C9 /* Events@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Events@2x.png"; sourceTree = "<group>"; };
+		D60BB7C21D72EF290083D0C9 /* Instagram@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Instagram@2x.png"; sourceTree = "<group>"; };
+		D60BB7C31D72EF290083D0C9 /* Results@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Results@2x.png"; sourceTree = "<group>"; };
+		D60BB7C81D72F08B0083D0C9 /* Category@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Category@2x.png"; sourceTree = "<group>"; };
 		D61DBBC81D38ACBF001BA98D /* instagramJsonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = instagramJsonModel.h; sourceTree = "<group>"; };
 		D61DBBC91D38ACBF001BA98D /* instagramJsonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = instagramJsonModel.m; sourceTree = "<group>"; };
 		D640BF511D4FD5B4006BA67C /* EventsDetailsJSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsDetailsJSONModel.h; sourceTree = "<group>"; };
@@ -191,6 +214,9 @@
 				1868992D1D6E350500B82923 /* App Delegate */,
 				1868992C1D6E34F800B82923 /* Favourites Core Data Model */,
 				188F51E01D0F08ED0083169D /* Main.storyboard */,
+				D60BB7B11D70C0120083D0C9 /* EventsTableViewCell.h */,
+				D60BB7B21D70C0120083D0C9 /* EventsTableViewCell.m */,
+				D60BB7B31D70C0120083D0C9 /* EventsTableViewCell.xib */,
 				1881A2131D13085800192BD1 /* EventsViewController.h */,
 				1881A2141D13085800192BD1 /* EventsViewController.m */,
 				18749BC81D14094700858B85 /* ResultsTableViewController.h */,
@@ -229,10 +255,19 @@
 		188F51D71D0F08ED0083169D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D60BB7B61D70C3A40083D0C9 /* Calendar-50.png */,
+				D60BB7B71D70C3A40083D0C9 /* Marker Filled-50.png */,
+				D60BB7B81D70C3A40083D0C9 /* Phone Filled-50.png */,
+				D60BB7B91D70C3A40083D0C9 /* Time Filled-50.png */,
+				D60BB7BA1D70C3A40083D0C9 /* User Group Man Man-50.png */,
 				188F51E81D0F08ED0083169D /* Info.plist */,
 				D6C5949B1D1831E9006F19D0 /* likepic.png */,
 				D6C5949C1D1831E9006F19D0 /* techtatvalogo.jpg */,
 				D6C5949D1D1831E9006F19D0 /* Comment.png */,
+				D60BB7C81D72F08B0083D0C9 /* Category@2x.png */,
+				D60BB7C11D72EF290083D0C9 /* Events@2x.png */,
+				D60BB7C21D72EF290083D0C9 /* Instagram@2x.png */,
+				D60BB7C31D72EF290083D0C9 /* Results@2x.png */,
 				18749BC61D13F8FC00858B85 /* thumb_IMG_7632_1024.jpg */,
 				188F51D81D0F08ED0083169D /* main.m */,
 			);
@@ -378,15 +413,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D60BB7BE1D70C3A40083D0C9 /* Time Filled-50.png in Resources */,
+				D60BB7C61D72EF290083D0C9 /* Instagram@2x.png in Resources */,
 				D6DCA1CA1D1C58E000496F9D /* EventsPopupView.xib in Resources */,
 				D699EECA1D1BFF4D0093F9CC /* InfoDetailsView.xib in Resources */,
+				D60BB7B51D70C0120083D0C9 /* EventsTableViewCell.xib in Resources */,
 				188F51E71D0F08ED0083169D /* LaunchScreen.storyboard in Resources */,
 				D6C594DE1D19771C006F19D0 /* InstagramTableViewCell.xib in Resources */,
 				18749BC51D13F1E600858B85 /* MoreTableViewCell.xib in Resources */,
 				D6C5949E1D1831E9006F19D0 /* likepic.png in Resources */,
+				D60BB7C91D72F08B0083D0C9 /* Category@2x.png in Resources */,
+				D60BB7BF1D70C3A40083D0C9 /* User Group Man Man-50.png in Resources */,
+				D60BB7BB1D70C3A40083D0C9 /* Calendar-50.png in Resources */,
 				D6C594A01D1831E9006F19D0 /* Comment.png in Resources */,
 				18749BC71D13F8FC00858B85 /* thumb_IMG_7632_1024.jpg in Resources */,
+				D60BB7BD1D70C3A40083D0C9 /* Phone Filled-50.png in Resources */,
+				D60BB7C51D72EF290083D0C9 /* Events@2x.png in Resources */,
+				D60BB7C71D72EF290083D0C9 /* Results@2x.png in Resources */,
 				188F51E41D0F08ED0083169D /* Assets.xcassets in Resources */,
+				D60BB7BC1D70C3A40083D0C9 /* Marker Filled-50.png in Resources */,
 				188F51E21D0F08ED0083169D /* Main.storyboard in Resources */,
 				D699EECF1D1BFF750093F9CC /* EventsDetailsView.xib in Resources */,
 				18749BCF1D140AC600858B85 /* ResultsTableViewCell.xib in Resources */,
@@ -430,6 +475,7 @@
 				D699EEC81D1BFF380093F9CC /* InfoDetailsView.m in Sources */,
 				188F51D91D0F08ED0083169D /* main.m in Sources */,
 				D6DCA1C61D1C58BC00496F9D /* EventsPopupView.m in Sources */,
+				D60BB7B41D70C0120083D0C9 /* EventsTableViewCell.m in Sources */,
 				18749BC01D13F17600858B85 /* MoreTableViewController.m in Sources */,
 				1881A20A1D0FCD8000192BD1 /* CategoriesTableViewController.m in Sources */,
 				18749BC41D13F1E600858B85 /* MoreTableViewCell.m in Sources */,

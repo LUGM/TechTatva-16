@@ -8,53 +8,51 @@
 
 #import "EventsViewController.h"
 #import "EventsPopupView.h"
+#import "EventsTableViewCell.h"
+#import "EventsDetailsView.h"
 
 @interface EventsViewController ()
 {
     UIView *overlay;
     EventsPopupView *Event;     //object of main xib class
 }
-    
+@property (nonatomic, strong) NSIndexPath *selectedIndexPath;
+
 @end
 
 @implementation EventsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    eventsArray = [[NSArray alloc]init];
-    
-    //added to set default selection
-    
-    [Event segmentController:Event.eventsAndInfoSegmentedview];
-
-    daycontrol.selectedSegmentIndex = 0;
-    if (daycontrol.selectedSegmentIndex == 0) {
-        eventsArray = @[@"one", @"two"];
-    }
-    if (daycontrol.selectedSegmentIndex == 1) {
-        eventsArray = @[@"two", @"one"];
-    }
-    [eventsTable reloadData];
 }
 
 -(IBAction)segmentSwitch{
-    if (daycontrol.selectedSegmentIndex == 0) {
-        eventsArray = @[@"one", @"two"];
-    }
-    if (daycontrol.selectedSegmentIndex == 1) {
-        eventsArray = @[@"two", @"one"];
-    }
-    [eventsTable reloadData];
+
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return eventsArray.count;
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"thisCell"];
-    cell.textLabel.text = [eventsArray objectAtIndex:indexPath.row];
+    
+    static NSString *cellIdentifier = @"myCell";
+    EventsTableViewCell *cell = (EventsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"EventsTableViewCell" owner:self options:nil];
+    
+    cell = [nib objectAtIndex:0];
+    
+    if (cell == nil)
+    {
+        
+        cell = [[EventsTableViewCell alloc] init];
+        
+    }
+
     return cell;
 }
 
@@ -65,23 +63,24 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UIView *customView = (UIView *)[[[NSBundle mainBundle] loadNibNamed:@"EventsPopupView" owner:nil options:nil] objectAtIndex:0];
+    [tableView beginUpdates];
     
-    [eventsTable addSubview:customView];
+    if (![indexPath compare:self.selectedIndexPath] == NSOrderedSame)
+        self.selectedIndexPath = indexPath;
+    else
+        self.selectedIndexPath = nil;
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    [tableView endUpdates];
+    
 }
 
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([indexPath compare:self.selectedIndexPath] == NSOrderedSame)
+        return 470.f;
+    return 95.f;
 }
-*/
+
 
 @end
