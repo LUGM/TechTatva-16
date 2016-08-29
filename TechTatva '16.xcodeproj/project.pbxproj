@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1828D81C1D7476B000E0454F /* CategoriesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828D81A1D7476B000E0454F /* CategoriesTableViewCell.m */; };
+		1828D81D1D7476B000E0454F /* CategoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1828D81B1D7476B000E0454F /* CategoriesTableViewCell.xib */; };
 		18541FE01D6DD9370046EAD0 /* Favourites.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18541FDE1D6DD9370046EAD0 /* Favourites.xcdatamodeld */; };
 		18541FF11D6DE04F0046EAD0 /* Entity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 18541FEE1D6DE04F0046EAD0 /* Entity+CoreDataProperties.m */; };
 		18541FF21D6DE04F0046EAD0 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = 18541FF01D6DE04F0046EAD0 /* Entity.m */; };
@@ -71,6 +73,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1828D8191D7476B000E0454F /* CategoriesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesTableViewCell.h; sourceTree = "<group>"; };
+		1828D81A1D7476B000E0454F /* CategoriesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesTableViewCell.m; sourceTree = "<group>"; };
+		1828D81B1D7476B000E0454F /* CategoriesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoriesTableViewCell.xib; sourceTree = "<group>"; };
 		18541FDF1D6DD9370046EAD0 /* Favourites.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Favourites.xcdatamodel; sourceTree = "<group>"; };
 		18541FED1D6DE04F0046EAD0 /* Entity+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Entity+CoreDataProperties.h"; sourceTree = "<group>"; };
 		18541FEE1D6DE04F0046EAD0 /* Entity+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Entity+CoreDataProperties.m"; sourceTree = "<group>"; };
@@ -240,6 +245,9 @@
 				D6DCA1C91D1C58E000496F9D /* EventsPopupView.xib */,
 				1881A2081D0FCD8000192BD1 /* CategoriesTableViewController.h */,
 				1881A2091D0FCD8000192BD1 /* CategoriesTableViewController.m */,
+				1828D8191D7476B000E0454F /* CategoriesTableViewCell.h */,
+				1828D81A1D7476B000E0454F /* CategoriesTableViewCell.m */,
+				1828D81B1D7476B000E0454F /* CategoriesTableViewCell.xib */,
 				188F51E31D0F08ED0083169D /* Assets.xcassets */,
 				D6C594D71D1976F8006F19D0 /* InstagramTableViewController.h */,
 				D6C594D81D1976F8006F19D0 /* InstagramTableViewController.m */,
@@ -434,6 +442,7 @@
 				D60BB7BC1D70C3A40083D0C9 /* Marker Filled-50.png in Resources */,
 				188F51E21D0F08ED0083169D /* Main.storyboard in Resources */,
 				D699EECF1D1BFF750093F9CC /* EventsDetailsView.xib in Resources */,
+				1828D81D1D7476B000E0454F /* CategoriesTableViewCell.xib in Resources */,
 				18749BCF1D140AC600858B85 /* ResultsTableViewCell.xib in Resources */,
 				D6C5949F1D1831E9006F19D0 /* techtatvalogo.jpg in Resources */,
 			);
@@ -473,6 +482,7 @@
 				18749BCE1D140AC600858B85 /* ResultsTableViewCell.m in Sources */,
 				D6C594DD1D19771C006F19D0 /* InstagramTableViewCell.m in Sources */,
 				D699EEC81D1BFF380093F9CC /* InfoDetailsView.m in Sources */,
+				1828D81C1D7476B000E0454F /* CategoriesTableViewCell.m in Sources */,
 				188F51D91D0F08ED0083169D /* main.m in Sources */,
 				D6DCA1C61D1C58BC00496F9D /* EventsPopupView.m in Sources */,
 				D60BB7B41D70C0120083D0C9 /* EventsTableViewCell.m in Sources */,

@@ -21,7 +21,7 @@
     [super viewDidLoad];
     
     labelArray = [[NSArray alloc]init];
-    labelArray = @[@"One", @"Two", @"Three"];
+    labelArray = @[@"Online Events", @"Registration", @"Favourites", @"About Us", @"Developers"];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

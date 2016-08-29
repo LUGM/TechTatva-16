@@ -7,6 +7,7 @@
 //
 
 #import "CategoriesTableViewController.h"
+#import "CategoriesTableViewCell.h"
 
 @interface CategoriesTableViewController(){
 NSArray *categoriesArray ;
@@ -36,7 +37,7 @@ NSArray *categoriesArray ;
 }
 
 
--(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+/*-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //UITableViewCell*cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     static NSString *identifier = @"Cell";
@@ -50,8 +51,28 @@ NSArray *categoriesArray ;
 
     
     return cell;
-}
+}*/
 
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *simpleTableIdentifier = @"categoriesCell";
+    CategoriesTableViewCell *cell = (CategoriesTableViewCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CategoriesTableViewCell" owner:self options:nil];
+    cell = [nib objectAtIndex:0];
+    if (cell == nil) {
+        cell = [[CategoriesTableViewCell alloc] init];
+    }
+    
+    cell.nameLabel1.text = [categoriesArray objectAtIndex:indexPath.row];
+    //cell.nameLabel2.text = [label2Array objectAtIndex:indexPath.row];
+    cell.thumbnailImageView.image = [UIImage imageNamed:@"thumb_IMG_7632_1024.jpg"];
+    cell.thumbnailImageView.layer.cornerRadius = cell.thumbnailImageView.frame.size.width / 2;
+    cell.thumbnailImageView.clipsToBounds = YES;
+    
+    
+    
+    return cell;
+}
 
 
 

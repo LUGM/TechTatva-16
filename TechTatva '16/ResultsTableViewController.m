@@ -79,6 +79,15 @@
 {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"My Alert"
+                                                                   message:@"This is an alert."
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {}];
+    
+    [alert addAction:defaultAction];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 
