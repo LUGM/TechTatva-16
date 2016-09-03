@@ -140,6 +140,7 @@
                     <connections>
                         <segue destination="cR3-TG-Bvq" kind="presentation" identifier="onlineEventsPage" id="jHQ-vH-dIZ"/>
                         <segue destination="fsb-H1-86K" kind="presentation" identifier="registrationPage" id="Rps-my-Rxo"/>
+                        <segue destination="lq2-L2-dbR" kind="modal" identifier="aboutUsPage" id="oQc-q4-mxM"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YnO-C9-Yb4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -235,6 +236,157 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3py-ME-ytw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2377.5" y="2254.5"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="r5H-Rv-nkF">
+            <objects>
+                <tableViewController id="8WT-jK-Sik" customClass="AboutUsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Jng-6P-NZh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection headerTitle="About Us:" id="8Bl-PI-Nq7">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="aboutCell" rowHeight="166" id="RAX-5X-tiz">
+                                        <rect key="frame" x="0.0" y="92" width="375" height="166"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RAX-5X-tiz" id="oCs-ap-BEz">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="165.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="j3b-UD-o5c">
+                                                    <rect key="frame" x="18" y="18" width="339" height="129.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="j3b-UD-o5c" secondAttribute="trailing" constant="10" id="AS2-Kc-okG"/>
+                                                <constraint firstItem="j3b-UD-o5c" firstAttribute="top" secondItem="oCs-ap-BEz" secondAttribute="topMargin" constant="10" id="k9o-al-DPa"/>
+                                                <constraint firstItem="j3b-UD-o5c" firstAttribute="leading" secondItem="oCs-ap-BEz" secondAttribute="leadingMargin" constant="10" id="oph-gp-c8s"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="j3b-UD-o5c" secondAttribute="bottom" constant="10" id="qyk-PG-SVH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Follow Us" id="Lmx-l9-4ZD">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="aboutCell" rowHeight="56" id="9gh-Xi-Ae1">
+                                        <rect key="frame" x="0.0" y="286" width="375" height="56"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9gh-Xi-Ae1" id="SL1-P4-qEs">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVI-JT-Y1s" userLabel="fbButton">
+                                                    <rect key="frame" x="33" y="13" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="LeZ-Jw-P7H"/>
+                                                        <constraint firstAttribute="height" constant="30" id="Sk9-1K-ZRh"/>
+                                                    </constraints>
+                                                    <state key="normal" backgroundImage="fb.png"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNm-ts-OpP">
+                                                    <rect key="frame" x="93" y="13" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="UVA-zK-rv2"/>
+                                                        <constraint firstAttribute="height" constant="30" id="c5x-gm-HJl"/>
+                                                    </constraints>
+                                                    <state key="normal" backgroundImage="twitter.png"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygv-or-1AP">
+                                                    <rect key="frame" x="153" y="12" width="30" height="30.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="cH0-nY-Czx"/>
+                                                        <constraint firstAttribute="height" constant="30" id="l3s-Qx-USQ"/>
+                                                    </constraints>
+                                                    <state key="normal" backgroundImage="Instagram.png"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyU-CC-RDu">
+                                                    <rect key="frame" x="213" y="12.5" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="NkA-wA-ugt"/>
+                                                        <constraint firstAttribute="width" constant="30" id="gDw-UV-SPC"/>
+                                                    </constraints>
+                                                    <state key="normal" backgroundImage="youtube.png"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJC-x6-MLU">
+                                                    <rect key="frame" x="273" y="13" width="30" height="29.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="AVv-lF-K0E"/>
+                                                        <constraint firstAttribute="height" constant="30" id="uO7-sc-P47"/>
+                                                    </constraints>
+                                                    <state key="normal" backgroundImage="google+.png"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="hVI-JT-Y1s" firstAttribute="leading" secondItem="SL1-P4-qEs" secondAttribute="leadingMargin" constant="25" id="4fD-fP-qYJ"/>
+                                                <constraint firstItem="ygv-or-1AP" firstAttribute="centerY" secondItem="SL1-P4-qEs" secondAttribute="centerY" id="4gD-Vc-E0T"/>
+                                                <constraint firstItem="fJC-x6-MLU" firstAttribute="centerY" secondItem="SL1-P4-qEs" secondAttribute="centerY" id="JOz-Ni-fOz"/>
+                                                <constraint firstItem="fJC-x6-MLU" firstAttribute="leading" secondItem="eyU-CC-RDu" secondAttribute="trailing" constant="30" id="Rrj-Dx-AaD"/>
+                                                <constraint firstItem="eyU-CC-RDu" firstAttribute="leading" secondItem="ygv-or-1AP" secondAttribute="trailing" constant="30" id="VHP-s6-eHr"/>
+                                                <constraint firstItem="ygv-or-1AP" firstAttribute="leading" secondItem="tNm-ts-OpP" secondAttribute="trailing" constant="30" id="fCg-A7-l3W"/>
+                                                <constraint firstItem="tNm-ts-OpP" firstAttribute="leading" secondItem="hVI-JT-Y1s" secondAttribute="trailing" constant="30" id="pj3-Vd-eFw"/>
+                                                <constraint firstItem="tNm-ts-OpP" firstAttribute="centerY" secondItem="SL1-P4-qEs" secondAttribute="centerY" id="rV9-VS-mB0"/>
+                                                <constraint firstItem="hVI-JT-Y1s" firstAttribute="centerY" secondItem="SL1-P4-qEs" secondAttribute="centerY" id="t0k-pK-JKN"/>
+                                                <constraint firstItem="eyU-CC-RDu" firstAttribute="centerY" secondItem="SL1-P4-qEs" secondAttribute="centerY" id="tfb-ML-cZ5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="8WT-jK-Sik" id="eVe-pT-ato"/>
+                            <outlet property="delegate" destination="8WT-jK-Sik" id="K8v-HG-6qa"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="2nj-U2-Uik">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="eFf-zI-mdB">
+                            <connections>
+                                <action selector="backButton:" destination="8WT-jK-Sik" id="cV1-K7-Wkr"/>
+                                <segue destination="Gs6-Z2-6QA" kind="unwind" unwindAction="backToStart:" id="cVM-9c-WZT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="backButton" destination="eFf-zI-mdB" id="P1x-nN-xuU"/>
+                        <outlet property="fbButton" destination="hVI-JT-Y1s" id="JjN-0H-LBh"/>
+                        <outlet property="googleplusButton" destination="fJC-x6-MLU" id="1yJ-FA-moI"/>
+                        <outlet property="instaButton" destination="ygv-or-1AP" id="L8M-Qn-zAI"/>
+                        <outlet property="twitterButton" destination="tNm-ts-OpP" id="AIx-to-wfh"/>
+                        <outlet property="youTubeButton" destination="eyU-CC-RDu" id="bqX-pf-mSn"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fMx-Ll-T7e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Gs6-Z2-6QA" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3594.5" y="2287.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="unu-Lp-SiA">
+            <objects>
+                <navigationController id="lq2-L2-dbR" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="jkA-Ea-VG1"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ca5-Bf-9a9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8WT-jK-Sik" kind="relationship" relationship="rootViewController" id="8RX-il-ehF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xtb-zO-6jj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3075.5" y="2287.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zDB-Ey-nMu">
@@ -456,5 +608,9 @@
         <image name="Events.png" width="25" height="25"/>
         <image name="Instagram.png" width="25" height="25"/>
         <image name="Results.png" width="25" height="25"/>
+        <image name="fb.png" width="25" height="25"/>
+        <image name="google+.png" width="25" height="25"/>
+        <image name="twitter.png" width="25" height="25"/>
+        <image name="youtube.png" width="48" height="48"/>
     </resources>
 </document>

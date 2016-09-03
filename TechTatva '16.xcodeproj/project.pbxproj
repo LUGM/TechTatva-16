@@ -40,6 +40,11 @@
 		D60BB7C71D72EF290083D0C9 /* Results@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60BB7C31D72EF290083D0C9 /* Results@2x.png */; };
 		D60BB7C91D72F08B0083D0C9 /* Category@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60BB7C81D72F08B0083D0C9 /* Category@2x.png */; };
 		D61DBBCA1D38ACBF001BA98D /* instagramJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D61DBBC91D38ACBF001BA98D /* instagramJsonModel.m */; };
+		D6247BF61D7B0C58007F7FF1 /* AboutUsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6247BF51D7B0C58007F7FF1 /* AboutUsTableViewController.m */; };
+		D6247BF81D7B0E74007F7FF1 /* fb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6247BF71D7B0E74007F7FF1 /* fb@2x.png */; };
+		D6247BFC1D7B100C007F7FF1 /* google+@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6247BF91D7B100C007F7FF1 /* google+@2x.png */; };
+		D6247BFE1D7B100C007F7FF1 /* twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6247BFB1D7B100C007F7FF1 /* twitter@2x.png */; };
+		D6247C021D7B145F007F7FF1 /* youtube.png in Resources */ = {isa = PBXBuildFile; fileRef = D6247C011D7B145F007F7FF1 /* youtube.png */; };
 		D640BF531D4FD5B4006BA67C /* EventsDetailsJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D640BF521D4FD5B4006BA67C /* EventsDetailsJSONModel.m */; };
 		D699EEC81D1BFF380093F9CC /* InfoDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = D699EEC71D1BFF380093F9CC /* InfoDetailsView.m */; };
 		D699EECA1D1BFF4D0093F9CC /* InfoDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D699EEC91D1BFF4D0093F9CC /* InfoDetailsView.xib */; };
@@ -126,6 +131,12 @@
 		D60BB7C81D72F08B0083D0C9 /* Category@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Category@2x.png"; sourceTree = "<group>"; };
 		D61DBBC81D38ACBF001BA98D /* instagramJsonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = instagramJsonModel.h; sourceTree = "<group>"; };
 		D61DBBC91D38ACBF001BA98D /* instagramJsonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = instagramJsonModel.m; sourceTree = "<group>"; };
+		D6247BF41D7B0C58007F7FF1 /* AboutUsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutUsTableViewController.h; path = ../AboutUsTableViewController.h; sourceTree = "<group>"; };
+		D6247BF51D7B0C58007F7FF1 /* AboutUsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutUsTableViewController.m; path = ../AboutUsTableViewController.m; sourceTree = "<group>"; };
+		D6247BF71D7B0E74007F7FF1 /* fb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fb@2x.png"; sourceTree = "<group>"; };
+		D6247BF91D7B100C007F7FF1 /* google+@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "google+@2x.png"; sourceTree = "<group>"; };
+		D6247BFB1D7B100C007F7FF1 /* twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter@2x.png"; sourceTree = "<group>"; };
+		D6247C011D7B145F007F7FF1 /* youtube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = youtube.png; sourceTree = "<group>"; };
 		D640BF511D4FD5B4006BA67C /* EventsDetailsJSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsDetailsJSONModel.h; sourceTree = "<group>"; };
 		D640BF521D4FD5B4006BA67C /* EventsDetailsJSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsDetailsJSONModel.m; sourceTree = "<group>"; };
 		D699EEC61D1BFF380093F9CC /* InfoDetailsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoDetailsView.h; sourceTree = "<group>"; };
@@ -225,6 +236,8 @@
 				1868992D1D6E350500B82923 /* App Delegate */,
 				1868992C1D6E34F800B82923 /* Favourites Core Data Model */,
 				188F51E01D0F08ED0083169D /* Main.storyboard */,
+				D6247BF41D7B0C58007F7FF1 /* AboutUsTableViewController.h */,
+				D6247BF51D7B0C58007F7FF1 /* AboutUsTableViewController.m */,
 				D6E6326B1D7AC21B00E71851 /* RegistrationPageViewController.h */,
 				D6E6326C1D7AC21B00E71851 /* RegistrationPageViewController.m */,
 				D6D061241D782D8B00D9267E /* OnlineEventsViewController.h */,
@@ -273,6 +286,10 @@
 		188F51D71D0F08ED0083169D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D6247BF71D7B0E74007F7FF1 /* fb@2x.png */,
+				D6247C011D7B145F007F7FF1 /* youtube.png */,
+				D6247BF91D7B100C007F7FF1 /* google+@2x.png */,
+				D6247BFB1D7B100C007F7FF1 /* twitter@2x.png */,
 				D60BB7B61D70C3A40083D0C9 /* Calendar-50.png */,
 				D60BB7B71D70C3A40083D0C9 /* Marker Filled-50.png */,
 				D60BB7B81D70C3A40083D0C9 /* Phone Filled-50.png */,
@@ -435,20 +452,24 @@
 				D60BB7C61D72EF290083D0C9 /* Instagram@2x.png in Resources */,
 				D6DCA1CA1D1C58E000496F9D /* EventsPopupView.xib in Resources */,
 				D699EECA1D1BFF4D0093F9CC /* InfoDetailsView.xib in Resources */,
+				D6247BF81D7B0E74007F7FF1 /* fb@2x.png in Resources */,
 				D60BB7B51D70C0120083D0C9 /* EventsTableViewCell.xib in Resources */,
 				188F51E71D0F08ED0083169D /* LaunchScreen.storyboard in Resources */,
 				D6C594DE1D19771C006F19D0 /* InstagramTableViewCell.xib in Resources */,
 				18749BC51D13F1E600858B85 /* MoreTableViewCell.xib in Resources */,
 				D6C5949E1D1831E9006F19D0 /* likepic.png in Resources */,
 				D60BB7C91D72F08B0083D0C9 /* Category@2x.png in Resources */,
+				D6247C021D7B145F007F7FF1 /* youtube.png in Resources */,
 				D60BB7BF1D70C3A40083D0C9 /* User Group Man Man-50.png in Resources */,
 				D60BB7BB1D70C3A40083D0C9 /* Calendar-50.png in Resources */,
 				D6C594A01D1831E9006F19D0 /* Comment.png in Resources */,
 				18749BC71D13F8FC00858B85 /* thumb_IMG_7632_1024.jpg in Resources */,
 				D60BB7BD1D70C3A40083D0C9 /* Phone Filled-50.png in Resources */,
+				D6247BFE1D7B100C007F7FF1 /* twitter@2x.png in Resources */,
 				D60BB7C51D72EF290083D0C9 /* Events@2x.png in Resources */,
 				D60BB7C71D72EF290083D0C9 /* Results@2x.png in Resources */,
 				188F51E41D0F08ED0083169D /* Assets.xcassets in Resources */,
+				D6247BFC1D7B100C007F7FF1 /* google+@2x.png in Resources */,
 				D60BB7BC1D70C3A40083D0C9 /* Marker Filled-50.png in Resources */,
 				188F51E21D0F08ED0083169D /* Main.storyboard in Resources */,
 				D699EECF1D1BFF750093F9CC /* EventsDetailsView.xib in Resources */,
@@ -482,6 +503,7 @@
 				D61DBBCA1D38ACBF001BA98D /* instagramJsonModel.m in Sources */,
 				18749BCA1D14094700858B85 /* ResultsTableViewController.m in Sources */,
 				188F51DC1D0F08ED0083169D /* AppDelegate.m in Sources */,
+				D6247BF61D7B0C58007F7FF1 /* AboutUsTableViewController.m in Sources */,
 				D640BF531D4FD5B4006BA67C /* EventsDetailsJSONModel.m in Sources */,
 				18541FF11D6DE04F0046EAD0 /* Entity+CoreDataProperties.m in Sources */,
 				D6C594D91D1976F8006F19D0 /* InstagramTableViewController.m in Sources */,

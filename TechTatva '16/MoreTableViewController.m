@@ -79,12 +79,15 @@
     else if (indexPath.row == 1) {
         [self performSegueWithIdentifier:@"registrationPage" sender:self];
     }
+    else if (indexPath.row == 3) {
+        [self performSegueWithIdentifier:@"aboutUsPage" sender:self];
+    }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 -(IBAction)backToStart:(UIStoryboardSegue *)segue
 {
-    //OnlineEventsViewController *source = segue.sourceViewController
+    
 }
 
 /*
