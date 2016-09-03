@@ -51,8 +51,10 @@
 		D6C594D91D1976F8006F19D0 /* InstagramTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C594D81D1976F8006F19D0 /* InstagramTableViewController.m */; };
 		D6C594DD1D19771C006F19D0 /* InstagramTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C594DB1D19771C006F19D0 /* InstagramTableViewCell.m */; };
 		D6C594DE1D19771C006F19D0 /* InstagramTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C594DC1D19771C006F19D0 /* InstagramTableViewCell.xib */; };
+		D6D061261D782D8B00D9267E /* OnlineEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D061251D782D8B00D9267E /* OnlineEventsViewController.m */; };
 		D6DCA1C61D1C58BC00496F9D /* EventsPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DCA1C51D1C58BC00496F9D /* EventsPopupView.m */; };
 		D6DCA1CA1D1C58E000496F9D /* EventsPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6DCA1C91D1C58E000496F9D /* EventsPopupView.xib */; };
+		D6E6326D1D7AC21B00E71851 /* RegistrationPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E6326C1D7AC21B00E71851 /* RegistrationPageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,9 +142,13 @@
 		D6C594DA1D19771C006F19D0 /* InstagramTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramTableViewCell.h; sourceTree = "<group>"; };
 		D6C594DB1D19771C006F19D0 /* InstagramTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramTableViewCell.m; sourceTree = "<group>"; };
 		D6C594DC1D19771C006F19D0 /* InstagramTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InstagramTableViewCell.xib; sourceTree = "<group>"; };
+		D6D061241D782D8B00D9267E /* OnlineEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlineEventsViewController.h; sourceTree = "<group>"; };
+		D6D061251D782D8B00D9267E /* OnlineEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlineEventsViewController.m; sourceTree = "<group>"; };
 		D6DCA1C41D1C58BC00496F9D /* EventsPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsPopupView.h; sourceTree = "<group>"; };
 		D6DCA1C51D1C58BC00496F9D /* EventsPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsPopupView.m; sourceTree = "<group>"; };
 		D6DCA1C91D1C58E000496F9D /* EventsPopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EventsPopupView.xib; path = ../EventsPopupView.xib; sourceTree = "<group>"; };
+		D6E6326B1D7AC21B00E71851 /* RegistrationPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegistrationPageViewController.h; path = ../RegistrationPageViewController.h; sourceTree = "<group>"; };
+		D6E6326C1D7AC21B00E71851 /* RegistrationPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegistrationPageViewController.m; path = ../RegistrationPageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +225,10 @@
 				1868992D1D6E350500B82923 /* App Delegate */,
 				1868992C1D6E34F800B82923 /* Favourites Core Data Model */,
 				188F51E01D0F08ED0083169D /* Main.storyboard */,
+				D6E6326B1D7AC21B00E71851 /* RegistrationPageViewController.h */,
+				D6E6326C1D7AC21B00E71851 /* RegistrationPageViewController.m */,
+				D6D061241D782D8B00D9267E /* OnlineEventsViewController.h */,
+				D6D061251D782D8B00D9267E /* OnlineEventsViewController.m */,
 				D60BB7B11D70C0120083D0C9 /* EventsTableViewCell.h */,
 				D60BB7B21D70C0120083D0C9 /* EventsTableViewCell.m */,
 				D60BB7B31D70C0120083D0C9 /* EventsTableViewCell.xib */,
@@ -479,6 +489,7 @@
 				1881A2151D13085800192BD1 /* EventsViewController.m in Sources */,
 				D699EECD1D1BFF670093F9CC /* EventsDetailsView.m in Sources */,
 				18541FE01D6DD9370046EAD0 /* Favourites.xcdatamodeld in Sources */,
+				D6E6326D1D7AC21B00E71851 /* RegistrationPageViewController.m in Sources */,
 				18749BCE1D140AC600858B85 /* ResultsTableViewCell.m in Sources */,
 				D6C594DD1D19771C006F19D0 /* InstagramTableViewCell.m in Sources */,
 				D699EEC81D1BFF380093F9CC /* InfoDetailsView.m in Sources */,
@@ -486,6 +497,7 @@
 				188F51D91D0F08ED0083169D /* main.m in Sources */,
 				D6DCA1C61D1C58BC00496F9D /* EventsPopupView.m in Sources */,
 				D60BB7B41D70C0120083D0C9 /* EventsTableViewCell.m in Sources */,
+				D6D061261D782D8B00D9267E /* OnlineEventsViewController.m in Sources */,
 				18749BC01D13F17600858B85 /* MoreTableViewController.m in Sources */,
 				1881A20A1D0FCD8000192BD1 /* CategoriesTableViewController.m in Sources */,
 				18749BC41D13F1E600858B85 /* MoreTableViewCell.m in Sources */,

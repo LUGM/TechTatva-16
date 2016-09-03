@@ -8,6 +8,7 @@
 
 #import "MoreTableViewController.h"
 #import "MoreTableViewCell.h"
+#import "OnlineEventsViewController.h"
 
 @interface MoreTableViewController (){
     NSArray *labelArray;
@@ -60,8 +61,6 @@
     cell.thumbnailImageView.layer.cornerRadius = cell.thumbnailImageView.frame.size.width / 2;
     cell.thumbnailImageView.clipsToBounds = YES;
     
-
-    
     
     // Configure the cell...
     
@@ -69,15 +68,24 @@
 }
 
 -(int)heightForRowAtIndexPath:(MoreTableViewCell *)MoreTableViewCell{
-    return 120;
+    return 100;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    if (indexPath.row == 0) {
+        [self performSegueWithIdentifier:@"onlineEventsPage" sender:self];
+    }
+    else if (indexPath.row == 1) {
+        [self performSegueWithIdentifier:@"registrationPage" sender:self];
+    }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+-(IBAction)backToStart:(UIStoryboardSegue *)segue
+{
+    //OnlineEventsViewController *source = segue.sourceViewController
+}
 
 /*
 // Override to support conditional editing of the table view.
