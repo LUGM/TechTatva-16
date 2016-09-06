@@ -12,7 +12,7 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *categoryName;
 @property (strong, nonatomic) IBOutlet UILabel *eventName;
-@property (strong, nonatomic) IBOutlet UITextField *commentsTextField;
+@property (strong, nonatomic) IBOutlet UITextView *commentsTextArea;
 @property (strong, nonatomic) IBOutlet UIButton *submitButton;
 - (IBAction)submitButton:(UIButton *)sender;
 

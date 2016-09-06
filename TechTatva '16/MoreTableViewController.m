@@ -22,7 +22,7 @@
     [super viewDidLoad];
     
     labelArray = [[NSArray alloc]init];
-    labelArray = @[@"Online Events", @"Registration", @"Favourites", @"About Us", @"Developers"];
+    labelArray = @[@"Online Events", @"Registration", @"Favourites", @"Feedback", @"About Us", @"Developers"];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -80,8 +80,13 @@
         [self performSegueWithIdentifier:@"registrationPage" sender:self];
     }
     else if (indexPath.row == 3) {
+        [self performSegueWithIdentifier:@"feedbackPage" sender:self];
+    }
+
+    else if (indexPath.row == 4) {
         [self performSegueWithIdentifier:@"aboutUsPage" sender:self];
     }
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
