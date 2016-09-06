@@ -50,6 +50,7 @@
 		D699EECA1D1BFF4D0093F9CC /* InfoDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D699EEC91D1BFF4D0093F9CC /* InfoDetailsView.xib */; };
 		D699EECD1D1BFF670093F9CC /* EventsDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = D699EECC1D1BFF670093F9CC /* EventsDetailsView.m */; };
 		D699EECF1D1BFF750093F9CC /* EventsDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D699EECE1D1BFF750093F9CC /* EventsDetailsView.xib */; };
+		D6C0853D1D7EBCEE00FBD1BC /* FeedbackTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C0853C1D7EBCEE00FBD1BC /* FeedbackTableViewController.m */; };
 		D6C5949E1D1831E9006F19D0 /* likepic.png in Resources */ = {isa = PBXBuildFile; fileRef = D6C5949B1D1831E9006F19D0 /* likepic.png */; };
 		D6C5949F1D1831E9006F19D0 /* techtatvalogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6C5949C1D1831E9006F19D0 /* techtatvalogo.jpg */; };
 		D6C594A01D1831E9006F19D0 /* Comment.png in Resources */ = {isa = PBXBuildFile; fileRef = D6C5949D1D1831E9006F19D0 /* Comment.png */; };
@@ -145,6 +146,8 @@
 		D699EECB1D1BFF670093F9CC /* EventsDetailsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventsDetailsView.h; path = ../EventsDetailsView.h; sourceTree = "<group>"; };
 		D699EECC1D1BFF670093F9CC /* EventsDetailsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventsDetailsView.m; path = ../EventsDetailsView.m; sourceTree = "<group>"; };
 		D699EECE1D1BFF750093F9CC /* EventsDetailsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EventsDetailsView.xib; path = ../EventsDetailsView.xib; sourceTree = "<group>"; };
+		D6C0853B1D7EBCEE00FBD1BC /* FeedbackTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackTableViewController.h; sourceTree = "<group>"; };
+		D6C0853C1D7EBCEE00FBD1BC /* FeedbackTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackTableViewController.m; sourceTree = "<group>"; };
 		D6C5949B1D1831E9006F19D0 /* likepic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = likepic.png; sourceTree = "<group>"; };
 		D6C5949C1D1831E9006F19D0 /* techtatvalogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = techtatvalogo.jpg; sourceTree = "<group>"; };
 		D6C5949D1D1831E9006F19D0 /* Comment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Comment.png; sourceTree = "<group>"; };
@@ -236,6 +239,8 @@
 				1868992D1D6E350500B82923 /* App Delegate */,
 				1868992C1D6E34F800B82923 /* Favourites Core Data Model */,
 				188F51E01D0F08ED0083169D /* Main.storyboard */,
+				D6C0853B1D7EBCEE00FBD1BC /* FeedbackTableViewController.h */,
+				D6C0853C1D7EBCEE00FBD1BC /* FeedbackTableViewController.m */,
 				D6247BF41D7B0C58007F7FF1 /* AboutUsTableViewController.h */,
 				D6247BF51D7B0C58007F7FF1 /* AboutUsTableViewController.m */,
 				D6E6326B1D7AC21B00E71851 /* RegistrationPageViewController.h */,
@@ -504,6 +509,7 @@
 				18749BCA1D14094700858B85 /* ResultsTableViewController.m in Sources */,
 				188F51DC1D0F08ED0083169D /* AppDelegate.m in Sources */,
 				D6247BF61D7B0C58007F7FF1 /* AboutUsTableViewController.m in Sources */,
+				D6C0853D1D7EBCEE00FBD1BC /* FeedbackTableViewController.m in Sources */,
 				D640BF531D4FD5B4006BA67C /* EventsDetailsJSONModel.m in Sources */,
 				18541FF11D6DE04F0046EAD0 /* Entity+CoreDataProperties.m in Sources */,
 				D6C594D91D1976F8006F19D0 /* InstagramTableViewController.m in Sources */,
