@@ -10,11 +10,14 @@
 #import "EventsPopupView.h"
 #import "EventsTableViewCell.h"
 #import "EventsDetailsView.h"
+#import "EventsDetailsJSONModel.h"
 
 @interface EventsViewController ()
 {
     UIView *overlay;
-    EventsPopupView *Event;     //object of main xib class
+    EventsPopupView *Event;  //object of main xib class
+    NSArray *array;
+    EventsDetailsJSONModel *jsonModel;
 }
 @property (nonatomic, strong) NSIndexPath *selectedIndexPath;
 
@@ -24,6 +27,39 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        @try {
+            NSURL *custumUrl = [[NSURL alloc]initWithString:@"https://api.myjson.com/bins/3t0vu"];
+            NSData *mydata = [NSData dataWithContentsOfURL:custumUrl];
+            NSError *error;
+            
+            if (mydata!=nil)
+            {
+                id jsonData = [NSJSONSerialization JSONObjectWithData:mydata options:kNilOptions error:&error];
+                id requiredArray = [jsonData valueForKey:@"data"];
+                array = [EventsDetailsJSONModel getArrayFromJson:requiredArray];
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    //[self.tableView reloadData];
+                });
+                
+                EventsDetailsJSONModel *model = [array objectAtIndex:1];
+                NSLog(@"%@",model.categoryEventId);
+                NSLog(@"%@",model.cntctname);
+                NSLog(@"%@",model.hs1);
+            }
+            
+            
+        }
+        @catch (NSException *exception) {
+            
+        }
+        @finally {
+            
+        }
+    });
+
 }
 
 -(IBAction)segmentSwitch{
@@ -79,7 +115,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if ([indexPath compare:self.selectedIndexPath] == NSOrderedSame)
         return 470.f;
-    return 95.f;
+    return 105.f;
 }
 
 

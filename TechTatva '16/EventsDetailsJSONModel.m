@@ -17,12 +17,16 @@
     if(self) {
         if (myData && [myData isKindOfClass:[NSMutableDictionary class]]) {
             NSMutableDictionary *data = [[NSMutableDictionary alloc]initWithDictionary:myData];
-            self.eventName = [data objectForKey:@"evename"];
-            self.eventId = [[data objectForKey:@"eveid"]integerValue];
-            self.eventDescription = [data objectForKey:@"evedesc"];
-            self.eventMaxTeamSize = [[data objectForKey:@"evemaxteamsize"]integerValue];
-            self.categoryEventId = [data objectForKey:@"cveid"];
-            self.categoryEventName = [data objectForKey:@"cvename"];
+            self.eventName = [data objectForKey:@"ename"];
+            self.eventId = [[data objectForKey:@"eid"]integerValue];
+            self.eventDescription = [data objectForKey:@"edesc"];
+            self.eventMaxTeamSize = [[data objectForKey:@"emaxteamsize"]integerValue];
+            self.categoryEventId = [data objectForKey:@"cid"];
+            self.categoryEventName = [data objectForKey:@"cname"];
+            self.cntctname = [data objectForKey:@"cntctname"];
+            self.cntctno = [data objectForKey:@"cntctno"];
+            self.hs1 = [data objectForKey:@"hs1"];
+            self.hs2 = [data objectForKey:@"hs2"];
         }
     }
     return self;

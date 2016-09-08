@@ -16,6 +16,10 @@
 @property (nonatomic) NSInteger eventMaxTeamSize;
 @property (strong,nonatomic) NSString *categoryEventId;
 @property (strong,nonatomic) NSString *categoryEventName;
+@property (strong,nonatomic) NSString *cntctname;
+@property (strong,nonatomic) NSString *cntctno;
+@property (strong,nonatomic) NSString *hs1;
+@property (strong,nonatomic) NSString *hs2;
 
 -(instancetype)initWithData:(id)data;
 +(NSMutableArray *)getArrayFromJson:(id)myData;

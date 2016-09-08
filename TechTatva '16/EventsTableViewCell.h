@@ -14,10 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UIView *eventName;
 
-@property (weak, nonatomic) IBOutlet UISegmentedControl *eventsAndInfoSegView;
-
-- (IBAction)segmentChange:(UISegmentedControl *)sender;
-
 @property (weak, nonatomic) IBOutlet UIView *eventsAndInfoView;
+@property (weak, nonatomic) IBOutlet UITextView *eventDesc;
 
 @end
