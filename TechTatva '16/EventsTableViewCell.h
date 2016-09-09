@@ -10,11 +10,9 @@
 
 @interface EventsTableViewCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIView *categoryName;
 
 @property (weak, nonatomic) IBOutlet UIView *eventName;
 
-@property (weak, nonatomic) IBOutlet UIView *eventsAndInfoView;
 @property (weak, nonatomic) IBOutlet UITextView *eventDesc;
 
 @end

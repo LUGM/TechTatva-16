@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17781A3720903931EC736833 /* libPods-TechTatva '16.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AF89144C0E8FCC01EF0FC16 /* libPods-TechTatva '16.a */; };
 		1828D81C1D7476B000E0454F /* CategoriesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828D81A1D7476B000E0454F /* CategoriesTableViewCell.m */; };
 		1828D81D1D7476B000E0454F /* CategoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1828D81B1D7476B000E0454F /* CategoriesTableViewCell.xib */; };
 		18541FE01D6DD9370046EAD0 /* Favourites.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18541FDE1D6DD9370046EAD0 /* Favourites.xcdatamodeld */; };
@@ -28,6 +29,8 @@
 		188F51E71D0F08ED0083169D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188F51E51D0F08ED0083169D /* LaunchScreen.storyboard */; };
 		188F51F21D0F08ED0083169D /* TechTatva__16Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F51F11D0F08ED0083169D /* TechTatva__16Tests.m */; };
 		188F51FD1D0F08ED0083169D /* TechTatva__16UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F51FC1D0F08ED0083169D /* TechTatva__16UITests.m */; };
+		282A7060EF9AE0FD968DE312 /* libPods-TechTatva '16Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F01C890F7CF6D05BFA94292B /* libPods-TechTatva '16Tests.a */; };
+		5D2E4C8A0A7710137FDEED67 /* libPods-TechTatva '16UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 452DB319F49B8C6F35F9AEDA /* libPods-TechTatva '16UITests.a */; };
 		D60BB7B41D70C0120083D0C9 /* EventsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D60BB7B21D70C0120083D0C9 /* EventsTableViewCell.m */; };
 		D60BB7B51D70C0120083D0C9 /* EventsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60BB7B31D70C0120083D0C9 /* EventsTableViewCell.xib */; };
 		D60BB7BB1D70C3A40083D0C9 /* Calendar-50.png in Resources */ = {isa = PBXBuildFile; fileRef = D60BB7B61D70C3A40083D0C9 /* Calendar-50.png */; };
@@ -118,6 +121,12 @@
 		188F51F81D0F08ED0083169D /* TechTatva '16UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TechTatva '16UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		188F51FC1D0F08ED0083169D /* TechTatva__16UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TechTatva__16UITests.m; sourceTree = "<group>"; };
 		188F51FE1D0F08ED0083169D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18CE6C3949F060D61B5D3837 /* Pods-TechTatva '16.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechTatva '16.release.xcconfig"; path = "Pods/Target Support Files/Pods-TechTatva '16/Pods-TechTatva '16.release.xcconfig"; sourceTree = "<group>"; };
+		1E39DD336457E8A5B4AD9BEC /* Pods-TechTatva '16UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechTatva '16UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TechTatva '16UITests/Pods-TechTatva '16UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		452DB319F49B8C6F35F9AEDA /* libPods-TechTatva '16UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TechTatva '16UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AF89144C0E8FCC01EF0FC16 /* libPods-TechTatva '16.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TechTatva '16.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9309D4D26842A1C03AFD9384 /* Pods-TechTatva '16UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechTatva '16UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TechTatva '16UITests/Pods-TechTatva '16UITests.release.xcconfig"; sourceTree = "<group>"; };
+		D5FF03F99F3281ADAB68B8C5 /* Pods-TechTatva '16Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechTatva '16Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TechTatva '16Tests/Pods-TechTatva '16Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D60BB7B11D70C0120083D0C9 /* EventsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsTableViewCell.h; sourceTree = "<group>"; };
 		D60BB7B21D70C0120083D0C9 /* EventsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsTableViewCell.m; sourceTree = "<group>"; };
 		D60BB7B31D70C0120083D0C9 /* EventsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventsTableViewCell.xib; sourceTree = "<group>"; };
@@ -163,6 +172,9 @@
 		D6DCA1C91D1C58E000496F9D /* EventsPopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EventsPopupView.xib; path = ../EventsPopupView.xib; sourceTree = "<group>"; };
 		D6E6326B1D7AC21B00E71851 /* RegistrationPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegistrationPageViewController.h; path = ../RegistrationPageViewController.h; sourceTree = "<group>"; };
 		D6E6326C1D7AC21B00E71851 /* RegistrationPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegistrationPageViewController.m; path = ../RegistrationPageViewController.m; sourceTree = "<group>"; };
+		E01D0203BC4C2BBAC2B42AE4 /* Pods-TechTatva '16.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechTatva '16.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TechTatva '16/Pods-TechTatva '16.debug.xcconfig"; sourceTree = "<group>"; };
+		EE72E6A53052B6A6B327AC10 /* Pods-TechTatva '16Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechTatva '16Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TechTatva '16Tests/Pods-TechTatva '16Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		F01C890F7CF6D05BFA94292B /* libPods-TechTatva '16Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TechTatva '16Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +182,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17781A3720903931EC736833 /* libPods-TechTatva '16.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				282A7060EF9AE0FD968DE312 /* libPods-TechTatva '16Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,12 +198,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D2E4C8A0A7710137FDEED67 /* libPods-TechTatva '16UITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0CE34380EB32F8CB59A55246 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4AF89144C0E8FCC01EF0FC16 /* libPods-TechTatva '16.a */,
+				F01C890F7CF6D05BFA94292B /* libPods-TechTatva '16Tests.a */,
+				452DB319F49B8C6F35F9AEDA /* libPods-TechTatva '16UITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1868992C1D6E34F800B82923 /* Favourites Core Data Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +243,8 @@
 				188F51F01D0F08ED0083169D /* TechTatva '16Tests */,
 				188F51FB1D0F08ED0083169D /* TechTatva '16UITests */,
 				188F51D51D0F08ED0083169D /* Products */,
+				A92A2EFCB0014870CCB14960 /* Pods */,
+				0CE34380EB32F8CB59A55246 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -332,6 +359,19 @@
 			path = "TechTatva '16UITests";
 			sourceTree = "<group>";
 		};
+		A92A2EFCB0014870CCB14960 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E01D0203BC4C2BBAC2B42AE4 /* Pods-TechTatva '16.debug.xcconfig */,
+				18CE6C3949F060D61B5D3837 /* Pods-TechTatva '16.release.xcconfig */,
+				EE72E6A53052B6A6B327AC10 /* Pods-TechTatva '16Tests.debug.xcconfig */,
+				D5FF03F99F3281ADAB68B8C5 /* Pods-TechTatva '16Tests.release.xcconfig */,
+				1E39DD336457E8A5B4AD9BEC /* Pods-TechTatva '16UITests.debug.xcconfig */,
+				9309D4D26842A1C03AFD9384 /* Pods-TechTatva '16UITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D61DBBC71D38AC9D001BA98D /* Instagram Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,9 +397,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 188F52011D0F08ED0083169D /* Build configuration list for PBXNativeTarget "TechTatva '16" */;
 			buildPhases = (
+				26A9072E85E4DA62046A7E14 /* [CP] Check Pods Manifest.lock */,
 				188F51D01D0F08ED0083169D /* Sources */,
 				188F51D11D0F08ED0083169D /* Frameworks */,
 				188F51D21D0F08ED0083169D /* Resources */,
+				A797C7EC2BB2069AA79A9E45 /* [CP] Embed Pods Frameworks */,
+				7E3BA2C7F8EA1A78D7AAC009 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -374,9 +417,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 188F52041D0F08ED0083169D /* Build configuration list for PBXNativeTarget "TechTatva '16Tests" */;
 			buildPhases = (
+				4E1A4CB28E3EAA43808C2361 /* [CP] Check Pods Manifest.lock */,
 				188F51E91D0F08ED0083169D /* Sources */,
 				188F51EA1D0F08ED0083169D /* Frameworks */,
 				188F51EB1D0F08ED0083169D /* Resources */,
+				93EDEABAE503A0B52E34BD56 /* [CP] Embed Pods Frameworks */,
+				E29D149548594DC178DB1AEE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -392,9 +438,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 188F52071D0F08ED0083169D /* Build configuration list for PBXNativeTarget "TechTatva '16UITests" */;
 			buildPhases = (
+				D096323625FE66C8C054BDAD /* [CP] Check Pods Manifest.lock */,
 				188F51F41D0F08ED0083169D /* Sources */,
 				188F51F51D0F08ED0083169D /* Frameworks */,
 				188F51F61D0F08ED0083169D /* Resources */,
+				70A11593B58DACE776714A9E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -499,6 +547,129 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		26A9072E85E4DA62046A7E14 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4E1A4CB28E3EAA43808C2361 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		70A11593B58DACE776714A9E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TechTatva '16UITests/Pods-TechTatva '16UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E3BA2C7F8EA1A78D7AAC009 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TechTatva '16/Pods-TechTatva '16-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93EDEABAE503A0B52E34BD56 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TechTatva '16Tests/Pods-TechTatva '16Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A797C7EC2BB2069AA79A9E45 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TechTatva '16/Pods-TechTatva '16-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D096323625FE66C8C054BDAD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E29D149548594DC178DB1AEE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TechTatva '16Tests/Pods-TechTatva '16Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		188F51D01D0F08ED0083169D /* Sources */ = {
@@ -667,6 +838,7 @@
 		};
 		188F52021D0F08ED0083169D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E01D0203BC4C2BBAC2B42AE4 /* Pods-TechTatva '16.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "TechTatva '16/Info.plist";
@@ -679,6 +851,7 @@
 		};
 		188F52031D0F08ED0083169D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18CE6C3949F060D61B5D3837 /* Pods-TechTatva '16.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "TechTatva '16/Info.plist";
@@ -691,6 +864,7 @@
 		};
 		188F52051D0F08ED0083169D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE72E6A53052B6A6B327AC10 /* Pods-TechTatva '16Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "TechTatva '16Tests/Info.plist";
@@ -703,6 +877,7 @@
 		};
 		188F52061D0F08ED0083169D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5FF03F99F3281ADAB68B8C5 /* Pods-TechTatva '16Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "TechTatva '16Tests/Info.plist";
@@ -715,6 +890,7 @@
 		};
 		188F52081D0F08ED0083169D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E39DD336457E8A5B4AD9BEC /* Pods-TechTatva '16UITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "TechTatva '16UITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -726,6 +902,7 @@
 		};
 		188F52091D0F08ED0083169D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9309D4D26842A1C03AFD9384 /* Pods-TechTatva '16UITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "TechTatva '16UITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
