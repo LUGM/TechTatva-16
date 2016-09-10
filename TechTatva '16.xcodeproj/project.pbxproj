@@ -34,7 +34,7 @@
 		D60BB7B41D70C0120083D0C9 /* EventsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D60BB7B21D70C0120083D0C9 /* EventsTableViewCell.m */; };
 		D60BB7B51D70C0120083D0C9 /* EventsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60BB7B31D70C0120083D0C9 /* EventsTableViewCell.xib */; };
 		D60BB7BB1D70C3A40083D0C9 /* Calendar-50.png in Resources */ = {isa = PBXBuildFile; fileRef = D60BB7B61D70C3A40083D0C9 /* Calendar-50.png */; };
-		D60BB7BC1D70C3A40083D0C9 /* Marker Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = D60BB7B71D70C3A40083D0C9 /* Marker Filled-50.png */; };
+		D60BB7BC1D70C3A40083D0C9 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = D60BB7B71D70C3A40083D0C9 /* location.png */; };
 		D60BB7BD1D70C3A40083D0C9 /* Phone Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = D60BB7B81D70C3A40083D0C9 /* Phone Filled-50.png */; };
 		D60BB7BE1D70C3A40083D0C9 /* Time Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = D60BB7B91D70C3A40083D0C9 /* Time Filled-50.png */; };
 		D60BB7BF1D70C3A40083D0C9 /* User Group Man Man-50.png in Resources */ = {isa = PBXBuildFile; fileRef = D60BB7BA1D70C3A40083D0C9 /* User Group Man Man-50.png */; };
@@ -53,6 +53,9 @@
 		D699EECA1D1BFF4D0093F9CC /* InfoDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D699EEC91D1BFF4D0093F9CC /* InfoDetailsView.xib */; };
 		D699EECD1D1BFF670093F9CC /* EventsDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = D699EECC1D1BFF670093F9CC /* EventsDetailsView.m */; };
 		D699EECF1D1BFF750093F9CC /* EventsDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D699EECE1D1BFF750093F9CC /* EventsDetailsView.xib */; };
+		D6A2B8CA1D847415008DE478 /* AllEventsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A2B8C81D847415008DE478 /* AllEventsTableViewCell.m */; };
+		D6A2B8CB1D847415008DE478 /* AllEventsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A2B8C91D847415008DE478 /* AllEventsTableViewCell.xib */; };
+		D6A2B8CE1D8477BF008DE478 /* AllEventsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A2B8CD1D8477BF008DE478 /* AllEventsTableViewController.m */; };
 		D6C0853D1D7EBCEE00FBD1BC /* FeedbackTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C0853C1D7EBCEE00FBD1BC /* FeedbackTableViewController.m */; };
 		D6C5949E1D1831E9006F19D0 /* likepic.png in Resources */ = {isa = PBXBuildFile; fileRef = D6C5949B1D1831E9006F19D0 /* likepic.png */; };
 		D6C5949F1D1831E9006F19D0 /* techtatvalogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6C5949C1D1831E9006F19D0 /* techtatvalogo.jpg */; };
@@ -61,6 +64,8 @@
 		D6C594DD1D19771C006F19D0 /* InstagramTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C594DB1D19771C006F19D0 /* InstagramTableViewCell.m */; };
 		D6C594DE1D19771C006F19D0 /* InstagramTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C594DC1D19771C006F19D0 /* InstagramTableViewCell.xib */; };
 		D6D061261D782D8B00D9267E /* OnlineEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D061251D782D8B00D9267E /* OnlineEventsViewController.m */; };
+		D6DC67231D848AFB00D75A5B /* filledstar.png in Resources */ = {isa = PBXBuildFile; fileRef = D6DC67211D848AFB00D75A5B /* filledstar.png */; };
+		D6DC67241D848AFB00D75A5B /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = D6DC67221D848AFB00D75A5B /* star.png */; };
 		D6DCA1C61D1C58BC00496F9D /* EventsPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DCA1C51D1C58BC00496F9D /* EventsPopupView.m */; };
 		D6DCA1CA1D1C58E000496F9D /* EventsPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6DCA1C91D1C58E000496F9D /* EventsPopupView.xib */; };
 		D6E6326D1D7AC21B00E71851 /* RegistrationPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E6326C1D7AC21B00E71851 /* RegistrationPageViewController.m */; };
@@ -131,7 +136,7 @@
 		D60BB7B21D70C0120083D0C9 /* EventsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsTableViewCell.m; sourceTree = "<group>"; };
 		D60BB7B31D70C0120083D0C9 /* EventsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventsTableViewCell.xib; sourceTree = "<group>"; };
 		D60BB7B61D70C3A40083D0C9 /* Calendar-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Calendar-50.png"; sourceTree = "<group>"; };
-		D60BB7B71D70C3A40083D0C9 /* Marker Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marker Filled-50.png"; sourceTree = "<group>"; };
+		D60BB7B71D70C3A40083D0C9 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
 		D60BB7B81D70C3A40083D0C9 /* Phone Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Phone Filled-50.png"; sourceTree = "<group>"; };
 		D60BB7B91D70C3A40083D0C9 /* Time Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Time Filled-50.png"; sourceTree = "<group>"; };
 		D60BB7BA1D70C3A40083D0C9 /* User Group Man Man-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "User Group Man Man-50.png"; sourceTree = "<group>"; };
@@ -155,6 +160,11 @@
 		D699EECB1D1BFF670093F9CC /* EventsDetailsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventsDetailsView.h; path = ../EventsDetailsView.h; sourceTree = "<group>"; };
 		D699EECC1D1BFF670093F9CC /* EventsDetailsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventsDetailsView.m; path = ../EventsDetailsView.m; sourceTree = "<group>"; };
 		D699EECE1D1BFF750093F9CC /* EventsDetailsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EventsDetailsView.xib; path = ../EventsDetailsView.xib; sourceTree = "<group>"; };
+		D6A2B8C71D847415008DE478 /* AllEventsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllEventsTableViewCell.h; sourceTree = "<group>"; };
+		D6A2B8C81D847415008DE478 /* AllEventsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllEventsTableViewCell.m; sourceTree = "<group>"; };
+		D6A2B8C91D847415008DE478 /* AllEventsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllEventsTableViewCell.xib; sourceTree = "<group>"; };
+		D6A2B8CC1D8477BF008DE478 /* AllEventsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllEventsTableViewController.h; sourceTree = "<group>"; };
+		D6A2B8CD1D8477BF008DE478 /* AllEventsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllEventsTableViewController.m; sourceTree = "<group>"; };
 		D6C0853B1D7EBCEE00FBD1BC /* FeedbackTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackTableViewController.h; sourceTree = "<group>"; };
 		D6C0853C1D7EBCEE00FBD1BC /* FeedbackTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackTableViewController.m; sourceTree = "<group>"; };
 		D6C5949B1D1831E9006F19D0 /* likepic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = likepic.png; sourceTree = "<group>"; };
@@ -167,6 +177,8 @@
 		D6C594DC1D19771C006F19D0 /* InstagramTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InstagramTableViewCell.xib; sourceTree = "<group>"; };
 		D6D061241D782D8B00D9267E /* OnlineEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlineEventsViewController.h; sourceTree = "<group>"; };
 		D6D061251D782D8B00D9267E /* OnlineEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlineEventsViewController.m; sourceTree = "<group>"; };
+		D6DC67211D848AFB00D75A5B /* filledstar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = filledstar.png; sourceTree = "<group>"; };
+		D6DC67221D848AFB00D75A5B /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		D6DCA1C41D1C58BC00496F9D /* EventsPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsPopupView.h; sourceTree = "<group>"; };
 		D6DCA1C51D1C58BC00496F9D /* EventsPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsPopupView.m; sourceTree = "<group>"; };
 		D6DCA1C91D1C58E000496F9D /* EventsPopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EventsPopupView.xib; path = ../EventsPopupView.xib; sourceTree = "<group>"; };
@@ -266,6 +278,11 @@
 				1868992D1D6E350500B82923 /* App Delegate */,
 				1868992C1D6E34F800B82923 /* Favourites Core Data Model */,
 				188F51E01D0F08ED0083169D /* Main.storyboard */,
+				D6A2B8CC1D8477BF008DE478 /* AllEventsTableViewController.h */,
+				D6A2B8CD1D8477BF008DE478 /* AllEventsTableViewController.m */,
+				D6A2B8C71D847415008DE478 /* AllEventsTableViewCell.h */,
+				D6A2B8C81D847415008DE478 /* AllEventsTableViewCell.m */,
+				D6A2B8C91D847415008DE478 /* AllEventsTableViewCell.xib */,
 				D6C0853B1D7EBCEE00FBD1BC /* FeedbackTableViewController.h */,
 				D6C0853C1D7EBCEE00FBD1BC /* FeedbackTableViewController.m */,
 				D6247BF41D7B0C58007F7FF1 /* AboutUsTableViewController.h */,
@@ -323,12 +340,14 @@
 				D6247BF91D7B100C007F7FF1 /* google+@2x.png */,
 				D6247BFB1D7B100C007F7FF1 /* twitter@2x.png */,
 				D60BB7B61D70C3A40083D0C9 /* Calendar-50.png */,
-				D60BB7B71D70C3A40083D0C9 /* Marker Filled-50.png */,
+				D60BB7B71D70C3A40083D0C9 /* location.png */,
 				D60BB7B81D70C3A40083D0C9 /* Phone Filled-50.png */,
 				D60BB7B91D70C3A40083D0C9 /* Time Filled-50.png */,
 				D60BB7BA1D70C3A40083D0C9 /* User Group Man Man-50.png */,
 				188F51E81D0F08ED0083169D /* Info.plist */,
 				D6C5949B1D1831E9006F19D0 /* likepic.png */,
+				D6DC67211D848AFB00D75A5B /* filledstar.png */,
+				D6DC67221D848AFB00D75A5B /* star.png */,
 				D6C5949C1D1831E9006F19D0 /* techtatvalogo.jpg */,
 				D6C5949D1D1831E9006F19D0 /* Comment.png */,
 				D60BB7C81D72F08B0083D0C9 /* Category@2x.png */,
@@ -506,6 +525,7 @@
 				D6DCA1CA1D1C58E000496F9D /* EventsPopupView.xib in Resources */,
 				D699EECA1D1BFF4D0093F9CC /* InfoDetailsView.xib in Resources */,
 				D6247BF81D7B0E74007F7FF1 /* fb@2x.png in Resources */,
+				D6DC67241D848AFB00D75A5B /* star.png in Resources */,
 				D60BB7B51D70C0120083D0C9 /* EventsTableViewCell.xib in Resources */,
 				188F51E71D0F08ED0083169D /* LaunchScreen.storyboard in Resources */,
 				D6C594DE1D19771C006F19D0 /* InstagramTableViewCell.xib in Resources */,
@@ -517,13 +537,15 @@
 				D60BB7BB1D70C3A40083D0C9 /* Calendar-50.png in Resources */,
 				D6C594A01D1831E9006F19D0 /* Comment.png in Resources */,
 				18749BC71D13F8FC00858B85 /* thumb_IMG_7632_1024.jpg in Resources */,
+				D6A2B8CB1D847415008DE478 /* AllEventsTableViewCell.xib in Resources */,
 				D60BB7BD1D70C3A40083D0C9 /* Phone Filled-50.png in Resources */,
 				D6247BFE1D7B100C007F7FF1 /* twitter@2x.png in Resources */,
 				D60BB7C51D72EF290083D0C9 /* Events@2x.png in Resources */,
 				D60BB7C71D72EF290083D0C9 /* Results@2x.png in Resources */,
+				D6DC67231D848AFB00D75A5B /* filledstar.png in Resources */,
 				188F51E41D0F08ED0083169D /* Assets.xcassets in Resources */,
 				D6247BFC1D7B100C007F7FF1 /* google+@2x.png in Resources */,
-				D60BB7BC1D70C3A40083D0C9 /* Marker Filled-50.png in Resources */,
+				D60BB7BC1D70C3A40083D0C9 /* location.png in Resources */,
 				188F51E21D0F08ED0083169D /* Main.storyboard in Resources */,
 				D699EECF1D1BFF750093F9CC /* EventsDetailsView.xib in Resources */,
 				1828D81D1D7476B000E0454F /* CategoriesTableViewCell.xib in Resources */,
@@ -678,6 +700,7 @@
 			files = (
 				D61DBBCA1D38ACBF001BA98D /* instagramJsonModel.m in Sources */,
 				18749BCA1D14094700858B85 /* ResultsTableViewController.m in Sources */,
+				D6A2B8CE1D8477BF008DE478 /* AllEventsTableViewController.m in Sources */,
 				188F51DC1D0F08ED0083169D /* AppDelegate.m in Sources */,
 				D6247BF61D7B0C58007F7FF1 /* AboutUsTableViewController.m in Sources */,
 				D6C0853D1D7EBCEE00FBD1BC /* FeedbackTableViewController.m in Sources */,
@@ -695,6 +718,7 @@
 				1828D81C1D7476B000E0454F /* CategoriesTableViewCell.m in Sources */,
 				188F51D91D0F08ED0083169D /* main.m in Sources */,
 				D6DCA1C61D1C58BC00496F9D /* EventsPopupView.m in Sources */,
+				D6A2B8CA1D847415008DE478 /* AllEventsTableViewCell.m in Sources */,
 				D60BB7B41D70C0120083D0C9 /* EventsTableViewCell.m in Sources */,
 				D6D061261D782D8B00D9267E /* OnlineEventsViewController.m in Sources */,
 				18749BC01D13F17600858B85 /* MoreTableViewController.m in Sources */,
