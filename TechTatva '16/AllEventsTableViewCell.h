@@ -20,8 +20,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *contact;
 @property (strong, nonatomic) IBOutlet UILabel *maxppl;
 @property (strong, nonatomic) IBOutlet UILabel *time;
+@property (strong, nonatomic) IBOutlet UIButton *favouritesButton;
 
-@property (nonatomic) NSInteger favbtnIndex;
 - (IBAction)favBtnPressed:(UIButton *)sender;
 
 @end

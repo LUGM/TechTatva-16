@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15E65" minimumToolsVersion="Xcode 7.0">
-    <entity name="Favourites" representedClassName="Entity" syncable="YES">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15A284" minimumToolsVersion="Xcode 7.0">
+    <entity name="Favourite" representedClassName="Favourite" syncable="YES">
         <attribute name="cveid" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="cvename" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="cventcvetname" optional="YES" attributeType="String" syncable="YES"/>
@@ -9,8 +9,9 @@
         <attribute name="eveid" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="evemaxteamsize" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="evename" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="favourite" optional="YES" attributeType="Boolean" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Favourites" positionX="-54" positionY="-9" width="128" height="165"/>
+        <element name="Favourite" positionX="-36" positionY="72" width="128" height="180"/>
     </elements>
 </model>

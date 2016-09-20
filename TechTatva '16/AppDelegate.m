@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "Entity.h"
+#import "Favourite.h"
 
 @interface AppDelegate ()
 
@@ -88,7 +88,7 @@
     if (_managedObjectModel != nil) {
         return _managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"TechTatva'16" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Favourites" withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
 }

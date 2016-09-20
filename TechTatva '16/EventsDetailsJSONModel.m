@@ -20,7 +20,7 @@
             self.eventName = [data objectForKey:@"ename"];
             self.eventId = [[data objectForKey:@"eid"]integerValue];
             self.eventDescription = [data objectForKey:@"edesc"];
-            self.eventMaxTeamSize = [[data objectForKey:@"emaxteamsize"]integerValue];
+            self.eventMaxTeamSize = [data objectForKey:@"emaxteamsize"];
             self.categoryEventId = [data objectForKey:@"cid"];
             self.categoryEventName = [data objectForKey:@"cname"];
             self.cntctname = [data objectForKey:@"cntctname"];

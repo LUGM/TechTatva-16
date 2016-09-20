@@ -1,32 +1,28 @@
 //
-//  Entity.m
-//  TechTatva '16
+//  Favourite.m
+//  
 //
-//  Created by Apple on 24/08/16.
-//  Copyright © 2016 YASH. All rights reserved.
+//  Created by Abhishek Vora on 12/09/16.
+//
 //
 
-#import "Entity.h"
+#import "Favourite.h"
 #import "AppDelegate.h"
 
-@implementation Entity
+@implementation Favourite
 
 // Insert code here to add functionality to your managed object subclass
-
-+ (NSManagedObjectContext *) managedObjectContext
++(NSManagedObjectContext *) managedObjectContext
 {
-    
     NSManagedObjectContext *context = nil;
-    
     id delegate = [[UIApplication sharedApplication] delegate];
     
-    if ([delegate performSelector:@selector(managedObjectContext) withObject:self])
+    if([delegate performSelector:@selector(managedObjectContext) withObject:self])
     {
         context = [delegate managedObjectContext];
     }
-    
     return context;
-    
 }
+
 
 @end
