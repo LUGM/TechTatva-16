@@ -9,6 +9,8 @@
 #import "InstagramTableViewController.h"
 #import "InstagramTableViewCell.h"
 #import "instagramJsonModel.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+
 
 @interface InstagramTableViewController ()
 {
@@ -84,7 +86,11 @@
     instagramJsonModel *model = [instaArray objectAtIndex:indexPath.row];
     cell.like_img.image = [UIImage imageNamed:[NSString stringWithFormat:@"likepic.png"]];
     cell.comment_image.image = [UIImage imageNamed:[NSString stringWithFormat:@"Comment.png"]];
-    cell.mainImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"thumb_IMG_7632_1024.jpg"]];
+    
+    //cell.mainImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"thumb_IMG_7632_1024.jpg"]];
+    //[cell.mainImage.image setImageWithURL:[NSURL URLWithString:model.standardResolutionImageUrl] placeholderImage:[UIImage imageNamed:@"youtube.png"]];
+    [cell.mainImage.image ssd_setImageWithURL:[NSURL URLWithString:model.standardResolutionImageUrl] placeholderImage:[UIImage imageNamed:@"youtube.png"] options:SDWebImageRefreshCached];
+    
     cell.likeLabel.text = [NSString stringWithFormat:@"%ld likes", (long)model.numberOfLikes];
     cell.commentLabel.text = [NSString stringWithFormat:@"%ld comments", (long)model.numberOfComments];
     cell.imageUploaderLabel.text = model.postingUserName;
@@ -92,7 +98,7 @@
     NSURL *senderImage = [NSURL URLWithString:model.postingUserImageUrl];
     cell.appLogo.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:senderImage]];        
     return cell;
-    
+
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

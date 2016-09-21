@@ -7,6 +7,8 @@
 //
 
 #import "instagramJsonModel.h"
+#import "UIImageView+WebCache.h"
+
 
 @implementation instagramJsonModel
 
@@ -37,6 +39,7 @@
             self.captionText = [captionKey objectForKey:@"text"];
             self.postingUserName = [fromKey objectForKey:@"username"];
             self.postingUserImageUrl = [fromKey objectForKey:@"profile_picture"];
+            
         }
     }
     return self;
