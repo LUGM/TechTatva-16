@@ -7,8 +7,6 @@
 //
 
 #import "AboutUsTableViewController.h"
-#import "Reachability.h"
-#import "PrefixHeader.pch"
 
 @interface AboutUsTableViewController ()
 

@@ -11,7 +11,7 @@
 @implementation AllEventsTableViewCell
 
 - (void)awakeFromNib {
-    
+    [super awakeFromNib];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -20,18 +20,18 @@
     // Configure the view for the selected state
 }
 
-- (IBAction)favBtnPressed:(UIButton *)sender
-{
-//    if (self.favbtnIndex == 0) {
-//        self.favbtnIndex = 1;
-//        [sender setBackgroundImage:[UIImage imageNamed:@"filledstar.png"] forState:UIControlStateNormal];
-//    }
-//    else
-//    {
-//        self.favbtnIndex = 0;
-//        [sender setBackgroundImage:[UIImage imageNamed:@"star.png"] forState:UIControlStateNormal];
-//        
-//    }
-}
+//- (IBAction)favBtnPressed:(UIButton *)sender
+//{
+////    if (self.favbtnIndex == 0) {
+////        self.favbtnIndex = 1;
+////        [sender setBackgroundImage:[UIImage imageNamed:@"filledstar.png"] forState:UIControlStateNormal];
+////    }
+////    else
+////    {
+////        self.favbtnIndex = 0;
+////        [sender setBackgroundImage:[UIImage imageNamed:@"star.png"] forState:UIControlStateNormal];
+////        
+////    }
+//}
 
 @end

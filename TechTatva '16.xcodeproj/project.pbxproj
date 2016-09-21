@@ -95,7 +95,6 @@
 /* Begin PBXFileReference section */
 		181290C01D92C06200E5B740 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		181290C11D92C06200E5B740 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		181290C51D92C14B00E5B740 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		1828D8191D7476B000E0454F /* CategoriesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesTableViewCell.h; sourceTree = "<group>"; };
 		1828D81A1D7476B000E0454F /* CategoriesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesTableViewCell.m; sourceTree = "<group>"; };
 		1828D81B1D7476B000E0454F /* CategoriesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoriesTableViewCell.xib; sourceTree = "<group>"; };
@@ -129,6 +128,7 @@
 		188F51F81D0F08ED0083169D /* TechTatva '16UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TechTatva '16UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		188F51FC1D0F08ED0083169D /* TechTatva__16UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TechTatva__16UITests.m; sourceTree = "<group>"; };
 		188F51FE1D0F08ED0083169D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18C3F2141D931513007F33DB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		18CE6C3949F060D61B5D3837 /* Pods-TechTatva '16.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechTatva '16.release.xcconfig"; path = "Pods/Target Support Files/Pods-TechTatva '16/Pods-TechTatva '16.release.xcconfig"; sourceTree = "<group>"; };
 		1E39DD336457E8A5B4AD9BEC /* Pods-TechTatva '16UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechTatva '16UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TechTatva '16UITests/Pods-TechTatva '16UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		452DB319F49B8C6F35F9AEDA /* libPods-TechTatva '16UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TechTatva '16UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -300,7 +300,6 @@
 				D6247BF51D7B0C58007F7FF1 /* AboutUsTableViewController.m */,
 				181290C01D92C06200E5B740 /* Reachability.h */,
 				181290C11D92C06200E5B740 /* Reachability.m */,
-				181290C51D92C14B00E5B740 /* PrefixHeader.pch */,
 				D6E6326B1D7AC21B00E71851 /* RegistrationPageViewController.h */,
 				D6E6326C1D7AC21B00E71851 /* RegistrationPageViewController.m */,
 				D6D061241D782D8B00D9267E /* OnlineEventsViewController.h */,
@@ -349,6 +348,7 @@
 		188F51D71D0F08ED0083169D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				18C3F2141D931513007F33DB /* PrefixHeader.pch */,
 				D6247BF71D7B0E74007F7FF1 /* fb@2x.png */,
 				D6247C011D7B145F007F7FF1 /* youtube.png */,
 				D6247BF91D7B100C007F7FF1 /* google+@2x.png */,
@@ -493,7 +493,7 @@
 		188F51CC1D0F08ED0083169D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = YASH;
 				TargetAttributes = {
 					188F51D31D0F08ED0083169D = {
@@ -810,8 +810,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -854,8 +856,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -883,6 +887,8 @@
 			baseConfigurationReference = E01D0203BC4C2BBAC2B42AE4 /* Pods-TechTatva '16.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TechTatva '16/PrefixHeader.pch";
 				INFOPLIST_FILE = "TechTatva '16/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -896,6 +902,8 @@
 			baseConfigurationReference = 18CE6C3949F060D61B5D3837 /* Pods-TechTatva '16.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TechTatva '16/PrefixHeader.pch";
 				INFOPLIST_FILE = "TechTatva '16/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

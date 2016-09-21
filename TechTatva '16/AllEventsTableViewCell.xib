@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -12,82 +13,68 @@
             <rect key="frame" x="0.0" y="0.0" width="300" height="275"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="300" height="274.5"/>
+                <frame key="frameInset" width="300" height="275"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMC-dJ-76x">
-                        <rect key="frame" x="18" y="26" width="255" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cat. Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHk-Uf-Jxo">
-                        <rect key="frame" x="18" y="54.5" width="210" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1VD-j2-TXd">
-                        <rect key="frame" x="99" y="110.5" width="180" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max Ppl" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhc-Fc-bpb">
-                        <rect key="frame" x="99" y="186.5" width="180" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mxw-ip-5hC">
-                        <rect key="frame" x="99" y="224.5" width="180" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location.png" translatesAutoresizingMaskIntoConstraints="NO" id="uNp-IG-A6q">
-                        <rect key="frame" x="38" y="104.5" width="31" height="31"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="31" id="Ppp-Mt-huc"/>
                             <constraint firstAttribute="width" constant="31" id="kHT-ha-9Ew"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phone Filled-50.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ni1-Cq-eSO">
-                        <rect key="frame" x="38" y="145.5" width="31" height="31"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="31" id="u63-ub-zas"/>
                             <constraint firstAttribute="height" constant="31" id="zBp-Mt-jDG"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="User Group Man Man-50.png" translatesAutoresizingMaskIntoConstraints="NO" id="237-In-6Gs">
-                        <rect key="frame" x="38" y="184.5" width="31" height="31"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="31" id="PyS-PG-dDF"/>
                             <constraint firstAttribute="width" constant="31" id="r8u-Vf-avt"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Time Filled-50.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xbs-zI-2B0">
-                        <rect key="frame" x="38" y="223.5" width="31" height="31"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="31" id="dwV-fm-v0J"/>
                             <constraint firstAttribute="height" constant="31" id="mkv-3K-a9c"/>
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z3f-d3-jRa">
-                        <rect key="frame" x="243" y="49.5" width="30" height="30.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="KXf-Hz-vZF"/>
                             <constraint firstAttribute="height" constant="30.5" id="tNf-Sr-Iox"/>
                         </constraints>
                         <state key="normal" backgroundImage="star.png"/>
-                        <connections>
-                            <action selector="favBtnPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="mwl-9z-ea1"/>
-                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GY5-L5-hqq">
-                        <rect key="frame" x="99" y="148.5" width="180" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -127,7 +114,7 @@
                 <outlet property="contact" destination="GY5-L5-hqq" id="Mec-NT-V8C"/>
                 <outlet property="contactImg" destination="Ni1-Cq-eSO" id="DwA-XA-OKL"/>
                 <outlet property="eventName" destination="nMC-dJ-76x" id="5gD-rR-9cL"/>
-                <outlet property="favouritesButton" destination="Z3f-d3-jRa" id="aod-ZK-x1e"/>
+                <outlet property="favouritesButton" destination="Z3f-d3-jRa" id="3ch-Zh-i11"/>
                 <outlet property="maxTeamsImg" destination="237-In-6Gs" id="8Ov-TC-fiI"/>
                 <outlet property="maxppl" destination="qhc-Fc-bpb" id="KNU-8J-MhO"/>
                 <outlet property="time" destination="Mxw-ip-5hC" id="3PM-ko-C4G"/>

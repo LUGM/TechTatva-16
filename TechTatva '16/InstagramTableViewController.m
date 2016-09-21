@@ -9,23 +9,30 @@
 #import "InstagramTableViewController.h"
 #import "InstagramTableViewCell.h"
 #import "instagramJsonModel.h"
-#import <SDWebImage/UIImageView+WebCache.h>
-
+#import "SDWebImage/UIImageView+WebCache.h"
 
 @interface InstagramTableViewController ()
 {
     NSMutableArray *instaArray;
+    NSURL *mainInstagramUrl;
 }
 
 @end
 
 @implementation InstagramTableViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
-    NSURL *mainInstagramUrl = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.instagram.com/v1/tags/techtatva16/media/recent?access_token=630237785.f53975e.8dcfa635acf14fcbb99681c60519d04c"]];
+    mainInstagramUrl = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.instagram.com/v1/tags/techtatva16/media/recent?access_token=630237785.f53975e.8dcfa635acf14fcbb99681c60519d04c"]];
+    SVHUD_SHOW;
+    [self getInstaData];
     
+}
+
+- (void) getInstaData
+{
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         @try {
             NSData *mydata = [NSData dataWithContentsOfURL:mainInstagramUrl];
@@ -36,14 +43,12 @@
                 id jsonData = [NSJSONSerialization JSONObjectWithData:mydata options:kNilOptions error:&error];
                 id requiredArray = [jsonData valueForKey:@"data"];
                 instaArray = [instagramJsonModel getArrayFromJson:requiredArray];
-                //NSLog(@"%@",jsonData);
-                
+//                NSLog(@"INSTA %@",jsonData);
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self.tableView reloadData];
+                    SVHUD_HIDE;
                 });
             }
-            
-            
         }
         @catch (NSException *exception) {
             
@@ -52,9 +57,6 @@
             
         }
     });
-
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -69,6 +71,8 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (instaArray.count == 0)
+        return 0;
     return instaArray.count;
 }
 
@@ -89,14 +93,14 @@
     
     //cell.mainImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"thumb_IMG_7632_1024.jpg"]];
     //[cell.mainImage.image setImageWithURL:[NSURL URLWithString:model.standardResolutionImageUrl] placeholderImage:[UIImage imageNamed:@"youtube.png"]];
-    [cell.mainImage.image ssd_setImageWithURL:[NSURL URLWithString:model.standardResolutionImageUrl] placeholderImage:[UIImage imageNamed:@"youtube.png"] options:SDWebImageRefreshCached];
+    [cell.mainImage sd_setImageWithURL:[NSURL URLWithString:model.standardResolutionImageUrl] placeholderImage:[UIImage imageNamed:@"youtube.png"]];
     
     cell.likeLabel.text = [NSString stringWithFormat:@"%ld likes", (long)model.numberOfLikes];
     cell.commentLabel.text = [NSString stringWithFormat:@"%ld comments", (long)model.numberOfComments];
     cell.imageUploaderLabel.text = model.postingUserName;
     cell.descriptionLabel.text = model.captionText;
     NSURL *senderImage = [NSURL URLWithString:model.postingUserImageUrl];
-    cell.appLogo.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:senderImage]];        
+    [cell.appLogo sd_setImageWithURL:senderImage placeholderImage:[UIImage imageNamed:@"youtube.png"]];
     return cell;
 
 }

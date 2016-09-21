@@ -76,7 +76,7 @@
 {
     FavouritesViewController *fav = [[FavouritesViewController alloc]init];
     
-    NSIndexPath *indexPath = [someObject valueForKey:@"object"];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[someObject tag] inSection:0];
     NSLog(@"index is %ld",(long)indexPath.row);
     
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Favourite"];
@@ -89,10 +89,9 @@
     for (int i=0; i<fetchedArray.count; i++)
     {
         
-        EventsDetailsJSONModel *checkForFav = [fetchedArray objectAtIndex:i];
-        if ([checkForFav.eventName isEqualToString:event.eventName])
+        Favourite *checkForFav = [fetchedArray objectAtIndex:i];
+        if ([checkForFav.cvename isEqualToString:event.categoryEventName])
         {
-            
             eventAlreadyThere = 1;
             UIAlertView *addedAlert = [[UIAlertView alloc]initWithTitle:@"Event Already Added!" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             [addedAlert show];
@@ -128,8 +127,7 @@
         }
         
         if (favouriteEvent.favourite == 0) {
-            //favouriteEvent.favourite = 1;
-            [Favourite setValue:@"1" forKey:@"favourite"];
+            favouriteEvent.favourite = [NSNumber numberWithInteger:1];
             [allEvent.favouritesButton setBackgroundImage:[UIImage imageNamed:@"filledstar.png"] forState:UIControlStateNormal];
         }
         else
