@@ -90,6 +90,14 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+- (UIView *) tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    
+    UIView *blankView = [[UIView alloc] initWithFrame:CGRectZero];
+    return blankView;
+    
+}
+
 -(IBAction)backToStart:(UIStoryboardSegue *)segue
 {
     

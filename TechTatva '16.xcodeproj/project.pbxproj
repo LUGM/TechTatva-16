@@ -57,6 +57,8 @@
 		D699EECA1D1BFF4D0093F9CC /* InfoDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D699EEC91D1BFF4D0093F9CC /* InfoDetailsView.xib */; };
 		D699EECD1D1BFF670093F9CC /* EventsDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = D699EECC1D1BFF670093F9CC /* EventsDetailsView.m */; };
 		D699EECF1D1BFF750093F9CC /* EventsDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D699EECE1D1BFF750093F9CC /* EventsDetailsView.xib */; };
+		D69A1A8D1D996021001F9E7F /* ScheduleJsonDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A1A8C1D996021001F9E7F /* ScheduleJsonDataModel.m */; };
+		D69A1A931D997463001F9E7F /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A1A921D997463001F9E7F /* ScheduleViewController.m */; };
 		D6A2B8CA1D847415008DE478 /* AllEventsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A2B8C81D847415008DE478 /* AllEventsTableViewCell.m */; };
 		D6A2B8CB1D847415008DE478 /* AllEventsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A2B8C91D847415008DE478 /* AllEventsTableViewCell.xib */; };
 		D6A2B8CE1D8477BF008DE478 /* AllEventsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A2B8CD1D8477BF008DE478 /* AllEventsTableViewController.m */; };
@@ -67,6 +69,7 @@
 		D6C594D91D1976F8006F19D0 /* InstagramTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C594D81D1976F8006F19D0 /* InstagramTableViewController.m */; };
 		D6C594DD1D19771C006F19D0 /* InstagramTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C594DB1D19771C006F19D0 /* InstagramTableViewCell.m */; };
 		D6C594DE1D19771C006F19D0 /* InstagramTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C594DC1D19771C006F19D0 /* InstagramTableViewCell.xib */; };
+		D6C6B3CD1D99891D003C52A7 /* ResultsJsonDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C6B3CC1D99891D003C52A7 /* ResultsJsonDataModel.m */; };
 		D6D061261D782D8B00D9267E /* OnlineEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D061251D782D8B00D9267E /* OnlineEventsViewController.m */; };
 		D6DC67231D848AFB00D75A5B /* filledstar.png in Resources */ = {isa = PBXBuildFile; fileRef = D6DC67211D848AFB00D75A5B /* filledstar.png */; };
 		D6DC67241D848AFB00D75A5B /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = D6DC67221D848AFB00D75A5B /* star.png */; };
@@ -169,6 +172,10 @@
 		D699EECB1D1BFF670093F9CC /* EventsDetailsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventsDetailsView.h; path = ../EventsDetailsView.h; sourceTree = "<group>"; };
 		D699EECC1D1BFF670093F9CC /* EventsDetailsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventsDetailsView.m; path = ../EventsDetailsView.m; sourceTree = "<group>"; };
 		D699EECE1D1BFF750093F9CC /* EventsDetailsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EventsDetailsView.xib; path = ../EventsDetailsView.xib; sourceTree = "<group>"; };
+		D69A1A8B1D996021001F9E7F /* ScheduleJsonDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleJsonDataModel.h; sourceTree = "<group>"; };
+		D69A1A8C1D996021001F9E7F /* ScheduleJsonDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleJsonDataModel.m; sourceTree = "<group>"; };
+		D69A1A911D997463001F9E7F /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
+		D69A1A921D997463001F9E7F /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
 		D6A2B8C71D847415008DE478 /* AllEventsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllEventsTableViewCell.h; sourceTree = "<group>"; };
 		D6A2B8C81D847415008DE478 /* AllEventsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllEventsTableViewCell.m; sourceTree = "<group>"; };
 		D6A2B8C91D847415008DE478 /* AllEventsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllEventsTableViewCell.xib; sourceTree = "<group>"; };
@@ -184,6 +191,8 @@
 		D6C594DA1D19771C006F19D0 /* InstagramTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramTableViewCell.h; sourceTree = "<group>"; };
 		D6C594DB1D19771C006F19D0 /* InstagramTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramTableViewCell.m; sourceTree = "<group>"; };
 		D6C594DC1D19771C006F19D0 /* InstagramTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InstagramTableViewCell.xib; sourceTree = "<group>"; };
+		D6C6B3CB1D99891D003C52A7 /* ResultsJsonDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsJsonDataModel.h; sourceTree = "<group>"; };
+		D6C6B3CC1D99891D003C52A7 /* ResultsJsonDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsJsonDataModel.m; sourceTree = "<group>"; };
 		D6D061241D782D8B00D9267E /* OnlineEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlineEventsViewController.h; sourceTree = "<group>"; };
 		D6D061251D782D8B00D9267E /* OnlineEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlineEventsViewController.m; sourceTree = "<group>"; };
 		D6DC67211D848AFB00D75A5B /* filledstar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = filledstar.png; sourceTree = "<group>"; };
@@ -282,6 +291,8 @@
 		188F51D61D0F08ED0083169D /* TechTatva '16 */ = {
 			isa = PBXGroup;
 			children = (
+				D6C6B3C71D9987FB003C52A7 /* Results Model */,
+				D69A1A8A1D995FE6001F9E7F /* Schedule Model */,
 				D640BF541D4FD67D006BA67C /* Events Model */,
 				D61DBBC71D38AC9D001BA98D /* Instagram Model */,
 				1868992D1D6E350500B82923 /* App Delegate */,
@@ -309,6 +320,8 @@
 				D60BB7B31D70C0120083D0C9 /* EventsTableViewCell.xib */,
 				1881A2131D13085800192BD1 /* EventsViewController.h */,
 				1881A2141D13085800192BD1 /* EventsViewController.m */,
+				D69A1A911D997463001F9E7F /* ScheduleViewController.h */,
+				D69A1A921D997463001F9E7F /* ScheduleViewController.m */,
 				18749BC81D14094700858B85 /* ResultsTableViewController.h */,
 				18749BC91D14094700858B85 /* ResultsTableViewController.m */,
 				18749BCB1D140AC600858B85 /* ResultsTableViewCell.h */,
@@ -421,6 +434,24 @@
 				D640BF521D4FD5B4006BA67C /* EventsDetailsJSONModel.m */,
 			);
 			name = "Events Model";
+			sourceTree = "<group>";
+		};
+		D69A1A8A1D995FE6001F9E7F /* Schedule Model */ = {
+			isa = PBXGroup;
+			children = (
+				D69A1A8B1D996021001F9E7F /* ScheduleJsonDataModel.h */,
+				D69A1A8C1D996021001F9E7F /* ScheduleJsonDataModel.m */,
+			);
+			name = "Schedule Model";
+			sourceTree = "<group>";
+		};
+		D6C6B3C71D9987FB003C52A7 /* Results Model */ = {
+			isa = PBXGroup;
+			children = (
+				D6C6B3CB1D99891D003C52A7 /* ResultsJsonDataModel.h */,
+				D6C6B3CC1D99891D003C52A7 /* ResultsJsonDataModel.m */,
+			);
+			name = "Results Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -719,6 +750,7 @@
 				D6A2B8CE1D8477BF008DE478 /* AllEventsTableViewController.m in Sources */,
 				188F51DC1D0F08ED0083169D /* AppDelegate.m in Sources */,
 				D6247BF61D7B0C58007F7FF1 /* AboutUsTableViewController.m in Sources */,
+				D69A1A931D997463001F9E7F /* ScheduleViewController.m in Sources */,
 				D6C0853D1D7EBCEE00FBD1BC /* FeedbackTableViewController.m in Sources */,
 				D640BF531D4FD5B4006BA67C /* EventsDetailsJSONModel.m in Sources */,
 				D6C594D91D1976F8006F19D0 /* InstagramTableViewController.m in Sources */,
@@ -735,9 +767,11 @@
 				D6DCA1C61D1C58BC00496F9D /* EventsPopupView.m in Sources */,
 				D6A2B8CA1D847415008DE478 /* AllEventsTableViewCell.m in Sources */,
 				D60BB7B41D70C0120083D0C9 /* EventsTableViewCell.m in Sources */,
+				D6C6B3CD1D99891D003C52A7 /* ResultsJsonDataModel.m in Sources */,
 				D6D061261D782D8B00D9267E /* OnlineEventsViewController.m in Sources */,
 				18749BC01D13F17600858B85 /* MoreTableViewController.m in Sources */,
 				D64DB20A1D87193F0084B4FC /* Favourite.m in Sources */,
+				D69A1A8D1D996021001F9E7F /* ScheduleJsonDataModel.m in Sources */,
 				1881A20A1D0FCD8000192BD1 /* CategoriesTableViewController.m in Sources */,
 				18749BC41D13F1E600858B85 /* MoreTableViewCell.m in Sources */,
 			);

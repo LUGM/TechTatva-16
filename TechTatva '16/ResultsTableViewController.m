@@ -8,10 +8,12 @@
 
 #import "ResultsTableViewController.h"
 #import "ResultsTableViewCell.h"
+#import "ResultsJsonDataModel.h"
 
 @interface ResultsTableViewController (){
     NSArray *label1Array;
     NSArray *label2Array;
+    NSArray *array;
 }
 
 @end
@@ -27,11 +29,39 @@
     label1Array = @[@"Yash", @"Manas", @"Abhishek"];
     label2Array = @[@"Cathead", @"Organiser1", @"Organiser2"];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelect/Users/apple/Desktop/TechTatva-16/TechTatva '16/ResultsTableViewController.mionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        @try {
+            NSURL *myUrl = [[NSURL alloc]initWithString:@"http://api.mitportals.in/results/"];
+            NSData *mydata = [NSData dataWithContentsOfURL:myUrl];
+            NSError *error;
+            
+            if (mydata!=nil)
+            {
+                id jsonData = [NSJSONSerialization JSONObjectWithData:mydata options:kNilOptions error:&error];
+                id requiredArray = [jsonData valueForKey:@"data"];
+                array = [ResultsJsonDataModel getArrayFromJson:requiredArray];
+                ResultsJsonDataModel *model = [array objectAtIndex:0];
+                NSLog(@"cat name: %@",model.category);
+                NSLog(@"Event name:%@",model.event);
+                NSLog(@"date:%@",model.position);
+                
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                });
+                
+                
+            }
+            
+            
+        }
+        @catch (NSException *exception) {
+            
+        }
+        @finally {
+            
+        }
+    });
+
 }
 
 - (void)didReceiveMemoryWarning {

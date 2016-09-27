@@ -18,6 +18,7 @@
     EventsPopupView *Event;  //object of main xib class
     NSArray *array;
     EventsDetailsJSONModel *jsonModel;
+    NSMutableDictionary *resultsDictionary;
 }
 @property (nonatomic, strong) NSIndexPath *selectedIndexPath;
 
@@ -28,27 +29,58 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSURL *eventsUrl = [NSURL URLWithString:@"https://api.myjson.com/bins/3t0vu"];
+    NSData *mydata = [NSData dataWithContentsOfURL:eventsUrl];
+    //ASMutableURLRequest *postRequest = [ASMutableURLRequest postRequestWithURL:categoriesUrl];
+    NSMutableURLRequest *postRequest = [[NSMutableURLRequest alloc] initWithURL:eventsUrl];
+    NSString *post = [NSString stringWithFormat:@"key=%@&value=%@", @"ttech", @"404"];
+    NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+    [postRequest setHTTPBody:postData];
+    
+
+    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         @try {
-            NSURL *custumUrl = [[NSURL alloc]initWithString:@"https://api.myjson.com/bins/3t0vu"];
-            NSData *mydata = [NSData dataWithContentsOfURL:custumUrl];
             NSError *error;
-            
             if (mydata!=nil)
-            {
-                id jsonData = [NSJSONSerialization JSONObjectWithData:mydata options:kNilOptions error:&error];
-                id requiredArray = [jsonData valueForKey:@"data"];
-                array = [EventsDetailsJSONModel getArrayFromJson:requiredArray];
-                
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    //[self.tableView reloadData];
-                });
-                
-                EventsDetailsJSONModel *model = [array objectAtIndex:1];
-                NSLog(@"%@",model.categoryEventId);
-                NSLog(@"%@",model.cntctname);
-                NSLog(@"%@",model.hs1);
-            }
+                        {
+                            id jsonData = [NSJSONSerialization JSONObjectWithData:mydata options:kNilOptions error:&error];
+                            id requiredArray = [jsonData valueForKey:@"data"];
+                            array = [EventsDetailsJSONModel getArrayFromJson:requiredArray];
+            
+                            dispatch_async(dispatch_get_main_queue(), ^{
+                                //[self.tableView reloadData];
+                            });
+            
+                            EventsDetailsJSONModel *model = [array objectAtIndex:1];
+                            NSLog(@"%@",model.categoryEventId);
+                            NSLog(@"%@",model.cntctname);
+                            NSLog(@"%@",model.hs1);
+                        }
+            
+            
+            
+            
+            
+//            NSURL *custumUrl = [[NSURL alloc]initWithString:@"https://api.myjson.com/bins/3t0vu"];
+//            NSData *mydata = [NSData dataWithContentsOfURL:custumUrl];
+//            NSError *error;
+//            
+//            if (mydata!=nil)
+//            {
+//                id jsonData = [NSJSONSerialization JSONObjectWithData:mydata options:kNilOptions error:&error];
+//                id requiredArray = [jsonData valueForKey:@"data"];
+//                array = [EventsDetailsJSONModel getArrayFromJson:requiredArray];
+//                
+//                dispatch_async(dispatch_get_main_queue(), ^{
+//                    //[self.tableView reloadData];
+//                });
+//                
+//                EventsDetailsJSONModel *model = [array objectAtIndex:1];
+//                NSLog(@"%@",model.categoryEventId);
+//                NSLog(@"%@",model.cntctname);
+//                NSLog(@"%@",model.hs1);
+//            }
             
             
         }
@@ -60,6 +92,17 @@
         }
     });
 
+}
+
+- (void)searchBar:(UISearchBar *)searchBar selectedScopeButtonIndexDidChange:(NSInteger)selectedScope {
+    if (searchBar.text.length > 0)
+    {
+        
+    }
+    else
+    {
+        
+    }
 }
 
 -(IBAction)segmentSwitch{

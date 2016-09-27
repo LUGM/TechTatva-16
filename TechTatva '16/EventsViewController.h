@@ -18,5 +18,6 @@
 
 -(IBAction)segmentSwitch;
 
+@property (strong, nonatomic) IBOutlet UISegmentedControl *eventsSearchBar;
 
 @end

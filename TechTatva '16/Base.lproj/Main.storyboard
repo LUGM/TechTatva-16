@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="USZ-m1-Sgf">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dqy-Ch-4OI">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -15,12 +15,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="12C-WR-Xlm">
+                            <rect key="frame" x="0.0" y="136" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell1" id="0y8-en-AC2" customClass="Cell">
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0y8-en-AC2" id="58P-pM-zNN">
-                                    <frame key="frameInset" width="375" height="44"/>
+                                    <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEM-Cr-AYl">
@@ -43,7 +48,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uZs-K3-CI0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2788" y="-202"/>
+            <point key="canvasLocation" x="2450" y="-134"/>
         </scene>
         <!--Tech Tatva '16-->
         <scene sceneID="ETt-w8-Smw">
@@ -59,17 +64,17 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hd0-hV-e9B">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="llG-5Z-kVc">
-                                    <rect key="frame" x="0.0" y="132" width="1000" height="44"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="0CA-cz-uwG">
+                                    <rect key="frame" x="0.0" y="132" width="383" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Favourites"/>
-                                </button>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="thisCell" rowHeight="40" id="OFk-2o-rbC">
                                         <rect key="frame" x="0.0" y="92" width="383" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OFk-2o-rbC" id="PnN-wI-AgZ">
-                                            <frame key="frameInset" width="383" height="40"/>
+                                            <frame key="frameInset" width="383" height="39"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -88,14 +93,20 @@
                                     <action selector="segmentSwitch" destination="eBJ-IY-SG3" eventType="valueChanged" id="hD5-bH-ReA"/>
                                 </connections>
                             </segmentedControl>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="nhH-CN-1UC">
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="nhH-CN-1UC" firstAttribute="leading" secondItem="73M-5g-9Iy" secondAttribute="leadingMargin" constant="-20" id="EO2-Wz-cgz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qiZ-J3-zox" secondAttribute="trailing" constant="-20" id="EpE-cC-Xsu"/>
                             <constraint firstItem="qiZ-J3-zox" firstAttribute="leading" secondItem="73M-5g-9Iy" secondAttribute="leadingMargin" constant="-20" id="P5Y-PW-5pi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nhH-CN-1UC" secondAttribute="trailing" constant="-20" id="Uzu-yd-fLH"/>
+                            <constraint firstItem="nhH-CN-1UC" firstAttribute="top" secondItem="qiZ-J3-zox" secondAttribute="bottom" id="b6r-Lf-pF3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hd0-hV-e9B" secondAttribute="trailing" constant="-20" id="b9i-yZ-4AD"/>
                             <constraint firstItem="CRZ-CJ-7Uh" firstAttribute="top" secondItem="hd0-hV-e9B" secondAttribute="bottom" id="ePn-LP-6Tt"/>
-                            <constraint firstItem="hd0-hV-e9B" firstAttribute="top" secondItem="7Jq-wl-G3v" secondAttribute="bottom" constant="30" id="egM-vm-h7d"/>
+                            <constraint firstItem="hd0-hV-e9B" firstAttribute="top" secondItem="7Jq-wl-G3v" secondAttribute="bottom" constant="75" id="egM-vm-h7d"/>
                             <constraint firstItem="qiZ-J3-zox" firstAttribute="top" secondItem="7Jq-wl-G3v" secondAttribute="bottom" id="kJ5-ZS-eqB"/>
                             <constraint firstItem="hd0-hV-e9B" firstAttribute="leading" secondItem="73M-5g-9Iy" secondAttribute="leadingMargin" constant="-20" id="lYP-2l-Q6k"/>
                         </constraints>
@@ -103,12 +114,13 @@
                     <navigationItem key="navigationItem" title="Tech Tatva '16" id="gPF-1j-abf"/>
                     <connections>
                         <outlet property="daycontrol" destination="qiZ-J3-zox" id="rSJ-Yu-qPk"/>
+                        <outlet property="eventsSearchBar" destination="qiZ-J3-zox" id="hsF-4Y-Wnv"/>
                         <outlet property="eventsTable" destination="hd0-hV-e9B" id="4Wd-IL-P19"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mcv-mn-TjT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2377.5" y="586.5"/>
+            <point key="canvasLocation" x="2448.8000000000002" y="584.25787106446785"/>
         </scene>
         <!--Tech Tatva '16-->
         <scene sceneID="IAp-FG-C83">
@@ -118,12 +130,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="yUJ-RH-2JC">
+                            <rect key="frame" x="0.0" y="136" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="moreCell" id="tu6-z2-cWt">
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tu6-z2-cWt" id="5I2-vw-cbO">
-                                    <frame key="frameInset" width="375" height="44"/>
+                                    <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -143,7 +160,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YnO-C9-Yb4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2377.5" y="1438.5"/>
+            <point key="canvasLocation" x="2449" y="1349"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hm4-SH-JSA">
@@ -159,7 +176,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cCw-MR-6Pq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3323.5" y="1014.5"/>
+            <point key="canvasLocation" x="3870" y="611"/>
         </scene>
         <!--Registration Page View Controller-->
         <scene sceneID="6b4-VC-X0g">
@@ -200,7 +217,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YCd-1Q-Nim" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="nPS-1g-zpk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4090" y="1014"/>
+            <point key="canvasLocation" x="4634" y="611"/>
         </scene>
         <!--Tech Tatva '16-->
         <scene sceneID="wFR-BB-2AW">
@@ -210,12 +227,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="9Gq-jv-KPC">
+                            <rect key="frame" x="0.0" y="136" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="resultsCell" id="bTr-LG-ImB">
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bTr-LG-ImB" id="gRA-oa-WIF">
-                                    <frame key="frameInset" width="375" height="44"/>
+                                    <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -229,7 +251,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3py-ME-ytw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2377.5" y="2254.5"/>
+            <point key="canvasLocation" x="2449" y="2095"/>
         </scene>
         <!--About Us-->
         <scene sceneID="r5H-Rv-nkF">
@@ -243,14 +265,13 @@
                             <tableViewSection headerTitle="About Us" id="8Bl-PI-Nq7">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="aboutCell" rowHeight="363" id="RAX-5X-tiz">
-                                        <rect key="frame" x="0.0" y="120" width="375" height="363"/>
+                                        <rect key="frame" x="0.0" y="119.5" width="375" height="363"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RAX-5X-tiz" id="oCs-ap-BEz">
-                                            <frame key="frameInset" width="375" height="363"/>
+                                            <frame key="frameInset" width="375" height="362"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="j3b-UD-o5c">
-                                                    <frame key="frameInset" minX="18" minY="18" width="339" height="343"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="j3b-UD-o5c">
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <string key="text">TechTatva is a national level technical fest in India organized by Manipal Institute of Technology students every year. With a plethora of events and workshops from all the spheres of Engineering organized by experts, TechTatva Fest witnesses mass participation from other colleges.
 
@@ -273,10 +294,10 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                             <tableViewSection headerTitle="Follow Us" id="Lmx-l9-4ZD">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="aboutCell" rowHeight="56" id="9gh-Xi-Ae1">
-                                        <rect key="frame" x="0.0" y="539" width="375" height="56"/>
+                                        <rect key="frame" x="0.0" y="538.5" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9gh-Xi-Ae1" id="SL1-P4-qEs">
-                                            <frame key="frameInset" width="375" height="56"/>
+                                            <frame key="frameInset" width="375" height="55"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVI-JT-Y1s" userLabel="fbButton">
@@ -371,7 +392,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fMx-Ll-T7e" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Gs6-Z2-6QA" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4237.6000000000004" y="1862.5187406296852"/>
+            <point key="canvasLocation" x="4634" y="1328"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="unu-Lp-SiA">
@@ -388,7 +409,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xtb-zO-6jj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3323.5" y="1863.5"/>
+            <point key="canvasLocation" x="3870" y="1328"/>
         </scene>
         <!--Feedback-->
         <scene sceneID="o7j-8p-oMV">
@@ -405,7 +426,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                                         <rect key="frame" x="0.0" y="64" width="375" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xtN-Bx-NEg" id="1Kz-WV-gGg">
-                                            <frame key="frameInset" width="375" height="88"/>
+                                            <frame key="frameInset" width="375" height="87"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbp-tq-5NN">
@@ -435,7 +456,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                                         <rect key="frame" x="0.0" y="180" width="375" height="118"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NDR-AM-JUK" id="YDT-nm-1ha">
-                                            <frame key="frameInset" width="375" height="118"/>
+                                            <frame key="frameInset" width="375" height="117"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -447,7 +468,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                                         <rect key="frame" x="0.0" y="326" width="375" height="268"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ykz-v3-vDf" id="RS1-qV-ZIp">
-                                            <frame key="frameInset" width="375" height="268"/>
+                                            <frame key="frameInset" width="375" height="267"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BSC-5c-7E4">
@@ -502,7 +523,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TIl-M1-Bb2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="UVS-Vm-vCu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4076" y="2803"/>
+            <point key="canvasLocation" x="4634" y="2062"/>
         </scene>
         <!--Favourites View Controller-->
         <scene sceneID="Bdt-RS-Vt2">
@@ -520,6 +541,16 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                                 <frame key="frameInset" minY="64" width="375" height="603"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ld9-SL-N7J">
+                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ld9-SL-N7J" id="69S-Su-O7E">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -532,6 +563,25 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zPa-lC-hxY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4106" y="3616"/>
+        </scene>
+        <!--Schedule View Controller-->
+        <scene sceneID="rCf-8E-DyO">
+            <objects>
+                <viewController id="gMc-Ei-uGy" customClass="ScheduleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XPT-Tj-0VI"/>
+                        <viewControllerLayoutGuide type="bottom" id="TiD-Sm-m9W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="C3W-hj-gY7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LC9-25-Wlh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SQ6-KT-irf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6300" y="3621"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rAu-71-AGz">
@@ -547,7 +597,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1AD-iZ-KEB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3323.5" y="2803.5"/>
+            <point key="canvasLocation" x="3870" y="2062"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zDB-Ey-nMu">
@@ -564,7 +614,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QyR-Ca-3h9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3323.5" y="217.5"/>
+            <point key="canvasLocation" x="3870" y="-133"/>
         </scene>
         <!--Online Events View Controller-->
         <scene sceneID="BHM-bB-9ph">
@@ -606,7 +656,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gli-Eg-5j8" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="iIr-TK-Lyv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4089" y="217"/>
+            <point key="canvasLocation" x="4634" y="-134"/>
         </scene>
         <!--Instagram Table View Controller-->
         <scene sceneID="pQp-VJ-VFw">
@@ -616,12 +666,17 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="I1q-5W-ZOb">
+                            <rect key="frame" x="0.0" y="136" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" id="lhG-a7-e3b">
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lhG-a7-e3b" id="L6F-Vi-7Aj">
-                                    <frame key="frameInset" width="375" height="44"/>
+                                    <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -635,7 +690,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NMS-yM-kHM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2742" y="-1010"/>
+            <point key="canvasLocation" x="2450" y="-908"/>
         </scene>
         <!--Tech Tatva '16-->
         <scene sceneID="t6t-C4-dHj">
@@ -654,7 +709,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bm5-Ue-foU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1881.5" y="-201.5"/>
+            <point key="canvasLocation" x="1590" y="-133"/>
         </scene>
         <!--Tech Tatva '16-->
         <scene sceneID="T3E-0B-BnH">
@@ -673,7 +728,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5o8-Pj-by1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1881.5" y="586.5"/>
+            <point key="canvasLocation" x="1590" y="586"/>
         </scene>
         <!--Tech Tatva '16-->
         <scene sceneID="l7P-FX-d3s">
@@ -692,7 +747,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GUR-GL-Xq3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1881.5" y="1438.5"/>
+            <point key="canvasLocation" x="1590" y="1349"/>
         </scene>
         <!--Results-->
         <scene sceneID="T5f-aM-M3i">
@@ -711,7 +766,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xxJ-Jk-ar6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1881.5" y="2254.5"/>
+            <point key="canvasLocation" x="1590" y="2095"/>
         </scene>
         <!--All Events-->
         <scene sceneID="eJH-AN-Lbd">
@@ -721,12 +776,17 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="H0t-UR-l5z">
+                            <rect key="frame" x="0.0" y="136" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AllEveCell" id="Sc8-6r-eVl">
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Sc8-6r-eVl" id="e7y-Na-fEt">
-                                    <frame key="frameInset" width="375" height="44"/>
+                                    <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -740,7 +800,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OmC-Pv-scY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2593" y="3074"/>
+            <point key="canvasLocation" x="2193" y="3621"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ADT-fg-U6I">
@@ -756,7 +816,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="meN-p9-Oau" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1881.5" y="3074.5"/>
+            <point key="canvasLocation" x="1481" y="3622"/>
         </scene>
         <!--Instagram-->
         <scene sceneID="Vip-0C-aQu">
@@ -775,7 +835,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="prA-GS-gPC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1881.5" y="-1009.5"/>
+            <point key="canvasLocation" x="1590" y="-907"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="3AX-mC-W3o">
@@ -797,7 +857,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EPc-c6-CXX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1197.5" y="586.5"/>
+            <point key="canvasLocation" x="582" y="586"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="omF-ag-9oh">
@@ -816,6 +876,24 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aTl-1E-yCi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3323.5" y="3621.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="U5l-cK-Rcq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qyR-kt-vAx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="o1j-Vg-5bx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gMc-Ei-uGy" kind="relationship" relationship="rootViewController" id="aFI-pU-ash"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wm3-PW-rQS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5361" y="3621"/>
         </scene>
     </scenes>
     <resources>
