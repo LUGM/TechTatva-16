@@ -11,7 +11,6 @@
 @implementation CategoriesTableViewCell
 
 - (void)awakeFromNib {
-    // Initialization code
     [super awakeFromNib];
 }
 

@@ -8,10 +8,14 @@
 
 #import "CategoriesTableViewController.h"
 #import "CategoriesTableViewCell.h"
+#import "CategoriesJSONModel.h"
 
 @interface CategoriesTableViewController(){
 NSArray *categoriesArray ;
+    NSArray *array;
 }
+
+@property (nonatomic, strong) NSIndexPath *selectedIndexPath;
 
 @end
 
@@ -19,7 +23,41 @@ NSArray *categoriesArray ;
 -(void)viewDidLoad{
     categoriesArray = [[NSArray alloc] init];
     categoriesArray = @[@"Categories",@"Hello",@"Hi",@"IOS",@"TT'16",@"AppDev"];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        @try {
+            
+                NSURL *custumUrl = [[NSURL alloc]initWithString:@"http://api.mitportals.in/categories/"];
+                NSData *mydata = [NSData dataWithContentsOfURL:custumUrl];
+                NSError *error;
+                
+                if (mydata!=nil)
+                {
+                    id jsonData = [NSJSONSerialization JSONObjectWithData:mydata options:kNilOptions error:&error];
+                    id requiredArray = [jsonData valueForKey:@"data"];
+                    array = [CategoriesJSONModel getArrayFromJson:requiredArray];
+                
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        
+                                });
+                
+                    CategoriesJSONModel *model = [array objectAtIndex:1];
+                    NSLog(@"Cat desc is:%@",model.catDesc);
+                    NSLog(@"%@",model.catName);
+                    NSLog(@"%@",model.catId);
+                }
+
+        }
+        @catch (NSException *exception) {
+            
+        }
+        @finally {
+            
+        }
+    });
+
 }
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -32,26 +70,17 @@ NSArray *categoriesArray ;
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
+    [tableView beginUpdates];
+    if (!([indexPath compare:self.selectedIndexPath] == NSOrderedSame))
+        self.selectedIndexPath = indexPath;
+    else
+        self.selectedIndexPath = nil;
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [tableView endUpdates];
+
 
 }
-
-
-/*-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    //UITableViewCell*cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    static NSString *identifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] init];
-    }
-    
-    
-    cell.textLabel.text = [categoriesArray objectAtIndex:indexPath.row];
-
-    
-    return cell;
-}*/
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -68,12 +97,18 @@ NSArray *categoriesArray ;
     cell.thumbnailImageView.image = [UIImage imageNamed:@"thumb_IMG_7632_1024.jpg"];
     cell.thumbnailImageView.layer.cornerRadius = cell.thumbnailImageView.frame.size.width / 2;
     cell.thumbnailImageView.clipsToBounds = YES;
-    
-    
+     cell.categoryInfo.contentInset = UIEdgeInsetsMake(-7.0,0.0,0,0.0);
+    CategoriesJSONModel *demoModel = [[CategoriesJSONModel alloc]init];
+    cell.categoryInfo.text = demoModel.catDesc;
     
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([indexPath compare:self.selectedIndexPath] == NSOrderedSame)
+        return 265.f;
+    return 70.f;
+}
 
 
 @end
