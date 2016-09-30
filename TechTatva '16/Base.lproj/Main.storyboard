@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ORP-SX-hMp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bS0-XA-1KL">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -65,16 +65,16 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hd0-hV-e9B">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="0CA-cz-uwG">
-                                    <rect key="frame" x="0.0" y="132" width="383" height="44"/>
+                                    <rect key="frame" x="0.0" y="132" width="1000" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="thisCell" rowHeight="40" id="OFk-2o-rbC">
-                                        <rect key="frame" x="0.0" y="92" width="383" height="40"/>
+                                        <rect key="frame" x="0.0" y="92" width="1000" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OFk-2o-rbC" id="PnN-wI-AgZ">
-                                            <frame key="frameInset" width="383" height="39.5"/>
+                                            <frame key="frameInset" width="1000" height="39.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -452,12 +452,76 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                             </tableViewSection>
                             <tableViewSection headerTitle="Rate the app" id="QvA-U5-FoI">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="118" id="NDR-AM-JUK">
-                                        <rect key="frame" x="0.0" y="180" width="375" height="118"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="150" id="NDR-AM-JUK">
+                                        <rect key="frame" x="0.0" y="180" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NDR-AM-JUK" id="YDT-nm-1ha">
-                                            <frame key="frameInset" width="375" height="117.5"/>
+                                            <frame key="frameInset" width="375" height="149"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FqF-GA-lw1">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="45" id="hzH-Ue-Byi"/>
+                                                        <constraint firstAttribute="height" constant="45" id="jo8-Cq-u6y"/>
+                                                    </constraints>
+                                                    <state key="normal" image="star.png"/>
+                                                    <connections>
+                                                        <action selector="star1Pressed:" destination="1H3-9I-kuE" eventType="touchUpInside" id="jO5-ge-3SM"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfA-z8-VXz">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="45" id="HrE-xI-GV3"/>
+                                                        <constraint firstAttribute="height" constant="45" id="qRu-fC-mXI"/>
+                                                    </constraints>
+                                                    <state key="normal" image="star.png"/>
+                                                    <connections>
+                                                        <action selector="star3Pressed:" destination="1H3-9I-kuE" eventType="touchUpInside" id="70W-dl-nUc"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJe-Dj-Bcz">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="45" id="6YD-AH-MWb"/>
+                                                        <constraint firstAttribute="height" constant="45" id="ncb-tC-RRP"/>
+                                                    </constraints>
+                                                    <state key="normal" image="star.png"/>
+                                                    <connections>
+                                                        <action selector="star4Pressed:" destination="1H3-9I-kuE" eventType="touchUpInside" id="QxX-z9-lvA"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hxl-Hw-HYD">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="45" id="DBU-05-U3Q"/>
+                                                        <constraint firstAttribute="height" constant="45" id="Lv1-7N-hxs"/>
+                                                    </constraints>
+                                                    <state key="normal" image="star.png"/>
+                                                    <connections>
+                                                        <action selector="star5Pressed:" destination="1H3-9I-kuE" eventType="touchUpInside" id="4rH-eC-BCg"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAj-Bx-Ewm">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="45" id="GgA-oS-MGf"/>
+                                                        <constraint firstAttribute="height" constant="45" id="pII-7Y-4af"/>
+                                                    </constraints>
+                                                    <state key="normal" image="star.png"/>
+                                                    <connections>
+                                                        <action selector="star2Pressed:" destination="1H3-9I-kuE" eventType="touchUpInside" id="adZ-FK-b0A"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="VAj-Bx-Ewm" firstAttribute="top" secondItem="YDT-nm-1ha" secondAttribute="topMargin" constant="50" id="5gE-o2-bgQ"/>
+                                                <constraint firstItem="FJe-Dj-Bcz" firstAttribute="leading" secondItem="xfA-z8-VXz" secondAttribute="trailing" constant="15" id="HYf-YU-wb7"/>
+                                                <constraint firstItem="xfA-z8-VXz" firstAttribute="centerX" secondItem="YDT-nm-1ha" secondAttribute="centerX" id="SQJ-xB-gVF"/>
+                                                <constraint firstItem="FJe-Dj-Bcz" firstAttribute="top" secondItem="YDT-nm-1ha" secondAttribute="topMargin" constant="50" id="Y6x-SY-kSy"/>
+                                                <constraint firstItem="FqF-GA-lw1" firstAttribute="top" secondItem="YDT-nm-1ha" secondAttribute="topMargin" constant="50" id="bdf-hQ-lRr"/>
+                                                <constraint firstItem="xfA-z8-VXz" firstAttribute="leading" secondItem="VAj-Bx-Ewm" secondAttribute="trailing" constant="15" id="mVl-dB-8VB"/>
+                                                <constraint firstItem="Hxl-Hw-HYD" firstAttribute="top" secondItem="YDT-nm-1ha" secondAttribute="topMargin" constant="50" id="y5I-QX-Sdu"/>
+                                                <constraint firstItem="xfA-z8-VXz" firstAttribute="top" secondItem="YDT-nm-1ha" secondAttribute="topMargin" constant="50" id="yf1-nB-59X"/>
+                                                <constraint firstItem="Hxl-Hw-HYD" firstAttribute="leading" secondItem="FJe-Dj-Bcz" secondAttribute="trailing" constant="15" id="zSP-sb-UA5"/>
+                                                <constraint firstItem="VAj-Bx-Ewm" firstAttribute="leading" secondItem="FqF-GA-lw1" secondAttribute="trailing" constant="15" id="zX4-qM-JUb"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -465,7 +529,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                             <tableViewSection headerTitle="Comments" id="cka-9B-vIz">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="268" id="Ykz-v3-vDf">
-                                        <rect key="frame" x="0.0" y="326" width="375" height="268"/>
+                                        <rect key="frame" x="0.0" y="358" width="375" height="268"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ykz-v3-vDf" id="RS1-qV-ZIp">
                                             <frame key="frameInset" width="375" height="267.5"/>
@@ -517,13 +581,18 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                         <outlet property="categoryName" destination="Lfb-2a-N0J" id="K0U-m0-Dzp"/>
                         <outlet property="commentsTextArea" destination="BSC-5c-7E4" id="Ylc-az-kBC"/>
                         <outlet property="eventName" destination="dbp-tq-5NN" id="S2K-2e-g5H"/>
+                        <outlet property="star1" destination="FqF-GA-lw1" id="s9v-L0-TBc"/>
+                        <outlet property="star2" destination="VAj-Bx-Ewm" id="cl3-Yf-TUW"/>
+                        <outlet property="star3" destination="xfA-z8-VXz" id="7cp-tl-PG7"/>
+                        <outlet property="star4" destination="FJe-Dj-Bcz" id="hMP-GZ-I5A"/>
+                        <outlet property="star5" destination="Hxl-Hw-HYD" id="u8R-7i-YRI"/>
                         <outlet property="submitButton" destination="pXH-CA-2gq" id="WM0-0W-J89"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TIl-M1-Bb2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="UVS-Vm-vCu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4634" y="2062"/>
+            <point key="canvasLocation" x="4690" y="2061"/>
         </scene>
         <!--Favourites View Controller-->
         <scene sceneID="Bdt-RS-Vt2">
@@ -903,6 +972,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
         <image name="Results.png" width="25" height="25"/>
         <image name="fb.png" width="25" height="25"/>
         <image name="google+.png" width="25" height="25"/>
+        <image name="star.png" width="50" height="50"/>
         <image name="twitter.png" width="25" height="25"/>
         <image name="youtube.png" width="48" height="48"/>
     </resources>

@@ -16,4 +16,19 @@
 @property (strong, nonatomic) IBOutlet UIButton *submitButton;
 - (IBAction)submitButton:(UIButton *)sender;
 
+@property (strong, nonatomic) IBOutlet UIButton *star1;
+@property (strong, nonatomic) IBOutlet UIButton *star2;
+@property (strong, nonatomic) IBOutlet UIButton *star3;
+@property (strong, nonatomic) IBOutlet UIButton *star4;
+@property (strong, nonatomic) IBOutlet UIButton *star5;
+@property (nonatomic) NSInteger favCount;   //to check no of stars selected
+
+
+- (IBAction)star1Pressed:(id)sender;
+- (IBAction)star2Pressed:(id)sender;
+- (IBAction)star3Pressed:(id)sender;
+- (IBAction)star4Pressed:(id)sender;
+- (IBAction)star5Pressed:(id)sender;
+
+
 @end
