@@ -18,7 +18,7 @@
     NSMutableArray *searchedEventsArray;
 }
 
--(IBAction)segmentSwitch;
+- (IBAction)eventsSegmentSwitch:(id)sender;
 
 
 @end

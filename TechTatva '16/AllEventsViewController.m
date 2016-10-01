@@ -1,22 +1,23 @@
 //
-//  AllEventsTableViewController.m
+//  AllEventsViewController.m
 //  TechTatva '16
 //
-//  Created by Abhishek Vora on 10/09/16.
+//  Created by Abhishek Vora on 01/10/16.
 //  Copyright © 2016 YASH. All rights reserved.
 //
 
-#import "AllEventsTableViewController.h"
+#import "AllEventsViewController.h"
 #import "AllEventsTableViewCell.h"
 #import "Favourite.h"
 #import "EventsDetailsJSONModel.h"
 #import "FavouritesViewController.h"
 
-@interface AllEventsTableViewController ()
+
+@interface AllEventsViewController ()
 
 @end
 
-@implementation AllEventsTableViewController
+@implementation AllEventsViewController
 {
     NSArray *fetchArray;
     NSMutableArray *eventByCategoryArray;
@@ -32,13 +33,13 @@
     searchedAllEventsArray = [[NSMutableArray alloc]initWithArray:allEventsArray];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyBoardShown:) name:UIKeyboardDidShowNotification object:nil];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyBoardHidden:) name:UIKeyboardWillHideNotification object:nil];
-
+    
 }
 
 -(void)keyBoardShown:(NSNotification *)note{
     CGRect keyboardFrame;
     [[[note userInfo]objectForKey:UIKeyboardFrameEndUserInfoKey]getValue:&keyboardFrame];
-    CGRect tableviewFrame = self.tableView.frame;
+    CGRect tableviewFrame = allEventsTableView.frame;
     tableviewFrame.size.height -= keyboardFrame.size.height;
     [allEventsTableView setFrame:tableviewFrame];
 }
@@ -78,6 +79,18 @@
     
     fetchArray = [[Favourite managedObjectContext]executeFetchRequest:fetchFavourite error:&error];
     
+}
+
+- (IBAction)allEventsSegmentChange:(id)sender
+{
+    if(allEventsSegmentControl.selectedSegmentIndex == 0)
+        NSLog(@"Day 1 selected.");
+    else if(allEventsSegmentControl.selectedSegmentIndex == 1)
+         NSLog(@"Day 2 selected.");
+    else if(allEventsSegmentControl.selectedSegmentIndex == 2)
+        NSLog(@"Day 3 selected.");
+    else if(allEventsSegmentControl.selectedSegmentIndex == 3)
+        NSLog(@"Day 4 selected.");
 }
 
 - (void)didReceiveMemoryWarning {
@@ -187,10 +200,10 @@
             NSIndexPath * pathsToDelete = [NSIndexPath indexPathForRow:path.row inSection:0];
             [fav.favouritesTable deleteRowsAtIndexPaths:@[pathsToDelete] withRowAnimation:UITableViewRowAnimationRight];
         }
-
+        
         
     }
-
+    
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -202,9 +215,4 @@
     return 275.f;
 }
 
-
-
-
-- (IBAction)allEventsSegmentChange:(id)sender {
-}
 @end

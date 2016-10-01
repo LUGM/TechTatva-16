@@ -32,6 +32,7 @@
 		188F51FD1D0F08ED0083169D /* TechTatva__16UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F51FC1D0F08ED0083169D /* TechTatva__16UITests.m */; };
 		282A7060EF9AE0FD968DE312 /* libPods-TechTatva '16Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F01C890F7CF6D05BFA94292B /* libPods-TechTatva '16Tests.a */; };
 		5D2E4C8A0A7710137FDEED67 /* libPods-TechTatva '16UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 452DB319F49B8C6F35F9AEDA /* libPods-TechTatva '16UITests.a */; };
+		D607A28D1D9FD10600CC01E2 /* AllEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D607A28C1D9FD10600CC01E2 /* AllEventsViewController.m */; };
 		D60BB7B41D70C0120083D0C9 /* EventsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D60BB7B21D70C0120083D0C9 /* EventsTableViewCell.m */; };
 		D60BB7B51D70C0120083D0C9 /* EventsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60BB7B31D70C0120083D0C9 /* EventsTableViewCell.xib */; };
 		D60BB7BB1D70C3A40083D0C9 /* Calendar-50.png in Resources */ = {isa = PBXBuildFile; fileRef = D60BB7B61D70C3A40083D0C9 /* Calendar-50.png */; };
@@ -139,6 +140,8 @@
 		4AF89144C0E8FCC01EF0FC16 /* libPods-TechTatva '16.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TechTatva '16.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9309D4D26842A1C03AFD9384 /* Pods-TechTatva '16UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechTatva '16UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TechTatva '16UITests/Pods-TechTatva '16UITests.release.xcconfig"; sourceTree = "<group>"; };
 		D5FF03F99F3281ADAB68B8C5 /* Pods-TechTatva '16Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechTatva '16Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TechTatva '16Tests/Pods-TechTatva '16Tests.release.xcconfig"; sourceTree = "<group>"; };
+		D607A28B1D9FD10600CC01E2 /* AllEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllEventsViewController.h; sourceTree = "<group>"; };
+		D607A28C1D9FD10600CC01E2 /* AllEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllEventsViewController.m; sourceTree = "<group>"; };
 		D60BB7B11D70C0120083D0C9 /* EventsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsTableViewCell.h; sourceTree = "<group>"; };
 		D60BB7B21D70C0120083D0C9 /* EventsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsTableViewCell.m; sourceTree = "<group>"; };
 		D60BB7B31D70C0120083D0C9 /* EventsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventsTableViewCell.xib; sourceTree = "<group>"; };
@@ -306,6 +309,8 @@
 				D64DB20F1D872CCA0084B4FC /* FavouritesViewController.m */,
 				D6A2B8CC1D8477BF008DE478 /* AllEventsTableViewController.h */,
 				D6A2B8CD1D8477BF008DE478 /* AllEventsTableViewController.m */,
+				D607A28B1D9FD10600CC01E2 /* AllEventsViewController.h */,
+				D607A28C1D9FD10600CC01E2 /* AllEventsViewController.m */,
 				D6A2B8C71D847415008DE478 /* AllEventsTableViewCell.h */,
 				D6A2B8C81D847415008DE478 /* AllEventsTableViewCell.m */,
 				D6A2B8C91D847415008DE478 /* AllEventsTableViewCell.xib */,
@@ -764,6 +769,7 @@
 				D6A2B8CE1D8477BF008DE478 /* AllEventsTableViewController.m in Sources */,
 				188F51DC1D0F08ED0083169D /* AppDelegate.m in Sources */,
 				D6247BF61D7B0C58007F7FF1 /* AboutUsTableViewController.m in Sources */,
+				D607A28D1D9FD10600CC01E2 /* AllEventsViewController.m in Sources */,
 				D69A1A931D997463001F9E7F /* ScheduleViewController.m in Sources */,
 				D6C0853D1D7EBCEE00FBD1BC /* FeedbackTableViewController.m in Sources */,
 				D640BF531D4FD5B4006BA67C /* EventsDetailsJSONModel.m in Sources */,

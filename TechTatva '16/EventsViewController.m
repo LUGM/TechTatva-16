@@ -29,6 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    daycontrol.selectedSegmentIndex = 0;
     
     NSURL *eventsUrl = [NSURL URLWithString:@"https://api.myjson.com/bins/3t0vu"];
     NSData *mydata = [NSData dataWithContentsOfURL:eventsUrl];
@@ -134,7 +135,16 @@
     [eventsSearchBar resignFirstResponder];
 }
 
--(IBAction)segmentSwitch{
+-(IBAction)eventsSegmentSwitch
+{
+    if(daycontrol.selectedSegmentIndex == 0)
+        NSLog(@"Day 1 selected.");
+    else if(daycontrol.selectedSegmentIndex == 1)
+        NSLog(@"Day 2 selected.");
+    else if(daycontrol.selectedSegmentIndex == 2)
+        NSLog(@"Day 3 selected.");
+    else if(daycontrol.selectedSegmentIndex == 3)
+        NSLog(@"Day 4 selected.");
 
 }
 
@@ -193,4 +203,6 @@
 }
 
 
+- (IBAction)eventsSegmentSwitch:(id)sender {
+}
 @end

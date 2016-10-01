@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ORP-SX-hMp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1S4-In-Lwp">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -88,9 +88,11 @@
                                 <segments>
                                     <segment title="First"/>
                                     <segment title="Second"/>
+                                    <segment title="Third"/>
+                                    <segment title="Fourth"/>
                                 </segments>
                                 <connections>
-                                    <action selector="segmentSwitch" destination="eBJ-IY-SG3" eventType="valueChanged" id="hD5-bH-ReA"/>
+                                    <action selector="eventsSegmentSwitch:" destination="eBJ-IY-SG3" eventType="valueChanged" id="12f-o0-zf3"/>
                                 </connections>
                             </segmentedControl>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="nhH-CN-1UC">
@@ -841,54 +843,69 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
             <point key="canvasLocation" x="1590" y="2095"/>
         </scene>
         <!--All Events-->
-        <scene sceneID="eJH-AN-Lbd">
+        <scene sceneID="HSH-ZA-BBn">
             <objects>
-                <tableViewController id="43A-vt-yS6" customClass="AllEventsTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="r6f-ga-af4">
+                <viewController id="yeY-ev-aId" customClass="AllEventsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xnq-tc-T0K"/>
+                        <viewControllerLayoutGuide type="bottom" id="dhK-F0-F0H"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o5o-Sr-QFO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="H0t-UR-l5z">
-                            <rect key="frame" x="0.0" y="136" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </view>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AllEveCell" id="Sc8-6r-eVl">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Sc8-6r-eVl" id="e7y-Na-fEt">
-                                    <frame key="frameInset" width="375" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="43A-vt-yS6" id="CiJ-3S-fGa"/>
-                            <outlet property="delegate" destination="43A-vt-yS6" id="CRp-6Q-BhH"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="All Events" id="a2s-qi-PGz"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OmC-Pv-scY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2193" y="3621"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="ADT-fg-U6I">
-            <objects>
-                <navigationController id="dqy-Ch-4OI" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="poE-yH-CDl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="143" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z09-ML-YIf">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllEveCell" id="hLJ-hP-4ab">
+                                        <rect key="frame" x="0.0" y="92" width="375" height="143"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hLJ-hP-4ab" id="gRL-hJ-YGh">
+                                            <frame key="frameInset" width="375" height="142"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Gpn-x2-A5D">
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="Third"/>
+                                    <segment title="Fourth"/>
+                                </segments>
+                                <connections>
+                                    <action selector="allEventsSegmentChange:" destination="yeY-ev-aId" eventType="valueChanged" id="TRZ-gk-vW4"/>
+                                </connections>
+                            </segmentedControl>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="50m-YM-dEg">
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="50m-YM-dEg" firstAttribute="leading" secondItem="o5o-Sr-QFO" secondAttribute="leading" id="1Zm-qw-43k"/>
+                            <constraint firstAttribute="trailing" secondItem="z09-ML-YIf" secondAttribute="trailing" id="9HS-Me-DwP"/>
+                            <constraint firstItem="Gpn-x2-A5D" firstAttribute="top" secondItem="Xnq-tc-T0K" secondAttribute="bottom" id="9Tc-G2-3SK"/>
+                            <constraint firstAttribute="trailing" secondItem="Gpn-x2-A5D" secondAttribute="trailing" id="Aq9-SC-BEj"/>
+                            <constraint firstItem="z09-ML-YIf" firstAttribute="top" secondItem="50m-YM-dEg" secondAttribute="bottom" id="FBv-X7-YzP"/>
+                            <constraint firstItem="dhK-F0-F0H" firstAttribute="top" secondItem="z09-ML-YIf" secondAttribute="bottom" id="JIN-8t-oQw"/>
+                            <constraint firstItem="z09-ML-YIf" firstAttribute="leading" secondItem="o5o-Sr-QFO" secondAttribute="leading" id="K3C-Fc-sVo"/>
+                            <constraint firstItem="50m-YM-dEg" firstAttribute="top" secondItem="Gpn-x2-A5D" secondAttribute="bottom" id="RQQ-sc-LsJ"/>
+                            <constraint firstItem="Gpn-x2-A5D" firstAttribute="leading" secondItem="o5o-Sr-QFO" secondAttribute="leading" id="TUh-uT-wvA"/>
+                            <constraint firstAttribute="trailing" secondItem="50m-YM-dEg" secondAttribute="trailing" id="ZsU-CU-Uso"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="All Events" id="Epx-bf-k7p"/>
                     <connections>
-                        <segue destination="43A-vt-yS6" kind="relationship" relationship="rootViewController" id="AwB-Ux-25M"/>
+                        <outlet property="allEventsSegmentControl" destination="Gpn-x2-A5D" id="siy-bw-AaD"/>
+                        <outlet property="allEventsTableView" destination="z09-ML-YIf" id="ypw-gk-fIP"/>
+                        <outlet property="eventsSearchBar" destination="50m-YM-dEg" id="T0t-0R-xnS"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="meN-p9-Oau" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DLW-Ah-LFt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1481" y="3622"/>
+            <point key="canvasLocation" x="2449" y="2786"/>
         </scene>
         <!--Instagram-->
         <scene sceneID="Vip-0C-aQu">
@@ -966,6 +983,24 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wm3-PW-rQS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5361" y="3621"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UG2-iE-Qj6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1S4-In-Lwp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hmu-I3-Heb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yeY-ev-aId" kind="relationship" relationship="rootViewController" id="h1A-jo-U4g"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wiZ-Bv-EwO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1590" y="2787"/>
         </scene>
     </scenes>
     <resources>
