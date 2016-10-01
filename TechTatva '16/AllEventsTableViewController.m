@@ -21,6 +21,7 @@
     NSArray *fetchArray;
     NSMutableArray *eventByCategoryArray;
     NSMutableArray *favouritesArray;
+    NSMutableArray *filteredArray;
     
 
 }
@@ -160,6 +161,8 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 275.f;
 }
+
+
 
 
 @end

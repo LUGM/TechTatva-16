@@ -19,6 +19,7 @@
     NSArray *array;
     EventsDetailsJSONModel *jsonModel;
     NSMutableDictionary *resultsDictionary;
+    EventsDetailsJSONModel *model;
 }
 @property (nonatomic, strong) NSIndexPath *selectedIndexPath;
 
@@ -31,13 +32,11 @@
     
     NSURL *eventsUrl = [NSURL URLWithString:@"https://api.myjson.com/bins/3t0vu"];
     NSData *mydata = [NSData dataWithContentsOfURL:eventsUrl];
-    //ASMutableURLRequest *postRequest = [ASMutableURLRequest postRequestWithURL:categoriesUrl];
+    
     NSMutableURLRequest *postRequest = [[NSMutableURLRequest alloc] initWithURL:eventsUrl];
     NSString *post = [NSString stringWithFormat:@"key=%@&value=%@", @"ttech", @"404"];
     NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     [postRequest setHTTPBody:postData];
-    
-
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         @try {
@@ -52,15 +51,12 @@
                                 //[self.tableView reloadData];
                             });
             
-                            EventsDetailsJSONModel *model = [array objectAtIndex:1];
+                            model = [array objectAtIndex:1];
                             NSLog(@"%@",model.categoryEventId);
                             NSLog(@"%@",model.cntctname);
                             NSLog(@"%@",model.hs1);
+                            
                         }
-            
-            
-            
-            
             
 //            NSURL *custumUrl = [[NSURL alloc]initWithString:@"https://api.myjson.com/bins/3t0vu"];
 //            NSData *mydata = [NSData dataWithContentsOfURL:custumUrl];
@@ -91,18 +87,51 @@
             
         }
     });
+    
+    eventsArray = [[NSArray alloc]initWithObjects:@"one",@"two",@"three", nil];
+    searchedEventsArray = [[NSMutableArray alloc]initWithArray:eventsArray];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyBoardShown:) name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyBoardHidden:) name:UIKeyboardWillHideNotification object:nil];
 
 }
 
-- (void)searchBar:(UISearchBar *)searchBar selectedScopeButtonIndexDidChange:(NSInteger)selectedScope {
-    if (searchBar.text.length > 0)
+-(void)keyBoardShown:(NSNotification *)note{
+    CGRect keyboardFrame;
+    [[[note userInfo]objectForKey:UIKeyboardFrameEndUserInfoKey]getValue:&keyboardFrame];
+    CGRect tableviewFrame = eventsTable.frame;
+    tableviewFrame.size.height -= keyboardFrame.size.height;
+    [eventsTable setFrame:tableviewFrame];
+}
+
+-(void)keyBoardHidden:(NSNotification *)note{
+    [eventsTable setFrame:self.view.bounds];
+    
+}
+
+
+
+-(void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    if(searchText.length == 0)
     {
-        
+        [searchedEventsArray removeAllObjects];
+        [searchedEventsArray addObjectsFromArray:eventsArray];
     }
-    else
-    {
-        
+    else{
+        [searchedEventsArray removeAllObjects];
+        for(NSString *string in eventsArray)
+        {
+            NSRange r = [string rangeOfString:searchText options:NSCaseInsensitiveSearch];
+            if(r.location != NSNotFound){
+                [searchedEventsArray addObject:string];
+            }
+        }
     }
+    [eventsTable reloadData];
+}
+
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    [eventsSearchBar resignFirstResponder];
 }
 
 -(IBAction)segmentSwitch{
@@ -131,7 +160,9 @@
         cell = [[EventsTableViewCell alloc] init];
         
     }
-
+    cell.eventDesc.text = model.eventDescription;
+    cell.eventName.text = model.eventName;
+    
     return cell;
 }
 
@@ -144,7 +175,7 @@
 {
     [tableView beginUpdates];
     
-    if (![indexPath compare:self.selectedIndexPath] == NSOrderedSame)
+    if (!([indexPath compare:self.selectedIndexPath] == NSOrderedSame))
         self.selectedIndexPath = indexPath;
     else
         self.selectedIndexPath = nil;

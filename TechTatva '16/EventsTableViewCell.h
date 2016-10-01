@@ -11,7 +11,7 @@
 @interface EventsTableViewCell : UITableViewCell
 
 
-@property (weak, nonatomic) IBOutlet UIView *eventName;
+@property (weak, nonatomic) IBOutlet UILabel *eventName;
 
 @property (weak, nonatomic) IBOutlet UITextView *eventDesc;
 
