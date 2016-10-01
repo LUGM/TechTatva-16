@@ -11,7 +11,6 @@
 @interface FeedbackTableViewController ()
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *backButton;
 
-
 @end
 
 @implementation FeedbackTableViewController
@@ -49,56 +48,85 @@
 
 - (IBAction)star1Pressed:(id)sender
 {
-    self.star1.imageView.image = [UIImage imageNamed:@"filledstar.png"];
-    self.star2.imageView.image = [UIImage imageNamed:@"star.png"];
-    self.star3.imageView.image = [UIImage imageNamed:@"star.png"];
-    self.star4.imageView.image = [UIImage imageNamed:@"star.png"];
-    self.star5.imageView.image = [UIImage imageNamed:@"star.png"];
+    [self set_stars:1];
     self.favCount = 1;
 }
 
 -(IBAction)star2Pressed:(id)sender
 {
-    self.star1.imageView.image = [UIImage imageNamed:@"filledstar.png"];
-    self.star2.imageView.image = [UIImage imageNamed:@"filledstar.png"];
-    self.star3.imageView.image = [UIImage imageNamed:@"star.png"];
-    self.star4.imageView.image = [UIImage imageNamed:@"star.png"];
-    self.star5.imageView.image = [UIImage imageNamed:@"star.png"];
+    [self set_stars:2];
     self.favCount = 2;
 
 }
 
 -(IBAction)star3Pressed:(id)sender
 {
-    self.star1.imageView.image = [UIImage imageNamed:@"filledstar.png"];
-    self.star2.imageView.image = [UIImage imageNamed:@"filledstar.png"];
-    self.star3.imageView.image = [UIImage imageNamed:@"filledstar.png"];
-    self.star4.imageView.image = [UIImage imageNamed:@"star.png"];
-    self.star5.imageView.image = [UIImage imageNamed:@"star.png"];
+    [self set_stars:3];
     self.favCount = 3;
 
 }
 
 -(IBAction)star4Pressed:(id)sender
 {
-    self.star1.imageView.image = [UIImage imageNamed:@"filledstar.png"];
-    self.star2.imageView.image = [UIImage imageNamed:@"filledstar.png"];
-    self.star3.imageView.image = [UIImage imageNamed:@"filledstar.png"];
-    self.star4.imageView.image = [UIImage imageNamed:@"filledstar.png"];
-    self.star5.imageView.image = [UIImage imageNamed:@"star.png"];
+    [self set_stars:4];
     self.favCount = 4;
 
 }
 
 -(IBAction)star5Pressed:(id)sender
 {
-    self.star1.imageView.image = [UIImage imageNamed:@"filledstar.png"];
-    self.star2.imageView.image = [UIImage imageNamed:@"filledstar.png"];
-    self.star3.imageView.image = [UIImage imageNamed:@"filledstar.png"];
-    self.star4.imageView.image = [UIImage imageNamed:@"filledstar.png"];
-    self.star5.imageView.image = [UIImage imageNamed:@"filledstar.png"];
+    [self set_stars:5];
     self.favCount = 5;
 
+}
+
+-(void)set_stars:(int)num
+{
+    if(num == 1)
+    {
+        [self.star1 setBackgroundImage:[UIImage imageNamed:@"filledstar.png"] forState:UIControlStateNormal];
+        [self.star2 setBackgroundImage:[UIImage imageNamed:@"star.png"] forState:UIControlStateNormal];
+        [self.star3 setBackgroundImage:[UIImage imageNamed:@"star.png"] forState:UIControlStateNormal];
+        [self.star4 setBackgroundImage:[UIImage imageNamed:@"star.png"] forState:UIControlStateNormal];
+        [self.star5 setBackgroundImage:[UIImage imageNamed:@"star.png"] forState:UIControlStateNormal];
+    }
+    
+    else if(num == 2)
+    {
+        [self.star1 setBackgroundImage:[UIImage imageNamed:@"filledstar.png"] forState:UIControlStateNormal];
+        [self.star2 setBackgroundImage:[UIImage imageNamed:@"filledstar.png"] forState:UIControlStateNormal];
+        [self.star3 setBackgroundImage:[UIImage imageNamed:@"star.png"] forState:UIControlStateNormal];
+        [self.star4 setBackgroundImage:[UIImage imageNamed:@"star.png"] forState:UIControlStateNormal];
+        [self.star5 setBackgroundImage:[UIImage imageNamed:@"star.png"] forState:UIControlStateNormal];
+
+    }
+    else if(num == 3)
+    {
+        [self.star1 setBackgroundImage:[UIImage imageNamed:@"filledstar.png"] forState:UIControlStateNormal];
+        [self.star2 setBackgroundImage:[UIImage imageNamed:@"filledstar.png"] forState:UIControlStateNormal];
+        [self.star3 setBackgroundImage:[UIImage imageNamed:@"filledstar.png"] forState:UIControlStateNormal];
+        [self.star4 setBackgroundImage:[UIImage imageNamed:@"star.png"] forState:UIControlStateNormal];
+        [self.star5 setBackgroundImage:[UIImage imageNamed:@"star.png"] forState:UIControlStateNormal];
+        
+    }
+    else if(num == 4)
+    {
+        [self.star1 setBackgroundImage:[UIImage imageNamed:@"filledstar.png"] forState:UIControlStateNormal];
+        [self.star2 setBackgroundImage:[UIImage imageNamed:@"filledstar.png"] forState:UIControlStateNormal];
+        [self.star3 setBackgroundImage:[UIImage imageNamed:@"filledstar.png"] forState:UIControlStateNormal];
+        [self.star4 setBackgroundImage:[UIImage imageNamed:@"filledstar.png"] forState:UIControlStateNormal];
+        [self.star5 setBackgroundImage:[UIImage imageNamed:@"star.png"] forState:UIControlStateNormal];
+        
+    }
+    else if(num == 5)
+    {
+        [self.star1 setBackgroundImage:[UIImage imageNamed:@"filledstar.png"] forState:UIControlStateNormal];
+        [self.star2 setBackgroundImage:[UIImage imageNamed:@"filledstar.png"] forState:UIControlStateNormal];
+        [self.star3 setBackgroundImage:[UIImage imageNamed:@"filledstar.png"] forState:UIControlStateNormal];
+        [self.star4 setBackgroundImage:[UIImage imageNamed:@"filledstar.png"] forState:UIControlStateNormal];
+        [self.star5 setBackgroundImage:[UIImage imageNamed:@"filledstar.png"] forState:UIControlStateNormal];
+        
+    }
 }
 
 @end

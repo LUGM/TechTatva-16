@@ -23,12 +23,13 @@
 @property (strong, nonatomic) IBOutlet UIButton *star5;
 @property (nonatomic) NSInteger favCount;   //to check no of stars selected
 
-
 - (IBAction)star1Pressed:(id)sender;
 - (IBAction)star2Pressed:(id)sender;
 - (IBAction)star3Pressed:(id)sender;
 - (IBAction)star4Pressed:(id)sender;
 - (IBAction)star5Pressed:(id)sender;
+
+-(void)set_stars:(int)num;
 
 
 @end
