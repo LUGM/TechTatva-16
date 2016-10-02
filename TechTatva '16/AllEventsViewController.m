@@ -11,6 +11,7 @@
 #import "Favourite.h"
 #import "EventsDetailsJSONModel.h"
 #import "FavouritesViewController.h"
+#import "ScheduleJsonDataModel.h"
 
 
 @interface AllEventsViewController ()
@@ -23,13 +24,41 @@
     NSMutableArray *eventByCategoryArray;
     NSMutableArray *favouritesArray;
     NSMutableArray *filteredArray;
+    NSArray *array;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self fetchFavourites];
     
-    allEventsArray = [[NSArray alloc]initWithObjects:@"one",@"two",@"three", nil];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        @try {
+            
+            NSURL *custumUrl = [[NSURL alloc]initWithString:@"http://api.mitportals.in/schedule/"];
+            NSData *mydata = [NSData dataWithContentsOfURL:custumUrl];
+            NSError *error;
+            
+            if (mydata!=nil)
+            {
+                id jsonData = [NSJSONSerialization JSONObjectWithData:mydata options:kNilOptions error:&error];
+                id requiredArray = [jsonData valueForKey:@"data"];
+                array = [ScheduleJsonDataModel getArrayFromJson:requiredArray];
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [allEventsTableView reloadData];
+                });
+            }
+        }
+        @catch (NSException *exception) {
+            
+        }
+        @finally {
+            
+        }
+    });
+
+    
+    allEventsArray = [[NSArray alloc]initWithArray:fetchArray];
     searchedAllEventsArray = [[NSMutableArray alloc]initWithArray:allEventsArray];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyBoardShown:) name:UIKeyboardDidShowNotification object:nil];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyBoardHidden:) name:UIKeyboardWillHideNotification object:nil];
@@ -103,13 +132,15 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    if(array.count == 0)
+        return 0;
+    return array.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     static NSString *cellIdentifier = @"AllEveCell";
-    AllEventsTableViewCell *cell = (AllEventsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    AllEventsTableViewCell *cell = (AllEventsTableViewCell *)[allEventsTableView dequeueReusableCellWithIdentifier:cellIdentifier];
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"AllEventsTableViewCell" owner:self options:nil];
     
     cell = [nib objectAtIndex:0];
@@ -121,7 +152,12 @@
         
     }
     
+    
     [cell.favouritesButton addTarget:self action:@selector(switchFavourites:) forControlEvents:UIControlEventTouchUpInside];
+//    cell.eventName.text = [NSString stringWithFormat:@"%@",[[array objectAtIndex:indexPath.row] evename]];
+//    cell.categoryName.text = [NSString stringWithFormat:@"%@",[[array objectAtIndex:indexPath.row] catName]];
+//    cell.venue.text = [NSString stringWithFormat:@"%@",[[array objectAtIndex:indexPath.row] place]];
+//    cell.time.text = [NSString stringWithFormat:@"%@ - %@",[[array objectAtIndex:indexPath.row] sTime],[[array objectAtIndex:indexPath.row] eTime]];
     
     return cell;
 }
@@ -182,11 +218,11 @@
         
         if (favouriteEvent.favourite == 0) {
             favouriteEvent.favourite = [NSNumber numberWithInteger:1];
-            [allEvent.favouritesButton setBackgroundImage:[UIImage imageNamed:@"filledstar.png"] forState:UIControlStateNormal];
+            [allEvent.favouritesButton setBackgroundImage:[UIImage imageNamed:@"FilledFavourites.png"] forState:UIControlStateNormal];
         }
         else
         {
-            [allEvent.favouritesButton setBackgroundImage:[UIImage imageNamed:@"star.png"] forState:UIControlStateNormal];
+            [allEvent.favouritesButton setBackgroundImage:[UIImage imageNamed:@"Favourites.png"] forState:UIControlStateNormal];
             
             NSIndexPath *path = [fav.favouritesTable indexPathForSelectedRow];
             Favourite * deleteFavouriteEvent = [favouritesArray objectAtIndex:path.row];
@@ -201,14 +237,13 @@
             [fav.favouritesTable deleteRowsAtIndexPaths:@[pathsToDelete] withRowAnimation:UITableViewRowAnimationRight];
         }
         
-        
     }
     
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [allEventsTableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

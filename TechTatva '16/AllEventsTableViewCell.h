@@ -14,11 +14,11 @@
 @property (strong, nonatomic) IBOutlet UILabel *categoryName;
 @property (strong, nonatomic) IBOutlet UIImageView *venueImg;
 @property (strong, nonatomic) IBOutlet UIImageView *contactImg;
-@property (strong, nonatomic) IBOutlet UIImageView *maxTeamsImg;
+@property (strong, nonatomic) IBOutlet UIImageView *dateImg;
 @property (strong, nonatomic) IBOutlet UIImageView *timeImg;
 @property (strong, nonatomic) IBOutlet UILabel *venue;
 @property (strong, nonatomic) IBOutlet UILabel *contact;
-@property (strong, nonatomic) IBOutlet UILabel *maxppl;
+@property (strong, nonatomic) IBOutlet UILabel *date;
 @property (strong, nonatomic) IBOutlet UILabel *time;
 @property (strong, nonatomic) IBOutlet UIButton *favouritesButton;
 

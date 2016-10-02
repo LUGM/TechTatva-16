@@ -22,7 +22,7 @@
             self.catId = [myData objectForKey:@"catid"];
             self.catName = [myData objectForKey:@"catname"];
             self.round = [myData objectForKey:@"round"];
-            self.venue = [myData objectForKey:@"venue"];
+            self.place = [myData objectForKey:@"venue"];
             self.sTime = [myData objectForKey:@"stime"];
             self.eTime = [myData objectForKey:@"etime"];
             self.date = [myData objectForKey:@"date"];

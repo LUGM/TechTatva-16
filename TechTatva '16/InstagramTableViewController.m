@@ -91,8 +91,6 @@
     cell.like_img.image = [UIImage imageNamed:[NSString stringWithFormat:@"likepic.png"]];
     cell.comment_image.image = [UIImage imageNamed:[NSString stringWithFormat:@"Comment.png"]];
     
-    //cell.mainImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"thumb_IMG_7632_1024.jpg"]];
-    //[cell.mainImage.image setImageWithURL:[NSURL URLWithString:model.standardResolutionImageUrl] placeholderImage:[UIImage imageNamed:@"youtube.png"]];
     [cell.mainImage sd_setImageWithURL:[NSURL URLWithString:model.standardResolutionImageUrl] placeholderImage:[UIImage imageNamed:@"youtube.png"]];
     
     cell.likeLabel.text = [NSString stringWithFormat:@"%ld likes", (long)model.numberOfLikes];

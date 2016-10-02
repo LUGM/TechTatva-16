@@ -54,6 +54,9 @@
 		D64DB2091D87193F0084B4FC /* Favourite+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = D64DB2061D87193F0084B4FC /* Favourite+CoreDataProperties.m */; };
 		D64DB20A1D87193F0084B4FC /* Favourite.m in Sources */ = {isa = PBXBuildFile; fileRef = D64DB2081D87193F0084B4FC /* Favourite.m */; };
 		D64DB2101D872CCA0084B4FC /* FavouritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D64DB20F1D872CCA0084B4FC /* FavouritesViewController.m */; };
+		D66BE63D1DA12FFE005B2B39 /* FilledFavourites.png in Resources */ = {isa = PBXBuildFile; fileRef = D66BE63B1DA12FFE005B2B39 /* FilledFavourites.png */; };
+		D66BE63E1DA12FFE005B2B39 /* Favourites.png in Resources */ = {isa = PBXBuildFile; fileRef = D66BE63C1DA12FFE005B2B39 /* Favourites.png */; };
+		D66BE6401DA1315C005B2B39 /* Calendar Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = D66BE63F1DA1315C005B2B39 /* Calendar Filled-50.png */; };
 		D68F16E31D9D1707007182C7 /* CategoriesJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D68F16E21D9D1707007182C7 /* CategoriesJSONModel.m */; };
 		D699EEC81D1BFF380093F9CC /* InfoDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = D699EEC71D1BFF380093F9CC /* InfoDetailsView.m */; };
 		D699EECA1D1BFF4D0093F9CC /* InfoDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D699EEC91D1BFF4D0093F9CC /* InfoDetailsView.xib */; };
@@ -63,7 +66,6 @@
 		D69A1A931D997463001F9E7F /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A1A921D997463001F9E7F /* ScheduleViewController.m */; };
 		D6A2B8CA1D847415008DE478 /* AllEventsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A2B8C81D847415008DE478 /* AllEventsTableViewCell.m */; };
 		D6A2B8CB1D847415008DE478 /* AllEventsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A2B8C91D847415008DE478 /* AllEventsTableViewCell.xib */; };
-		D6A2B8CE1D8477BF008DE478 /* AllEventsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A2B8CD1D8477BF008DE478 /* AllEventsTableViewController.m */; };
 		D6C0853D1D7EBCEE00FBD1BC /* FeedbackTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C0853C1D7EBCEE00FBD1BC /* FeedbackTableViewController.m */; };
 		D6C5949E1D1831E9006F19D0 /* likepic.png in Resources */ = {isa = PBXBuildFile; fileRef = D6C5949B1D1831E9006F19D0 /* likepic.png */; };
 		D6C5949F1D1831E9006F19D0 /* techtatvalogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6C5949C1D1831E9006F19D0 /* techtatvalogo.jpg */; };
@@ -170,6 +172,9 @@
 		D64DB2081D87193F0084B4FC /* Favourite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Favourite.m; sourceTree = "<group>"; };
 		D64DB20E1D872CCA0084B4FC /* FavouritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavouritesViewController.h; sourceTree = "<group>"; };
 		D64DB20F1D872CCA0084B4FC /* FavouritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavouritesViewController.m; sourceTree = "<group>"; };
+		D66BE63B1DA12FFE005B2B39 /* FilledFavourites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FilledFavourites.png; sourceTree = "<group>"; };
+		D66BE63C1DA12FFE005B2B39 /* Favourites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Favourites.png; sourceTree = "<group>"; };
+		D66BE63F1DA1315C005B2B39 /* Calendar Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Calendar Filled-50.png"; sourceTree = "<group>"; };
 		D68F16E11D9D1707007182C7 /* CategoriesJSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesJSONModel.h; sourceTree = "<group>"; };
 		D68F16E21D9D1707007182C7 /* CategoriesJSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesJSONModel.m; sourceTree = "<group>"; };
 		D699EEC61D1BFF380093F9CC /* InfoDetailsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoDetailsView.h; sourceTree = "<group>"; };
@@ -185,8 +190,6 @@
 		D6A2B8C71D847415008DE478 /* AllEventsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllEventsTableViewCell.h; sourceTree = "<group>"; };
 		D6A2B8C81D847415008DE478 /* AllEventsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllEventsTableViewCell.m; sourceTree = "<group>"; };
 		D6A2B8C91D847415008DE478 /* AllEventsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllEventsTableViewCell.xib; sourceTree = "<group>"; };
-		D6A2B8CC1D8477BF008DE478 /* AllEventsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllEventsTableViewController.h; sourceTree = "<group>"; };
-		D6A2B8CD1D8477BF008DE478 /* AllEventsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllEventsTableViewController.m; sourceTree = "<group>"; };
 		D6C0853B1D7EBCEE00FBD1BC /* FeedbackTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackTableViewController.h; sourceTree = "<group>"; };
 		D6C0853C1D7EBCEE00FBD1BC /* FeedbackTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackTableViewController.m; sourceTree = "<group>"; };
 		D6C5949B1D1831E9006F19D0 /* likepic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = likepic.png; sourceTree = "<group>"; };
@@ -312,8 +315,6 @@
 				1828D81B1D7476B000E0454F /* CategoriesTableViewCell.xib */,
 				D64DB20E1D872CCA0084B4FC /* FavouritesViewController.h */,
 				D64DB20F1D872CCA0084B4FC /* FavouritesViewController.m */,
-				D6A2B8CC1D8477BF008DE478 /* AllEventsTableViewController.h */,
-				D6A2B8CD1D8477BF008DE478 /* AllEventsTableViewController.m */,
 				D607A28B1D9FD10600CC01E2 /* AllEventsViewController.h */,
 				D607A28C1D9FD10600CC01E2 /* AllEventsViewController.m */,
 				D6A2B8C71D847415008DE478 /* AllEventsTableViewCell.h */,
@@ -371,6 +372,9 @@
 			isa = PBXGroup;
 			children = (
 				18C3F2141D931513007F33DB /* PrefixHeader.pch */,
+				D66BE63F1DA1315C005B2B39 /* Calendar Filled-50.png */,
+				D66BE63B1DA12FFE005B2B39 /* FilledFavourites.png */,
+				D66BE63C1DA12FFE005B2B39 /* Favourites.png */,
 				D6247BF71D7B0E74007F7FF1 /* fb@2x.png */,
 				D6247C011D7B145F007F7FF1 /* youtube.png */,
 				D6247BF91D7B100C007F7FF1 /* google+@2x.png */,
@@ -594,7 +598,9 @@
 				D6C594DE1D19771C006F19D0 /* InstagramTableViewCell.xib in Resources */,
 				18749BC51D13F1E600858B85 /* MoreTableViewCell.xib in Resources */,
 				D6C5949E1D1831E9006F19D0 /* likepic.png in Resources */,
+				D66BE63D1DA12FFE005B2B39 /* FilledFavourites.png in Resources */,
 				D60BB7C91D72F08B0083D0C9 /* Category@2x.png in Resources */,
+				D66BE6401DA1315C005B2B39 /* Calendar Filled-50.png in Resources */,
 				D6247C021D7B145F007F7FF1 /* youtube.png in Resources */,
 				D60BB7BF1D70C3A40083D0C9 /* User Group Man Man-50.png in Resources */,
 				D60BB7BB1D70C3A40083D0C9 /* Calendar-50.png in Resources */,
@@ -604,6 +610,7 @@
 				D60BB7BD1D70C3A40083D0C9 /* Phone Filled-50.png in Resources */,
 				D6247BFE1D7B100C007F7FF1 /* twitter@2x.png in Resources */,
 				D60BB7C51D72EF290083D0C9 /* Events@2x.png in Resources */,
+				D66BE63E1DA12FFE005B2B39 /* Favourites.png in Resources */,
 				D60BB7C71D72EF290083D0C9 /* Results@2x.png in Resources */,
 				D6DC67231D848AFB00D75A5B /* filledstar.png in Resources */,
 				188F51E41D0F08ED0083169D /* Assets.xcassets in Resources */,
@@ -766,7 +773,6 @@
 				D64DB2101D872CCA0084B4FC /* FavouritesViewController.m in Sources */,
 				D64DB2091D87193F0084B4FC /* Favourite+CoreDataProperties.m in Sources */,
 				18749BCA1D14094700858B85 /* ResultsTableViewController.m in Sources */,
-				D6A2B8CE1D8477BF008DE478 /* AllEventsTableViewController.m in Sources */,
 				188F51DC1D0F08ED0083169D /* AppDelegate.m in Sources */,
 				D6247BF61D7B0C58007F7FF1 /* AboutUsTableViewController.m in Sources */,
 				D607A28D1D9FD10600CC01E2 /* AllEventsViewController.m in Sources */,

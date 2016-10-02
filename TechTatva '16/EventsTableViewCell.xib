@@ -9,11 +9,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" rowHeight="179" id="KGk-i7-Jjw" customClass="EventsTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="321" height="180"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventsCell" rowHeight="295" id="KGk-i7-Jjw" customClass="EventsTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="321" height="295"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="321" height="179"/>
+                <frame key="frameInset" width="321" height="294"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Details" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="78H-yf-q0G">
@@ -21,29 +21,73 @@
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MsG-CO-1gU">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MsG-CO-1gU">
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max Team Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDj-Dc-x8w">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="305" id="MiK-go-POV"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAR-Nq-4ne">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="305" id="Fyg-VX-JgH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8q-tP-Ro4">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="251" id="Qwt-pG-g58"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcE-Jb-mIY">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="xSg-jh-NHn"/>
+                            <constraint firstAttribute="width" constant="30" id="yvt-0T-OhT"/>
+                        </constraints>
+                        <state key="normal" image="Phone Filled-50.png"/>
+                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="leadingMargin" secondItem="78H-yf-q0G" secondAttribute="leading" id="5dv-Rn-Ru1"/>
+                    <constraint firstItem="hAR-Nq-4ne" firstAttribute="top" secondItem="sDj-Dc-x8w" secondAttribute="bottom" constant="8" id="8Q2-7m-AOx"/>
                     <constraint firstAttribute="trailingMargin" secondItem="MsG-CO-1gU" secondAttribute="trailing" id="EaR-nY-9ir"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="78H-yf-q0G" secondAttribute="trailing" id="MaL-aX-s7T"/>
-                    <constraint firstItem="78H-yf-q0G" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="QO9-gC-5L3"/>
-                    <constraint firstItem="78H-yf-q0G" firstAttribute="top" secondItem="MsG-CO-1gU" secondAttribute="bottom" constant="19" id="QSf-GG-Nxw"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="78H-yf-q0G" secondAttribute="bottom" constant="1" id="igm-7H-p6P"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="78H-yf-q0G" secondAttribute="trailing" constant="5" id="Emp-v8-piy"/>
+                    <constraint firstItem="78H-yf-q0G" firstAttribute="top" secondItem="R8q-tP-Ro4" secondAttribute="bottom" constant="10" id="N5v-1i-ghE"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="hAR-Nq-4ne" secondAttribute="leading" id="Q3K-Gd-y2T"/>
+                    <constraint firstItem="78H-yf-q0G" firstAttribute="top" secondItem="mcE-Jb-mIY" secondAttribute="bottom" constant="6" id="QSw-Ke-DTB"/>
+                    <constraint firstItem="sDj-Dc-x8w" firstAttribute="top" secondItem="MsG-CO-1gU" secondAttribute="bottom" constant="27.5" id="U5l-yo-9ld"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="R8q-tP-Ro4" secondAttribute="leading" id="VUz-Ig-Nb7"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="78H-yf-q0G" secondAttribute="bottom" constant="5" id="b90-Ux-7Zq"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="78H-yf-q0G" secondAttribute="leading" id="baS-2M-zte"/>
+                    <constraint firstItem="mcE-Jb-mIY" firstAttribute="leading" secondItem="R8q-tP-Ro4" secondAttribute="trailing" constant="20" id="jUk-27-4Ol"/>
                     <constraint firstItem="MsG-CO-1gU" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="lEj-25-gbb"/>
-                    <constraint firstItem="MsG-CO-1gU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="qI9-4d-I9O"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="sDj-Dc-x8w" secondAttribute="leading" id="p1A-0M-TY7"/>
+                    <constraint firstItem="MsG-CO-1gU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="qI9-4d-I9O"/>
                     <constraint firstAttribute="leadingMargin" secondItem="MsG-CO-1gU" secondAttribute="leading" id="u1b-W5-Tq3"/>
+                    <constraint firstItem="R8q-tP-Ro4" firstAttribute="top" secondItem="hAR-Nq-4ne" secondAttribute="bottom" constant="8" id="xND-qk-cTD"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="contactName" destination="hAR-Nq-4ne" id="vIJ-cl-BBl"/>
+                <outlet property="contactNumber" destination="R8q-tP-Ro4" id="ofB-Pe-ayT"/>
                 <outlet property="eventDesc" destination="78H-yf-q0G" id="j9x-cG-kzY"/>
                 <outlet property="eventName" destination="MsG-CO-1gU" id="hST-nA-8h5"/>
+                <outlet property="maxTeamSize" destination="sDj-Dc-x8w" id="skR-99-GHA"/>
             </connections>
-            <point key="canvasLocation" x="114.5" y="218"/>
+            <point key="canvasLocation" x="-95.5" y="158.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="Phone Filled-50.png" width="50" height="50"/>
+    </resources>
 </document>

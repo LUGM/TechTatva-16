@@ -11,7 +11,7 @@
 @interface EventsDetailsJSONModel : NSObject
 
 @property (strong,nonatomic) NSString *eventName;
-@property (nonatomic) NSInteger eventId;
+@property (nonatomic) NSString *eventId;
 @property (strong,nonatomic) NSString *eventDescription;
 @property (nonatomic) NSString *eventMaxTeamSize;
 @property (strong,nonatomic) NSString *categoryEventId;

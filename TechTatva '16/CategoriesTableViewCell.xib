@@ -9,55 +9,42 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="265" id="KGk-i7-Jjw" customClass="CategoriesTableViewCell">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="categoriesCell" rowHeight="265" id="KGk-i7-Jjw" customClass="CategoriesTableViewCell">
             <rect key="frame" x="0.0" y="0.0" width="391" height="267"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <frame key="frameInset" width="391" height="266"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumb_IMG_7632_1024.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="tvC-mh-jr9">
-                        <constraints>
-                            <constraint firstAttribute="width" constant="45" id="3s2-zS-WrJ"/>
-                            <constraint firstAttribute="height" constant="45" id="Idp-hY-eLU"/>
-                        </constraints>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9O-wR-HZu">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="345" id="159-EL-IDe"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Qqd-8Q-I30">
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="345" id="nSV-nv-Z0b"/>
-                        </constraints>
-                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="leadingMargin" secondItem="tvC-mh-jr9" secondAttribute="leading" id="3Ys-nS-lEf"/>
-                    <constraint firstItem="s9O-wR-HZu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="11" id="9gt-jm-c3S"/>
+                    <constraint firstItem="s9O-wR-HZu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="15" id="9gt-jm-c3S"/>
                     <constraint firstItem="Qqd-8Q-I30" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="16" id="B8d-k4-pN2"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Qqd-8Q-I30" secondAttribute="trailing" constant="14" id="ItP-Oo-cKb"/>
-                    <constraint firstAttribute="topMargin" secondItem="tvC-mh-jr9" secondAttribute="top" id="Xjf-2z-brJ"/>
                     <constraint firstAttribute="bottomMargin" secondItem="Qqd-8Q-I30" secondAttribute="bottom" constant="10" id="e4d-la-h4N"/>
-                    <constraint firstItem="Qqd-8Q-I30" firstAttribute="top" secondItem="tvC-mh-jr9" secondAttribute="bottom" constant="31" id="ewJ-s0-l7t"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="s9O-wR-HZu" secondAttribute="trailing" constant="28" id="kh0-Mx-UL0"/>
-                    <constraint firstItem="s9O-wR-HZu" firstAttribute="leading" secondItem="tvC-mh-jr9" secondAttribute="trailing" constant="29" id="rQg-cn-t5D"/>
+                    <constraint firstItem="Qqd-8Q-I30" firstAttribute="top" secondItem="s9O-wR-HZu" secondAttribute="bottom" constant="30" id="gtO-VD-Xhf"/>
+                    <constraint firstItem="s9O-wR-HZu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="16" id="z8v-dR-4uP"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="categoryInfo" destination="Qqd-8Q-I30" id="gmS-Ho-Cy8"/>
                 <outlet property="nameLabel1" destination="s9O-wR-HZu" id="D3a-kX-eSm"/>
-                <outlet property="thumbnailImageView" destination="tvC-mh-jr9" id="4Zi-uR-YCo"/>
             </connections>
             <point key="canvasLocation" x="239.5" y="171.5"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="thumb_IMG_7632_1024.jpg" width="1086" height="724"/>
-    </resources>
 </document>

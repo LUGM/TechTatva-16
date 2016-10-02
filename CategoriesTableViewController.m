@@ -91,18 +91,14 @@
     
     cell.nameLabel1.text = [[array objectAtIndex:indexPath.row] catName];
     //cell.nameLabel2.text = [label2Array objectAtIndex:indexPath.row];
-    cell.thumbnailImageView.image = [UIImage imageNamed:@"thumb_IMG_7632_1024.jpg"];
-    cell.thumbnailImageView.layer.cornerRadius = cell.thumbnailImageView.frame.size.width / 2;
-    cell.thumbnailImageView.clipsToBounds = YES;
     cell.categoryInfo.text = [[array objectAtIndex:indexPath.row] catDesc];
-    NSDictionary *catDict = [array objectAtIndex:indexPath.row];
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if ([indexPath compare:self.selectedIndexPath] == NSOrderedSame)
         return 265.f;
-    return 70.f;
+    return 90.f;
 }
 
 

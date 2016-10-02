@@ -17,7 +17,7 @@
     if(self) {
         if (myData && [myData isKindOfClass:[NSDictionary class]]) {
             self.eventName = [myData objectForKey:@"ename"];
-            self.eventId = [[myData objectForKey:@"eid"]integerValue];
+            self.eventId = [myData objectForKey:@"eid"];
             self.eventDescription = [myData objectForKey:@"edesc"];
             self.eventMaxTeamSize = [myData objectForKey:@"emaxteamsize"];
             self.categoryEventId = [myData objectForKey:@"cid"];

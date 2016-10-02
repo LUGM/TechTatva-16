@@ -11,7 +11,8 @@
 @interface ResultsTableViewCell : UITableViewCell
 @property (nonatomic, strong) IBOutlet UILabel *nameLabel1;
 @property (nonatomic, strong) IBOutlet UILabel *nameLabel2;
-@property (nonatomic, strong) IBOutlet UIImageView *thumbnailImageView;
+@property (strong, nonatomic) IBOutlet UILabel *eveRound;
+
 
 
 

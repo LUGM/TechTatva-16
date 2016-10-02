@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -13,7 +13,7 @@
             <rect key="frame" x="0.0" y="0.0" width="300" height="275"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="300" height="275"/>
+                <frame key="frameInset" width="300" height="274"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMC-dJ-76x">
@@ -31,7 +31,7 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max Ppl" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhc-Fc-bpb">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhc-Fc-bpb">
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -53,7 +53,7 @@
                             <constraint firstAttribute="height" constant="31" id="zBp-Mt-jDG"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="User Group Man Man-50.png" translatesAutoresizingMaskIntoConstraints="NO" id="237-In-6Gs">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Calendar Filled-50.png" translatesAutoresizingMaskIntoConstraints="NO" id="237-In-6Gs">
                         <constraints>
                             <constraint firstAttribute="height" constant="31" id="PyS-PG-dDF"/>
                             <constraint firstAttribute="width" constant="31" id="r8u-Vf-avt"/>
@@ -65,12 +65,12 @@
                             <constraint firstAttribute="height" constant="31" id="mkv-3K-a9c"/>
                         </constraints>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z3f-d3-jRa">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z3f-d3-jRa">
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="KXf-Hz-vZF"/>
                             <constraint firstAttribute="height" constant="30.5" id="tNf-Sr-Iox"/>
                         </constraints>
-                        <state key="normal" backgroundImage="star.png"/>
+                        <state key="normal" image="Favourites.png"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GY5-L5-hqq">
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -113,23 +113,23 @@
                 <outlet property="categoryName" destination="eHk-Uf-Jxo" id="UcK-Wd-xkT"/>
                 <outlet property="contact" destination="GY5-L5-hqq" id="Mec-NT-V8C"/>
                 <outlet property="contactImg" destination="Ni1-Cq-eSO" id="DwA-XA-OKL"/>
+                <outlet property="date" destination="qhc-Fc-bpb" id="FSP-At-wzX"/>
+                <outlet property="dateImg" destination="237-In-6Gs" id="nLg-54-EB5"/>
                 <outlet property="eventName" destination="nMC-dJ-76x" id="5gD-rR-9cL"/>
                 <outlet property="favouritesButton" destination="Z3f-d3-jRa" id="3ch-Zh-i11"/>
-                <outlet property="maxTeamsImg" destination="237-In-6Gs" id="8Ov-TC-fiI"/>
-                <outlet property="maxppl" destination="qhc-Fc-bpb" id="KNU-8J-MhO"/>
                 <outlet property="time" destination="Mxw-ip-5hC" id="3PM-ko-C4G"/>
                 <outlet property="timeImg" destination="Xbs-zI-2B0" id="emd-Tx-ozk"/>
                 <outlet property="venue" destination="1VD-j2-TXd" id="Txb-E5-fKv"/>
                 <outlet property="venueImg" destination="uNp-IG-A6q" id="waz-sU-2zI"/>
             </connections>
-            <point key="canvasLocation" x="101" y="-126.5"/>
+            <point key="canvasLocation" x="233" y="-127"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Calendar Filled-50.png" width="50" height="50"/>
+        <image name="Favourites.png" width="50" height="50"/>
         <image name="Phone Filled-50.png" width="50" height="50"/>
         <image name="Time Filled-50.png" width="50" height="50"/>
-        <image name="User Group Man Man-50.png" width="50" height="50"/>
         <image name="location.png" width="50" height="50"/>
-        <image name="star.png" width="50" height="50"/>
     </resources>
 </document>

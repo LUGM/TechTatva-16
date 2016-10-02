@@ -17,7 +17,7 @@
     self = [super init];
     
     if(self) {
-        if (myData && [myData isKindOfClass:[NSMutableDictionary class]]) {
+        if (myData && [myData isKindOfClass:[NSDictionary class]]) {
             
             NSMutableDictionary *data = [[NSMutableDictionary alloc] initWithDictionary:myData];
             self.objectType = [data objectForKey:@"type"];

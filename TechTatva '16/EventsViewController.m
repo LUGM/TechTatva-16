@@ -14,9 +14,6 @@
 @interface EventsViewController ()
 {
     NSArray *array;
-    EventsDetailsJSONModel *jsonModel;
-    NSMutableDictionary *resultsDictionary;
-    EventsDetailsJSONModel *model;
 }
 @property (nonatomic, strong) NSIndexPath *selectedIndexPath;
 
@@ -26,7 +23,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    daycontrol.selectedSegmentIndex = 0;
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         @try {
@@ -74,8 +70,6 @@
     
 }
 
-
-
 -(void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
     if(searchText.length == 0)
@@ -105,13 +99,14 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+    if(array.count == 0)
+        return 0;
+    return array.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    static NSString *cellIdentifier = @"myCell";
-    EventsTableViewCell *cell = (EventsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    EventsTableViewCell *cell = (EventsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"eventsCell"];
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"EventsTableViewCell" owner:self options:nil];
     
     cell = [nib objectAtIndex:0];
@@ -122,9 +117,15 @@
         cell = [[EventsTableViewCell alloc] init];
         
     }
-    cell.eventDesc.text = model.eventDescription;
-    cell.eventName.text = model.eventName;
     
+    EventsDetailsJSONModel *demoModel = [array objectAtIndex:indexPath.row];
+    cell.eventDesc.text = demoModel.eventDescription;
+    //cell.eventDesc.text = [NSString stringWithFormat:@"%@",[[array objectAtIndex:indexPath.row] eventDescription]];
+    //cell.eventName.text = [NSString stringWithFormat:@"%@",[[array objectAtIndex:indexPath.row] eventName]];
+    cell.contactNumber.text = [NSString stringWithFormat:@"%@",[[array objectAtIndex:indexPath.row] contactNumber]];
+    cell.contactName.text = [NSString stringWithFormat:@"%@",[[array objectAtIndex:indexPath.row] cntctname]];
+    cell.maxTeamSize.text = [NSString stringWithFormat:@"%@",[[array objectAtIndex:indexPath.row] eventMaxTeamSize]];
+
     return cell;
 }
 
@@ -150,8 +151,8 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if ([indexPath compare:self.selectedIndexPath] == NSOrderedSame)
-        return 180.f;
-    return 60.f;
+        return 295.f;
+    return 50.f;
 }
 
 
