@@ -40,19 +40,11 @@
                 id jsonData = [NSJSONSerialization JSONObjectWithData:mydata options:kNilOptions error:&error];
                 id requiredArray = [jsonData valueForKey:@"data"];
                 array = [ResultsJsonDataModel getArrayFromJson:requiredArray];
-                ResultsJsonDataModel *model = [array objectAtIndex:0];
-                NSLog(@"cat name: %@",model.category);
-                NSLog(@"Event name:%@",model.event);
-                NSLog(@"date:%@",model.position);
-                
                 
                 dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.tableView reloadData];
                 });
-                
-                
             }
-            
-            
         }
         @catch (NSException *exception) {
             
@@ -76,7 +68,9 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return label1Array.count;
+    if (array.count == 0)
+        return 0;
+    return array.count;
 }
 
 
@@ -89,14 +83,9 @@
         cell = [[ResultsTableViewCell alloc] init];
     }
     
-    cell.nameLabel1.text = [label1Array objectAtIndex:indexPath.row];
-    cell.nameLabel2.text = [label2Array objectAtIndex:indexPath.row];
-    cell.thumbnailImageView.image = [UIImage imageNamed:@"thumb_IMG_7632_1024.jpg"];
-    cell.thumbnailImageView.layer.cornerRadius = cell.thumbnailImageView.frame.size.width / 2;
-    cell.thumbnailImageView.clipsToBounds = YES;
+    cell.nameLabel1.text = [NSString stringWithFormat:@"Event : %@",[[array objectAtIndex:indexPath.row] event]];
+    cell.nameLabel2.text = [NSString stringWithFormat:@"Category : %@",[[array objectAtIndex:indexPath.row] category]];
 
-    
-    
     return cell;
 }
 
@@ -109,8 +98,8 @@
 {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"My Alert"
-                                                                   message:@"This is an alert."
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Result"
+                                                                   message:[NSString stringWithFormat:@"Position : %@\nTeam ID : %@", [[array objectAtIndex:indexPath.row] standing], [[array objectAtIndex:indexPath.row] teamID]]
                                                             preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault

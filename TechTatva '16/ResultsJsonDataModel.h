@@ -13,7 +13,7 @@
 @property (strong,nonatomic) NSString *teamID;
 @property (strong,nonatomic) NSString *category;
 @property (strong,nonatomic) NSString *event;
-@property (strong,nonatomic) NSString *position;
+@property (strong,nonatomic) NSString *standing;
 @property (strong,nonatomic) NSString *round;
 
 

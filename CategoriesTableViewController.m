@@ -10,8 +10,8 @@
 #import "CategoriesTableViewCell.h"
 #import "CategoriesJSONModel.h"
 
-@interface CategoriesTableViewController(){
-NSArray *categoriesArray ;
+@interface CategoriesTableViewController()  {
+    NSArray *categoriesArray ;
     NSArray *array;
 }
 
@@ -20,7 +20,8 @@ NSArray *categoriesArray ;
 @end
 
 @implementation CategoriesTableViewController
--(void)viewDidLoad{
+
+-(void)viewDidLoad  {
     categoriesArray = [[NSArray alloc] init];
     categoriesArray = @[@"Categories",@"Hello",@"Hi",@"IOS",@"TT'16",@"AppDev"];
     
@@ -36,17 +37,10 @@ NSArray *categoriesArray ;
                     id jsonData = [NSJSONSerialization JSONObjectWithData:mydata options:kNilOptions error:&error];
                     id requiredArray = [jsonData valueForKey:@"data"];
                     array = [CategoriesJSONModel getArrayFromJson:requiredArray];
-                
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        
-                                });
-                
-                    CategoriesJSONModel *model = [array objectAtIndex:1];
-                    NSLog(@"Cat desc is:%@",model.catDesc);
-                    NSLog(@"%@",model.catName);
-                    NSLog(@"%@",model.catId);
+                        [self.tableView reloadData];
+                    });
                 }
-
         }
         @catch (NSException *exception) {
             
@@ -64,7 +58,9 @@ NSArray *categoriesArray ;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return categoriesArray.count;
+    if (array.count == 0)
+        return 0;
+    return array.count;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -79,11 +75,11 @@ NSArray *categoriesArray ;
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [tableView endUpdates];
 
-
 }
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     static NSString *simpleTableIdentifier = @"categoriesCell";
     CategoriesTableViewCell *cell = (CategoriesTableViewCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CategoriesTableViewCell" owner:self options:nil];
@@ -92,15 +88,14 @@ NSArray *categoriesArray ;
         cell = [[CategoriesTableViewCell alloc] init];
     }
     
-    cell.nameLabel1.text = [categoriesArray objectAtIndex:indexPath.row];
+    
+    cell.nameLabel1.text = [[array objectAtIndex:indexPath.row] catName];
     //cell.nameLabel2.text = [label2Array objectAtIndex:indexPath.row];
     cell.thumbnailImageView.image = [UIImage imageNamed:@"thumb_IMG_7632_1024.jpg"];
     cell.thumbnailImageView.layer.cornerRadius = cell.thumbnailImageView.frame.size.width / 2;
     cell.thumbnailImageView.clipsToBounds = YES;
-     cell.categoryInfo.contentInset = UIEdgeInsetsMake(-7.0,0.0,0,0.0);
-    CategoriesJSONModel *demoModel = [[CategoriesJSONModel alloc]init];
-    cell.categoryInfo.text = demoModel.catDesc;
-    
+    cell.categoryInfo.text = [[array objectAtIndex:indexPath.row] catDesc];
+    NSDictionary *catDict = [array objectAtIndex:indexPath.row];
     return cell;
 }
 

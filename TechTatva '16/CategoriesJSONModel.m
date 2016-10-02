@@ -15,17 +15,16 @@
     self = [super init];
     
     if(self) {
-        if (myData && [myData isKindOfClass:[NSMutableDictionary class]]) {
-            NSMutableDictionary *data = [[NSMutableDictionary alloc]initWithDictionary:myData];
-            self.catId = [data objectForKey:@"cid"];
-            self.catName = [data objectForKey:@"cname"];
-            self.catDesc = [data objectForKey:@"cdesc"];
+        if (myData && [myData isKindOfClass:[NSDictionary class]]) {
+            self.catId = [myData objectForKey:@"cid"];
+            self.catName = [myData objectForKey:@"cname"];
+            self.catDesc = [myData objectForKey:@"cdesc"];
         }
     }
     return self;
 }
 
-+(NSMutableArray *)getArrayFromJson:(id)myData
++ (NSMutableArray *)getArrayFromJson:(id)myData
 {
     NSMutableArray *array = [NSMutableArray new];
     for(NSDictionary *dict in myData)

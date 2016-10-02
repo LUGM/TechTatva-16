@@ -15,18 +15,17 @@
     self = [super init];
     
     if(self) {
-        if (myData && [myData isKindOfClass:[NSMutableDictionary class]]) {
-            NSMutableDictionary *data = [[NSMutableDictionary alloc]initWithDictionary:myData];
-            self.eventName = [data objectForKey:@"ename"];
-            self.eventId = [[data objectForKey:@"eid"]integerValue];
-            self.eventDescription = [data objectForKey:@"edesc"];
-            self.eventMaxTeamSize = [data objectForKey:@"emaxteamsize"];
-            self.categoryEventId = [data objectForKey:@"cid"];
-            self.categoryEventName = [data objectForKey:@"cname"];
-            self.cntctname = [data objectForKey:@"cntctname"];
-            self.cntctno = [data objectForKey:@"cntctno"];
-            self.hs1 = [data objectForKey:@"hs1"];
-            self.hs2 = [data objectForKey:@"hs2"];
+        if (myData && [myData isKindOfClass:[NSDictionary class]]) {
+            self.eventName = [myData objectForKey:@"ename"];
+            self.eventId = [[myData objectForKey:@"eid"]integerValue];
+            self.eventDescription = [myData objectForKey:@"edesc"];
+            self.eventMaxTeamSize = [myData objectForKey:@"emaxteamsize"];
+            self.categoryEventId = [myData objectForKey:@"cid"];
+            self.categoryEventName = [myData objectForKey:@"cname"];
+            self.cntctname = [myData objectForKey:@"cntctname"];
+            self.cntctno = [myData objectForKey:@"cntctno"];
+            self.hs1 = [myData objectForKey:@"hs1"];
+            self.hs2 = [myData objectForKey:@"hs2"];
         }
     }
     return self;
@@ -43,37 +42,4 @@
     return array;
 }
 
-/*  code to run the events details model
-
- dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
- @try {
- NSURL *custumUrl = [[NSURL alloc]initWithString:@"https://api.myjson.com/bins/26qtt"];
- NSData *mydata = [NSData dataWithContentsOfURL:custumUrl];
- NSError *error;
- 
- if (mydata!=nil)
- {
- id jsonData = [NSJSONSerialization JSONObjectWithData:mydata options:kNilOptions error:&error];
- id requiredArray = [jsonData valueForKey:@"data"];
- array = [jsonModel getArrayFromJson:requiredArray];
- 
- dispatch_async(dispatch_get_main_queue(), ^{
- //[self.tableView reloadData];
- });
- 
- jsonModel *model = [array objectAtIndex:1];
- NSLog(@"%@",model.categoryEventId);
- }
- 
- 
- }
- @catch (NSException *exception) {
- 
- }
- @finally {
- 
- }
- });
- 
-*/
 @end

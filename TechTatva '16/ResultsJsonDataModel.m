@@ -15,13 +15,12 @@
     self = [super init];
     
     if(self) {
-        if (myData && [myData isKindOfClass:[NSMutableDictionary class]]) {
-            NSMutableDictionary *data = [[NSMutableDictionary alloc]initWithDictionary:myData];
-            self.teamID = [data objectForKey:@"tid"];
-            self.event = [data objectForKey:@"eve"];
-            self.category = [data objectForKey:@"cat"];
-            self.round = [data objectForKey:@"round"];
-            self.position = [data objectForKey:@"pos"];
+        if (myData && [myData isKindOfClass:[NSDictionary class]]) {
+            self.teamID = [myData objectForKey:@"tid"];
+            self.event = [myData objectForKey:@"eve"];
+            self.category = [myData objectForKey:@"cat"];
+            self.round = [myData objectForKey:@"round"];
+            self.standing = [myData objectForKey:@"pos"];
         }
     }
     return self;

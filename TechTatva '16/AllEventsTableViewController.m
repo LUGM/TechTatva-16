@@ -35,7 +35,7 @@
 
 }
 
--(void)keyBoardShown:(NSNotification *)note{
+-(void)keyBoardShown:(NSNotification *)note {
     CGRect keyboardFrame;
     [[[note userInfo]objectForKey:UIKeyboardFrameEndUserInfoKey]getValue:&keyboardFrame];
     CGRect tableviewFrame = self.tableView.frame;
@@ -43,7 +43,7 @@
     [allEventsTableView setFrame:tableviewFrame];
 }
 
--(void)keyBoardHidden:(NSNotification *)note{
+-(void)keyBoardHidden:(NSNotification *)note    {
     [allEventsTableView setFrame:self.view.bounds];
 }
 
@@ -67,7 +67,7 @@
     [allEventsTableView reloadData];
 }
 
--(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar  {
     [eventsSearchBar resignFirstResponder];
 }
 
@@ -103,9 +103,7 @@
     
     if (cell == nil)
     {
-        
         cell = [[AllEventsTableViewCell alloc] init];
-        
     }
     
     [cell.favouritesButton addTarget:self action:@selector(switchFavourites:) forControlEvents:UIControlEventTouchUpInside];
@@ -187,10 +185,7 @@
             NSIndexPath * pathsToDelete = [NSIndexPath indexPathForRow:path.row inSection:0];
             [fav.favouritesTable deleteRowsAtIndexPaths:@[pathsToDelete] withRowAnimation:UITableViewRowAnimationRight];
         }
-
-        
     }
-
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -201,9 +196,6 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 275.f;
 }
-
-
-
 
 - (IBAction)allEventsSegmentChange:(id)sender {
 }

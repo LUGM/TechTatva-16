@@ -305,6 +305,11 @@
 				1868992D1D6E350500B82923 /* App Delegate */,
 				1868992C1D6E34F800B82923 /* Favourites Core Data Model */,
 				188F51E01D0F08ED0083169D /* Main.storyboard */,
+				1881A2081D0FCD8000192BD1 /* CategoriesTableViewController.h */,
+				1881A2091D0FCD8000192BD1 /* CategoriesTableViewController.m */,
+				1828D8191D7476B000E0454F /* CategoriesTableViewCell.h */,
+				1828D81A1D7476B000E0454F /* CategoriesTableViewCell.m */,
+				1828D81B1D7476B000E0454F /* CategoriesTableViewCell.xib */,
 				D64DB20E1D872CCA0084B4FC /* FavouritesViewController.h */,
 				D64DB20F1D872CCA0084B4FC /* FavouritesViewController.m */,
 				D6A2B8CC1D8477BF008DE478 /* AllEventsTableViewController.h */,
@@ -350,11 +355,6 @@
 				D6DCA1C41D1C58BC00496F9D /* EventsPopupView.h */,
 				D6DCA1C51D1C58BC00496F9D /* EventsPopupView.m */,
 				D6DCA1C91D1C58E000496F9D /* EventsPopupView.xib */,
-				1881A2081D0FCD8000192BD1 /* CategoriesTableViewController.h */,
-				1881A2091D0FCD8000192BD1 /* CategoriesTableViewController.m */,
-				1828D8191D7476B000E0454F /* CategoriesTableViewCell.h */,
-				1828D81A1D7476B000E0454F /* CategoriesTableViewCell.m */,
-				1828D81B1D7476B000E0454F /* CategoriesTableViewCell.xib */,
 				188F51E31D0F08ED0083169D /* Assets.xcassets */,
 				D6C594D71D1976F8006F19D0 /* InstagramTableViewController.h */,
 				D6C594D81D1976F8006F19D0 /* InstagramTableViewController.m */,
@@ -941,6 +941,7 @@
 			baseConfigurationReference = E01D0203BC4C2BBAC2B42AE4 /* Pods-TechTatva '16.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TechTatva '16/PrefixHeader.pch";
 				INFOPLIST_FILE = "TechTatva '16/Info.plist";
@@ -956,6 +957,7 @@
 			baseConfigurationReference = 18CE6C3949F060D61B5D3837 /* Pods-TechTatva '16.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TechTatva '16/PrefixHeader.pch";
 				INFOPLIST_FILE = "TechTatva '16/Info.plist";

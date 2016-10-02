@@ -7,15 +7,12 @@
 //
 
 #import "EventsViewController.h"
-#import "EventsPopupView.h"
 #import "EventsTableViewCell.h"
 #import "EventsDetailsView.h"
 #import "EventsDetailsJSONModel.h"
 
 @interface EventsViewController ()
 {
-    UIView *overlay;
-    EventsPopupView *Event;  //object of main xib class
     NSArray *array;
     EventsDetailsJSONModel *jsonModel;
     NSMutableDictionary *resultsDictionary;
@@ -31,55 +28,23 @@
     [super viewDidLoad];
     daycontrol.selectedSegmentIndex = 0;
     
-    NSURL *eventsUrl = [NSURL URLWithString:@"https://api.myjson.com/bins/3t0vu"];
-    NSData *mydata = [NSData dataWithContentsOfURL:eventsUrl];
-    
-    NSMutableURLRequest *postRequest = [[NSMutableURLRequest alloc] initWithURL:eventsUrl];
-    NSString *post = [NSString stringWithFormat:@"key=%@&value=%@", @"ttech", @"404"];
-    NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
-    [postRequest setHTTPBody:postData];
-    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         @try {
+            
+            NSURL *custumUrl = [[NSURL alloc]initWithString:@"api.mitportals.in/events/"];
+            NSData *mydata = [NSData dataWithContentsOfURL:custumUrl];
             NSError *error;
+            
             if (mydata!=nil)
-                        {
-                            id jsonData = [NSJSONSerialization JSONObjectWithData:mydata options:kNilOptions error:&error];
-                            id requiredArray = [jsonData valueForKey:@"data"];
-                            array = [EventsDetailsJSONModel getArrayFromJson:requiredArray];
-            
-                            dispatch_async(dispatch_get_main_queue(), ^{
-                                //[self.tableView reloadData];
-                            });
-            
-                            model = [array objectAtIndex:1];
-                            NSLog(@"%@",model.categoryEventId);
-                            NSLog(@"%@",model.cntctname);
-                            NSLog(@"%@",model.hs1);
-                            
-                        }
-            
-//            NSURL *custumUrl = [[NSURL alloc]initWithString:@"https://api.myjson.com/bins/3t0vu"];
-//            NSData *mydata = [NSData dataWithContentsOfURL:custumUrl];
-//            NSError *error;
-//            
-//            if (mydata!=nil)
-//            {
-//                id jsonData = [NSJSONSerialization JSONObjectWithData:mydata options:kNilOptions error:&error];
-//                id requiredArray = [jsonData valueForKey:@"data"];
-//                array = [EventsDetailsJSONModel getArrayFromJson:requiredArray];
-//                
-//                dispatch_async(dispatch_get_main_queue(), ^{
-//                    //[self.tableView reloadData];
-//                });
-//                
-//                EventsDetailsJSONModel *model = [array objectAtIndex:1];
-//                NSLog(@"%@",model.categoryEventId);
-//                NSLog(@"%@",model.cntctname);
-//                NSLog(@"%@",model.hs1);
-//            }
-            
-            
+            {
+                id jsonData = [NSJSONSerialization JSONObjectWithData:mydata options:kNilOptions error:&error];
+                id requiredArray = [jsonData valueForKey:@"data"];
+                array = [EventsDetailsJSONModel getArrayFromJson:requiredArray];
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [eventsTable reloadData];
+                });
+            }
         }
         @catch (NSException *exception) {
             
@@ -89,7 +54,7 @@
         }
     });
     
-    eventsArray = [[NSArray alloc]initWithObjects:@"one",@"two",@"three", nil];
+    eventsArray = [[NSArray alloc] initWithObjects:@"one",@"two",@"three", nil];
     searchedEventsArray = [[NSMutableArray alloc]initWithArray:eventsArray];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyBoardShown:) name:UIKeyboardDidShowNotification object:nil];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyBoardHidden:) name:UIKeyboardWillHideNotification object:nil];
@@ -133,19 +98,6 @@
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
     [eventsSearchBar resignFirstResponder];
-}
-
--(IBAction)eventsSegmentSwitch
-{
-    if(daycontrol.selectedSegmentIndex == 0)
-        NSLog(@"Day 1 selected.");
-    else if(daycontrol.selectedSegmentIndex == 1)
-        NSLog(@"Day 2 selected.");
-    else if(daycontrol.selectedSegmentIndex == 2)
-        NSLog(@"Day 3 selected.");
-    else if(daycontrol.selectedSegmentIndex == 3)
-        NSLog(@"Day 4 selected.");
-
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -204,5 +156,13 @@
 
 
 - (IBAction)eventsSegmentSwitch:(id)sender {
+    if(daycontrol.selectedSegmentIndex == 0)
+        NSLog(@"Day 1 selected.");
+    else if(daycontrol.selectedSegmentIndex == 1)
+        NSLog(@"Day 2 selected.");
+    else if(daycontrol.selectedSegmentIndex == 2)
+        NSLog(@"Day 3 selected.");
+    else if(daycontrol.selectedSegmentIndex == 3)
+        NSLog(@"Day 4 selected.");
 }
 @end

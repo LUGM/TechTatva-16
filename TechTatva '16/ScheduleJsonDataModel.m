@@ -16,18 +16,17 @@
     self = [super init];
     
     if(self) {
-        if (myData && [myData isKindOfClass:[NSMutableDictionary class]]) {
-            NSMutableDictionary *data = [[NSMutableDictionary alloc]initWithDictionary:myData];
-            self.eventId = [data objectForKey:@"eid"];
-            self.eventName = [data objectForKey:@"ename"];
-            self.catId = [data objectForKey:@"catid"];
-            self.catName = [data objectForKey:@"catname"];
-            self.round = [data objectForKey:@"round"];
-            self.venue = [data objectForKey:@"venue"];
-            self.sTime = [data objectForKey:@"stime"];
-            self.eTime = [data objectForKey:@"etime"];
-            self.date = [data objectForKey:@"date"];
-            self.day = [data objectForKey:@"day"];
+        if (myData && [myData isKindOfClass:[NSDictionary class]]) {
+            self.eventId = [myData objectForKey:@"eid"];
+            self.eventName = [myData objectForKey:@"ename"];
+            self.catId = [myData objectForKey:@"catid"];
+            self.catName = [myData objectForKey:@"catname"];
+            self.round = [myData objectForKey:@"round"];
+            self.venue = [myData objectForKey:@"venue"];
+            self.sTime = [myData objectForKey:@"stime"];
+            self.eTime = [myData objectForKey:@"etime"];
+            self.date = [myData objectForKey:@"date"];
+            self.day = [myData objectForKey:@"day"];
         }
     }
     return self;
