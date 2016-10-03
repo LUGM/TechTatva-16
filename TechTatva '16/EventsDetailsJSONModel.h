@@ -21,7 +21,7 @@
 @property (strong,nonatomic) NSString *hs1;
 @property (strong,nonatomic) NSString *hs2;
 
--(instancetype)initWithData:(id)data;
+-(instancetype)initWithData:(id)myData;
 +(NSMutableArray *)getArrayFromJson:(id)myData;
 
 @end

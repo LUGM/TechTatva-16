@@ -21,7 +21,7 @@
 @property (strong,nonatomic) NSString *day;
 @property (strong,nonatomic) NSString *date;
 
--(instancetype)initWithData:(id)data;
+-(instancetype)initWithData:(id)myData;
 +(NSMutableArray *)getArrayFromJson:(id)myData;
 
 @end

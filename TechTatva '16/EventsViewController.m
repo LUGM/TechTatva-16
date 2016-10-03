@@ -26,9 +26,8 @@
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         @try {
-            
-            NSURL *custumUrl = [[NSURL alloc]initWithString:@"api.mitportals.in/events/"];
-            NSData *mydata = [NSData dataWithContentsOfURL:custumUrl];
+            NSURL *myUrl = [[NSURL alloc]initWithString:@"http://api.mitportals.in/events/"];
+            NSData *mydata = [NSData dataWithContentsOfURL:myUrl];
             NSError *error;
             
             if (mydata!=nil)
@@ -49,6 +48,7 @@
             
         }
     });
+
     
     eventsArray = [[NSArray alloc] initWithObjects:@"one",@"two",@"three", nil];
     searchedEventsArray = [[NSMutableArray alloc]initWithArray:eventsArray];
@@ -119,12 +119,11 @@
     }
     
     EventsDetailsJSONModel *demoModel = [array objectAtIndex:indexPath.row];
+    cell.eventName.text = demoModel.eventName;
     cell.eventDesc.text = demoModel.eventDescription;
-    //cell.eventDesc.text = [NSString stringWithFormat:@"%@",[[array objectAtIndex:indexPath.row] eventDescription]];
-    //cell.eventName.text = [NSString stringWithFormat:@"%@",[[array objectAtIndex:indexPath.row] eventName]];
-    cell.contactNumber.text = [NSString stringWithFormat:@"%@",[[array objectAtIndex:indexPath.row] contactNumber]];
-    cell.contactName.text = [NSString stringWithFormat:@"%@",[[array objectAtIndex:indexPath.row] cntctname]];
-    cell.maxTeamSize.text = [NSString stringWithFormat:@"%@",[[array objectAtIndex:indexPath.row] eventMaxTeamSize]];
+    cell.contactNumber.text = demoModel.cntctno;
+    cell.contactName.text = demoModel.cntctname;
+    cell.maxTeamSize.text = demoModel.eventMaxTeamSize;
 
     return cell;
 }
