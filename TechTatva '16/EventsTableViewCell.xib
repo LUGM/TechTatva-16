@@ -27,25 +27,16 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max Team Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDj-Dc-x8w">
-                        <constraints>
-                            <constraint firstAttribute="width" constant="305" id="MiK-go-POV"/>
-                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAR-Nq-4ne">
-                        <constraints>
-                            <constraint firstAttribute="width" constant="305" id="Fyg-VX-JgH"/>
-                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8q-tP-Ro4">
-                        <constraints>
-                            <constraint firstAttribute="width" constant="251" id="Qwt-pG-g58"/>
-                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -59,22 +50,27 @@
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="hAR-Nq-4ne" firstAttribute="top" secondItem="sDj-Dc-x8w" secondAttribute="bottom" constant="8" id="8Q2-7m-AOx"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="MsG-CO-1gU" secondAttribute="trailing" id="EaR-nY-9ir"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="78H-yf-q0G" secondAttribute="trailing" constant="5" id="Emp-v8-piy"/>
-                    <constraint firstItem="78H-yf-q0G" firstAttribute="top" secondItem="R8q-tP-Ro4" secondAttribute="bottom" constant="10" id="N5v-1i-ghE"/>
-                    <constraint firstAttribute="leadingMargin" secondItem="hAR-Nq-4ne" secondAttribute="leading" id="Q3K-Gd-y2T"/>
-                    <constraint firstItem="78H-yf-q0G" firstAttribute="top" secondItem="mcE-Jb-mIY" secondAttribute="bottom" constant="6" id="QSw-Ke-DTB"/>
-                    <constraint firstItem="sDj-Dc-x8w" firstAttribute="top" secondItem="MsG-CO-1gU" secondAttribute="bottom" constant="27.5" id="U5l-yo-9ld"/>
-                    <constraint firstAttribute="leadingMargin" secondItem="R8q-tP-Ro4" secondAttribute="leading" id="VUz-Ig-Nb7"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="78H-yf-q0G" secondAttribute="bottom" constant="5" id="b90-Ux-7Zq"/>
-                    <constraint firstAttribute="leadingMargin" secondItem="78H-yf-q0G" secondAttribute="leading" id="baS-2M-zte"/>
-                    <constraint firstItem="mcE-Jb-mIY" firstAttribute="leading" secondItem="R8q-tP-Ro4" secondAttribute="trailing" constant="20" id="jUk-27-4Ol"/>
-                    <constraint firstItem="MsG-CO-1gU" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="lEj-25-gbb"/>
-                    <constraint firstAttribute="leadingMargin" secondItem="sDj-Dc-x8w" secondAttribute="leading" id="p1A-0M-TY7"/>
-                    <constraint firstItem="MsG-CO-1gU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="qI9-4d-I9O"/>
-                    <constraint firstAttribute="leadingMargin" secondItem="MsG-CO-1gU" secondAttribute="leading" id="u1b-W5-Tq3"/>
-                    <constraint firstItem="R8q-tP-Ro4" firstAttribute="top" secondItem="hAR-Nq-4ne" secondAttribute="bottom" constant="8" id="xND-qk-cTD"/>
+                    <constraint firstItem="mcE-Jb-mIY" firstAttribute="leading" secondItem="R8q-tP-Ro4" secondAttribute="trailing" constant="20" id="383-6O-gZE"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="MsG-CO-1gU" secondAttribute="leading" id="3u7-kZ-Cox"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="MsG-CO-1gU" secondAttribute="trailing" id="7gi-nw-CuK"/>
+                    <constraint firstItem="R8q-tP-Ro4" firstAttribute="top" secondItem="hAR-Nq-4ne" secondAttribute="bottom" constant="8" id="7hE-ex-6cf"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="78H-yf-q0G" secondAttribute="trailing" constant="5" id="E9w-1A-4fN"/>
+                    <constraint firstItem="78H-yf-q0G" firstAttribute="top" secondItem="R8q-tP-Ro4" secondAttribute="bottom" constant="10" id="EP6-wk-muW"/>
+                    <constraint firstItem="mcE-Jb-mIY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="104.5" id="JI3-Dy-ER4"/>
+                    <constraint firstItem="sDj-Dc-x8w" firstAttribute="top" secondItem="MsG-CO-1gU" secondAttribute="bottom" constant="27.5" id="MhG-q8-97N"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="hAR-Nq-4ne" secondAttribute="leading" id="P4N-0b-Ffd"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="hAR-Nq-4ne" secondAttribute="trailing" id="TfP-fX-Xd0"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="sDj-Dc-x8w" secondAttribute="leading" id="UGc-PX-ZuH"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="mcE-Jb-mIY" secondAttribute="trailing" constant="10" id="V7s-wa-Hy7"/>
+                    <constraint firstItem="hAR-Nq-4ne" firstAttribute="top" secondItem="sDj-Dc-x8w" secondAttribute="bottom" constant="8" id="WPc-v9-epn"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="sDj-Dc-x8w" secondAttribute="trailing" id="Xzs-4x-uAa"/>
+                    <constraint firstItem="78H-yf-q0G" firstAttribute="top" secondItem="mcE-Jb-mIY" secondAttribute="bottom" constant="13" id="a1P-j1-4II"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="78H-yf-q0G" secondAttribute="leading" id="bqA-8r-Bvn"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="mcE-Jb-mIY" secondAttribute="bottom" constant="143.5" id="dmz-MX-PPU"/>
+                    <constraint firstItem="mcE-Jb-mIY" firstAttribute="top" secondItem="MsG-CO-1gU" secondAttribute="bottom" constant="74" id="iJu-zE-nLk"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="78H-yf-q0G" secondAttribute="bottom" constant="4.5" id="jJZ-eH-Say"/>
+                    <constraint firstItem="MsG-CO-1gU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="vks-aw-YtT"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="R8q-tP-Ro4" secondAttribute="leading" id="vyt-HF-Doq"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -84,7 +80,7 @@
                 <outlet property="eventName" destination="MsG-CO-1gU" id="hST-nA-8h5"/>
                 <outlet property="maxTeamSize" destination="sDj-Dc-x8w" id="skR-99-GHA"/>
             </connections>
-            <point key="canvasLocation" x="-95.5" y="158.5"/>
+            <point key="canvasLocation" x="54" y="-96"/>
         </tableViewCell>
     </objects>
     <resources>

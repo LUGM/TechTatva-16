@@ -140,25 +140,18 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     static NSString *cellIdentifier = @"AllEveCell";
-    AllEventsTableViewCell *cell = (AllEventsTableViewCell *)[allEventsTableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    AllEventsTableViewCell *cell = (AllEventsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"AllEventsTableViewCell" owner:self options:nil];
     
     cell = [nib objectAtIndex:0];
     
     if (cell == nil)
     {
-        
         cell = [[AllEventsTableViewCell alloc] init];
-        
     }
     
     
-    [cell.favouritesButton addTarget:self action:@selector(switchFavourites:) forControlEvents:UIControlEventTouchUpInside];
-//    cell.eventName.text = [NSString stringWithFormat:@"%@",[[array objectAtIndex:indexPath.row] evename]];
-//    cell.categoryName.text = [NSString stringWithFormat:@"%@",[[array objectAtIndex:indexPath.row] catName]];
-//    cell.venue.text = [NSString stringWithFormat:@"%@",[[array objectAtIndex:indexPath.row] place]];
-//    cell.time.text = [NSString stringWithFormat:@"%@ - %@",[[array objectAtIndex:indexPath.row] sTime],[[array objectAtIndex:indexPath.row] eTime]];
-    
+    //[cell.favouritesButton addTarget:self action:@selector(switchFavourites:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
 }
 

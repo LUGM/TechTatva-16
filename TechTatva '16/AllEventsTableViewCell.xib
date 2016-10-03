@@ -122,7 +122,7 @@
                 <outlet property="venue" destination="1VD-j2-TXd" id="Txb-E5-fKv"/>
                 <outlet property="venueImg" destination="uNp-IG-A6q" id="waz-sU-2zI"/>
             </connections>
-            <point key="canvasLocation" x="233" y="-127"/>
+            <point key="canvasLocation" x="233" y="-127.5"/>
         </tableViewCell>
     </objects>
     <resources>

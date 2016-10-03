@@ -100,7 +100,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if(array.count == 0)
-        return 0;
+        return 5;
     return array.count;
 }
 
@@ -152,7 +152,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if ([indexPath compare:self.selectedIndexPath] == NSOrderedSame)
         return 295.f;
-    return 50.f;
+    return 60.f;
 }
 
 
