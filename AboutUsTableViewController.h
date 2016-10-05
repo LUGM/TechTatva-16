@@ -10,11 +10,4 @@
 
 @interface AboutUsTableViewController : UITableViewController
 
-@property (strong, nonatomic) IBOutlet UIButton *fbButton;
-@property (strong, nonatomic) IBOutlet UIButton *twitterButton;
-@property (strong, nonatomic) IBOutlet UIButton *instaButton;
-@property (strong, nonatomic) IBOutlet UIButton *youTubeButton;
-@property (strong, nonatomic) IBOutlet UIButton *googleplusButton;
-
-
 @end

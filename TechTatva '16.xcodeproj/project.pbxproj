@@ -14,6 +14,9 @@
 		1828D81C1D7476B000E0454F /* CategoriesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828D81A1D7476B000E0454F /* CategoriesTableViewCell.m */; };
 		1828D81D1D7476B000E0454F /* CategoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1828D81B1D7476B000E0454F /* CategoriesTableViewCell.xib */; };
 		184A2ADE1DA5ACDF00D589DE /* InstagramFullViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184A2ADD1DA5ACDF00D589DE /* InstagramFullViewController.m */; };
+		184A2AE81DA5BE6500D589DE /* Favourite+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 184A2AE51DA5BE6500D589DE /* Favourite+CoreDataClass.m */; };
+		184A2AE91DA5BE6500D589DE /* Favourite+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 184A2AE71DA5BE6500D589DE /* Favourite+CoreDataProperties.m */; };
+		184A2AEB1DA5C51100D589DE /* Snapchat-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 184A2AEA1DA5C51100D589DE /* Snapchat-100.png */; };
 		18541FE01D6DD9370046EAD0 /* Favourites.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18541FDE1D6DD9370046EAD0 /* Favourites.xcdatamodeld */; };
 		18749BC01D13F17600858B85 /* MoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18749BBF1D13F17600858B85 /* MoreTableViewController.m */; };
 		18749BC71D13F8FC00858B85 /* thumb_IMG_7632_1024.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18749BC61D13F8FC00858B85 /* thumb_IMG_7632_1024.jpg */; };
@@ -50,8 +53,6 @@
 		D6247BFE1D7B100C007F7FF1 /* twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6247BFB1D7B100C007F7FF1 /* twitter@2x.png */; };
 		D6247C021D7B145F007F7FF1 /* youtube.png in Resources */ = {isa = PBXBuildFile; fileRef = D6247C011D7B145F007F7FF1 /* youtube.png */; };
 		D640BF531D4FD5B4006BA67C /* EventsDetailsJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D640BF521D4FD5B4006BA67C /* EventsDetailsJSONModel.m */; };
-		D64DB2091D87193F0084B4FC /* Favourite+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = D64DB2061D87193F0084B4FC /* Favourite+CoreDataProperties.m */; };
-		D64DB20A1D87193F0084B4FC /* Favourite.m in Sources */ = {isa = PBXBuildFile; fileRef = D64DB2081D87193F0084B4FC /* Favourite.m */; };
 		D64DB2101D872CCA0084B4FC /* FavouritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D64DB20F1D872CCA0084B4FC /* FavouritesViewController.m */; };
 		D66BE63D1DA12FFE005B2B39 /* FilledFavourites.png in Resources */ = {isa = PBXBuildFile; fileRef = D66BE63B1DA12FFE005B2B39 /* FilledFavourites.png */; };
 		D66BE63E1DA12FFE005B2B39 /* Favourites.png in Resources */ = {isa = PBXBuildFile; fileRef = D66BE63C1DA12FFE005B2B39 /* Favourites.png */; };
@@ -99,6 +100,11 @@
 		1828D81B1D7476B000E0454F /* CategoriesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoriesTableViewCell.xib; sourceTree = "<group>"; };
 		184A2ADC1DA5ACDF00D589DE /* InstagramFullViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramFullViewController.h; sourceTree = "<group>"; };
 		184A2ADD1DA5ACDF00D589DE /* InstagramFullViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramFullViewController.m; sourceTree = "<group>"; };
+		184A2AE41DA5BE6500D589DE /* Favourite+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Favourite+CoreDataClass.h"; sourceTree = "<group>"; };
+		184A2AE51DA5BE6500D589DE /* Favourite+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Favourite+CoreDataClass.m"; sourceTree = "<group>"; };
+		184A2AE61DA5BE6500D589DE /* Favourite+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Favourite+CoreDataProperties.h"; sourceTree = "<group>"; };
+		184A2AE71DA5BE6500D589DE /* Favourite+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Favourite+CoreDataProperties.m"; sourceTree = "<group>"; };
+		184A2AEA1DA5C51100D589DE /* Snapchat-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Snapchat-100.png"; sourceTree = "<group>"; };
 		18541FDF1D6DD9370046EAD0 /* Favourites.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Favourites.xcdatamodel; sourceTree = "<group>"; };
 		18749BBE1D13F17600858B85 /* MoreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreTableViewController.h; sourceTree = "<group>"; };
 		18749BBF1D13F17600858B85 /* MoreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreTableViewController.m; sourceTree = "<group>"; };
@@ -157,10 +163,6 @@
 		D6247C011D7B145F007F7FF1 /* youtube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = youtube.png; sourceTree = "<group>"; };
 		D640BF511D4FD5B4006BA67C /* EventsDetailsJSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsDetailsJSONModel.h; sourceTree = "<group>"; };
 		D640BF521D4FD5B4006BA67C /* EventsDetailsJSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsDetailsJSONModel.m; sourceTree = "<group>"; };
-		D64DB2051D87193F0084B4FC /* Favourite+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Favourite+CoreDataProperties.h"; sourceTree = "<group>"; };
-		D64DB2061D87193F0084B4FC /* Favourite+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Favourite+CoreDataProperties.m"; sourceTree = "<group>"; };
-		D64DB2071D87193F0084B4FC /* Favourite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Favourite.h; sourceTree = "<group>"; };
-		D64DB2081D87193F0084B4FC /* Favourite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Favourite.m; sourceTree = "<group>"; };
 		D64DB20E1D872CCA0084B4FC /* FavouritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavouritesViewController.h; sourceTree = "<group>"; };
 		D64DB20F1D872CCA0084B4FC /* FavouritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavouritesViewController.m; sourceTree = "<group>"; };
 		D66BE63B1DA12FFE005B2B39 /* FilledFavourites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FilledFavourites.png; sourceTree = "<group>"; };
@@ -363,10 +365,10 @@
 			isa = PBXGroup;
 			children = (
 				18541FDE1D6DD9370046EAD0 /* Favourites.xcdatamodeld */,
-				D64DB2051D87193F0084B4FC /* Favourite+CoreDataProperties.h */,
-				D64DB2061D87193F0084B4FC /* Favourite+CoreDataProperties.m */,
-				D64DB2071D87193F0084B4FC /* Favourite.h */,
-				D64DB2081D87193F0084B4FC /* Favourite.m */,
+				184A2AE41DA5BE6500D589DE /* Favourite+CoreDataClass.h */,
+				184A2AE51DA5BE6500D589DE /* Favourite+CoreDataClass.m */,
+				184A2AE61DA5BE6500D589DE /* Favourite+CoreDataProperties.h */,
+				184A2AE71DA5BE6500D589DE /* Favourite+CoreDataProperties.m */,
 			);
 			name = "Favourites Core Data Model";
 			sourceTree = "<group>";
@@ -452,6 +454,7 @@
 				D6C5949B1D1831E9006F19D0 /* likepic.png */,
 				D6DC67211D848AFB00D75A5B /* filledstar.png */,
 				D6DC67221D848AFB00D75A5B /* star.png */,
+				184A2AEA1DA5C51100D589DE /* Snapchat-100.png */,
 				D6C5949C1D1831E9006F19D0 /* techtatvalogo.jpg */,
 				D6C5949D1D1831E9006F19D0 /* Comment.png */,
 				D60BB7C81D72F08B0083D0C9 /* Category@2x.png */,
@@ -656,6 +659,7 @@
 				D6247BF81D7B0E74007F7FF1 /* fb@2x.png in Resources */,
 				D6DC67241D848AFB00D75A5B /* star.png in Resources */,
 				D60BB7B51D70C0120083D0C9 /* EventsTableViewCell.xib in Resources */,
+				184A2AEB1DA5C51100D589DE /* Snapchat-100.png in Resources */,
 				188F51E71D0F08ED0083169D /* LaunchScreen.storyboard in Resources */,
 				D6C594DE1D19771C006F19D0 /* InstagramTableViewCell.xib in Resources */,
 				D6C5949E1D1831E9006F19D0 /* likepic.png in Resources */,
@@ -831,7 +835,6 @@
 				D61DBBCA1D38ACBF001BA98D /* instagramJsonModel.m in Sources */,
 				D68F16E31D9D1707007182C7 /* CategoriesJSONModel.m in Sources */,
 				D64DB2101D872CCA0084B4FC /* FavouritesViewController.m in Sources */,
-				D64DB2091D87193F0084B4FC /* Favourite+CoreDataProperties.m in Sources */,
 				184A2ADE1DA5ACDF00D589DE /* InstagramFullViewController.m in Sources */,
 				18749BCA1D14094700858B85 /* ResultsTableViewController.m in Sources */,
 				188F51DC1D0F08ED0083169D /* AppDelegate.m in Sources */,
@@ -850,10 +853,11 @@
 				188F51D91D0F08ED0083169D /* main.m in Sources */,
 				D6A2B8CA1D847415008DE478 /* AllEventsTableViewCell.m in Sources */,
 				D60BB7B41D70C0120083D0C9 /* EventsTableViewCell.m in Sources */,
+				184A2AE91DA5BE6500D589DE /* Favourite+CoreDataProperties.m in Sources */,
 				D6C6B3CD1D99891D003C52A7 /* ResultsJsonDataModel.m in Sources */,
 				D6D061261D782D8B00D9267E /* OnlineEventsViewController.m in Sources */,
 				18749BC01D13F17600858B85 /* MoreTableViewController.m in Sources */,
-				D64DB20A1D87193F0084B4FC /* Favourite.m in Sources */,
+				184A2AE81DA5BE6500D589DE /* Favourite+CoreDataClass.m in Sources */,
 				D69A1A8D1D996021001F9E7F /* ScheduleJsonDataModel.m in Sources */,
 				1881A20A1D0FCD8000192BD1 /* CategoriesTableViewController.m in Sources */,
 			);

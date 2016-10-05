@@ -33,23 +33,23 @@
 
 
 - (IBAction)facebookAction:(id)sender {
-    [self openURLWithString:@"https://www.facebook.com/mitrevels/" backupURLString:@"https://www.facebook.com/mitrevels/"];
+    [self openURLWithString:@"https://www.facebook.com/MITtechtatva/" backupURLString:@"https://www.facebook.com/MITtechtatva/"];
 }
 
 - (IBAction)twitterAction:(id)sender {
-    [self openURLWithString:@"twitter://user?screen_name=revelsmit/" backupURLString:@"https://www.twitter.com/revelsmit/"];
+    [self openURLWithString:@"twitter://user?screen_name=mittechtatva/" backupURLString:@"https://www.twitter.com/mittechtatva/"];
 }
 
 - (IBAction)instagramAction:(id)sender {
-    [self openURLWithString:@"instagram://user?username=revelsmit" backupURLString:@"https://www.instagram.com/revelsmit/"];
+    [self openURLWithString:@"instagram://user?username=mittechtatva" backupURLString:@"https://www.instagram.com/mittechtatva/"];
 }
 
 - (IBAction)youtubeAction:(id)sender {
-    [self openURLWithString:@"youtube://www.youtube.com/channel/UC9gwWd47a0q042qwEgutjWw" backupURLString:@"http://www.youtube.com/user/UC9gwWd47a0q042qwEgutjWw"];
+    [self openURLWithString:@"youtube://www.youtube.com/user/TechTatva" backupURLString:@"https://www.youtube.com/user/TechTatva"];
 }
 
 - (IBAction)snapchatAction:(id)sender {
-    [self openURLWithString:@"snapchat://add/revelsmit" backupURLString:@"http://www.snapchat.com/add/revelsmit/"];
+    [self openURLWithString:@"snapchat://add/mittt16" backupURLString:@"http://www.snapchat.com/add/mittt16/"];
 }
 
 

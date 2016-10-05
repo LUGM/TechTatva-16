@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "Favourite.h"
+#import "Favourite+CoreDataProperties.h"
+#import "Favourite+CoreDataClass.h"
 
 @interface AppDelegate ()
 

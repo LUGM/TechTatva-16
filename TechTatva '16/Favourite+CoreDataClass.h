@@ -1,8 +1,8 @@
 //
-//  Favourite.h
+//  Favourite+CoreDataClass.h
 //  
 //
-//  Created by Abhishek Vora on 12/09/16.
+//  Created by YASH on 06/10/16.
 //
 //
 
@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Favourite : NSManagedObject
 
-+(NSManagedObjectContext *) managedObjectContext;
++ (NSManagedObjectContext *) managedObjectContext;
 
 @end
 

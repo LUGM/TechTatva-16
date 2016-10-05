@@ -8,28 +8,32 @@
 
 #import "AllEventsViewController.h"
 #import "AllEventsTableViewCell.h"
-#import "Favourite.h"
-#import "EventsDetailsJSONModel.h"
+#import "Favourite+CoreDataClass.h"
+#import "Favourite+CoreDataProperties.h"
 #import "FavouritesViewController.h"
 #import "ScheduleJsonDataModel.h"
 
 
-@interface AllEventsViewController ()
+@interface AllEventsViewController () <UISearchResultsUpdating, UISearchBarDelegate>
+
+@property (nonatomic, strong) UISearchController *searchController;
+@property (nonatomic, strong) NSIndexPath *selectedIndexPath;
 
 @end
 
 @implementation AllEventsViewController
 {
     NSArray *fetchArray;
-    NSMutableArray *eventByCategoryArray;
     NSMutableArray *favouritesArray;
-    NSMutableArray *filteredArray;
+    NSMutableArray *filteredEvents;
     NSArray *array;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    favouritesArray = [NSMutableArray new];
+    filteredEvents = [NSMutableArray new];
     [self fetchFavourites];
     
     [self loadFromApi];
@@ -39,6 +43,21 @@
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyBoardShown:) name:UIKeyboardDidShowNotification object:nil];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyBoardHidden:) name:UIKeyboardWillHideNotification object:nil];
     
+    [self setupSearchController];
+}
+
+- (void)setupSearchController
+{
+    self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+    self.searchController.searchResultsUpdater = self;
+//    self.searchController.delegate = self;
+    self.searchController.searchBar.searchBarStyle = UISearchBarStyleMinimal;
+    self.searchController.searchBar.delegate = self;
+    self.searchController.searchBar.backgroundColor = [UIColor whiteColor];
+    self.searchController.searchBar.tintColor = [UIColor blackColor];
+    self.searchController.dimsBackgroundDuringPresentation = NO;
+    self.definesPresentationContext = YES;
+    allEventsTableView.tableHeaderView = self.searchController.searchBar;
 }
 
 - (void) loadFromApi
@@ -55,9 +74,8 @@
                 id jsonData = [NSJSONSerialization JSONObjectWithData:mydata options:kNilOptions error:&error];
                 id requiredArray = [jsonData valueForKey:@"data"];
                 array = [ScheduleJsonDataModel getArrayFromJson:requiredArray];
-                
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    [allEventsTableView reloadData];
+                    [self filterEventsForSelectedSegmentTitle:[allEventsSegmentControl titleForSegmentAtIndex:allEventsSegmentControl.selectedSegmentIndex]];
                 });
             }
         }
@@ -115,7 +133,7 @@
     NSFetchRequest *fetchFavourite = [NSFetchRequest fetchRequestWithEntityName:@"Favourite"];
     NSError *error = nil;
     
-    fetchArray = [[Favourite managedObjectContext]executeFetchRequest:fetchFavourite error:&error];
+    fetchArray = [[Favourite managedObjectContext] executeFetchRequest:fetchFavourite error:&error];
 }
 
 - (IBAction)allEventsSegmentChange:(id)sender
@@ -149,18 +167,21 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    ScheduleJsonDataModel *event = [filteredEvents objectAtIndex:indexPath.row];
     static NSString *cellIdentifier = @"AllEveCell";
     AllEventsTableViewCell *cell = (AllEventsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"AllEventsTableViewCell" owner:self options:nil];
-    
     cell = [nib objectAtIndex:0];
     
     if (cell == nil)
     {
         cell = [[AllEventsTableViewCell alloc] init];
     }
-    
+    cell.eventName.text = [NSString stringWithFormat:@"%@ R%@", event.eventName, event.round];
+    cell.categoryName.text = event.catName;
+    cell.venue.text = event.place;
+    cell.date.text = event.date;
+    cell.time.text = [NSString stringWithFormat:@"%@ - %@", event.sTime, event.eTime];
     [cell.rateEvent addTarget:self action:@selector(rateEvent:) forControlEvents:UIControlEventTouchUpInside];
     [cell.favouritesButton addTarget:self action:@selector(switchFavourites:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
@@ -181,7 +202,7 @@
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Favourite"];
     NSError *error = nil;
     
-    EventsDetailsJSONModel *event = [eventByCategoryArray objectAtIndex:indexPath.row];
+    ScheduleJsonDataModel *event = [filteredEvents objectAtIndex:indexPath.row];
     NSArray *fetchedArray = [[Favourite managedObjectContext] executeFetchRequest:fetchRequest error:&error];
     NSInteger eventAlreadyThere = 0;
     
@@ -189,7 +210,7 @@
     {
         
         Favourite *checkForFav = [fetchedArray objectAtIndex:i];
-        if ([checkForFav.cvename isEqualToString:event.categoryEventName])
+        if ([checkForFav.eventID isEqualToString:event.eventId])
         {
             eventAlreadyThere = 1;
             UIAlertView *addedAlert = [[UIAlertView alloc]initWithTitle:@"Event Already Added!" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
@@ -206,18 +227,6 @@
         
         Favourite *favouriteEvent = [NSEntityDescription insertNewObjectForEntityForName:@"Favourite" inManagedObjectContext:context];
         
-        favouriteEvent.evename = event.eventName;
-        //favouriteEvent.location = event.location;
-        //favouriteEvent.start = event.start;
-        //favouriteEvent.stop = event.stop;
-        //favouriteEvent.duration = event.duration;
-        favouriteEvent.cvename = event.categoryEventName;
-        favouriteEvent.evedesc = event.eventDescription;
-        //favouriteEvent.contact = event.contact;
-        //favouriteEvent.date = event.date;
-        //favouriteEvent.day = event.day;
-        favouriteEvent.evemaxteamsize = event.eventMaxTeamSize;
-        
         if (![context save:&error])
         {
             
@@ -226,7 +235,7 @@
         }
         
         if (favouriteEvent.favourite == 0) {
-            favouriteEvent.favourite = [NSNumber numberWithInteger:1];
+            favouriteEvent.favourite = @"1";
             [allEvent.favouritesButton setBackgroundImage:[UIImage imageNamed:@"FilledFavourites.png"] forState:UIControlStateNormal];
         }
         else
@@ -254,7 +263,57 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 275.f;
+    return 252.f;
+}
+
+#pragma mark - Filtering
+
+- (void)filterEventsForSelectedSegmentTitle:(NSString *)segmentTitle
+{
+    filteredEvents = [NSMutableArray arrayWithArray:array];
+    if (allEventsSegmentControl.selectedSegmentIndex != 4)
+        [filteredEvents filterUsingPredicate:[NSPredicate predicateWithFormat:@"day == %@", segmentTitle]];
+    [allEventsTableView reloadData];
+}
+
+- (void)filterEventsForSearchString:(NSString *)searchString andScopeBarTitle:(NSString *)scopeTitle
+{
+    filteredEvents = [NSMutableArray arrayWithArray:array];
+    if (allEventsSegmentControl.selectedSegmentIndex != 4)
+        [filteredEvents filterUsingPredicate:[NSPredicate predicateWithFormat:@"(name contains[cd] %@ OR categoryName contains[cd] %@) AND day == %@", searchString, searchString, scopeTitle]];
+    else
+        [filteredEvents filterUsingPredicate:[NSPredicate predicateWithFormat:@"name contains[cd] %@  OR categoryName contains[cd] %@", searchString, searchString]];
+    [allEventsTableView reloadData];
+}
+
+#pragma mark - Search controller results updating
+
+- (void)updateSearchResultsForSearchController:(UISearchController *)searchController
+{
+    UISearchBar *searchBar = searchController.searchBar;
+    if (searchBar.text.length > 0) {
+        if (searchBar.scopeButtonTitles.count > 0)
+            [self filterEventsForSearchString:searchBar.text andScopeBarTitle:searchBar.scopeButtonTitles[searchBar.selectedScopeButtonIndex]];
+        else
+            [self filterEventsForSearchString:searchBar.text andScopeBarTitle:[allEventsSegmentControl titleForSegmentAtIndex:allEventsSegmentControl.selectedSegmentIndex]];
+    }
+    else {
+        [self filterEventsForSelectedSegmentTitle:[allEventsSegmentControl titleForSegmentAtIndex:allEventsSegmentControl.selectedSegmentIndex]];
+    }
+}
+
+#pragma mark - Search bar delegate
+
+- (void)searchBar:(UISearchBar *)searchBar selectedScopeButtonIndexDidChange:(NSInteger)selectedScope {
+    if (searchBar.text.length > 0)
+        [self filterEventsForSearchString:searchBar.text andScopeBarTitle:searchBar.scopeButtonTitles[searchBar.selectedScopeButtonIndex]];
+    else
+        [self searchBarCancelButtonClicked:searchBar];
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    [self filterEventsForSelectedSegmentTitle:[allEventsSegmentControl titleForSegmentAtIndex:allEventsSegmentControl.selectedSegmentIndex]];
 }
 
 @end
