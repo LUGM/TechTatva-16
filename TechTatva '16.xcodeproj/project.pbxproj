@@ -13,6 +13,7 @@
 		181290C41D92C06200E5B740 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 181290C11D92C06200E5B740 /* Reachability.m */; };
 		1828D81C1D7476B000E0454F /* CategoriesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828D81A1D7476B000E0454F /* CategoriesTableViewCell.m */; };
 		1828D81D1D7476B000E0454F /* CategoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1828D81B1D7476B000E0454F /* CategoriesTableViewCell.xib */; };
+		184A2ADE1DA5ACDF00D589DE /* InstagramFullViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184A2ADD1DA5ACDF00D589DE /* InstagramFullViewController.m */; };
 		18541FE01D6DD9370046EAD0 /* Favourites.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18541FDE1D6DD9370046EAD0 /* Favourites.xcdatamodeld */; };
 		18749BC01D13F17600858B85 /* MoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18749BBF1D13F17600858B85 /* MoreTableViewController.m */; };
 		18749BC71D13F8FC00858B85 /* thumb_IMG_7632_1024.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18749BC61D13F8FC00858B85 /* thumb_IMG_7632_1024.jpg */; };
@@ -96,6 +97,8 @@
 		1828D8191D7476B000E0454F /* CategoriesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesTableViewCell.h; sourceTree = "<group>"; };
 		1828D81A1D7476B000E0454F /* CategoriesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesTableViewCell.m; sourceTree = "<group>"; };
 		1828D81B1D7476B000E0454F /* CategoriesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoriesTableViewCell.xib; sourceTree = "<group>"; };
+		184A2ADC1DA5ACDF00D589DE /* InstagramFullViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramFullViewController.h; sourceTree = "<group>"; };
+		184A2ADD1DA5ACDF00D589DE /* InstagramFullViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramFullViewController.m; sourceTree = "<group>"; };
 		18541FDF1D6DD9370046EAD0 /* Favourites.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Favourites.xcdatamodel; sourceTree = "<group>"; };
 		18749BBE1D13F17600858B85 /* MoreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreTableViewController.h; sourceTree = "<group>"; };
 		18749BBF1D13F17600858B85 /* MoreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreTableViewController.m; sourceTree = "<group>"; };
@@ -350,6 +353,8 @@
 				D6C594DA1D19771C006F19D0 /* InstagramTableViewCell.h */,
 				D6C594DB1D19771C006F19D0 /* InstagramTableViewCell.m */,
 				D6C594DC1D19771C006F19D0 /* InstagramTableViewCell.xib */,
+				184A2ADC1DA5ACDF00D589DE /* InstagramFullViewController.h */,
+				184A2ADD1DA5ACDF00D589DE /* InstagramFullViewController.m */,
 			);
 			name = Instagram;
 			sourceTree = "<group>";
@@ -827,6 +832,7 @@
 				D68F16E31D9D1707007182C7 /* CategoriesJSONModel.m in Sources */,
 				D64DB2101D872CCA0084B4FC /* FavouritesViewController.m in Sources */,
 				D64DB2091D87193F0084B4FC /* Favourite+CoreDataProperties.m in Sources */,
+				184A2ADE1DA5ACDF00D589DE /* InstagramFullViewController.m in Sources */,
 				18749BCA1D14094700858B85 /* ResultsTableViewController.m in Sources */,
 				188F51DC1D0F08ED0083169D /* AppDelegate.m in Sources */,
 				D6247BF61D7B0C58007F7FF1 /* AboutUsTableViewController.m in Sources */,

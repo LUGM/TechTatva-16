@@ -10,11 +10,13 @@
 #import "InstagramTableViewCell.h"
 #import "instagramJsonModel.h"
 #import "SDWebImage/UIImageView+WebCache.h"
+#import "InstagramFullViewController.h"
 
 @interface InstagramTableViewController ()
 {
     NSMutableArray *instaArray;
     NSURL *mainInstagramUrl;
+    NSIndexPath *selectedIndex;
 }
 
 @end
@@ -109,8 +111,15 @@
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    selectedIndex = indexPath;
+    UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UINavigationController *navController = [storyboard instantiateViewControllerWithIdentifier:@"fullScreenNav"];
+    InstagramFullViewController *destController = [navController viewControllers][0];
+    instagramJsonModel *model = [instaArray objectAtIndex:selectedIndex.row];
+    destController.imageUrl = model.standardResolutionImageUrl;
+    [self presentViewController:navController animated:YES completion:nil];
+    [self performSegueWithIdentifier:@"FullScreenImage" sender:self];
 }
-
 
 /*
 // Override to support conditional editing of the table view.

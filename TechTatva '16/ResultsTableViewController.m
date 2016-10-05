@@ -86,13 +86,12 @@
     cell.nameLabel1.text = [NSString stringWithFormat:@"Event : %@",[[array objectAtIndex:indexPath.row] event]];
     cell.nameLabel2.text = [NSString stringWithFormat:@"Category : %@",[[array objectAtIndex:indexPath.row] category]];
     cell.eveRound.text = [NSString stringWithFormat:@"Round : %@",[[array objectAtIndex:indexPath.row] round]];
-
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 106;
+    return 90;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

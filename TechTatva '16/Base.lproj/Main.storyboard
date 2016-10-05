@@ -116,11 +116,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="yUJ-RH-2JC">
-                            <rect key="frame" x="0.0" y="136" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="moreCell" id="tu6-z2-cWt">
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
@@ -732,6 +727,9 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                                     <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="wgD-Ma-vgL" kind="show" identifier="FullScreenImage" id="66Z-12-a2W"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -744,6 +742,50 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NMS-yM-kHM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2450" y="-908"/>
+        </scene>
+        <!--Instagram Full View Controller-->
+        <scene sceneID="Cfm-bl-tLm">
+            <objects>
+                <viewController id="29C-Lj-g36" customClass="InstagramFullViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4gh-iF-zcD"/>
+                        <viewControllerLayoutGuide type="bottom" id="sRk-UI-ui9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MpB-K9-3yL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zFp-BK-et0"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xlu-Mb-hWV"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xlu-Mb-hWV" firstAttribute="trailing" secondItem="zFp-BK-et0" secondAttribute="trailing" id="2ir-qP-3Gw"/>
+                            <constraint firstItem="xlu-Mb-hWV" firstAttribute="height" secondItem="zFp-BK-et0" secondAttribute="height" id="5KT-jr-Bam"/>
+                            <constraint firstItem="sRk-UI-ui9" firstAttribute="top" secondItem="zFp-BK-et0" secondAttribute="bottom" constant="8" id="U9V-ZM-7kX"/>
+                            <constraint firstItem="xlu-Mb-hWV" firstAttribute="width" secondItem="zFp-BK-et0" secondAttribute="width" id="WRf-4q-Rci"/>
+                            <constraint firstItem="xlu-Mb-hWV" firstAttribute="leading" secondItem="zFp-BK-et0" secondAttribute="leading" id="Zmt-40-2PS"/>
+                            <constraint firstItem="zFp-BK-et0" firstAttribute="top" secondItem="4gh-iF-zcD" secondAttribute="bottom" id="iwU-5V-RT9"/>
+                            <constraint firstItem="zFp-BK-et0" firstAttribute="leading" secondItem="MpB-K9-3yL" secondAttribute="leadingMargin" constant="-16" id="kL4-38-7F9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zFp-BK-et0" secondAttribute="trailing" constant="-16" id="o89-Nc-AUS"/>
+                            <constraint firstItem="xlu-Mb-hWV" firstAttribute="top" secondItem="zFp-BK-et0" secondAttribute="top" id="oQs-ok-on7"/>
+                            <constraint firstItem="xlu-Mb-hWV" firstAttribute="bottom" secondItem="zFp-BK-et0" secondAttribute="bottom" id="wA1-b1-ig6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="r3e-E4-U5f">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="LTA-gA-eAZ">
+                            <connections>
+                                <action selector="goBack:" destination="29C-Lj-g36" id="Fl5-j5-T60"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="scrollView" destination="xlu-Mb-hWV" id="Hmr-eJ-dVA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2KO-Te-YBT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4940" y="-908.09595202398805"/>
         </scene>
         <!--Tech Tatva '16-->
         <scene sceneID="t6t-C4-dHj">
@@ -980,6 +1022,24 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TWc-Pg-WVv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3753" y="-134"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qqe-4k-BDj">
+            <objects>
+                <navigationController storyboardIdentifier="fullScreenNav" automaticallyAdjustsScrollViewInsets="NO" id="wgD-Ma-vgL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ILZ-Jj-Ujz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="29C-Lj-g36" kind="relationship" relationship="rootViewController" id="jOt-EE-SnN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VwA-Go-u0A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4000.8000000000002" y="-908.09595202398805"/>
         </scene>
     </scenes>
     <resources>

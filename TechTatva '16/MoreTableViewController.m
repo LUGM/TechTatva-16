@@ -9,7 +9,8 @@
 #import "MoreTableViewController.h"
 #import "OnlineEventsViewController.h"
 
-@interface MoreTableViewController (){
+@interface MoreTableViewController ()
+{
     NSArray *labelArray;
 }
 
@@ -20,8 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    labelArray = [[NSArray alloc]init];
-    labelArray = @[@"Online Events", @"Registration", @"Favourites", @"Feedback", @"About Us", @"Developers"];
+    labelArray = [[NSArray alloc] init];
+    labelArray = @[@"Online Events", @"Registration", @"Favourites", @"About Us", @"Developers"];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -45,15 +46,10 @@
     return labelArray.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *simpleTableIdentifier = @"MoreTableCell";
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *simpleTableIdentifier = @"moreCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-    if (cell == nil)
-    {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MoreTableViewCell" owner:self options:nil];
-        cell = [nib objectAtIndex:0];
-    }
-    
     cell.textLabel.text = [labelArray objectAtIndex:indexPath.row];
     
     // Configure the cell...
@@ -63,6 +59,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.row == 0) {
         [self performSegueWithIdentifier:@"onlineEventsPage" sender:self];
     }
@@ -70,14 +67,8 @@
         [self performSegueWithIdentifier:@"registrationPage" sender:self];
     }
     else if (indexPath.row == 3) {
-        [self performSegueWithIdentifier:@"feedbackPage" sender:self];
-    }
-
-    else if (indexPath.row == 4) {
         [self performSegueWithIdentifier:@"aboutUsPage" sender:self];
     }
-    
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (UIView *) tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
