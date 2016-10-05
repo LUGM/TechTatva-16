@@ -15,8 +15,6 @@
 		1828D81D1D7476B000E0454F /* CategoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1828D81B1D7476B000E0454F /* CategoriesTableViewCell.xib */; };
 		18541FE01D6DD9370046EAD0 /* Favourites.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18541FDE1D6DD9370046EAD0 /* Favourites.xcdatamodeld */; };
 		18749BC01D13F17600858B85 /* MoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18749BBF1D13F17600858B85 /* MoreTableViewController.m */; };
-		18749BC41D13F1E600858B85 /* MoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18749BC21D13F1E600858B85 /* MoreTableViewCell.m */; };
-		18749BC51D13F1E600858B85 /* MoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18749BC31D13F1E600858B85 /* MoreTableViewCell.xib */; };
 		18749BC71D13F8FC00858B85 /* thumb_IMG_7632_1024.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18749BC61D13F8FC00858B85 /* thumb_IMG_7632_1024.jpg */; };
 		18749BCA1D14094700858B85 /* ResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18749BC91D14094700858B85 /* ResultsTableViewController.m */; };
 		18749BCE1D140AC600858B85 /* ResultsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18749BCC1D140AC600858B85 /* ResultsTableViewCell.m */; };
@@ -58,12 +56,7 @@
 		D66BE63E1DA12FFE005B2B39 /* Favourites.png in Resources */ = {isa = PBXBuildFile; fileRef = D66BE63C1DA12FFE005B2B39 /* Favourites.png */; };
 		D66BE6401DA1315C005B2B39 /* Calendar Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = D66BE63F1DA1315C005B2B39 /* Calendar Filled-50.png */; };
 		D68F16E31D9D1707007182C7 /* CategoriesJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D68F16E21D9D1707007182C7 /* CategoriesJSONModel.m */; };
-		D699EEC81D1BFF380093F9CC /* InfoDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = D699EEC71D1BFF380093F9CC /* InfoDetailsView.m */; };
-		D699EECA1D1BFF4D0093F9CC /* InfoDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D699EEC91D1BFF4D0093F9CC /* InfoDetailsView.xib */; };
-		D699EECD1D1BFF670093F9CC /* EventsDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = D699EECC1D1BFF670093F9CC /* EventsDetailsView.m */; };
-		D699EECF1D1BFF750093F9CC /* EventsDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D699EECE1D1BFF750093F9CC /* EventsDetailsView.xib */; };
 		D69A1A8D1D996021001F9E7F /* ScheduleJsonDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A1A8C1D996021001F9E7F /* ScheduleJsonDataModel.m */; };
-		D69A1A931D997463001F9E7F /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A1A921D997463001F9E7F /* ScheduleViewController.m */; };
 		D6A2B8CA1D847415008DE478 /* AllEventsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A2B8C81D847415008DE478 /* AllEventsTableViewCell.m */; };
 		D6A2B8CB1D847415008DE478 /* AllEventsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A2B8C91D847415008DE478 /* AllEventsTableViewCell.xib */; };
 		D6C0853D1D7EBCEE00FBD1BC /* FeedbackTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C0853C1D7EBCEE00FBD1BC /* FeedbackTableViewController.m */; };
@@ -77,8 +70,6 @@
 		D6D061261D782D8B00D9267E /* OnlineEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D061251D782D8B00D9267E /* OnlineEventsViewController.m */; };
 		D6DC67231D848AFB00D75A5B /* filledstar.png in Resources */ = {isa = PBXBuildFile; fileRef = D6DC67211D848AFB00D75A5B /* filledstar.png */; };
 		D6DC67241D848AFB00D75A5B /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = D6DC67221D848AFB00D75A5B /* star.png */; };
-		D6DCA1C61D1C58BC00496F9D /* EventsPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DCA1C51D1C58BC00496F9D /* EventsPopupView.m */; };
-		D6DCA1CA1D1C58E000496F9D /* EventsPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6DCA1C91D1C58E000496F9D /* EventsPopupView.xib */; };
 		D6E6326D1D7AC21B00E71851 /* RegistrationPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E6326C1D7AC21B00E71851 /* RegistrationPageViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -108,9 +99,6 @@
 		18541FDF1D6DD9370046EAD0 /* Favourites.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Favourites.xcdatamodel; sourceTree = "<group>"; };
 		18749BBE1D13F17600858B85 /* MoreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreTableViewController.h; sourceTree = "<group>"; };
 		18749BBF1D13F17600858B85 /* MoreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreTableViewController.m; sourceTree = "<group>"; };
-		18749BC11D13F1E600858B85 /* MoreTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreTableViewCell.h; sourceTree = "<group>"; };
-		18749BC21D13F1E600858B85 /* MoreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreTableViewCell.m; sourceTree = "<group>"; };
-		18749BC31D13F1E600858B85 /* MoreTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreTableViewCell.xib; sourceTree = "<group>"; };
 		18749BC61D13F8FC00858B85 /* thumb_IMG_7632_1024.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = thumb_IMG_7632_1024.jpg; sourceTree = "<group>"; };
 		18749BC81D14094700858B85 /* ResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsTableViewController.h; sourceTree = "<group>"; };
 		18749BC91D14094700858B85 /* ResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsTableViewController.m; sourceTree = "<group>"; };
@@ -177,16 +165,8 @@
 		D66BE63F1DA1315C005B2B39 /* Calendar Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Calendar Filled-50.png"; sourceTree = "<group>"; };
 		D68F16E11D9D1707007182C7 /* CategoriesJSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesJSONModel.h; sourceTree = "<group>"; };
 		D68F16E21D9D1707007182C7 /* CategoriesJSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesJSONModel.m; sourceTree = "<group>"; };
-		D699EEC61D1BFF380093F9CC /* InfoDetailsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoDetailsView.h; sourceTree = "<group>"; };
-		D699EEC71D1BFF380093F9CC /* InfoDetailsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoDetailsView.m; sourceTree = "<group>"; };
-		D699EEC91D1BFF4D0093F9CC /* InfoDetailsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoDetailsView.xib; sourceTree = "<group>"; };
-		D699EECB1D1BFF670093F9CC /* EventsDetailsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventsDetailsView.h; path = ../EventsDetailsView.h; sourceTree = "<group>"; };
-		D699EECC1D1BFF670093F9CC /* EventsDetailsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventsDetailsView.m; path = ../EventsDetailsView.m; sourceTree = "<group>"; };
-		D699EECE1D1BFF750093F9CC /* EventsDetailsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EventsDetailsView.xib; path = ../EventsDetailsView.xib; sourceTree = "<group>"; };
 		D69A1A8B1D996021001F9E7F /* ScheduleJsonDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleJsonDataModel.h; sourceTree = "<group>"; };
 		D69A1A8C1D996021001F9E7F /* ScheduleJsonDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleJsonDataModel.m; sourceTree = "<group>"; };
-		D69A1A911D997463001F9E7F /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
-		D69A1A921D997463001F9E7F /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
 		D6A2B8C71D847415008DE478 /* AllEventsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllEventsTableViewCell.h; sourceTree = "<group>"; };
 		D6A2B8C81D847415008DE478 /* AllEventsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllEventsTableViewCell.m; sourceTree = "<group>"; };
 		D6A2B8C91D847415008DE478 /* AllEventsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllEventsTableViewCell.xib; sourceTree = "<group>"; };
@@ -206,9 +186,6 @@
 		D6D061251D782D8B00D9267E /* OnlineEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlineEventsViewController.m; sourceTree = "<group>"; };
 		D6DC67211D848AFB00D75A5B /* filledstar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = filledstar.png; sourceTree = "<group>"; };
 		D6DC67221D848AFB00D75A5B /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
-		D6DCA1C41D1C58BC00496F9D /* EventsPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsPopupView.h; sourceTree = "<group>"; };
-		D6DCA1C51D1C58BC00496F9D /* EventsPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsPopupView.m; sourceTree = "<group>"; };
-		D6DCA1C91D1C58E000496F9D /* EventsPopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EventsPopupView.xib; path = ../EventsPopupView.xib; sourceTree = "<group>"; };
 		D6E6326B1D7AC21B00E71851 /* RegistrationPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegistrationPageViewController.h; path = ../RegistrationPageViewController.h; sourceTree = "<group>"; };
 		D6E6326C1D7AC21B00E71851 /* RegistrationPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegistrationPageViewController.m; path = ../RegistrationPageViewController.m; sourceTree = "<group>"; };
 		E01D0203BC4C2BBAC2B42AE4 /* Pods-TechTatva '16.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechTatva '16.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TechTatva '16/Pods-TechTatva '16.debug.xcconfig"; sourceTree = "<group>"; };
@@ -252,6 +229,129 @@
 				452DB319F49B8C6F35F9AEDA /* libPods-TechTatva '16UITests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		184A2AD01DA59F6600D589DE /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				1881A2081D0FCD8000192BD1 /* CategoriesTableViewController.h */,
+				1881A2091D0FCD8000192BD1 /* CategoriesTableViewController.m */,
+				1828D8191D7476B000E0454F /* CategoriesTableViewCell.h */,
+				1828D81A1D7476B000E0454F /* CategoriesTableViewCell.m */,
+				1828D81B1D7476B000E0454F /* CategoriesTableViewCell.xib */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		184A2AD11DA59F7000D589DE /* Category Events */ = {
+			isa = PBXGroup;
+			children = (
+				D60BB7B11D70C0120083D0C9 /* EventsTableViewCell.h */,
+				D60BB7B21D70C0120083D0C9 /* EventsTableViewCell.m */,
+				D60BB7B31D70C0120083D0C9 /* EventsTableViewCell.xib */,
+				1881A2131D13085800192BD1 /* EventsViewController.h */,
+				1881A2141D13085800192BD1 /* EventsViewController.m */,
+			);
+			name = "Category Events";
+			sourceTree = "<group>";
+		};
+		184A2AD21DA59F7900D589DE /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				D607A28B1D9FD10600CC01E2 /* AllEventsViewController.h */,
+				D607A28C1D9FD10600CC01E2 /* AllEventsViewController.m */,
+				D6A2B8C71D847415008DE478 /* AllEventsTableViewCell.h */,
+				D6A2B8C81D847415008DE478 /* AllEventsTableViewCell.m */,
+				D6A2B8C91D847415008DE478 /* AllEventsTableViewCell.xib */,
+			);
+			name = Events;
+			sourceTree = "<group>";
+		};
+		184A2AD31DA59F8200D589DE /* Favourites */ = {
+			isa = PBXGroup;
+			children = (
+				D64DB20E1D872CCA0084B4FC /* FavouritesViewController.h */,
+				D64DB20F1D872CCA0084B4FC /* FavouritesViewController.m */,
+			);
+			name = Favourites;
+			sourceTree = "<group>";
+		};
+		184A2AD41DA59F8B00D589DE /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				D6C0853B1D7EBCEE00FBD1BC /* FeedbackTableViewController.h */,
+				D6C0853C1D7EBCEE00FBD1BC /* FeedbackTableViewController.m */,
+			);
+			name = Feedback;
+			sourceTree = "<group>";
+		};
+		184A2AD51DA59F9300D589DE /* About Us */ = {
+			isa = PBXGroup;
+			children = (
+				D6247BF41D7B0C58007F7FF1 /* AboutUsTableViewController.h */,
+				D6247BF51D7B0C58007F7FF1 /* AboutUsTableViewController.m */,
+			);
+			name = "About Us";
+			sourceTree = "<group>";
+		};
+		184A2AD61DA59FD200D589DE /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				18749BC81D14094700858B85 /* ResultsTableViewController.h */,
+				18749BC91D14094700858B85 /* ResultsTableViewController.m */,
+				18749BCB1D140AC600858B85 /* ResultsTableViewCell.h */,
+				18749BCC1D140AC600858B85 /* ResultsTableViewCell.m */,
+				18749BCD1D140AC600858B85 /* ResultsTableViewCell.xib */,
+			);
+			name = Results;
+			sourceTree = "<group>";
+		};
+		184A2AD71DA5A0EF00D589DE /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				181290C01D92C06200E5B740 /* Reachability.h */,
+				181290C11D92C06200E5B740 /* Reachability.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
+		184A2AD81DA5A0FC00D589DE /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				D6E6326B1D7AC21B00E71851 /* RegistrationPageViewController.h */,
+				D6E6326C1D7AC21B00E71851 /* RegistrationPageViewController.m */,
+			);
+			name = Register;
+			sourceTree = "<group>";
+		};
+		184A2AD91DA5A10300D589DE /* Online Events */ = {
+			isa = PBXGroup;
+			children = (
+				D6D061241D782D8B00D9267E /* OnlineEventsViewController.h */,
+				D6D061251D782D8B00D9267E /* OnlineEventsViewController.m */,
+			);
+			name = "Online Events";
+			sourceTree = "<group>";
+		};
+		184A2ADA1DA5A10F00D589DE /* More */ = {
+			isa = PBXGroup;
+			children = (
+				18749BBE1D13F17600858B85 /* MoreTableViewController.h */,
+				18749BBF1D13F17600858B85 /* MoreTableViewController.m */,
+			);
+			name = More;
+			sourceTree = "<group>";
+		};
+		184A2ADB1DA5A11C00D589DE /* Instagram */ = {
+			isa = PBXGroup;
+			children = (
+				D6C594D71D1976F8006F19D0 /* InstagramTableViewController.h */,
+				D6C594D81D1976F8006F19D0 /* InstagramTableViewController.m */,
+				D6C594DA1D19771C006F19D0 /* InstagramTableViewCell.h */,
+				D6C594DB1D19771C006F19D0 /* InstagramTableViewCell.m */,
+				D6C594DC1D19771C006F19D0 /* InstagramTableViewCell.xib */,
+			);
+			name = Instagram;
 			sourceTree = "<group>";
 		};
 		1868992C1D6E34F800B82923 /* Favourites Core Data Model */ = {
@@ -300,6 +400,7 @@
 		188F51D61D0F08ED0083169D /* TechTatva '16 */ = {
 			isa = PBXGroup;
 			children = (
+				184A2AD71DA5A0EF00D589DE /* Reachability */,
 				D68F16E01D9D16E9007182C7 /* Categories Model */,
 				D6C6B3C71D9987FB003C52A7 /* Results Model */,
 				D69A1A8A1D995FE6001F9E7F /* Schedule Model */,
@@ -308,60 +409,18 @@
 				1868992D1D6E350500B82923 /* App Delegate */,
 				1868992C1D6E34F800B82923 /* Favourites Core Data Model */,
 				188F51E01D0F08ED0083169D /* Main.storyboard */,
-				1881A2081D0FCD8000192BD1 /* CategoriesTableViewController.h */,
-				1881A2091D0FCD8000192BD1 /* CategoriesTableViewController.m */,
-				1828D8191D7476B000E0454F /* CategoriesTableViewCell.h */,
-				1828D81A1D7476B000E0454F /* CategoriesTableViewCell.m */,
-				1828D81B1D7476B000E0454F /* CategoriesTableViewCell.xib */,
-				D64DB20E1D872CCA0084B4FC /* FavouritesViewController.h */,
-				D64DB20F1D872CCA0084B4FC /* FavouritesViewController.m */,
-				D607A28B1D9FD10600CC01E2 /* AllEventsViewController.h */,
-				D607A28C1D9FD10600CC01E2 /* AllEventsViewController.m */,
-				D6A2B8C71D847415008DE478 /* AllEventsTableViewCell.h */,
-				D6A2B8C81D847415008DE478 /* AllEventsTableViewCell.m */,
-				D6A2B8C91D847415008DE478 /* AllEventsTableViewCell.xib */,
-				D6C0853B1D7EBCEE00FBD1BC /* FeedbackTableViewController.h */,
-				D6C0853C1D7EBCEE00FBD1BC /* FeedbackTableViewController.m */,
-				D6247BF41D7B0C58007F7FF1 /* AboutUsTableViewController.h */,
-				D6247BF51D7B0C58007F7FF1 /* AboutUsTableViewController.m */,
-				181290C01D92C06200E5B740 /* Reachability.h */,
-				181290C11D92C06200E5B740 /* Reachability.m */,
-				D6E6326B1D7AC21B00E71851 /* RegistrationPageViewController.h */,
-				D6E6326C1D7AC21B00E71851 /* RegistrationPageViewController.m */,
-				D6D061241D782D8B00D9267E /* OnlineEventsViewController.h */,
-				D6D061251D782D8B00D9267E /* OnlineEventsViewController.m */,
-				D60BB7B11D70C0120083D0C9 /* EventsTableViewCell.h */,
-				D60BB7B21D70C0120083D0C9 /* EventsTableViewCell.m */,
-				D60BB7B31D70C0120083D0C9 /* EventsTableViewCell.xib */,
-				1881A2131D13085800192BD1 /* EventsViewController.h */,
-				1881A2141D13085800192BD1 /* EventsViewController.m */,
-				D69A1A911D997463001F9E7F /* ScheduleViewController.h */,
-				D69A1A921D997463001F9E7F /* ScheduleViewController.m */,
-				18749BC81D14094700858B85 /* ResultsTableViewController.h */,
-				18749BC91D14094700858B85 /* ResultsTableViewController.m */,
-				18749BCB1D140AC600858B85 /* ResultsTableViewCell.h */,
-				18749BCC1D140AC600858B85 /* ResultsTableViewCell.m */,
-				18749BCD1D140AC600858B85 /* ResultsTableViewCell.xib */,
-				18749BBE1D13F17600858B85 /* MoreTableViewController.h */,
-				18749BBF1D13F17600858B85 /* MoreTableViewController.m */,
-				18749BC11D13F1E600858B85 /* MoreTableViewCell.h */,
-				18749BC21D13F1E600858B85 /* MoreTableViewCell.m */,
-				18749BC31D13F1E600858B85 /* MoreTableViewCell.xib */,
-				D699EECB1D1BFF670093F9CC /* EventsDetailsView.h */,
-				D699EECC1D1BFF670093F9CC /* EventsDetailsView.m */,
-				D699EECE1D1BFF750093F9CC /* EventsDetailsView.xib */,
-				D699EEC61D1BFF380093F9CC /* InfoDetailsView.h */,
-				D699EEC71D1BFF380093F9CC /* InfoDetailsView.m */,
-				D699EEC91D1BFF4D0093F9CC /* InfoDetailsView.xib */,
-				D6DCA1C41D1C58BC00496F9D /* EventsPopupView.h */,
-				D6DCA1C51D1C58BC00496F9D /* EventsPopupView.m */,
-				D6DCA1C91D1C58E000496F9D /* EventsPopupView.xib */,
+				184A2AD01DA59F6600D589DE /* Categories */,
+				184A2AD11DA59F7000D589DE /* Category Events */,
+				184A2AD31DA59F8200D589DE /* Favourites */,
+				184A2AD21DA59F7900D589DE /* Events */,
+				184A2AD41DA59F8B00D589DE /* Feedback */,
+				184A2AD51DA59F9300D589DE /* About Us */,
+				184A2AD81DA5A0FC00D589DE /* Register */,
+				184A2AD91DA5A10300D589DE /* Online Events */,
+				184A2AD61DA59FD200D589DE /* Results */,
+				184A2ADA1DA5A10F00D589DE /* More */,
 				188F51E31D0F08ED0083169D /* Assets.xcassets */,
-				D6C594D71D1976F8006F19D0 /* InstagramTableViewController.h */,
-				D6C594D81D1976F8006F19D0 /* InstagramTableViewController.m */,
-				D6C594DA1D19771C006F19D0 /* InstagramTableViewCell.h */,
-				D6C594DB1D19771C006F19D0 /* InstagramTableViewCell.m */,
-				D6C594DC1D19771C006F19D0 /* InstagramTableViewCell.xib */,
+				184A2ADB1DA5A11C00D589DE /* Instagram */,
 				188F51E51D0F08ED0083169D /* LaunchScreen.storyboard */,
 				188F51D71D0F08ED0083169D /* Supporting Files */,
 			);
@@ -589,14 +648,11 @@
 			files = (
 				D60BB7BE1D70C3A40083D0C9 /* Time Filled-50.png in Resources */,
 				D60BB7C61D72EF290083D0C9 /* Instagram@2x.png in Resources */,
-				D6DCA1CA1D1C58E000496F9D /* EventsPopupView.xib in Resources */,
-				D699EECA1D1BFF4D0093F9CC /* InfoDetailsView.xib in Resources */,
 				D6247BF81D7B0E74007F7FF1 /* fb@2x.png in Resources */,
 				D6DC67241D848AFB00D75A5B /* star.png in Resources */,
 				D60BB7B51D70C0120083D0C9 /* EventsTableViewCell.xib in Resources */,
 				188F51E71D0F08ED0083169D /* LaunchScreen.storyboard in Resources */,
 				D6C594DE1D19771C006F19D0 /* InstagramTableViewCell.xib in Resources */,
-				18749BC51D13F1E600858B85 /* MoreTableViewCell.xib in Resources */,
 				D6C5949E1D1831E9006F19D0 /* likepic.png in Resources */,
 				D66BE63D1DA12FFE005B2B39 /* FilledFavourites.png in Resources */,
 				D60BB7C91D72F08B0083D0C9 /* Category@2x.png in Resources */,
@@ -617,7 +673,6 @@
 				D6247BFC1D7B100C007F7FF1 /* google+@2x.png in Resources */,
 				D60BB7BC1D70C3A40083D0C9 /* location.png in Resources */,
 				188F51E21D0F08ED0083169D /* Main.storyboard in Resources */,
-				D699EECF1D1BFF750093F9CC /* EventsDetailsView.xib in Resources */,
 				1828D81D1D7476B000E0454F /* CategoriesTableViewCell.xib in Resources */,
 				18749BCF1D140AC600858B85 /* ResultsTableViewCell.xib in Resources */,
 				D6C5949F1D1831E9006F19D0 /* techtatvalogo.jpg in Resources */,
@@ -776,21 +831,17 @@
 				188F51DC1D0F08ED0083169D /* AppDelegate.m in Sources */,
 				D6247BF61D7B0C58007F7FF1 /* AboutUsTableViewController.m in Sources */,
 				D607A28D1D9FD10600CC01E2 /* AllEventsViewController.m in Sources */,
-				D69A1A931D997463001F9E7F /* ScheduleViewController.m in Sources */,
 				D6C0853D1D7EBCEE00FBD1BC /* FeedbackTableViewController.m in Sources */,
 				D640BF531D4FD5B4006BA67C /* EventsDetailsJSONModel.m in Sources */,
 				D6C594D91D1976F8006F19D0 /* InstagramTableViewController.m in Sources */,
 				181290C21D92C06200E5B740 /* Reachability.m in Sources */,
 				1881A2151D13085800192BD1 /* EventsViewController.m in Sources */,
-				D699EECD1D1BFF670093F9CC /* EventsDetailsView.m in Sources */,
 				18541FE01D6DD9370046EAD0 /* Favourites.xcdatamodeld in Sources */,
 				D6E6326D1D7AC21B00E71851 /* RegistrationPageViewController.m in Sources */,
 				18749BCE1D140AC600858B85 /* ResultsTableViewCell.m in Sources */,
 				D6C594DD1D19771C006F19D0 /* InstagramTableViewCell.m in Sources */,
-				D699EEC81D1BFF380093F9CC /* InfoDetailsView.m in Sources */,
 				1828D81C1D7476B000E0454F /* CategoriesTableViewCell.m in Sources */,
 				188F51D91D0F08ED0083169D /* main.m in Sources */,
-				D6DCA1C61D1C58BC00496F9D /* EventsPopupView.m in Sources */,
 				D6A2B8CA1D847415008DE478 /* AllEventsTableViewCell.m in Sources */,
 				D60BB7B41D70C0120083D0C9 /* EventsTableViewCell.m in Sources */,
 				D6C6B3CD1D99891D003C52A7 /* ResultsJsonDataModel.m in Sources */,
@@ -799,7 +850,6 @@
 				D64DB20A1D87193F0084B4FC /* Favourite.m in Sources */,
 				D69A1A8D1D996021001F9E7F /* ScheduleJsonDataModel.m in Sources */,
 				1881A20A1D0FCD8000192BD1 /* CategoriesTableViewController.m in Sources */,
-				18749BC41D13F1E600858B85 /* MoreTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

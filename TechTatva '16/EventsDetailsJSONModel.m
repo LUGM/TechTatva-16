@@ -26,6 +26,7 @@
             self.cntctno = [myData objectForKey:@"cntctno"];
             self.hs1 = [myData objectForKey:@"hs1"];
             self.hs2 = [myData objectForKey:@"hs2"];
+            self.day = [myData objectForKey:@"day"];
         }
     }
     return self;

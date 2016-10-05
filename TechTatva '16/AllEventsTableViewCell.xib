@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -9,11 +9,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllEveCell" rowHeight="275" id="KGk-i7-Jjw" customClass="AllEventsTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="300" height="275"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllEveCell" rowHeight="285" id="KGk-i7-Jjw" customClass="AllEventsTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="285"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="300" height="274"/>
+                <frame key="frameInset" width="375" height="284"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMC-dJ-76x">
@@ -77,30 +77,37 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sma-fb-uQW">
+                        <frame key="frameInset" minX="18" minY="244" width="336" height="30"/>
+                        <state key="normal" title="Rate"/>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="Sma-fb-uQW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="062-fy-ROg"/>
                     <constraint firstItem="uNp-IG-A6q" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="30" id="2wX-Hz-iXU"/>
-                    <constraint firstItem="1VD-j2-TXd" firstAttribute="top" secondItem="eHk-Uf-Jxo" secondAttribute="bottom" constant="36" id="4fq-6h-hiT"/>
+                    <constraint firstItem="1VD-j2-TXd" firstAttribute="top" secondItem="eHk-Uf-Jxo" secondAttribute="bottom" constant="12" id="4fq-6h-hiT"/>
                     <constraint firstAttribute="trailingMargin" secondItem="GY5-L5-hqq" secondAttribute="trailing" constant="13" id="Cop-eW-kn2"/>
                     <constraint firstItem="qhc-Fc-bpb" firstAttribute="top" secondItem="GY5-L5-hqq" secondAttribute="bottom" constant="18" id="Eof-ro-Imy"/>
                     <constraint firstItem="237-In-6Gs" firstAttribute="top" secondItem="Ni1-Cq-eSO" secondAttribute="bottom" constant="8" id="FkH-Bt-xPr"/>
                     <constraint firstItem="nMC-dJ-76x" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="GoY-we-3wd"/>
                     <constraint firstItem="nMC-dJ-76x" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="18" id="ILS-0r-bID"/>
-                    <constraint firstItem="uNp-IG-A6q" firstAttribute="top" secondItem="eHk-Uf-Jxo" secondAttribute="bottom" constant="30" id="IZs-cR-8G4"/>
+                    <constraint firstItem="uNp-IG-A6q" firstAttribute="top" secondItem="eHk-Uf-Jxo" secondAttribute="bottom" constant="10" id="IZs-cR-8G4"/>
                     <constraint firstItem="qhc-Fc-bpb" firstAttribute="leading" secondItem="1VD-j2-TXd" secondAttribute="leading" id="K7g-8x-jby"/>
                     <constraint firstItem="Ni1-Cq-eSO" firstAttribute="leading" secondItem="uNp-IG-A6q" secondAttribute="leading" id="Oek-Ky-tTg"/>
                     <constraint firstItem="GY5-L5-hqq" firstAttribute="top" secondItem="1VD-j2-TXd" secondAttribute="bottom" constant="18" id="P2m-hj-tq8"/>
                     <constraint firstItem="GY5-L5-hqq" firstAttribute="leading" secondItem="1VD-j2-TXd" secondAttribute="leading" id="P6B-dc-Fky"/>
                     <constraint firstItem="Xbs-zI-2B0" firstAttribute="top" secondItem="237-In-6Gs" secondAttribute="bottom" constant="8" id="RA0-G2-acw"/>
                     <constraint firstItem="eHk-Uf-Jxo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="ViR-rw-drD"/>
-                    <constraint firstItem="Mxw-ip-5hC" firstAttribute="top" secondItem="qhc-Fc-bpb" secondAttribute="bottom" constant="18" id="WN5-XF-ciY"/>
+                    <constraint firstItem="Mxw-ip-5hC" firstAttribute="top" secondItem="qhc-Fc-bpb" secondAttribute="bottom" constant="20" id="WN5-XF-ciY"/>
                     <constraint firstItem="237-In-6Gs" firstAttribute="leading" secondItem="uNp-IG-A6q" secondAttribute="leading" id="Z3n-Pe-en5"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Sma-fb-uQW" secondAttribute="trailing" constant="13" id="a89-G3-ypv"/>
                     <constraint firstItem="1VD-j2-TXd" firstAttribute="leading" secondItem="uNp-IG-A6q" secondAttribute="trailing" constant="30" id="aee-bE-NC3"/>
                     <constraint firstAttribute="trailingMargin" secondItem="qhc-Fc-bpb" secondAttribute="trailing" constant="13" id="cIp-Nk-7go"/>
                     <constraint firstAttribute="trailingMargin" secondItem="1VD-j2-TXd" secondAttribute="trailing" constant="13" id="cOR-qE-6wN"/>
                     <constraint firstItem="Xbs-zI-2B0" firstAttribute="leading" secondItem="uNp-IG-A6q" secondAttribute="leading" id="gy6-FM-BkY"/>
                     <constraint firstItem="Z3f-d3-jRa" firstAttribute="top" secondItem="nMC-dJ-76x" secondAttribute="bottom" constant="3" id="oA2-Fh-cKx"/>
                     <constraint firstItem="Ni1-Cq-eSO" firstAttribute="top" secondItem="uNp-IG-A6q" secondAttribute="bottom" constant="10" id="pVe-TX-C0Y"/>
+                    <constraint firstItem="Sma-fb-uQW" firstAttribute="top" secondItem="Mxw-ip-5hC" secondAttribute="bottom" constant="12" id="pWU-eU-idh"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Z3f-d3-jRa" secondAttribute="trailing" constant="19" id="qtT-Lo-j9o"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Mxw-ip-5hC" secondAttribute="trailing" constant="13" id="ryI-eL-CgT"/>
                     <constraint firstItem="Mxw-ip-5hC" firstAttribute="leading" secondItem="1VD-j2-TXd" secondAttribute="leading" id="tzq-pg-CVJ"/>
@@ -117,12 +124,13 @@
                 <outlet property="dateImg" destination="237-In-6Gs" id="nLg-54-EB5"/>
                 <outlet property="eventName" destination="nMC-dJ-76x" id="5gD-rR-9cL"/>
                 <outlet property="favouritesButton" destination="Z3f-d3-jRa" id="3ch-Zh-i11"/>
+                <outlet property="rateEvent" destination="Sma-fb-uQW" id="obL-Rn-zgz"/>
                 <outlet property="time" destination="Mxw-ip-5hC" id="3PM-ko-C4G"/>
                 <outlet property="timeImg" destination="Xbs-zI-2B0" id="emd-Tx-ozk"/>
                 <outlet property="venue" destination="1VD-j2-TXd" id="Txb-E5-fKv"/>
                 <outlet property="venueImg" destination="uNp-IG-A6q" id="waz-sU-2zI"/>
             </connections>
-            <point key="canvasLocation" x="233" y="-127.5"/>
+            <point key="canvasLocation" x="270.5" y="-122.5"/>
         </tableViewCell>
     </objects>
     <resources>

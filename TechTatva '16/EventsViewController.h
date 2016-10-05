@@ -8,17 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EventsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource,UISearchBarDelegate>
+@interface EventsViewController : UIViewController 
 {
     IBOutlet UITableView *eventsTable;
-    IBOutlet UISegmentedControl *daycontrol;
-    IBOutlet UISearchBar *eventsSearchBar;
     
     NSArray *eventsArray;
     NSMutableArray *searchedEventsArray;
 }
 
-- (IBAction)eventsSegmentSwitch:(id)sender;
-
+@property (strong, nonatomic) NSString *categoryID;
 
 @end

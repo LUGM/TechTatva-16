@@ -7,7 +7,6 @@
 //
 
 #import "MoreTableViewController.h"
-#import "MoreTableViewCell.h"
 #import "OnlineEventsViewController.h"
 
 @interface MoreTableViewController (){
@@ -48,27 +47,18 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *simpleTableIdentifier = @"MoreTableCell";
-    MoreTableViewCell *cell = (MoreTableViewCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     if (cell == nil)
     {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MoreTableViewCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
     
-    
-    cell.nameLabel.text = [labelArray objectAtIndex:indexPath.row];
-    cell.thumbnailImageView.image = [UIImage imageNamed:@"thumb_IMG_7632_1024.jpg"];
-    cell.thumbnailImageView.layer.cornerRadius = cell.thumbnailImageView.frame.size.width / 2;
-    cell.thumbnailImageView.clipsToBounds = YES;
-    
+    cell.textLabel.text = [labelArray objectAtIndex:indexPath.row];
     
     // Configure the cell...
     
     return cell;
-}
-
--(int)heightForRowAtIndexPath:(MoreTableViewCell *)MoreTableViewCell{
-    return 80;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -92,15 +82,8 @@
 
 - (UIView *) tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
-    
     UIView *blankView = [[UIView alloc] initWithFrame:CGRectZero];
     return blankView;
-    
-}
-
--(IBAction)backToStart:(UIStoryboardSegue *)segue
-{
-    
 }
 
 /*

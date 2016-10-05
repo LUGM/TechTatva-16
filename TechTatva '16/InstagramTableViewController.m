@@ -78,7 +78,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    InstagramTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myCell"];
+    InstagramTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"instaCell"];
     
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"InstagramTableViewCell" owner:self options:nil];
     cell = [nib objectAtIndex:0];
@@ -88,15 +88,13 @@
     }
     
     instagramJsonModel *model = [instaArray objectAtIndex:indexPath.row];
-    cell.like_img.image = [UIImage imageNamed:[NSString stringWithFormat:@"likepic.png"]];
-    cell.comment_image.image = [UIImage imageNamed:[NSString stringWithFormat:@"Comment.png"]];
     
     [cell.mainImage sd_setImageWithURL:[NSURL URLWithString:model.standardResolutionImageUrl] placeholderImage:[UIImage imageNamed:@"youtube.png"]];
     
-    cell.likeLabel.text = [NSString stringWithFormat:@"%ld likes", (long)model.numberOfLikes];
-    cell.commentLabel.text = [NSString stringWithFormat:@"%ld comments", (long)model.numberOfComments];
+    cell.likeLabel.text = [NSString stringWithFormat:@"%li", (long) model.numberOfLikes];
+    cell.commentLabel.text = [NSString stringWithFormat:@"%li", (long) model.numberOfComments];
     cell.imageUploaderLabel.text = model.postingUserName;
-    cell.descriptionLabel.text = model.captionText;
+//    cell.descriptionLabel.text = model.captionText;
     NSURL *senderImage = [NSURL URLWithString:model.postingUserImageUrl];
     [cell.appLogo sd_setImageWithURL:senderImage placeholderImage:[UIImage imageNamed:@"youtube.png"]];
     return cell;
@@ -105,7 +103,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 477.5;
+    return 433.f;
 }
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

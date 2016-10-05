@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fhN-NG-Lqf">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ORP-SX-hMp">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -65,16 +65,16 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hd0-hV-e9B">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="0CA-cz-uwG">
-                                    <rect key="frame" x="0.0" y="132" width="383" height="44"/>
+                                    <rect key="frame" x="0.0" y="132" width="379" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="eventsCell" rowHeight="40" id="OFk-2o-rbC">
-                                        <rect key="frame" x="0.0" y="92" width="383" height="40"/>
+                                        <rect key="frame" x="0.0" y="92" width="379" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OFk-2o-rbC" id="PnN-wI-AgZ">
-                                            <frame key="frameInset" width="383" height="39"/>
+                                            <frame key="frameInset" width="379" height="39"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -84,48 +84,29 @@
                                     <outlet property="delegate" destination="eBJ-IY-SG3" id="WJZ-WM-Jga"/>
                                 </connections>
                             </tableView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" momentary="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qiZ-J3-zox">
-                                <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
-                                    <segment title="Third"/>
-                                    <segment title="Fourth"/>
-                                </segments>
-                                <connections>
-                                    <action selector="eventsSegmentSwitch:" destination="eBJ-IY-SG3" eventType="valueChanged" id="12f-o0-zf3"/>
-                                </connections>
-                            </segmentedControl>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="nhH-CN-1UC">
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="eBJ-IY-SG3" id="NPZ-OM-1ik"/>
-                                </connections>
-                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="hd0-hV-e9B" firstAttribute="top" secondItem="nhH-CN-1UC" secondAttribute="bottom" constant="-20" id="BXN-Dq-KAR"/>
-                            <constraint firstItem="nhH-CN-1UC" firstAttribute="leading" secondItem="73M-5g-9Iy" secondAttribute="leadingMargin" constant="-20" id="EO2-Wz-cgz"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="qiZ-J3-zox" secondAttribute="trailing" constant="-20" id="EpE-cC-Xsu"/>
-                            <constraint firstItem="qiZ-J3-zox" firstAttribute="leading" secondItem="73M-5g-9Iy" secondAttribute="leadingMargin" constant="-20" id="P5Y-PW-5pi"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="nhH-CN-1UC" secondAttribute="trailing" constant="-20" id="Uzu-yd-fLH"/>
-                            <constraint firstItem="nhH-CN-1UC" firstAttribute="top" secondItem="qiZ-J3-zox" secondAttribute="bottom" id="b6r-Lf-pF3"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="hd0-hV-e9B" secondAttribute="trailing" constant="-20" id="b9i-yZ-4AD"/>
-                            <constraint firstItem="CRZ-CJ-7Uh" firstAttribute="top" secondItem="hd0-hV-e9B" secondAttribute="bottom" id="ePn-LP-6Tt"/>
-                            <constraint firstItem="qiZ-J3-zox" firstAttribute="top" secondItem="7Jq-wl-G3v" secondAttribute="bottom" id="kJ5-ZS-eqB"/>
-                            <constraint firstItem="hd0-hV-e9B" firstAttribute="leading" secondItem="73M-5g-9Iy" secondAttribute="leadingMargin" constant="-20" id="lYP-2l-Q6k"/>
+                            <constraint firstItem="hd0-hV-e9B" firstAttribute="leading" secondItem="73M-5g-9Iy" secondAttribute="leadingMargin" constant="-16" id="7XT-2A-xBJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hd0-hV-e9B" secondAttribute="trailing" constant="-20" id="I6m-e5-hBQ"/>
+                            <constraint firstItem="CRZ-CJ-7Uh" firstAttribute="top" secondItem="hd0-hV-e9B" secondAttribute="bottom" id="dCQ-4O-VAq"/>
+                            <constraint firstItem="hd0-hV-e9B" firstAttribute="top" secondItem="7Jq-wl-G3v" secondAttribute="bottom" id="vDm-d3-uH6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Tech Tatva '16" id="gPF-1j-abf"/>
+                    <navigationItem key="navigationItem" title="Tech Tatva '16" id="gPF-1j-abf">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="C4j-pL-mmD">
+                            <connections>
+                                <action selector="dismissVC:" destination="eBJ-IY-SG3" id="gK8-it-79v"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="daycontrol" destination="qiZ-J3-zox" id="rSJ-Yu-qPk"/>
-                        <outlet property="eventsSearchBar" destination="nhH-CN-1UC" id="cBe-Lr-kZF"/>
                         <outlet property="eventsTable" destination="hd0-hV-e9B" id="4Wd-IL-P19"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mcv-mn-TjT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="660" y="2095"/>
+            <point key="canvasLocation" x="4689" y="-134"/>
         </scene>
         <!--Tech Tatva '16-->
         <scene sceneID="IAp-FG-C83">
@@ -181,7 +162,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cCw-MR-6Pq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3870" y="611"/>
+            <point key="canvasLocation" x="4808.8000000000002" y="610.34482758620697"/>
         </scene>
         <!--Registration Page View Controller-->
         <scene sceneID="6b4-VC-X0g">
@@ -222,7 +203,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YCd-1Q-Nim" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="nPS-1g-zpk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4634" y="611"/>
+            <point key="canvasLocation" x="5572" y="610.34482758620697"/>
         </scene>
         <!--Tech Tatva '16-->
         <scene sceneID="wFR-BB-2AW">
@@ -270,7 +251,7 @@
                             <tableViewSection headerTitle="About Us" id="8Bl-PI-Nq7">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="aboutCell" rowHeight="363" id="RAX-5X-tiz">
-                                        <rect key="frame" x="0.0" y="119.5" width="375" height="363"/>
+                                        <rect key="frame" x="0.0" y="120" width="375" height="363"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RAX-5X-tiz" id="oCs-ap-BEz">
                                             <frame key="frameInset" width="375" height="362"/>
@@ -299,7 +280,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                             <tableViewSection headerTitle="Follow Us" id="Lmx-l9-4ZD">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="aboutCell" rowHeight="56" id="9gh-Xi-Ae1">
-                                        <rect key="frame" x="0.0" y="538.5" width="375" height="56"/>
+                                        <rect key="frame" x="0.0" y="539" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9gh-Xi-Ae1" id="SL1-P4-qEs">
                                             <frame key="frameInset" width="375" height="55"/>
@@ -686,7 +667,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QyR-Ca-3h9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3870" y="-133"/>
+            <point key="canvasLocation" x="5948" y="-134.48275862068968"/>
         </scene>
         <!--Online Events View Controller-->
         <scene sceneID="BHM-bB-9ph">
@@ -728,7 +709,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gli-Eg-5j8" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="iIr-TK-Lyv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4634" y="-134"/>
+            <point key="canvasLocation" x="6783.1999999999998" y="-134.48275862068968"/>
         </scene>
         <!--Instagram Table View Controller-->
         <scene sceneID="pQp-VJ-VFw">
@@ -767,7 +748,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
         <!--Tech Tatva '16-->
         <scene sceneID="t6t-C4-dHj">
             <objects>
-                <navigationController title="Tech Tatva '16" automaticallyAdjustsScrollViewInsets="NO" id="SwR-le-mwe" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="categoryNav" title="Tech Tatva '16" automaticallyAdjustsScrollViewInsets="NO" id="SwR-le-mwe" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Categories" image="Category.png" id="ADL-It-af6"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="91U-hZ-WSp">
@@ -782,25 +763,6 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bm5-Ue-foU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1590" y="-133"/>
-        </scene>
-        <!--Tech Tatva '16-->
-        <scene sceneID="T3E-0B-BnH">
-            <objects>
-                <navigationController title="Tech Tatva '16" automaticallyAdjustsScrollViewInsets="NO" id="fhN-NG-Lqf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Events" image="Events.png" id="Zhe-5P-nqR"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DQ5-bS-9to">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="eBJ-IY-SG3" kind="relationship" relationship="rootViewController" id="naB-dC-yL5"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5o8-Pj-by1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-199" y="2096"/>
         </scene>
         <!--Tech Tatva '16-->
         <scene sceneID="l7P-FX-d3s">
@@ -903,7 +865,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DLW-Ah-LFt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2449" y="584"/>
+            <point key="canvasLocation" x="2449" y="585"/>
         </scene>
         <!--Instagram-->
         <scene sceneID="Vip-0C-aQu">
@@ -936,10 +898,10 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                     </tabBar>
                     <connections>
                         <segue destination="SwR-le-mwe" kind="relationship" relationship="viewControllers" id="JcY-ux-r1j"/>
-                        <segue destination="1S4-In-Lwp" kind="relationship" relationship="viewControllers" id="krM-qc-FcF"/>
-                        <segue destination="ofk-ZU-3YD" kind="relationship" relationship="viewControllers" id="euQ-fV-qk3"/>
-                        <segue destination="ehV-nW-uEs" kind="relationship" relationship="viewControllers" id="cw2-mb-k5J"/>
-                        <segue destination="BLM-R3-bXL" kind="relationship" relationship="viewControllers" id="r5i-IA-SYP"/>
+                        <segue destination="ehV-nW-uEs" kind="relationship" relationship="viewControllers" id="3RQ-Ch-u13"/>
+                        <segue destination="ofk-ZU-3YD" kind="relationship" relationship="viewControllers" id="SHY-XD-oKy"/>
+                        <segue destination="BLM-R3-bXL" kind="relationship" relationship="viewControllers" id="E7q-yY-3Wf"/>
+                        <segue destination="I3L-2s-D2T" kind="relationship" relationship="viewControllers" id="BwC-w9-otq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EPc-c6-CXX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -983,23 +945,41 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
             <point key="canvasLocation" x="5361" y="3621"/>
         </scene>
         <!--Events-->
-        <scene sceneID="UG2-iE-Qj6">
+        <scene sceneID="2wr-tH-GAH">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1S4-In-Lwp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Events" image="Events.png" id="Q9j-QP-bia"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I3L-2s-D2T" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Events" image="Events.png" id="a6a-4d-8Mf"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hmu-I3-Heb">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ggI-qW-gIb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="yeY-ev-aId" kind="relationship" relationship="rootViewController" id="h1A-jo-U4g"/>
+                        <segue destination="yeY-ev-aId" kind="relationship" relationship="rootViewController" id="hZZ-US-7Mb"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wiZ-Bv-EwO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KoM-N5-BCQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1590" y="585"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EAd-lf-EJz">
+            <objects>
+                <navigationController storyboardIdentifier="eventListNav" automaticallyAdjustsScrollViewInsets="NO" id="uoS-a6-4vc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="beb-j3-bZ4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eBJ-IY-SG3" kind="relationship" relationship="rootViewController" id="Zjz-DM-4p2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TWc-Pg-WVv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3753" y="-134"/>
         </scene>
     </scenes>
     <resources>

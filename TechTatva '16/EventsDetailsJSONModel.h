@@ -11,15 +11,16 @@
 @interface EventsDetailsJSONModel : NSObject
 
 @property (strong,nonatomic) NSString *eventName;
-@property (nonatomic) NSString *eventId;
-@property (strong,nonatomic) NSString *eventDescription;
-@property (nonatomic) NSString *eventMaxTeamSize;
-@property (strong,nonatomic) NSString *categoryEventId;
-@property (strong,nonatomic) NSString *categoryEventName;
-@property (strong,nonatomic) NSString *cntctname;
-@property (strong,nonatomic) NSString *cntctno;
-@property (strong,nonatomic) NSString *hs1;
-@property (strong,nonatomic) NSString *hs2;
+@property (strong, nonatomic) NSString *eventId;
+@property (strong, nonatomic) NSString *eventDescription;
+@property (strong, nonatomic) NSString *eventMaxTeamSize;
+@property (strong, nonatomic) NSString *categoryEventId;
+@property (strong, nonatomic) NSString *categoryEventName;
+@property (strong, nonatomic) NSString *cntctname;
+@property (strong, nonatomic) NSString *cntctno;
+@property (strong, nonatomic) NSString *hs1;
+@property (strong, nonatomic) NSString *hs2;
+@property (strong, nonatomic) NSString *day;
 
 -(instancetype)initWithData:(id)myData;
 +(NSMutableArray *)getArrayFromJson:(id)myData;

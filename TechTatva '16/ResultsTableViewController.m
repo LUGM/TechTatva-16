@@ -99,8 +99,7 @@
 {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Result"
-                                                                   message:[NSString stringWithFormat:@"Position : %@\nTeam ID : %@", [[array objectAtIndex:indexPath.row] standing], [[array objectAtIndex:indexPath.row] teamID]]
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Result" message:[NSString stringWithFormat:@"Position : %@\nTeam ID : %@", [[array objectAtIndex:indexPath.row] standing], [[array objectAtIndex:indexPath.row] teamID]]
                                                             preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault

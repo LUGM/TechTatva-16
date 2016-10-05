@@ -27,10 +27,22 @@
     NSArray *array;
 }
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     [self fetchFavourites];
     
+    [self loadFromApi];
+    
+    allEventsArray = [[NSArray alloc]initWithArray:fetchArray];
+    searchedAllEventsArray = [[NSMutableArray alloc]initWithArray:allEventsArray];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyBoardShown:) name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyBoardHidden:) name:UIKeyboardWillHideNotification object:nil];
+    
+}
+
+- (void) loadFromApi
+{
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         @try {
             
@@ -56,16 +68,10 @@
             
         }
     });
-
-    
-    allEventsArray = [[NSArray alloc]initWithArray:fetchArray];
-    searchedAllEventsArray = [[NSMutableArray alloc]initWithArray:allEventsArray];
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyBoardShown:) name:UIKeyboardDidShowNotification object:nil];
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyBoardHidden:) name:UIKeyboardWillHideNotification object:nil];
-    
 }
 
--(void)keyBoardShown:(NSNotification *)note{
+-(void)keyBoardShown:(NSNotification *)note
+{
     CGRect keyboardFrame;
     [[[note userInfo]objectForKey:UIKeyboardFrameEndUserInfoKey]getValue:&keyboardFrame];
     CGRect tableviewFrame = allEventsTableView.frame;
@@ -73,7 +79,8 @@
     [allEventsTableView setFrame:tableviewFrame];
 }
 
--(void)keyBoardHidden:(NSNotification *)note{
+-(void)keyBoardHidden:(NSNotification *)note
+{
     [allEventsTableView setFrame:self.view.bounds];
 }
 
@@ -89,7 +96,8 @@
         for(NSString *string in allEventsArray)
         {
             NSRange r = [string rangeOfString:searchText options:NSCaseInsensitiveSearch];
-            if(r.location != NSNotFound){
+            if(r.location != NSNotFound)
+            {
                 [searchedAllEventsArray addObject:string];
             }
         }
@@ -97,7 +105,8 @@
     [allEventsTableView reloadData];
 }
 
--(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
     [eventsSearchBar resignFirstResponder];
 }
 
@@ -107,7 +116,6 @@
     NSError *error = nil;
     
     fetchArray = [[Favourite managedObjectContext]executeFetchRequest:fetchFavourite error:&error];
-    
 }
 
 - (IBAction)allEventsSegmentChange:(id)sender
@@ -127,17 +135,20 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
     if(array.count == 0)
-        return 4;
+        return 0;
     return array.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     
     static NSString *cellIdentifier = @"AllEveCell";
     AllEventsTableViewCell *cell = (AllEventsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
@@ -150,9 +161,14 @@
         cell = [[AllEventsTableViewCell alloc] init];
     }
     
-    
+    [cell.rateEvent addTarget:self action:@selector(rateEvent:) forControlEvents:UIControlEventTouchUpInside];
     [cell.favouritesButton addTarget:self action:@selector(switchFavourites:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
+}
+
+- (void) rateEvent :(id) sender
+{
+    
 }
 
 - (void) switchFavourites:(id) someObject
@@ -229,9 +245,7 @@
             NSIndexPath * pathsToDelete = [NSIndexPath indexPathForRow:path.row inSection:0];
             [fav.favouritesTable deleteRowsAtIndexPaths:@[pathsToDelete] withRowAnimation:UITableViewRowAnimationRight];
         }
-        
     }
-    
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

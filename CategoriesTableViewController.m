@@ -9,8 +9,10 @@
 #import "CategoriesTableViewController.h"
 #import "CategoriesTableViewCell.h"
 #import "CategoriesJSONModel.h"
+#import "EventsViewController.h"
 
-@interface CategoriesTableViewController()  {
+@interface CategoriesTableViewController()
+{
     NSArray *categoriesArray ;
     NSArray *array;
 }
@@ -21,26 +23,29 @@
 
 @implementation CategoriesTableViewController
 
--(void)viewDidLoad  {
-    categoriesArray = [[NSArray alloc] init];
-    categoriesArray = @[@"Categories",@"Hello",@"Hi",@"IOS",@"TT'16",@"AppDev"];
-    
+-(void)viewDidLoad
+{
+    [self loadFromApi];
+}
+
+- (void) loadFromApi
+{
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         @try {
             
-                NSURL *custumUrl = [[NSURL alloc]initWithString:@"http://api.mitportals.in/categories/"];
-                NSData *mydata = [NSData dataWithContentsOfURL:custumUrl];
-                NSError *error;
-                
-                if (mydata!=nil)
-                {
-                    id jsonData = [NSJSONSerialization JSONObjectWithData:mydata options:kNilOptions error:&error];
-                    id requiredArray = [jsonData valueForKey:@"data"];
-                    array = [CategoriesJSONModel getArrayFromJson:requiredArray];
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        [self.tableView reloadData];
-                    });
-                }
+            NSURL *custumUrl = [[NSURL alloc]initWithString:@"http://api.mitportals.in/categories/"];
+            NSData *mydata = [NSData dataWithContentsOfURL:custumUrl];
+            NSError *error;
+            
+            if (mydata!=nil)
+            {
+                id jsonData = [NSJSONSerialization JSONObjectWithData:mydata options:kNilOptions error:&error];
+                id requiredArray = [jsonData valueForKey:@"data"];
+                array = [CategoriesJSONModel getArrayFromJson:requiredArray];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.tableView reloadData];
+                });
+            }
         }
         @catch (NSException *exception) {
             
@@ -49,9 +54,7 @@
             
         }
     });
-
 }
-
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -65,18 +68,15 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    [tableView beginUpdates];
-    if (!([indexPath compare:self.selectedIndexPath] == NSOrderedSame))
-        self.selectedIndexPath = indexPath;
-    else
-        self.selectedIndexPath = nil;
-    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [tableView endUpdates];
-
+    UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UINavigationController *navController = [storyboard instantiateViewControllerWithIdentifier:@"eventListNav"];
+    EventsViewController *destController = [navController viewControllers][0];
+    CategoriesJSONModel *model = [array objectAtIndex:indexPath.row];
+    destController.title = @"Category Events";
+    destController.categoryID = model.catId;
+    [self presentViewController:navController animated:YES completion:nil];
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -84,22 +84,32 @@
     CategoriesTableViewCell *cell = (CategoriesTableViewCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CategoriesTableViewCell" owner:self options:nil];
     cell = [nib objectAtIndex:0];
-    if (cell == nil) {
+    if (cell == nil)
+    {
         cell = [[CategoriesTableViewCell alloc] init];
     }
-    
-    
-    cell.nameLabel1.text = [[array objectAtIndex:indexPath.row] catName];
-    //cell.nameLabel2.text = [label2Array objectAtIndex:indexPath.row];
-    cell.categoryInfo.text = [[array objectAtIndex:indexPath.row] catDesc];
+    CategoriesJSONModel *model = [array objectAtIndex:indexPath.row];
+    cell.nameLabel.text = model.catName;
+    cell.categoryImage = nil;
     return cell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if ([indexPath compare:self.selectedIndexPath] == NSOrderedSame)
-        return 265.f;
-    return 90.f;
+-(void) tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    CategoriesJSONModel *model = [array objectAtIndex:indexPath.row];
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:model.catName message:model.catDesc delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 50.f;
+}
+
+- (UIView *) tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    UIView *blankView = [[UIView alloc] initWithFrame:CGRectZero];
+    return blankView;
+}
 
 @end

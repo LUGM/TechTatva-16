@@ -8,24 +8,53 @@
 
 #import "EventsViewController.h"
 #import "EventsTableViewCell.h"
-#import "EventsDetailsView.h"
 #import "EventsDetailsJSONModel.h"
 
-@interface EventsViewController ()
+@interface EventsViewController () <UISearchResultsUpdating, UISearchBarDelegate>
+
 {
     NSArray *array;
+    NSMutableArray *filteredEvents;
 }
 @property (nonatomic, strong) NSIndexPath *selectedIndexPath;
+@property (strong, nonatomic) UISearchController *searchController;
 
 @end
 
 @implementation EventsViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
+    eventsTable.contentInset = UIEdgeInsetsMake(-44, 0, 0, 0);
+    [self setupSearchController];
+    
+    [self loadFromApi];
+
+}
+
+- (void) setupSearchController
+{
+    self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+    self.searchController.searchResultsUpdater = self;
+    //    self.searchController.delegate = self;
+    // Get the searchbar's text field via KVO and set color
+    UITextField *tfield = [self.searchController.searchBar valueForKey:@"_searchField"];
+    tfield.backgroundColor = [UIColor colorWithWhite:0.85 alpha:1.0];
+    self.searchController.searchBar.delegate = self;
+    self.searchController.searchBar.barTintColor = [UIColor whiteColor];
+    self.searchController.searchBar.tintColor = [UIColor blackColor];
+    self.searchController.dimsBackgroundDuringPresentation = NO;
+    self.definesPresentationContext = YES;
+    eventsTable.tableHeaderView = self.searchController.searchBar;
+}
+
+- (void) loadFromApi
+{
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-        @try {
+        @try
+        {
             NSURL *myUrl = [[NSURL alloc]initWithString:@"http://api.mitportals.in/events/"];
             NSData *mydata = [NSData dataWithContentsOfURL:myUrl];
             NSError *error;
@@ -35,97 +64,79 @@
                 id jsonData = [NSJSONSerialization JSONObjectWithData:mydata options:kNilOptions error:&error];
                 id requiredArray = [jsonData valueForKey:@"data"];
                 array = [EventsDetailsJSONModel getArrayFromJson:requiredArray];
-                
+                filteredEvents = [NSMutableArray new];
+                NSMutableArray *filter = [NSMutableArray arrayWithArray:array];
+                for (EventsDetailsJSONModel *dict in filter)
+                {
+                    if ([dict.categoryEventId isEqualToString:_categoryID])
+                    {
+                        [filteredEvents addObject:dict];
+                    }
+                }
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [eventsTable reloadData];
                 });
             }
         }
         @catch (NSException *exception) {
-            
         }
         @finally {
-            
         }
     });
-
-    
-    eventsArray = [[NSArray alloc] initWithObjects:@"one",@"two",@"three", nil];
-    searchedEventsArray = [[NSMutableArray alloc]initWithArray:eventsArray];
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyBoardShown:) name:UIKeyboardDidShowNotification object:nil];
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyBoardHidden:) name:UIKeyboardWillHideNotification object:nil];
-
-}
-
--(void)keyBoardShown:(NSNotification *)note{
-    CGRect keyboardFrame;
-    [[[note userInfo]objectForKey:UIKeyboardFrameEndUserInfoKey]getValue:&keyboardFrame];
-    CGRect tableviewFrame = eventsTable.frame;
-    tableviewFrame.size.height -= keyboardFrame.size.height;
-    [eventsTable setFrame:tableviewFrame];
-}
-
--(void)keyBoardHidden:(NSNotification *)note{
-    [eventsTable setFrame:self.view.bounds];
-    
-}
-
--(void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
-{
-    if(searchText.length == 0)
-    {
-        [searchedEventsArray removeAllObjects];
-        [searchedEventsArray addObjectsFromArray:eventsArray];
-    }
-    else{
-        [searchedEventsArray removeAllObjects];
-        for(NSString *string in eventsArray)
-        {
-            NSRange r = [string rangeOfString:searchText options:NSCaseInsensitiveSearch];
-            if(r.location != NSNotFound){
-                [searchedEventsArray addObject:string];
-            }
-        }
-    }
-    [eventsTable reloadData];
-}
-
--(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
-    [eventsSearchBar resignFirstResponder];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
     if(array.count == 0)
-        return 5;
-    return array.count;
+        return 0;
+    return filteredEvents.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+- (IBAction)dismissVC:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     EventsTableViewCell *cell = (EventsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"eventsCell"];
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"EventsTableViewCell" owner:self options:nil];
-    
     cell = [nib objectAtIndex:0];
-    
     if (cell == nil)
     {
-        
         cell = [[EventsTableViewCell alloc] init];
-        
     }
-    
-    EventsDetailsJSONModel *demoModel = [array objectAtIndex:indexPath.row];
+    EventsDetailsJSONModel *demoModel = [filteredEvents objectAtIndex:indexPath.row];
     cell.eventName.text = demoModel.eventName;
     cell.eventDesc.text = demoModel.eventDescription;
-    cell.contactNumber.text = demoModel.cntctno;
-    cell.contactName.text = demoModel.cntctname;
-    cell.maxTeamSize.text = demoModel.eventMaxTeamSize;
-
+    if ([demoModel.cntctno isEqualToString:@" "])
+        cell.contactNumber.text = @"Contact Info Unavailable";
+    else
+        cell.contactNumber.text = [NSString stringWithFormat:@"Call : %@",demoModel.cntctno];
+    if ([demoModel.cntctname isEqualToString:@" "])
+        cell.contactName.text = @"No Contact Person Listed";
+    else
+        cell.contactName.text = [NSString stringWithFormat:@"Contact : %@", demoModel.cntctname];
+    cell.maxTeamSize.text = [NSString stringWithFormat:@"Maximum Team Size : %@", demoModel.eventMaxTeamSize];
+    if ([demoModel.day isEqualToString:@"0"])
+        cell.day.text = @"Online";
+    else
+        cell.day.text = [NSString stringWithFormat:@"On day(s): %@", demoModel.day];
+    cell.categoryName.text = [NSString stringWithFormat:@"Category : %@", demoModel.categoryEventName];
+    [cell.callButton addTarget:self action:@selector(callEventHead:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
+}
+
+- (void) callEventHead:(id)sender
+{
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[sender tag] inSection:0];
+    EventsDetailsJSONModel *event = [filteredEvents objectAtIndex:indexPath.row];
+    NSURL *phoneURL = [NSURL URLWithString:[NSString stringWithFormat:@"tel://%@", event.cntctno]];
+    [[UIApplication sharedApplication] openURL:phoneURL];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -136,33 +147,51 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView beginUpdates];
-    
     if (!([indexPath compare:self.selectedIndexPath] == NSOrderedSame))
         self.selectedIndexPath = indexPath;
     else
         self.selectedIndexPath = nil;
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
     [tableView endUpdates];
-    
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     if ([indexPath compare:self.selectedIndexPath] == NSOrderedSame)
-        return 295.f;
-    return 60.f;
+        return 255.f;
+    return 46.f;
 }
 
+# pragma mark - Search
 
-- (IBAction)eventsSegmentSwitch:(id)sender {
-    if(daycontrol.selectedSegmentIndex == 0)
-        NSLog(@"Day 1 selected.");
-    else if(daycontrol.selectedSegmentIndex == 1)
-        NSLog(@"Day 2 selected.");
-    else if(daycontrol.selectedSegmentIndex == 2)
-        NSLog(@"Day 3 selected.");
-    else if(daycontrol.selectedSegmentIndex == 3)
-        NSLog(@"Day 4 selected.");
+- (void)updateSearchResultsForSearchController:(UISearchController *)searchController
+{
+    UISearchBar *searchBar = searchController.searchBar;
+    if (searchBar.text.length > 0)
+    {
+        [self filterEventsForSearchString:searchBar.text andScopeBarTitle:searchBar.scopeButtonTitles[searchBar.selectedScopeButtonIndex]];
+    }
 }
+
+- (void)filterEventsForSearchString:(NSString *)searchString andScopeBarTitle:(NSString *)scopeTitle
+{
+    filteredEvents = [NSMutableArray arrayWithArray:array];
+    [filteredEvents filterUsingPredicate:[NSPredicate predicateWithFormat:@"eventName contains[cd] %@ OR categoryEventName contains[cd] %@ OR hs1 contains[cd] %@ OR hs2 contains[cd] %@", searchString, searchString, searchString, searchString]];
+    [eventsTable reloadData];
+}
+
+- (void)searchBar:(UISearchBar *)searchBar selectedScopeButtonIndexDidChange:(NSInteger)selectedScope
+{
+    if (searchBar.text.length > 0)
+        [self filterEventsForSearchString:searchBar.text andScopeBarTitle:searchBar.scopeButtonTitles[searchBar.selectedScopeButtonIndex]];
+    else
+        [self searchBarCancelButtonClicked:searchBar];
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    [eventsTable reloadData];
+}
+
 @end

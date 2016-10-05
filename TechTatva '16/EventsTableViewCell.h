@@ -11,13 +11,13 @@
 @interface EventsTableViewCell : UITableViewCell
 
 
-@property (weak, nonatomic) IBOutlet UILabel *eventName;
-@property (weak, nonatomic) IBOutlet UITextView *eventDesc;
+@property (strong, nonatomic) IBOutlet UILabel *eventName;
+@property (strong, nonatomic) IBOutlet UITextView *eventDesc;
 @property (strong, nonatomic) IBOutlet UILabel *maxTeamSize;
 @property (strong, nonatomic) IBOutlet UILabel *contactName;
 @property (strong, nonatomic) IBOutlet UILabel *contactNumber;
 @property (strong, nonatomic) IBOutlet UIButton *callButton;
-
-- (IBAction)callBtnPressed:(id)sender;
+@property (strong, nonatomic) IBOutlet UILabel *day;
+@property (strong, nonatomic) IBOutlet UILabel *categoryName;
 
 @end

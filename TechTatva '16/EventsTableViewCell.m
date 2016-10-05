@@ -20,23 +20,4 @@
     // Configure the view for the selected state
 }
 
-//- (IBAction)segmentChange:(UISegmentedControl *)sender {
-//    
-//    UIView * view1 = [[[NSBundle mainBundle] loadNibNamed:@"EventsDetailsView" owner:self options:nil ]objectAtIndex:0];
-//    UIView * view2 = [[[NSBundle mainBundle] loadNibNamed:@"InfoDetailsView" owner:self options:nil ]objectAtIndex:0];
-//    if(self.eventsAndInfoSegView.selectedSegmentIndex==0)
-//    {
-//        [view2 removeFromSuperview];
-//        [self.eventsAndInfoView addSubview:view1];
-//    }
-//    else
-//    {
-//        [view1 removeFromSuperview];
-//        [self.eventsAndInfoView addSubview:view2];
-//    }
-//    
-//}
-
-- (IBAction)callBtnPressed:(id)sender {
-}
 @end
