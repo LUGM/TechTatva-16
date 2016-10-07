@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ORP-SX-hMp">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ORP-SX-hMp">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -247,7 +247,7 @@
                             <tableViewSection headerTitle="About Us" id="8Bl-PI-Nq7">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="aboutCell" rowHeight="363" id="RAX-5X-tiz">
-                                        <rect key="frame" x="0.0" y="120" width="375" height="363"/>
+                                        <rect key="frame" x="0.0" y="119.5" width="375" height="363"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RAX-5X-tiz" id="oCs-ap-BEz">
                                             <frame key="frameInset" width="375" height="362"/>
@@ -276,7 +276,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                             <tableViewSection headerTitle="Follow Us" id="Lmx-l9-4ZD">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="aboutCell" rowHeight="56" id="9gh-Xi-Ae1">
-                                        <rect key="frame" x="0.0" y="539" width="375" height="56"/>
+                                        <rect key="frame" x="0.0" y="538.5" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9gh-Xi-Ae1" id="SL1-P4-qEs">
                                             <frame key="frameInset" width="375" height="55"/>
@@ -849,17 +849,38 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Gpn-x2-A5D">
-                                <segments>
-                                    <segment title="DAY 1"/>
-                                    <segment title="DAY 2"/>
-                                    <segment title="DAY 3"/>
-                                    <segment title="DAY 4"/>
-                                </segments>
-                                <connections>
-                                    <action selector="allEventsSegmentChange:" destination="yeY-ev-aId" eventType="valueChanged" id="TRZ-gk-vW4"/>
-                                </connections>
-                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RHR-Gy-Kfh">
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Gpn-x2-A5D">
+                                        <segments>
+                                            <segment title="DAY 1"/>
+                                            <segment title="DAY 2"/>
+                                            <segment title="DAY 3"/>
+                                            <segment title="DAY 4"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="allEventsSegmentChange:" destination="yeY-ev-aId" eventType="valueChanged" id="TRZ-gk-vW4"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hIm-gX-CVr">
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="Chk-6b-2gh"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="hIm-gX-CVr" secondAttribute="trailing" constant="-20" id="7EZ-4W-cgq"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gpn-x2-A5D" secondAttribute="bottom" constant="8" id="SA9-bK-3fS"/>
+                                    <constraint firstItem="Gpn-x2-A5D" firstAttribute="top" secondItem="RHR-Gy-Kfh" secondAttribute="top" constant="8" id="ToR-cc-Jii"/>
+                                    <constraint firstAttribute="height" constant="44" id="dSC-bS-yaa"/>
+                                    <constraint firstItem="hIm-gX-CVr" firstAttribute="leading" secondItem="RHR-Gy-Kfh" secondAttribute="leading" constant="-20" id="goq-ou-Sq2"/>
+                                    <constraint firstAttribute="bottom" secondItem="hIm-gX-CVr" secondAttribute="bottom" id="se6-oN-sq3"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gpn-x2-A5D" secondAttribute="trailing" constant="8" id="wd2-WS-YTr"/>
+                                    <constraint firstItem="Gpn-x2-A5D" firstAttribute="leading" secondItem="RHR-Gy-Kfh" secondAttribute="leading" constant="8" id="xeu-TD-qji"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="143" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z09-ML-YIf">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -883,16 +904,17 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                             <constraint firstAttribute="trailing" secondItem="z09-ML-YIf" secondAttribute="trailing" id="9HS-Me-DwP"/>
                             <constraint firstItem="dhK-F0-F0H" firstAttribute="top" secondItem="z09-ML-YIf" secondAttribute="bottom" id="JIN-8t-oQw"/>
                             <constraint firstItem="z09-ML-YIf" firstAttribute="leading" secondItem="o5o-Sr-QFO" secondAttribute="leading" id="K3C-Fc-sVo"/>
-                            <constraint firstItem="Gpn-x2-A5D" firstAttribute="top" secondItem="Xnq-tc-T0K" secondAttribute="bottom" id="Onu-wp-yjU"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="Gpn-x2-A5D" secondAttribute="leading" id="cWZ-du-4Kh"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Gpn-x2-A5D" secondAttribute="trailing" id="nvP-GP-c9U"/>
-                            <constraint firstItem="z09-ML-YIf" firstAttribute="top" secondItem="Gpn-x2-A5D" secondAttribute="bottom" constant="12" id="p9q-NR-scv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RHR-Gy-Kfh" secondAttribute="trailing" constant="-16" id="Y8L-WG-sN8"/>
+                            <constraint firstItem="RHR-Gy-Kfh" firstAttribute="top" secondItem="Xnq-tc-T0K" secondAttribute="bottom" id="Ybh-xy-hGE"/>
+                            <constraint firstItem="z09-ML-YIf" firstAttribute="top" secondItem="RHR-Gy-Kfh" secondAttribute="bottom" id="a6D-xN-pGG"/>
+                            <constraint firstItem="RHR-Gy-Kfh" firstAttribute="leading" secondItem="o5o-Sr-QFO" secondAttribute="leadingMargin" constant="-16" id="tof-Gz-tfC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="All Events" id="Epx-bf-k7p"/>
                     <connections>
                         <outlet property="allEventsSegmentControl" destination="Gpn-x2-A5D" id="siy-bw-AaD"/>
                         <outlet property="allEventsTableView" destination="z09-ML-YIf" id="ypw-gk-fIP"/>
+                        <outlet property="tableViewTopConstraint" destination="a6D-xN-pGG" id="cTw-6C-z6E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DLW-Ah-LFt" userLabel="First Responder" sceneMemberID="firstResponder"/>

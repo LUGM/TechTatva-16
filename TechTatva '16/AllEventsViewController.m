@@ -14,10 +14,11 @@
 #import "ScheduleJsonDataModel.h"
 
 
-@interface AllEventsViewController () <UISearchResultsUpdating, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface AllEventsViewController () <UISearchResultsUpdating, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource, UISearchControllerDelegate>
 
 @property (nonatomic, strong) UISearchController *searchController;
 @property (nonatomic, strong) NSIndexPath *selectedIndexPath;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewTopConstraint;
 
 @end
 
@@ -43,19 +44,31 @@
     searchedAllEventsArray = [[NSMutableArray alloc]initWithArray:allEventsArray];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyBoardShown:) name:UIKeyboardDidShowNotification object:nil];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyBoardHidden:) name:UIKeyboardWillHideNotification object:nil];
+	
+	[allEventsTableView registerNib:[UINib nibWithNibName:@"AllEventsTableViewCell" bundle:nil] forCellReuseIdentifier:@"AllEveCell"];
     
     [self setupSearchController];
+	
+	[self.navigationController.navigationBar setTranslucent:NO];
+	[self.navigationController.navigationBar setShadowImage:[UIImage imageNamed:@"TransparentPixel"]];
+	[self.navigationController.navigationBar setBackgroundColor:GLOBAL_BACK_COLOR];
+	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"Pixel"] forBarMetrics:UIBarMetricsDefault];
 }
 
 - (void)setupSearchController
 {
     self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
     self.searchController.searchResultsUpdater = self;
-//    self.searchController.delegate = self;
-    self.searchController.searchBar.searchBarStyle = UISearchBarStyleMinimal;
+    self.searchController.delegate = self;
+    self.searchController.searchBar.searchBarStyle = UISearchBarStyleProminent;
+	UITextField *tfield = [self.searchController.searchBar valueForKey:@"_searchField"];
+	tfield.backgroundColor = [UIColor colorWithWhite:0.85 alpha:1.0];
     self.searchController.searchBar.delegate = self;
+	self.searchController.searchBar.showsScopeBar = NO;
+	self.searchController.searchBar.scopeButtonTitles = @[@"DAY 1", @"DAY 2", @"DAY 3", @"DAY 4"];
     self.searchController.searchBar.backgroundColor = [UIColor whiteColor];
     self.searchController.searchBar.tintColor = [UIColor blackColor];
+	self.searchController.searchBar.barTintColor = [UIColor whiteColor];
     self.searchController.dimsBackgroundDuringPresentation = NO;
     self.definesPresentationContext = YES;
     allEventsTableView.tableHeaderView = self.searchController.searchBar;
@@ -185,12 +198,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ScheduleJsonDataModel *event = [filteredEvents objectAtIndex:indexPath.row];
-    NSLog(@"event number hello %li %@", (long) indexPath.row, event.eventName);
     static NSString *cellIdentifier = @"AllEveCell";
     AllEventsTableViewCell *cell = (AllEventsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"AllEventsTableViewCell" owner:self options:nil];
-    cell = [nib objectAtIndex:0];
-    
     if (cell == nil)
     {
         cell = [[AllEventsTableViewCell alloc] init];
@@ -209,6 +218,10 @@
     [cell.rateEvent addTarget:self action:@selector(rateEvent:) forControlEvents:UIControlEventTouchUpInside];
     [cell.favouritesButton addTarget:self action:@selector(switchFavourites:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+	return [UIView new];
 }
 
 - (void) rateEvent :(id) sender
@@ -307,7 +320,7 @@
 {
     filteredEvents = [NSMutableArray arrayWithArray:array];
     if (allEventsSegmentControl.selectedSegmentIndex != 4)
-        [filteredEvents filterUsingPredicate:[NSPredicate predicateWithFormat:@"(eventName contains[cd] %@ OR catName contains[cd] %@) AND day == %@", searchString, searchString, [NSString stringWithFormat:@"%li", allEventsSegmentControl.selectedSegmentIndex+1]]];
+        [filteredEvents filterUsingPredicate:[NSPredicate predicateWithFormat:@"(eventName contains[cd] %@ OR catName contains[cd] %@) AND day == %@", searchString, searchString, [scopeTitle substringFromIndex:4]]];
     else
         [filteredEvents filterUsingPredicate:[NSPredicate predicateWithFormat:@"eventName contains[cd] %@  OR catName contains[cd] %@", searchString, searchString]];
     [allEventsTableView reloadData];
@@ -341,6 +354,14 @@
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
 {
     [self filterEventsForSelectedSegmentTitle:[allEventsSegmentControl titleForSegmentAtIndex:allEventsSegmentControl.selectedSegmentIndex]];
+}
+
+- (void)didPresentSearchController:(UISearchController *)searchController {
+	self.tableViewTopConstraint.constant = 4.f;
+}
+
+- (void)didDismissSearchController:(UISearchController *)searchController {
+	self.tableViewTopConstraint.constant = 0.f;
 }
 
 @end
