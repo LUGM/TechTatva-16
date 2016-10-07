@@ -10,6 +10,7 @@
 
 @interface AboutUsTableViewController ()
 
+
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *backButton;
 
 @end
@@ -52,6 +53,10 @@
     [self openURLWithString:@"snapchat://add/mittt16" backupURLString:@"http://www.snapchat.com/add/mittt16/"];
 }
 
+- (IBAction)simonGoBack:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -66,6 +71,5 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-
 
 @end

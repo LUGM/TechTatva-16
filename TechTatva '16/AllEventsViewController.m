@@ -14,7 +14,7 @@
 #import "ScheduleJsonDataModel.h"
 
 
-@interface AllEventsViewController () <UISearchResultsUpdating, UISearchBarDelegate>
+@interface AllEventsViewController () <UISearchResultsUpdating, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UISearchController *searchController;
 @property (nonatomic, strong) NSIndexPath *selectedIndexPath;
@@ -34,7 +34,8 @@
     [super viewDidLoad];
     favouritesArray = [NSMutableArray new];
     filteredEvents = [NSMutableArray new];
-    [self fetchFavourites];
+    allEventsSegmentControl.selectedSegmentIndex = 0;
+//    [self fetchFavourites];
     
     [self loadFromApi];
     
@@ -74,6 +75,8 @@
                 id jsonData = [NSJSONSerialization JSONObjectWithData:mydata options:kNilOptions error:&error];
                 id requiredArray = [jsonData valueForKey:@"data"];
                 array = [ScheduleJsonDataModel getArrayFromJson:requiredArray];
+                NSLog(@"ARRAYCOUNT %li", array.count);
+//                filteredEvents = [array mutableCopy];
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self filterEventsForSelectedSegmentTitle:[allEventsSegmentControl titleForSegmentAtIndex:allEventsSegmentControl.selectedSegmentIndex]];
                 });
@@ -128,24 +131,38 @@
     [eventsSearchBar resignFirstResponder];
 }
 
-- (void) fetchFavourites
+- (BOOL)checkIfFavorite:(NSString *)eventID
 {
     NSFetchRequest *fetchFavourite = [NSFetchRequest fetchRequestWithEntityName:@"Favourite"];
+    [fetchFavourite setPredicate:[NSPredicate predicateWithFormat:@"eventID == %@", eventID]];
     NSError *error = nil;
-    
     fetchArray = [[Favourite managedObjectContext] executeFetchRequest:fetchFavourite error:&error];
+    return (fetchArray.count > 0);
 }
 
 - (IBAction)allEventsSegmentChange:(id)sender
 {
     if(allEventsSegmentControl.selectedSegmentIndex == 0)
+    {
         NSLog(@"Day 1 selected.");
+//        allEventsSegmentControl.selectedSegmentIndex = 0;
+    }
     else if(allEventsSegmentControl.selectedSegmentIndex == 1)
-         NSLog(@"Day 2 selected.");
+    {
+        NSLog(@"Day 2 selected.");
+//        allEventsSegmentControl.selectedSegmentIndex = 1;
+    }
     else if(allEventsSegmentControl.selectedSegmentIndex == 2)
+    {
         NSLog(@"Day 3 selected.");
+//        allEventsSegmentControl.selectedSegmentIndex = 2;
+    }
     else if(allEventsSegmentControl.selectedSegmentIndex == 3)
+    {
         NSLog(@"Day 4 selected.");
+//        allEventsSegmentControl.selectedSegmentIndex = 3;
+    }
+    [self filterEventsForSelectedSegmentTitle:[allEventsSegmentControl titleForSegmentAtIndex:allEventsSegmentControl.selectedSegmentIndex]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -160,14 +177,17 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if(array.count == 0)
+    NSLog(@"FILTERCOUNT %li", filteredEvents.count);
+    NSLog(@"ALLCOUNT %li", array.count);
+    if (filteredEvents.count == 0)
         return 0;
-    return array.count;
+    return filteredEvents.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ScheduleJsonDataModel *event = [filteredEvents objectAtIndex:indexPath.row];
+    NSLog(@"event number hello %li %@", (long) indexPath.row, event.eventName);
     static NSString *cellIdentifier = @"AllEveCell";
     AllEventsTableViewCell *cell = (AllEventsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"AllEventsTableViewCell" owner:self options:nil];
@@ -182,6 +202,12 @@
     cell.venue.text = event.place;
     cell.date.text = event.date;
     cell.time.text = [NSString stringWithFormat:@"%@ - %@", event.sTime, event.eTime];
+    NSString *favImageName;
+    if ([self checkIfFavorite:event.eventId])
+        favImageName = @"FilledFavourites.png";
+    else
+        favImageName = @"Favourites.png";
+    [cell.favouritesButton setBackgroundImage:[UIImage imageNamed:favImageName] forState:UIControlStateNormal];
     [cell.rateEvent addTarget:self action:@selector(rateEvent:) forControlEvents:UIControlEventTouchUpInside];
     [cell.favouritesButton addTarget:self action:@selector(switchFavourites:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
@@ -194,38 +220,48 @@
 
 - (void) switchFavourites:(id) someObject
 {
-    FavouritesViewController *fav = [[FavouritesViewController alloc]init];
     
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[someObject tag] inSection:0];
+    NSIndexPath *indexPath = [allEventsTableView indexPathForRowAtPoint:[someObject convertPoint:CGPointZero toView:allEventsTableView]];
     NSLog(@"index is %ld",(long)indexPath.row);
     
+    ScheduleJsonDataModel *event = [filteredEvents objectAtIndex:indexPath.row];
+    
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Favourite"];
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"eventID == %@", event.eventId]];
     NSError *error = nil;
     
-    ScheduleJsonDataModel *event = [filteredEvents objectAtIndex:indexPath.row];
     NSArray *fetchedArray = [[Favourite managedObjectContext] executeFetchRequest:fetchRequest error:&error];
-    NSInteger eventAlreadyThere = 0;
     
-    for (int i=0; i<fetchedArray.count; i++)
+    if (fetchedArray.count > 0)
     {
+//        UIAlertView *addedAlert = [[UIAlertView alloc]initWithTitle:@"Event Already Added!" message:nil delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
+//        [addedAlert show];
         
-        Favourite *checkForFav = [fetchedArray objectAtIndex:i];
-        if ([checkForFav.eventID isEqualToString:event.eventId])
+        // Remove from favs
+        
+        Favourite *favouriteEvent = fetchArray.firstObject;
+        
+        [[Favourite managedObjectContext] deleteObject:favouriteEvent];
+        
+        if (![[Favourite managedObjectContext] save:&error])
         {
-            eventAlreadyThere = 1;
-            UIAlertView *addedAlert = [[UIAlertView alloc]initWithTitle:@"Event Already Added!" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-            [addedAlert show];
-            break;
+            
+            NSLog(@"%@",error);
+            
         }
         
     }
-    
-    if (eventAlreadyThere == 0)
+    else
     {
-        AllEventsTableViewCell *allEvent = [[AllEventsTableViewCell alloc]init];
+//        AllEventsTableViewCell *allEvent = [allEventsTableView cellForRowAtIndexPath:indexPath];
+        
         NSManagedObjectContext * context = [Favourite managedObjectContext];
         
         Favourite *favouriteEvent = [NSEntityDescription insertNewObjectForEntityForName:@"Favourite" inManagedObjectContext:context];
+        
+        favouriteEvent.favourite = @"1";
+        favouriteEvent.eventID = event.eventId;
+        // CONTINUE
         
         if (![context save:&error])
         {
@@ -234,27 +270,11 @@
             
         }
         
-        if (favouriteEvent.favourite == 0) {
-            favouriteEvent.favourite = @"1";
-            [allEvent.favouritesButton setBackgroundImage:[UIImage imageNamed:@"FilledFavourites.png"] forState:UIControlStateNormal];
-        }
-        else
-        {
-            [allEvent.favouritesButton setBackgroundImage:[UIImage imageNamed:@"Favourites.png"] forState:UIControlStateNormal];
-            
-            NSIndexPath *path = [fav.favouritesTable indexPathForSelectedRow];
-            Favourite * deleteFavouriteEvent = [favouritesArray objectAtIndex:path.row];
-            [favouritesArray removeObjectAtIndex:path.row];
-            [[Favourite managedObjectContext] deleteObject:deleteFavouriteEvent];
-            NSError * error;
-            if (![[Favourite managedObjectContext] save:&error])
-            {
-                NSLog(@"Error : %@",error);
-            }
-            NSIndexPath * pathsToDelete = [NSIndexPath indexPathForRow:path.row inSection:0];
-            [fav.favouritesTable deleteRowsAtIndexPaths:@[pathsToDelete] withRowAnimation:UITableViewRowAnimationRight];
-        }
+    
     }
+    
+    [allEventsTableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -270,9 +290,9 @@
 
 - (void)filterEventsForSelectedSegmentTitle:(NSString *)segmentTitle
 {
-    filteredEvents = [NSMutableArray arrayWithArray:array];
-    if (allEventsSegmentControl.selectedSegmentIndex != 4)
-        [filteredEvents filterUsingPredicate:[NSPredicate predicateWithFormat:@"day == %@", segmentTitle]];
+    filteredEvents = [array mutableCopy];
+    if (allEventsSegmentControl.selectedSegmentIndex < 4)
+        [filteredEvents filterUsingPredicate:[NSPredicate predicateWithFormat:@"day == %@", [NSString stringWithFormat:@"%li", allEventsSegmentControl.selectedSegmentIndex+1]]];
     [allEventsTableView reloadData];
 }
 
@@ -280,9 +300,9 @@
 {
     filteredEvents = [NSMutableArray arrayWithArray:array];
     if (allEventsSegmentControl.selectedSegmentIndex != 4)
-        [filteredEvents filterUsingPredicate:[NSPredicate predicateWithFormat:@"(name contains[cd] %@ OR categoryName contains[cd] %@) AND day == %@", searchString, searchString, scopeTitle]];
+        [filteredEvents filterUsingPredicate:[NSPredicate predicateWithFormat:@"(eventName contains[cd] %@ OR catName contains[cd] %@) AND day == %@", searchString, searchString, [NSString stringWithFormat:@"%li", allEventsSegmentControl.selectedSegmentIndex+1]]];
     else
-        [filteredEvents filterUsingPredicate:[NSPredicate predicateWithFormat:@"name contains[cd] %@  OR categoryName contains[cd] %@", searchString, searchString]];
+        [filteredEvents filterUsingPredicate:[NSPredicate predicateWithFormat:@"eventName contains[cd] %@  OR catName contains[cd] %@", searchString, searchString]];
     [allEventsTableView reloadData];
 }
 

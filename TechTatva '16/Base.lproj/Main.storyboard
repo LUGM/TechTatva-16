@@ -65,16 +65,16 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hd0-hV-e9B">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="0CA-cz-uwG">
-                                    <rect key="frame" x="0.0" y="132" width="379" height="44"/>
+                                    <rect key="frame" x="0.0" y="132" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="eventsCell" rowHeight="40" id="OFk-2o-rbC">
-                                        <rect key="frame" x="0.0" y="92" width="379" height="40"/>
+                                        <rect key="frame" x="0.0" y="92" width="375" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OFk-2o-rbC" id="PnN-wI-AgZ">
-                                            <frame key="frameInset" width="379" height="39"/>
+                                            <frame key="frameInset" width="375" height="39"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -87,10 +87,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="hd0-hV-e9B" firstAttribute="leading" secondItem="73M-5g-9Iy" secondAttribute="leadingMargin" constant="-16" id="7XT-2A-xBJ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="hd0-hV-e9B" secondAttribute="trailing" constant="-20" id="I6m-e5-hBQ"/>
-                            <constraint firstItem="CRZ-CJ-7Uh" firstAttribute="top" secondItem="hd0-hV-e9B" secondAttribute="bottom" id="dCQ-4O-VAq"/>
-                            <constraint firstItem="hd0-hV-e9B" firstAttribute="top" secondItem="7Jq-wl-G3v" secondAttribute="bottom" id="vDm-d3-uH6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hd0-hV-e9B" secondAttribute="trailing" constant="-16" id="ScE-yf-3RN"/>
+                            <constraint firstItem="hd0-hV-e9B" firstAttribute="top" secondItem="7Jq-wl-G3v" secondAttribute="bottom" constant="-64" id="f5S-Og-GNP"/>
+                            <constraint firstItem="hd0-hV-e9B" firstAttribute="leading" secondItem="73M-5g-9Iy" secondAttribute="leadingMargin" constant="-16" id="fuQ-DC-Sl1"/>
+                            <constraint firstItem="CRZ-CJ-7Uh" firstAttribute="top" secondItem="hd0-hV-e9B" secondAttribute="bottom" id="k7s-PF-7Lr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Tech Tatva '16" id="gPF-1j-abf">
@@ -102,11 +102,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="eventsTable" destination="hd0-hV-e9B" id="4Wd-IL-P19"/>
+                        <outlet property="searchBarTopConstraint" destination="f5S-Og-GNP" id="w8Y-iK-msy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mcv-mn-TjT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4689" y="-134"/>
+            <point key="canvasLocation" x="4688.8000000000002" y="-134.48275862068968"/>
         </scene>
         <!--Tech Tatva '16-->
         <scene sceneID="IAp-FG-C83">
@@ -358,7 +359,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                     <navigationItem key="navigationItem" title="About Us" id="2nj-U2-Uik">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="eFf-zI-mdB">
                             <connections>
-                                <action selector="backButton:" destination="8WT-jK-Sik" id="cV1-K7-Wkr"/>
+                                <action selector="simonGoBack:" destination="8WT-jK-Sik" id="cD1-NK-CMa"/>
                                 <segue destination="Gs6-Z2-6QA" kind="unwind" unwindAction="backToStart:" id="cVM-9c-WZT"/>
                             </connections>
                         </barButtonItem>
@@ -848,20 +849,6 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="143" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z09-ML-YIf">
-                                <frame key="frameInset" minY="116" width="375" height="502"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllEveCell" id="hLJ-hP-4ab">
-                                        <rect key="frame" x="0.0" y="92" width="375" height="143"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hLJ-hP-4ab" id="gRL-hJ-YGh">
-                                            <frame key="frameInset" width="375" height="142"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Gpn-x2-A5D">
                                 <segments>
                                     <segment title="DAY 1"/>
@@ -873,6 +860,23 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                                     <action selector="allEventsSegmentChange:" destination="yeY-ev-aId" eventType="valueChanged" id="TRZ-gk-vW4"/>
                                 </connections>
                             </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="143" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z09-ML-YIf">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllEveCell" id="hLJ-hP-4ab">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="143"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hLJ-hP-4ab" id="gRL-hJ-YGh">
+                                            <frame key="frameInset" width="375" height="142"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="yeY-ev-aId" id="PV5-7k-7hS"/>
+                                    <outlet property="delegate" destination="yeY-ev-aId" id="ULn-Yi-rMC"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -882,6 +886,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                             <constraint firstItem="Gpn-x2-A5D" firstAttribute="top" secondItem="Xnq-tc-T0K" secondAttribute="bottom" id="Onu-wp-yjU"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Gpn-x2-A5D" secondAttribute="leading" id="cWZ-du-4Kh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Gpn-x2-A5D" secondAttribute="trailing" id="nvP-GP-c9U"/>
+                            <constraint firstItem="z09-ML-YIf" firstAttribute="top" secondItem="Gpn-x2-A5D" secondAttribute="bottom" constant="12" id="p9q-NR-scv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="All Events" id="Epx-bf-k7p"/>
@@ -925,10 +930,10 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                     </tabBar>
                     <connections>
                         <segue destination="SwR-le-mwe" kind="relationship" relationship="viewControllers" id="JcY-ux-r1j"/>
+                        <segue destination="I3L-2s-D2T" kind="relationship" relationship="viewControllers" id="BwC-w9-otq"/>
                         <segue destination="ehV-nW-uEs" kind="relationship" relationship="viewControllers" id="3RQ-Ch-u13"/>
                         <segue destination="ofk-ZU-3YD" kind="relationship" relationship="viewControllers" id="SHY-XD-oKy"/>
                         <segue destination="BLM-R3-bXL" kind="relationship" relationship="viewControllers" id="E7q-yY-3Wf"/>
-                        <segue destination="I3L-2s-D2T" kind="relationship" relationship="viewControllers" id="BwC-w9-otq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EPc-c6-CXX" userLabel="First Responder" sceneMemberID="firstResponder"/>

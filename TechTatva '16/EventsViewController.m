@@ -10,7 +10,7 @@
 #import "EventsTableViewCell.h"
 #import "EventsDetailsJSONModel.h"
 
-@interface EventsViewController () <UISearchResultsUpdating, UISearchBarDelegate>
+@interface EventsViewController () <UISearchResultsUpdating, UISearchBarDelegate, UISearchControllerDelegate>
 
 {
     NSArray *array;
@@ -18,6 +18,7 @@
 }
 @property (nonatomic, strong) NSIndexPath *selectedIndexPath;
 @property (strong, nonatomic) UISearchController *searchController;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *searchBarTopConstraint;
 
 @end
 
@@ -26,8 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    eventsTable.contentInset = UIEdgeInsetsMake(-44, 0, 0, 0);
+
     [self setupSearchController];
     
     [self loadFromApi];
@@ -38,15 +38,17 @@
 {
     self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
     self.searchController.searchResultsUpdater = self;
-    //    self.searchController.delegate = self;
+    self.searchController.delegate = self;
     // Get the searchbar's text field via KVO and set color
     UITextField *tfield = [self.searchController.searchBar valueForKey:@"_searchField"];
     tfield.backgroundColor = [UIColor colorWithWhite:0.85 alpha:1.0];
+    self.searchController.searchBar.searchBarStyle = UISearchBarStyleProminent;
     self.searchController.searchBar.delegate = self;
     self.searchController.searchBar.barTintColor = [UIColor whiteColor];
     self.searchController.searchBar.tintColor = [UIColor blackColor];
     self.searchController.dimsBackgroundDuringPresentation = NO;
     self.definesPresentationContext = YES;
+    self.extendedLayoutIncludesOpaqueBars = YES;
     eventsTable.tableHeaderView = self.searchController.searchBar;
 }
 
@@ -73,6 +75,7 @@
                         [filteredEvents addObject:dict];
                     }
                 }
+                array = [filteredEvents copy];
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [eventsTable reloadData];
                 });
@@ -171,6 +174,8 @@
     if (searchBar.text.length > 0)
     {
         [self filterEventsForSearchString:searchBar.text andScopeBarTitle:searchBar.scopeButtonTitles[searchBar.selectedScopeButtonIndex]];
+    } else {
+        filteredEvents = [NSMutableArray arrayWithArray:array];
     }
 }
 
@@ -191,7 +196,20 @@
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
 {
+    filteredEvents = [NSMutableArray arrayWithArray:array];
     [eventsTable reloadData];
+}
+
+- (void)didPresentSearchController:(UISearchController *)searchController {
+//    [UIView animateWithDuration:0.3 animations:^{
+        self.searchBarTopConstraint.constant = -20.f;
+//    }];
+}
+
+- (void)didDismissSearchController:(UISearchController *)searchController {
+//    [UIView animateWithDuration:0.3 animations:^{
+        self.searchBarTopConstraint.constant = -64.f;
+//    }];
 }
 
 @end

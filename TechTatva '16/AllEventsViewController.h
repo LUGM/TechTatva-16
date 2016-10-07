@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AllEventsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource,UISearchBarDelegate>
+@interface AllEventsViewController : UIViewController
 {
     IBOutlet UISearchBar *eventsSearchBar;
     
