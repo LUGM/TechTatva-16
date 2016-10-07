@@ -13,7 +13,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="252"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="375" height="251"/>
+                <frame key="frameInset" width="375" height="251.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMC-dJ-76x">
@@ -88,12 +88,12 @@
                     <constraint firstItem="eHk-Uf-Jxo" firstAttribute="leading" secondItem="nMC-dJ-76x" secondAttribute="leading" id="JGp-CT-z4F"/>
                     <constraint firstItem="Z3f-d3-jRa" firstAttribute="centerY" secondItem="eHk-Uf-Jxo" secondAttribute="centerY" id="Kcc-go-9g4"/>
                     <constraint firstItem="eHk-Uf-Jxo" firstAttribute="top" secondItem="nMC-dJ-76x" secondAttribute="bottom" constant="8" id="LAy-Nk-0Ff"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="Sma-fb-uQW" secondAttribute="bottom" constant="4" id="SEt-kC-7BT"/>
                     <constraint firstItem="Z3f-d3-jRa" firstAttribute="trailing" secondItem="nMC-dJ-76x" secondAttribute="trailing" id="Tn3-81-tnx"/>
                     <constraint firstItem="Xbs-zI-2B0" firstAttribute="top" secondItem="237-In-6Gs" secondAttribute="bottom" constant="12" id="U5y-6h-nZ5"/>
                     <constraint firstItem="uNp-IG-A6q" firstAttribute="leading" secondItem="eHk-Uf-Jxo" secondAttribute="leading" constant="24" id="bAK-p4-bBO"/>
                     <constraint firstItem="1VD-j2-TXd" firstAttribute="centerY" secondItem="uNp-IG-A6q" secondAttribute="centerY" id="ecN-Pi-Oqu"/>
                     <constraint firstItem="237-In-6Gs" firstAttribute="centerX" secondItem="uNp-IG-A6q" secondAttribute="centerX" id="g9q-B7-JaO"/>
+                    <constraint firstItem="Sma-fb-uQW" firstAttribute="top" secondItem="Mxw-ip-5hC" secondAttribute="bottom" constant="12" id="gTk-2R-22O"/>
                     <constraint firstItem="Sma-fb-uQW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="12" id="ix6-hh-O6o"/>
                     <constraint firstItem="237-In-6Gs" firstAttribute="top" secondItem="uNp-IG-A6q" secondAttribute="bottom" constant="9" id="jR8-PG-Sq7"/>
                     <constraint firstItem="Mxw-ip-5hC" firstAttribute="centerY" secondItem="Xbs-zI-2B0" secondAttribute="centerY" id="ksZ-8l-lqA"/>

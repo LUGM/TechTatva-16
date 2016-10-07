@@ -177,8 +177,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog(@"FILTERCOUNT %li", filteredEvents.count);
-    NSLog(@"ALLCOUNT %li", array.count);
     if (filteredEvents.count == 0)
         return 0;
     return filteredEvents.count;
@@ -279,11 +277,20 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView beginUpdates];
+    if (!([indexPath compare:self.selectedIndexPath] == NSOrderedSame))
+        self.selectedIndexPath = indexPath;
+    else
+        self.selectedIndexPath = nil;
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [tableView endUpdates];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 252.f;
+    if ([indexPath compare:self.selectedIndexPath] == NSOrderedSame)
+        return 252.f;
+    return 66.f;
 }
 
 #pragma mark - Filtering
