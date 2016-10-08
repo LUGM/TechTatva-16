@@ -18,7 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.favCount = 0;
-    
+    self.eventName.text = _nameOfEvent;
+    self.categoryName.text = _nameOfCategory;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,24 +27,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)simonGoBack:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-}
-
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    if (sender == self.backButton) {
-        return;
-    }
-}
-
-
-- (IBAction)submitButton:(UIButton *)sender
-{
-    
 }
 
 - (IBAction)star1Pressed:(id)sender
@@ -56,28 +47,24 @@
 {
     [self set_stars:2];
     self.favCount = 2;
-
 }
 
 -(IBAction)star3Pressed:(id)sender
 {
     [self set_stars:3];
     self.favCount = 3;
-
 }
 
 -(IBAction)star4Pressed:(id)sender
 {
     [self set_stars:4];
     self.favCount = 4;
-
 }
 
 -(IBAction)star5Pressed:(id)sender
 {
     [self set_stars:5];
     self.favCount = 5;
-
 }
 
 -(void)set_stars:(int)num
@@ -127,6 +114,12 @@
         [self.star5 setBackgroundImage:[UIImage imageNamed:@"filledstar.png"] forState:UIControlStateNormal];
         
     }
+}
+
+- (UIView *) tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    UIView *blankView = [[UIView alloc] initWithFrame:CGRectZero];
+    return blankView;
 }
 
 @end

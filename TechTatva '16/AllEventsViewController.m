@@ -10,9 +10,8 @@
 #import "AllEventsTableViewCell.h"
 #import "Favourite+CoreDataClass.h"
 #import "Favourite+CoreDataProperties.h"
-#import "FavouritesViewController.h"
 #import "ScheduleJsonDataModel.h"
-
+#import "FeedbackTableViewController.h"
 
 @interface AllEventsViewController () <UISearchResultsUpdating, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource, UISearchControllerDelegate>
 
@@ -36,7 +35,6 @@
     favouritesArray = [NSMutableArray new];
     filteredEvents = [NSMutableArray new];
     allEventsSegmentControl.selectedSegmentIndex = 0;
-//    [self fetchFavourites];
     
     [self loadFromApi];
     
@@ -158,22 +156,18 @@
     if(allEventsSegmentControl.selectedSegmentIndex == 0)
     {
         NSLog(@"Day 1 selected.");
-//        allEventsSegmentControl.selectedSegmentIndex = 0;
     }
     else if(allEventsSegmentControl.selectedSegmentIndex == 1)
     {
         NSLog(@"Day 2 selected.");
-//        allEventsSegmentControl.selectedSegmentIndex = 1;
     }
     else if(allEventsSegmentControl.selectedSegmentIndex == 2)
     {
         NSLog(@"Day 3 selected.");
-//        allEventsSegmentControl.selectedSegmentIndex = 2;
     }
     else if(allEventsSegmentControl.selectedSegmentIndex == 3)
     {
         NSLog(@"Day 4 selected.");
-//        allEventsSegmentControl.selectedSegmentIndex = 3;
     }
     [self filterEventsForSelectedSegmentTitle:[allEventsSegmentControl titleForSegmentAtIndex:allEventsSegmentControl.selectedSegmentIndex]];
 }
@@ -220,20 +214,46 @@
     return cell;
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
-	return [UIView new];
+- (BOOL) checkTheDate
+{
+    NSDate *now = [NSDate date];
+    NSString *dateString = @"12.10.2016";
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd.MM.yy"];
+    NSDate *startTT = [formatter dateFromString:dateString];
+    NSComparisonResult result = [now compare:startTT];
+    if (result == NSOrderedAscending)
+        return false;
+    else
+        return true;
 }
 
 - (void) rateEvent :(id) sender
 {
-    
+    if ([self checkTheDate])
+    {
+        NSIndexPath *indexPath = [allEventsTableView indexPathForRowAtPoint:[sender convertPoint:CGPointZero toView:allEventsTableView]];
+        ScheduleJsonDataModel *event = [filteredEvents objectAtIndex:indexPath.row];
+        UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UINavigationController * navController = [storyboard instantiateViewControllerWithIdentifier:@"feedbackNav"];
+        FeedbackTableViewController * destController = [navController viewControllers][0];
+        destController.title = event.eventName;
+        destController.nameOfEvent = event.eventName;
+        destController.nameOfCategory = event.catName;
+        destController.eventId = event.eventId;
+        [self presentViewController:navController animated:YES completion:nil];
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Too Early!" message:@"TechTatva 16 has not yet started. No categories are trending. Check back later" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }
 }
 
 - (void) switchFavourites:(id) someObject
 {
     
     NSIndexPath *indexPath = [allEventsTableView indexPathForRowAtPoint:[someObject convertPoint:CGPointZero toView:allEventsTableView]];
-    NSLog(@"index is %ld",(long)indexPath.row);
     
     ScheduleJsonDataModel *event = [filteredEvents objectAtIndex:indexPath.row];
     
@@ -250,7 +270,8 @@
         
         // Remove from favs
         
-        Favourite *favouriteEvent = fetchArray.firstObject;
+        Favourite *favouriteEvent = fetchedArray.firstObject;
+        NSLog(@"delete this %@", favouriteEvent.eventID);
         
         [[Favourite managedObjectContext] deleteObject:favouriteEvent];
         
@@ -302,7 +323,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if ([indexPath compare:self.selectedIndexPath] == NSOrderedSame)
-        return 252.f;
+        return 235.f;
     return 66.f;
 }
 

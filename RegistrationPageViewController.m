@@ -12,7 +12,6 @@
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *backButton;
 
-
 @end
 
 @implementation RegistrationPageViewController
@@ -24,23 +23,17 @@
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://www.google.co.in"]]; //Enter the link here.
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [registrationWebView loadRequest:request];
+    self.title = @"Register";
+}
 
+- (IBAction)simonGoBack:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    if (sender == self.backButton) {
-        return;
-    }
 }
 
 @end

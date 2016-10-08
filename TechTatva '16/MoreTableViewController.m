@@ -8,6 +8,9 @@
 
 #import "MoreTableViewController.h"
 #import "OnlineEventsViewController.h"
+#import "AboutUsTableViewController.h"
+#import "RegistrationPageViewController.h"
+#import "FavouritesTableViewController.h"
 
 @interface MoreTableViewController ()
 {
@@ -22,7 +25,7 @@
     [super viewDidLoad];
     
     labelArray = [[NSArray alloc] init];
-    labelArray = @[@"Online Events", @"Registration", @"Favourites", @"About Us", @"Developers"];
+    labelArray = @[@"Online Events", @"Registration", @"Favourites", @"About Us", @"Trending", @"Developers"];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -60,14 +63,30 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     if (indexPath.row == 0) {
-        [self performSegueWithIdentifier:@"onlineEventsPage" sender:self];
+        UINavigationController *dest = [storyboard instantiateViewControllerWithIdentifier:@"onlineNav"];
+        [self presentViewController:dest animated:YES completion:nil];
     }
     else if (indexPath.row == 1) {
-        [self performSegueWithIdentifier:@"registrationPage" sender:self];
+        UINavigationController *dest = [storyboard instantiateViewControllerWithIdentifier:@"registerNav"];
+        [self presentViewController:dest animated:YES completion:nil];
+    }
+    else if (indexPath.row == 2) {
+        UINavigationController *dest = [storyboard instantiateViewControllerWithIdentifier:@"favouritesNav"];
+        [self presentViewController:dest animated:YES completion:nil];
     }
     else if (indexPath.row == 3) {
-        [self performSegueWithIdentifier:@"aboutUsPage" sender:self];
+        UINavigationController *dest = [storyboard instantiateViewControllerWithIdentifier:@"aboutUsNav"];
+        [self presentViewController:dest animated:YES completion:nil];
+    }
+    else if (indexPath.row == 4) {
+        UINavigationController *dest = [storyboard instantiateViewControllerWithIdentifier:@"trendingNav"];
+        [self presentViewController:dest animated:YES completion:nil];
+    }
+    else if (indexPath.row == 5) {
+        UINavigationController *dest = [storyboard instantiateViewControllerWithIdentifier:@"developersNav"];
+        [self presentViewController:dest animated:YES completion:nil];
     }
 }
 

@@ -14,8 +14,6 @@
 		1828D81C1D7476B000E0454F /* CategoriesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828D81A1D7476B000E0454F /* CategoriesTableViewCell.m */; };
 		1828D81D1D7476B000E0454F /* CategoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1828D81B1D7476B000E0454F /* CategoriesTableViewCell.xib */; };
 		184A2ADE1DA5ACDF00D589DE /* InstagramFullViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184A2ADD1DA5ACDF00D589DE /* InstagramFullViewController.m */; };
-		184A2AE81DA5BE6500D589DE /* Favourite+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 184A2AE51DA5BE6500D589DE /* Favourite+CoreDataClass.m */; };
-		184A2AE91DA5BE6500D589DE /* Favourite+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 184A2AE71DA5BE6500D589DE /* Favourite+CoreDataProperties.m */; };
 		184A2AEB1DA5C51100D589DE /* Snapchat-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 184A2AEA1DA5C51100D589DE /* Snapchat-100.png */; };
 		18541FE01D6DD9370046EAD0 /* Favourites.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18541FDE1D6DD9370046EAD0 /* Favourites.xcdatamodeld */; };
 		18749BC01D13F17600858B85 /* MoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18749BBF1D13F17600858B85 /* MoreTableViewController.m */; };
@@ -32,6 +30,14 @@
 		188F51E71D0F08ED0083169D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188F51E51D0F08ED0083169D /* LaunchScreen.storyboard */; };
 		188F51F21D0F08ED0083169D /* TechTatva__16Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F51F11D0F08ED0083169D /* TechTatva__16Tests.m */; };
 		188F51FD1D0F08ED0083169D /* TechTatva__16UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F51FC1D0F08ED0083169D /* TechTatva__16UITests.m */; };
+		18FFC4AD1DA88164000CD00E /* FavouritesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FFC4AC1DA88164000CD00E /* FavouritesTableViewController.m */; };
+		18FFC4B11DA8858F000CD00E /* DevelopersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FFC4B01DA8858F000CD00E /* DevelopersViewController.m */; };
+		18FFC4B71DA886A4000CD00E /* Favourite+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FFC4B41DA886A4000CD00E /* Favourite+CoreDataClass.m */; };
+		18FFC4B81DA886A4000CD00E /* Favourite+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FFC4B61DA886A4000CD00E /* Favourite+CoreDataProperties.m */; };
+		18FFC4BB1DA88BB7000CD00E /* TrendingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FFC4BA1DA88BB7000CD00E /* TrendingTableViewController.m */; };
+		18FFC4BF1DA89610000CD00E /* UITableView+Animations.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FFC4BE1DA89610000CD00E /* UITableView+Animations.m */; };
+		18FFC4C41DA89646000CD00E /* DevViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FFC4C11DA89646000CD00E /* DevViewCell.xib */; };
+		18FFC4C51DA89646000CD00E /* DevViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FFC4C31DA89646000CD00E /* DevViewTableViewCell.m */; };
 		282A7060EF9AE0FD968DE312 /* libPods-TechTatva '16Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F01C890F7CF6D05BFA94292B /* libPods-TechTatva '16Tests.a */; };
 		5D2E4C8A0A7710137FDEED67 /* libPods-TechTatva '16UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 452DB319F49B8C6F35F9AEDA /* libPods-TechTatva '16UITests.a */; };
 		D607A28D1D9FD10600CC01E2 /* AllEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D607A28C1D9FD10600CC01E2 /* AllEventsViewController.m */; };
@@ -53,7 +59,6 @@
 		D6247BFE1D7B100C007F7FF1 /* twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6247BFB1D7B100C007F7FF1 /* twitter@2x.png */; };
 		D6247C021D7B145F007F7FF1 /* youtube.png in Resources */ = {isa = PBXBuildFile; fileRef = D6247C011D7B145F007F7FF1 /* youtube.png */; };
 		D640BF531D4FD5B4006BA67C /* EventsDetailsJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D640BF521D4FD5B4006BA67C /* EventsDetailsJSONModel.m */; };
-		D64DB2101D872CCA0084B4FC /* FavouritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D64DB20F1D872CCA0084B4FC /* FavouritesViewController.m */; };
 		D66BE63D1DA12FFE005B2B39 /* FilledFavourites.png in Resources */ = {isa = PBXBuildFile; fileRef = D66BE63B1DA12FFE005B2B39 /* FilledFavourites.png */; };
 		D66BE63E1DA12FFE005B2B39 /* Favourites.png in Resources */ = {isa = PBXBuildFile; fileRef = D66BE63C1DA12FFE005B2B39 /* Favourites.png */; };
 		D66BE6401DA1315C005B2B39 /* Calendar Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = D66BE63F1DA1315C005B2B39 /* Calendar Filled-50.png */; };
@@ -100,10 +105,6 @@
 		1828D81B1D7476B000E0454F /* CategoriesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoriesTableViewCell.xib; sourceTree = "<group>"; };
 		184A2ADC1DA5ACDF00D589DE /* InstagramFullViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramFullViewController.h; sourceTree = "<group>"; };
 		184A2ADD1DA5ACDF00D589DE /* InstagramFullViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramFullViewController.m; sourceTree = "<group>"; };
-		184A2AE41DA5BE6500D589DE /* Favourite+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Favourite+CoreDataClass.h"; sourceTree = "<group>"; };
-		184A2AE51DA5BE6500D589DE /* Favourite+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Favourite+CoreDataClass.m"; sourceTree = "<group>"; };
-		184A2AE61DA5BE6500D589DE /* Favourite+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Favourite+CoreDataProperties.h"; sourceTree = "<group>"; };
-		184A2AE71DA5BE6500D589DE /* Favourite+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Favourite+CoreDataProperties.m"; sourceTree = "<group>"; };
 		184A2AEA1DA5C51100D589DE /* Snapchat-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Snapchat-100.png"; sourceTree = "<group>"; };
 		18541FDF1D6DD9370046EAD0 /* Favourites.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Favourites.xcdatamodel; sourceTree = "<group>"; };
 		18749BBE1D13F17600858B85 /* MoreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreTableViewController.h; sourceTree = "<group>"; };
@@ -134,6 +135,21 @@
 		188F51FE1D0F08ED0083169D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18C3F2141D931513007F33DB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		18CE6C3949F060D61B5D3837 /* Pods-TechTatva '16.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechTatva '16.release.xcconfig"; path = "Pods/Target Support Files/Pods-TechTatva '16/Pods-TechTatva '16.release.xcconfig"; sourceTree = "<group>"; };
+		18FFC4AB1DA88164000CD00E /* FavouritesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavouritesTableViewController.h; sourceTree = "<group>"; };
+		18FFC4AC1DA88164000CD00E /* FavouritesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavouritesTableViewController.m; sourceTree = "<group>"; };
+		18FFC4AF1DA8858F000CD00E /* DevelopersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevelopersViewController.h; sourceTree = "<group>"; };
+		18FFC4B01DA8858F000CD00E /* DevelopersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DevelopersViewController.m; sourceTree = "<group>"; };
+		18FFC4B31DA886A4000CD00E /* Favourite+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Favourite+CoreDataClass.h"; sourceTree = "<group>"; };
+		18FFC4B41DA886A4000CD00E /* Favourite+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Favourite+CoreDataClass.m"; sourceTree = "<group>"; };
+		18FFC4B51DA886A4000CD00E /* Favourite+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Favourite+CoreDataProperties.h"; sourceTree = "<group>"; };
+		18FFC4B61DA886A4000CD00E /* Favourite+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Favourite+CoreDataProperties.m"; sourceTree = "<group>"; };
+		18FFC4B91DA88BB7000CD00E /* TrendingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendingTableViewController.h; sourceTree = "<group>"; };
+		18FFC4BA1DA88BB7000CD00E /* TrendingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendingTableViewController.m; sourceTree = "<group>"; };
+		18FFC4BD1DA89610000CD00E /* UITableView+Animations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Animations.h"; sourceTree = "<group>"; };
+		18FFC4BE1DA89610000CD00E /* UITableView+Animations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Animations.m"; sourceTree = "<group>"; };
+		18FFC4C11DA89646000CD00E /* DevViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DevViewCell.xib; sourceTree = "<group>"; };
+		18FFC4C21DA89646000CD00E /* DevViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevViewTableViewCell.h; sourceTree = "<group>"; };
+		18FFC4C31DA89646000CD00E /* DevViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DevViewTableViewCell.m; sourceTree = "<group>"; };
 		1E39DD336457E8A5B4AD9BEC /* Pods-TechTatva '16UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechTatva '16UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TechTatva '16UITests/Pods-TechTatva '16UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		452DB319F49B8C6F35F9AEDA /* libPods-TechTatva '16UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TechTatva '16UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AF89144C0E8FCC01EF0FC16 /* libPods-TechTatva '16.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TechTatva '16.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,8 +179,6 @@
 		D6247C011D7B145F007F7FF1 /* youtube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = youtube.png; sourceTree = "<group>"; };
 		D640BF511D4FD5B4006BA67C /* EventsDetailsJSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsDetailsJSONModel.h; sourceTree = "<group>"; };
 		D640BF521D4FD5B4006BA67C /* EventsDetailsJSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsDetailsJSONModel.m; sourceTree = "<group>"; };
-		D64DB20E1D872CCA0084B4FC /* FavouritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavouritesViewController.h; sourceTree = "<group>"; };
-		D64DB20F1D872CCA0084B4FC /* FavouritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavouritesViewController.m; sourceTree = "<group>"; };
 		D66BE63B1DA12FFE005B2B39 /* FilledFavourites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FilledFavourites.png; sourceTree = "<group>"; };
 		D66BE63C1DA12FFE005B2B39 /* Favourites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Favourites.png; sourceTree = "<group>"; };
 		D66BE63F1DA1315C005B2B39 /* Calendar Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Calendar Filled-50.png"; sourceTree = "<group>"; };
@@ -272,15 +286,6 @@
 			name = Events;
 			sourceTree = "<group>";
 		};
-		184A2AD31DA59F8200D589DE /* Favourites */ = {
-			isa = PBXGroup;
-			children = (
-				D64DB20E1D872CCA0084B4FC /* FavouritesViewController.h */,
-				D64DB20F1D872CCA0084B4FC /* FavouritesViewController.m */,
-			);
-			name = Favourites;
-			sourceTree = "<group>";
-		};
 		184A2AD41DA59F8B00D589DE /* Feedback */ = {
 			isa = PBXGroup;
 			children = (
@@ -364,11 +369,11 @@
 		1868992C1D6E34F800B82923 /* Favourites Core Data Model */ = {
 			isa = PBXGroup;
 			children = (
+				18FFC4B31DA886A4000CD00E /* Favourite+CoreDataClass.h */,
+				18FFC4B41DA886A4000CD00E /* Favourite+CoreDataClass.m */,
+				18FFC4B51DA886A4000CD00E /* Favourite+CoreDataProperties.h */,
+				18FFC4B61DA886A4000CD00E /* Favourite+CoreDataProperties.m */,
 				18541FDE1D6DD9370046EAD0 /* Favourites.xcdatamodeld */,
-				184A2AE41DA5BE6500D589DE /* Favourite+CoreDataClass.h */,
-				184A2AE51DA5BE6500D589DE /* Favourite+CoreDataClass.m */,
-				184A2AE61DA5BE6500D589DE /* Favourite+CoreDataProperties.h */,
-				184A2AE71DA5BE6500D589DE /* Favourite+CoreDataProperties.m */,
 			);
 			name = "Favourites Core Data Model";
 			sourceTree = "<group>";
@@ -407,6 +412,7 @@
 		188F51D61D0F08ED0083169D /* TechTatva '16 */ = {
 			isa = PBXGroup;
 			children = (
+				18FFC4C01DA89614000CD00E /* Dev Animations */,
 				184A2AD71DA5A0EF00D589DE /* Reachability */,
 				D68F16E01D9D16E9007182C7 /* Categories Model */,
 				D6C6B3C71D9987FB003C52A7 /* Results Model */,
@@ -418,7 +424,6 @@
 				188F51E01D0F08ED0083169D /* Main.storyboard */,
 				184A2AD01DA59F6600D589DE /* Categories */,
 				184A2AD11DA59F7000D589DE /* Category Events */,
-				184A2AD31DA59F8200D589DE /* Favourites */,
 				184A2AD21DA59F7900D589DE /* Events */,
 				184A2AD41DA59F8B00D589DE /* Feedback */,
 				184A2AD51DA59F9300D589DE /* About Us */,
@@ -430,6 +435,9 @@
 				184A2ADB1DA5A11C00D589DE /* Instagram */,
 				188F51E51D0F08ED0083169D /* LaunchScreen.storyboard */,
 				188F51D71D0F08ED0083169D /* Supporting Files */,
+				18FFC4AE1DA8816E000CD00E /* Favourites */,
+				18FFC4B21DA88596000CD00E /* Developers */,
+				18FFC4BC1DA88BCD000CD00E /* Trending */,
 			);
 			path = "TechTatva '16";
 			sourceTree = "<group>";
@@ -483,6 +491,45 @@
 				188F51FE1D0F08ED0083169D /* Info.plist */,
 			);
 			path = "TechTatva '16UITests";
+			sourceTree = "<group>";
+		};
+		18FFC4AE1DA8816E000CD00E /* Favourites */ = {
+			isa = PBXGroup;
+			children = (
+				18FFC4AB1DA88164000CD00E /* FavouritesTableViewController.h */,
+				18FFC4AC1DA88164000CD00E /* FavouritesTableViewController.m */,
+			);
+			name = Favourites;
+			sourceTree = "<group>";
+		};
+		18FFC4B21DA88596000CD00E /* Developers */ = {
+			isa = PBXGroup;
+			children = (
+				18FFC4C11DA89646000CD00E /* DevViewCell.xib */,
+				18FFC4C21DA89646000CD00E /* DevViewTableViewCell.h */,
+				18FFC4C31DA89646000CD00E /* DevViewTableViewCell.m */,
+				18FFC4AF1DA8858F000CD00E /* DevelopersViewController.h */,
+				18FFC4B01DA8858F000CD00E /* DevelopersViewController.m */,
+			);
+			name = Developers;
+			sourceTree = "<group>";
+		};
+		18FFC4BC1DA88BCD000CD00E /* Trending */ = {
+			isa = PBXGroup;
+			children = (
+				18FFC4B91DA88BB7000CD00E /* TrendingTableViewController.h */,
+				18FFC4BA1DA88BB7000CD00E /* TrendingTableViewController.m */,
+			);
+			name = Trending;
+			sourceTree = "<group>";
+		};
+		18FFC4C01DA89614000CD00E /* Dev Animations */ = {
+			isa = PBXGroup;
+			children = (
+				18FFC4BD1DA89610000CD00E /* UITableView+Animations.h */,
+				18FFC4BE1DA89610000CD00E /* UITableView+Animations.m */,
+			);
+			name = "Dev Animations";
 			sourceTree = "<group>";
 		};
 		A92A2EFCB0014870CCB14960 /* Pods */ = {
@@ -681,6 +728,7 @@
 				D6DC67231D848AFB00D75A5B /* filledstar.png in Resources */,
 				188F51E41D0F08ED0083169D /* Assets.xcassets in Resources */,
 				D6247BFC1D7B100C007F7FF1 /* google+@2x.png in Resources */,
+				18FFC4C41DA89646000CD00E /* DevViewCell.xib in Resources */,
 				D60BB7BC1D70C3A40083D0C9 /* location.png in Resources */,
 				188F51E21D0F08ED0083169D /* Main.storyboard in Resources */,
 				1828D81D1D7476B000E0454F /* CategoriesTableViewCell.xib in Resources */,
@@ -849,8 +897,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D61DBBCA1D38ACBF001BA98D /* instagramJsonModel.m in Sources */,
+				18FFC4B71DA886A4000CD00E /* Favourite+CoreDataClass.m in Sources */,
 				D68F16E31D9D1707007182C7 /* CategoriesJSONModel.m in Sources */,
-				D64DB2101D872CCA0084B4FC /* FavouritesViewController.m in Sources */,
+				18FFC4B11DA8858F000CD00E /* DevelopersViewController.m in Sources */,
 				184A2ADE1DA5ACDF00D589DE /* InstagramFullViewController.m in Sources */,
 				18749BCA1D14094700858B85 /* ResultsTableViewController.m in Sources */,
 				188F51DC1D0F08ED0083169D /* AppDelegate.m in Sources */,
@@ -861,19 +910,22 @@
 				D6C594D91D1976F8006F19D0 /* InstagramTableViewController.m in Sources */,
 				181290C21D92C06200E5B740 /* Reachability.m in Sources */,
 				1881A2151D13085800192BD1 /* EventsViewController.m in Sources */,
+				18FFC4C51DA89646000CD00E /* DevViewTableViewCell.m in Sources */,
 				18541FE01D6DD9370046EAD0 /* Favourites.xcdatamodeld in Sources */,
 				D6E6326D1D7AC21B00E71851 /* RegistrationPageViewController.m in Sources */,
+				18FFC4B81DA886A4000CD00E /* Favourite+CoreDataProperties.m in Sources */,
 				18749BCE1D140AC600858B85 /* ResultsTableViewCell.m in Sources */,
+				18FFC4BB1DA88BB7000CD00E /* TrendingTableViewController.m in Sources */,
+				18FFC4AD1DA88164000CD00E /* FavouritesTableViewController.m in Sources */,
 				D6C594DD1D19771C006F19D0 /* InstagramTableViewCell.m in Sources */,
 				1828D81C1D7476B000E0454F /* CategoriesTableViewCell.m in Sources */,
 				188F51D91D0F08ED0083169D /* main.m in Sources */,
 				D6A2B8CA1D847415008DE478 /* AllEventsTableViewCell.m in Sources */,
 				D60BB7B41D70C0120083D0C9 /* EventsTableViewCell.m in Sources */,
-				184A2AE91DA5BE6500D589DE /* Favourite+CoreDataProperties.m in Sources */,
 				D6C6B3CD1D99891D003C52A7 /* ResultsJsonDataModel.m in Sources */,
 				D6D061261D782D8B00D9267E /* OnlineEventsViewController.m in Sources */,
 				18749BC01D13F17600858B85 /* MoreTableViewController.m in Sources */,
-				184A2AE81DA5BE6500D589DE /* Favourite+CoreDataClass.m in Sources */,
+				18FFC4BF1DA89610000CD00E /* UITableView+Animations.m in Sources */,
 				D69A1A8D1D996021001F9E7F /* ScheduleJsonDataModel.m in Sources */,
 				1881A20A1D0FCD8000192BD1 /* CategoriesTableViewController.m in Sources */,
 			);

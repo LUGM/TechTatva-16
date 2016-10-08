@@ -13,8 +13,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *categoryName;
 @property (strong, nonatomic) IBOutlet UILabel *eventName;
 @property (strong, nonatomic) IBOutlet UITextView *commentsTextArea;
-@property (strong, nonatomic) IBOutlet UIButton *submitButton;
-- (IBAction)submitButton:(UIButton *)sender;
 
 @property (strong, nonatomic) IBOutlet UIButton *star1;
 @property (strong, nonatomic) IBOutlet UIButton *star2;
@@ -31,5 +29,8 @@
 
 -(void)set_stars:(int)num;
 
+@property (strong, nonatomic) NSString *eventId;
+@property (strong, nonatomic) NSString *nameOfEvent;
+@property (strong, nonatomic) NSString *nameOfCategory;
 
 @end

@@ -2,7 +2,7 @@
 //  Favourite+CoreDataClass.m
 //  
 //
-//  Created by YASH on 06/10/16.
+//  Created by YASH on 08/10/16.
 //
 //
 
@@ -12,20 +12,13 @@
 
 + (NSManagedObjectContext *) managedObjectContext
 {
-    
     NSManagedObjectContext *context = nil;
-    
     id delegate = [[UIApplication sharedApplication] delegate];
-    
     if ([delegate performSelector:@selector(managedObjectContext) withObject:self])
     {
-        
         context = [delegate managedObjectContext];
-        
     }
-    
     return context;
-    
 }
 
 @end

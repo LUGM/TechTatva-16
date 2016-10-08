@@ -2,7 +2,7 @@
 //  Favourite+CoreDataProperties.m
 //  
 //
-//  Created by YASH on 06/10/16.
+//  Created by YASH on 08/10/16.
 //
 //
 
@@ -14,14 +14,15 @@
 	return [[NSFetchRequest alloc] initWithEntityName:@"Favourite"];
 }
 
+@dynamic categoryID;
+@dynamic categoryName;
+@dynamic date;
+@dynamic endTime;
 @dynamic eventID;
 @dynamic eventName;
-@dynamic categoryName;
-@dynamic categoryID;
-@dynamic round;
 @dynamic favourite;
-@dynamic date;
+@dynamic round;
 @dynamic startTime;
-@dynamic endTime;
+@dynamic location;
 
 @end
