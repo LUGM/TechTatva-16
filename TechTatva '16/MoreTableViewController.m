@@ -46,7 +46,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return labelArray.count;
+    return 6;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -81,8 +81,16 @@
         [self presentViewController:dest animated:YES completion:nil];
     }
     else if (indexPath.row == 4) {
-        UINavigationController *dest = [storyboard instantiateViewControllerWithIdentifier:@"trendingNav"];
-        [self presentViewController:dest animated:YES completion:nil];
+        if ([self checkTheDate])
+        {
+            UINavigationController *dest = [storyboard instantiateViewControllerWithIdentifier:@"trendingNav"];
+            [self presentViewController:dest animated:YES completion:nil];
+        }
+        else
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Too Early!" message:@"TechTatva 16 has not yet started. No categories are trending. Check back later" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alert show];
+        }
     }
     else if (indexPath.row == 5) {
         UINavigationController *dest = [storyboard instantiateViewControllerWithIdentifier:@"developersNav"];
@@ -94,6 +102,20 @@
 {
     UIView *blankView = [[UIView alloc] initWithFrame:CGRectZero];
     return blankView;
+}
+
+- (BOOL) checkTheDate
+{
+    NSDate *now = [NSDate date];
+    NSString *dateString = @"12.10.2016";
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd.MM.yy"];
+    NSDate *startTT = [formatter dateFromString:dateString];
+    NSComparisonResult result = [now compare:startTT];
+    if (result == NSOrderedAscending)
+        return false;
+    else
+        return true;
 }
 
 /*

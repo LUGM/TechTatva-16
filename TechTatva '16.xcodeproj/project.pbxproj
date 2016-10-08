@@ -11,6 +11,11 @@
 		181290C21D92C06200E5B740 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 181290C11D92C06200E5B740 /* Reachability.m */; };
 		181290C31D92C06200E5B740 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 181290C11D92C06200E5B740 /* Reachability.m */; };
 		181290C41D92C06200E5B740 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 181290C11D92C06200E5B740 /* Reachability.m */; };
+		1827822E1DA8C5A600BD8C34 /* launchvideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1827822D1DA8C5A600BD8C34 /* launchvideo.mp4 */; };
+		182782311DA8C5CB00BD8C34 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182782301DA8C5CB00BD8C34 /* SplashViewController.m */; };
+		182782341DA8C7A000BD8C34 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182782331DA8C7A000BD8C34 /* AVFoundation.framework */; };
+		182782361DA8C7A500BD8C34 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182782351DA8C7A500BD8C34 /* CoreGraphics.framework */; };
+		182782381DA8C7AA00BD8C34 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182782371DA8C7AA00BD8C34 /* AudioToolbox.framework */; };
 		1828D81C1D7476B000E0454F /* CategoriesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828D81A1D7476B000E0454F /* CategoriesTableViewCell.m */; };
 		1828D81D1D7476B000E0454F /* CategoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1828D81B1D7476B000E0454F /* CategoriesTableViewCell.xib */; };
 		184A2AEB1DA5C51100D589DE /* Snapchat-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 184A2AEA1DA5C51100D589DE /* Snapchat-100.png */; };
@@ -104,6 +109,12 @@
 /* Begin PBXFileReference section */
 		181290C01D92C06200E5B740 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		181290C11D92C06200E5B740 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		1827822D1DA8C5A600BD8C34 /* launchvideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = launchvideo.mp4; sourceTree = "<group>"; };
+		1827822F1DA8C5CB00BD8C34 /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
+		182782301DA8C5CB00BD8C34 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
+		182782331DA8C7A000BD8C34 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		182782351DA8C7A500BD8C34 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		182782371DA8C7AA00BD8C34 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		1828D8191D7476B000E0454F /* CategoriesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesTableViewCell.h; sourceTree = "<group>"; };
 		1828D81A1D7476B000E0454F /* CategoriesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesTableViewCell.m; sourceTree = "<group>"; };
 		1828D81B1D7476B000E0454F /* CategoriesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoriesTableViewCell.xib; sourceTree = "<group>"; };
@@ -230,6 +241,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				182782381DA8C7AA00BD8C34 /* AudioToolbox.framework in Frameworks */,
+				182782361DA8C7A500BD8C34 /* CoreGraphics.framework in Frameworks */,
+				182782341DA8C7A000BD8C34 /* AVFoundation.framework in Frameworks */,
 				17781A3720903931EC736833 /* libPods-TechTatva '16.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,11 +270,23 @@
 		0CE34380EB32F8CB59A55246 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				182782371DA8C7AA00BD8C34 /* AudioToolbox.framework */,
+				182782351DA8C7A500BD8C34 /* CoreGraphics.framework */,
+				182782331DA8C7A000BD8C34 /* AVFoundation.framework */,
 				4AF89144C0E8FCC01EF0FC16 /* libPods-TechTatva '16.a */,
 				F01C890F7CF6D05BFA94292B /* libPods-TechTatva '16Tests.a */,
 				452DB319F49B8C6F35F9AEDA /* libPods-TechTatva '16UITests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		182782321DA8C5DF00BD8C34 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				1827822F1DA8C5CB00BD8C34 /* SplashViewController.h */,
+				182782301DA8C5CB00BD8C34 /* SplashViewController.m */,
+			);
+			name = Splash;
 			sourceTree = "<group>";
 		};
 		184A2AD01DA59F6600D589DE /* Categories */ = {
@@ -455,6 +481,7 @@
 				18FFC4AE1DA8816E000CD00E /* Favourites */,
 				18FFC4B21DA88596000CD00E /* Developers */,
 				18FFC4BC1DA88BCD000CD00E /* Trending */,
+				182782321DA8C5DF00BD8C34 /* Splash */,
 			);
 			path = "TechTatva '16";
 			sourceTree = "<group>";
@@ -464,6 +491,7 @@
 			children = (
 				18C3F2141D931513007F33DB /* PrefixHeader.pch */,
 				188F51E81D0F08ED0083169D /* Info.plist */,
+				1827822D1DA8C5A600BD8C34 /* launchvideo.mp4 */,
 				59544E271DA8A9FF00BDA118 /* images */,
 				188F51D81D0F08ED0083169D /* main.m */,
 			);
@@ -756,6 +784,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1827822E1DA8C5A600BD8C34 /* launchvideo.mp4 in Resources */,
 				D60BB7BE1D70C3A40083D0C9 /* Time Filled-50.png in Resources */,
 				D60BB7C61D72EF290083D0C9 /* Instagram@2x.png in Resources */,
 				D6247BF81D7B0E74007F7FF1 /* fb@2x.png in Resources */,
@@ -982,6 +1011,7 @@
 				D6C6B3CD1D99891D003C52A7 /* ResultsJsonDataModel.m in Sources */,
 				D6D061261D782D8B00D9267E /* OnlineEventsViewController.m in Sources */,
 				18749BC01D13F17600858B85 /* MoreTableViewController.m in Sources */,
+				182782311DA8C5CB00BD8C34 /* SplashViewController.m in Sources */,
 				18FFC4BF1DA89610000CD00E /* UITableView+Animations.m in Sources */,
 				D69A1A8D1D996021001F9E7F /* ScheduleJsonDataModel.m in Sources */,
 				59544E171DA8A78100BDA118 /* InstagramData.m in Sources */,

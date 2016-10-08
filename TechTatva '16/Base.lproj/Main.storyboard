@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ORP-SX-hMp">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="s3v-As-HPZ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tech Tatva '16-->
+        <!--Categories-->
         <scene sceneID="5WZ-28-hdL">
             <objects>
                 <tableViewController id="ap7-x5-agp" customClass="CategoriesTableViewController" sceneMemberID="viewController">
@@ -45,13 +45,13 @@
                             <outlet property="delegate" destination="ap7-x5-agp" id="Run-ff-IGY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Tech Tatva '16" id="slJ-A1-xvG"/>
+                    <navigationItem key="navigationItem" title="Categories" id="slJ-A1-xvG"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uZs-K3-CI0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2450" y="-134"/>
         </scene>
-        <!--Tech Tatva '16-->
+        <!--Events-->
         <scene sceneID="ETt-w8-Smw">
             <objects>
                 <viewController id="eBJ-IY-SG3" customClass="EventsViewController" sceneMemberID="viewController">
@@ -79,7 +79,7 @@
                             <constraint firstItem="CRZ-CJ-7Uh" firstAttribute="top" secondItem="hd0-hV-e9B" secondAttribute="bottom" id="k7s-PF-7Lr"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Tech Tatva '16" id="gPF-1j-abf">
+                    <navigationItem key="navigationItem" title="Events" id="gPF-1j-abf">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="C4j-pL-mmD">
                             <connections>
                                 <action selector="dismissVC:" destination="eBJ-IY-SG3" id="gK8-it-79v"/>
@@ -95,7 +95,7 @@
             </objects>
             <point key="canvasLocation" x="4688.8000000000002" y="-134.48275862068968"/>
         </scene>
-        <!--Tech Tatva '16-->
+        <!--More-->
         <scene sceneID="IAp-FG-C83">
             <objects>
                 <tableViewController id="TtJ-xJ-nYw" customClass="MoreTableViewController" sceneMemberID="viewController">
@@ -118,7 +118,7 @@
                             <outlet property="delegate" destination="TtJ-xJ-nYw" id="l8z-t0-aPl"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Tech Tatva '16" id="HxQ-zJ-wg8"/>
+                    <navigationItem key="navigationItem" title="More" id="HxQ-zJ-wg8"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YnO-C9-Yb4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -180,7 +180,7 @@
             </objects>
             <point key="canvasLocation" x="5572" y="610.34482758620697"/>
         </scene>
-        <!--Tech Tatva '16-->
+        <!--Results-->
         <scene sceneID="wFR-BB-2AW">
             <objects>
                 <tableViewController id="Vxc-WC-uXd" customClass="ResultsTableViewController" sceneMemberID="viewController">
@@ -208,7 +208,7 @@
                             <outlet property="delegate" destination="Vxc-WC-uXd" id="M08-mw-5SU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Tech Tatva '16" id="9jx-n4-1lC"/>
+                    <navigationItem key="navigationItem" title="Results" id="9jx-n4-1lC"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3py-ME-ytw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -226,7 +226,7 @@
                             <tableViewSection headerTitle="About Us" id="8Bl-PI-Nq7">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="aboutCell" rowHeight="363" id="RAX-5X-tiz">
-                                        <rect key="frame" x="0.0" y="119.5" width="375" height="363"/>
+                                        <rect key="frame" x="0.0" y="120" width="375" height="363"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RAX-5X-tiz" id="oCs-ap-BEz">
                                             <frame key="frameInset" width="375" height="362"/>
@@ -255,7 +255,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                             <tableViewSection headerTitle="Follow Us" id="Lmx-l9-4ZD">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="aboutCell" rowHeight="56" id="9gh-Xi-Ae1">
-                                        <rect key="frame" x="0.0" y="538.5" width="375" height="56"/>
+                                        <rect key="frame" x="0.0" y="539" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9gh-Xi-Ae1" id="SL1-P4-qEs">
                                             <frame key="frameInset" width="375" height="55"/>
@@ -799,6 +799,39 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
             </objects>
             <point key="canvasLocation" x="7338.3999999999996" y="2061.3193403298351"/>
         </scene>
+        <!--Splash View Controller-->
+        <scene sceneID="LE7-9d-yDg">
+            <objects>
+                <viewController id="s3v-As-HPZ" customClass="SplashViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5lY-G2-o0A"/>
+                        <viewControllerLayoutGuide type="bottom" id="ggb-j9-nyW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Uik-4v-dFs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tvm-x7-gzN">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tvm-x7-gzN" firstAttribute="top" secondItem="5lY-G2-o0A" secondAttribute="bottom" id="AsA-7g-snX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tvm-x7-gzN" secondAttribute="trailing" constant="-16" id="ReY-Oq-4p0"/>
+                            <constraint firstItem="ggb-j9-nyW" firstAttribute="top" secondItem="Tvm-x7-gzN" secondAttribute="bottom" id="Vjd-Ks-bsi"/>
+                            <constraint firstItem="Tvm-x7-gzN" firstAttribute="leading" secondItem="Uik-4v-dFs" secondAttribute="leadingMargin" constant="-16" id="bfv-ZR-rV7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Pth-qX-4tc"/>
+                    <connections>
+                        <outlet property="splashVideo" destination="Tvm-x7-gzN" id="gzY-1F-hjO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vDp-mj-Eso" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7919.1999999999998" y="2845.7271364317844"/>
+        </scene>
         <!--Schedule View Controller-->
         <scene sceneID="rCf-8E-DyO">
             <objects>
@@ -861,7 +894,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XP6-nn-H4d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9400.7999999999993" y="3092.2038980509747"/>
+            <point key="canvasLocation" x="10340" y="3092.2038980509747"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rAu-71-AGz">
@@ -923,7 +956,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
         <scene sceneID="t6t-C4-dHj">
             <objects>
                 <navigationController storyboardIdentifier="categoryNav" title="Tech Tatva '16" automaticallyAdjustsScrollViewInsets="NO" id="SwR-le-mwe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="Category.png" id="ADL-It-af6">
+                    <tabBarItem key="tabBarItem" title="Categories" image="Category.png" id="ADL-It-af6">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -944,7 +977,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
         <scene sceneID="l7P-FX-d3s">
             <objects>
                 <navigationController title="Tech Tatva '16" automaticallyAdjustsScrollViewInsets="NO" id="BLM-R3-bXL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="list" id="V3S-x0-rnw">
+                    <tabBarItem key="tabBarItem" title="More" image="list" id="V3S-x0-rnw">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -961,11 +994,11 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
             </objects>
             <point key="canvasLocation" x="1590" y="1349"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Results-->
         <scene sceneID="T5f-aM-M3i">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ofk-ZU-3YD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="Results.png" id="tY2-Uq-8Vm">
+                    <tabBarItem key="tabBarItem" title="Results" image="Results.png" id="tY2-Uq-8Vm">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -1059,7 +1092,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
         <!--Tab Bar Controller-->
         <scene sceneID="3AX-mC-W3o">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ORP-SX-hMp" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="initTabBar" automaticallyAdjustsScrollViewInsets="NO" id="ORP-SX-hMp" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="e2r-ew-Gm7">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -1156,11 +1189,11 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
             </objects>
             <point key="canvasLocation" x="6300" y="3620.2398800599703"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Events-->
         <scene sceneID="2wr-tH-GAH">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I3L-2s-D2T" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="Events.png" id="a6a-4d-8Mf">
+                    <tabBarItem key="tabBarItem" title="Events" image="Events.png" id="a6a-4d-8Mf">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -1283,7 +1316,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1sl-KK-d5z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8461.6000000000004" y="3092.2038980509747"/>
+            <point key="canvasLocation" x="9400.7999999999993" y="3092.2038980509747"/>
         </scene>
         <!--Instagram Viewer-->
         <scene sceneID="X7C-yF-g9C">
@@ -1697,11 +1730,11 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
             </objects>
             <point key="canvasLocation" x="3719" y="-858"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Instagram-->
         <scene sceneID="Ah7-xQ-IVM">
             <objects>
                 <navigationController storyboardIdentifier="InstagramV2VCNav" automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnSwipe="YES" id="pbC-Gj-0RN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="Instagram.png" id="91F-4w-49y">
+                    <tabBarItem key="tabBarItem" title="Instagram" image="Instagram.png" id="91F-4w-49y">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <toolbarItems/>

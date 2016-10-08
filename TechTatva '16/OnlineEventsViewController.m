@@ -21,7 +21,7 @@
     [super viewDidLoad];
     
     self.title = @"Online Events";
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://www.google.co.in"]]; //Enter the link here.
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.onlineevents.techtatva.in"]]; //Enter the link here.
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [onlineEventsWebView loadRequest:request];
 }
