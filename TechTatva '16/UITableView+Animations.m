@@ -194,7 +194,7 @@
  */
 - (void)performAnimationAwesome1:(void (^)(bool finished))block {
     NSArray *cells = self.visibleCells;
-    CGFloat tableHeight = self.bounds.size.height;
+//    CGFloat tableHeight = self.bounds.size.height;
     CGFloat tableWidth = self.bounds.size.width;
     
     NSInteger iCount = cells.count;

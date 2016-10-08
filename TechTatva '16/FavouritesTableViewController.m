@@ -13,11 +13,14 @@
 #import "ScheduleJsonDataModel.h"
 #import "FeedbackTableViewController.h"
 
+
 @interface FavouritesTableViewController ()
 {
     NSMutableArray *favouritesArray;
     NSArray *fetchArray;
 }
+
+@property (nonatomic, strong) NSIndexPath *selectedIndexPath;
 
 @end
 
@@ -34,6 +37,9 @@
     
     [self loadFavourites];
     self.title = @"Favourites";
+	
+	[self.tableView registerNib:[UINib nibWithNibName:@"AllEventsTableViewCell" bundle:nil] forCellReuseIdentifier:@"AllEveCell"];
+	
 }
 
 - (IBAction)simonGoBack:(id)sender
@@ -71,8 +77,7 @@
     static NSString *cellIdentifier = @"AllEveCell";
     NSLog(@"name and all %@", event.eventName);
     AllEventsTableViewCell *cell = (AllEventsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if (cell == nil)
-    {
+    if (cell == nil) {
         cell = [[AllEventsTableViewCell alloc] init];
     }
     cell.eventName.text = [NSString stringWithFormat:@"%@ R%@", event.eventName, event.round];
@@ -96,7 +101,7 @@
     NSDate *now = [NSDate date];
     NSString *dateString = @"12.10.2016";
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"dd.MM.yy"];
+    [formatter setDateFormat:@"dd.MM.yyyy"];
     NSDate *startTT = [formatter dateFromString:dateString];
     NSComparisonResult result = [now compare:startTT];
     if (result == NSOrderedAscending)
@@ -159,10 +164,29 @@
         {
             NSLog(@"%@",error);
         }
+		
+		[favouritesArray removeObject:favouriteEvent];
+		[self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     }
-    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	[tableView beginUpdates];
+	if (!([indexPath compare:self.selectedIndexPath] == NSOrderedSame))
+		self.selectedIndexPath = indexPath;
+	else
+		self.selectedIndexPath = nil;
+	
+	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+	[tableView endUpdates];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+	if ([indexPath compare:self.selectedIndexPath] == NSOrderedSame)
+		return 235.f;
+	return 66.f;
+}
 
 /*
 // Override to support conditional editing of the table view.

@@ -6,8 +6,10 @@ target 'TechTatva \'16' do
   # use_frameworks!
 
   # Pods for TechTatva '16
-  pod 'SVProgressHUD'
-  pod 'SDWebImage', '~>3.7'
+	pod 'SVProgressHUD'
+	pod 'SDWebImage', '~>3.7'
+	pod 'DZNEmptyDataSet'
+	pod 'KWTransition'
 
   target 'TechTatva \'16Tests' do
     inherit! :search_paths

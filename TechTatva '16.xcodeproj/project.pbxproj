@@ -13,7 +13,6 @@
 		181290C41D92C06200E5B740 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 181290C11D92C06200E5B740 /* Reachability.m */; };
 		1828D81C1D7476B000E0454F /* CategoriesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828D81A1D7476B000E0454F /* CategoriesTableViewCell.m */; };
 		1828D81D1D7476B000E0454F /* CategoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1828D81B1D7476B000E0454F /* CategoriesTableViewCell.xib */; };
-		184A2ADE1DA5ACDF00D589DE /* InstagramFullViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184A2ADD1DA5ACDF00D589DE /* InstagramFullViewController.m */; };
 		184A2AEB1DA5C51100D589DE /* Snapchat-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 184A2AEA1DA5C51100D589DE /* Snapchat-100.png */; };
 		18541FE01D6DD9370046EAD0 /* Favourites.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18541FDE1D6DD9370046EAD0 /* Favourites.xcdatamodeld */; };
 		18749BC01D13F17600858B85 /* MoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18749BBF1D13F17600858B85 /* MoreTableViewController.m */; };
@@ -39,6 +38,15 @@
 		18FFC4C41DA89646000CD00E /* DevViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FFC4C11DA89646000CD00E /* DevViewCell.xib */; };
 		18FFC4C51DA89646000CD00E /* DevViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FFC4C31DA89646000CD00E /* DevViewTableViewCell.m */; };
 		282A7060EF9AE0FD968DE312 /* libPods-TechTatva '16Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F01C890F7CF6D05BFA94292B /* libPods-TechTatva '16Tests.a */; };
+		59544E091DA8A76F00BDA118 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 59544E081DA8A76F00BDA118 /* UIImage+ImageEffects.m */; };
+		59544E0D1DA8A77400BDA118 /* ASMutableURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 59544E0C1DA8A77400BDA118 /* ASMutableURLRequest.m */; };
+		59544E111DA8A77900BDA118 /* CrossButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 59544E101DA8A77900BDA118 /* CrossButton.m */; };
+		59544E171DA8A78100BDA118 /* InstagramData.m in Sources */ = {isa = PBXBuildFile; fileRef = 59544E141DA8A78100BDA118 /* InstagramData.m */; };
+		59544E181DA8A78100BDA118 /* ParallaxCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59544E161DA8A78100BDA118 /* ParallaxCollectionViewCell.m */; };
+		59544E1F1DA8A79000BDA118 /* InstagramDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59544E1A1DA8A79000BDA118 /* InstagramDetailViewController.m */; };
+		59544E201DA8A79000BDA118 /* InstagramRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59544E1C1DA8A79000BDA118 /* InstagramRootViewController.m */; };
+		59544E241DA8A7A600BDA118 /* RoundedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 59544E231DA8A7A600BDA118 /* RoundedLabel.m */; };
+		59544E261DA8A81A00BDA118 /* InstagramV2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59544E251DA8A81A00BDA118 /* InstagramV2ViewController.m */; };
 		5D2E4C8A0A7710137FDEED67 /* libPods-TechTatva '16UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 452DB319F49B8C6F35F9AEDA /* libPods-TechTatva '16UITests.a */; };
 		D607A28D1D9FD10600CC01E2 /* AllEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D607A28C1D9FD10600CC01E2 /* AllEventsViewController.m */; };
 		D60BB7B41D70C0120083D0C9 /* EventsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D60BB7B21D70C0120083D0C9 /* EventsTableViewCell.m */; };
@@ -52,7 +60,6 @@
 		D60BB7C61D72EF290083D0C9 /* Instagram@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60BB7C21D72EF290083D0C9 /* Instagram@2x.png */; };
 		D60BB7C71D72EF290083D0C9 /* Results@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60BB7C31D72EF290083D0C9 /* Results@2x.png */; };
 		D60BB7C91D72F08B0083D0C9 /* Category@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60BB7C81D72F08B0083D0C9 /* Category@2x.png */; };
-		D61DBBCA1D38ACBF001BA98D /* instagramJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D61DBBC91D38ACBF001BA98D /* instagramJsonModel.m */; };
 		D6247BF61D7B0C58007F7FF1 /* AboutUsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6247BF51D7B0C58007F7FF1 /* AboutUsTableViewController.m */; };
 		D6247BF81D7B0E74007F7FF1 /* fb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6247BF71D7B0E74007F7FF1 /* fb@2x.png */; };
 		D6247BFC1D7B100C007F7FF1 /* google+@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6247BF91D7B100C007F7FF1 /* google+@2x.png */; };
@@ -70,9 +77,6 @@
 		D6C5949E1D1831E9006F19D0 /* likepic.png in Resources */ = {isa = PBXBuildFile; fileRef = D6C5949B1D1831E9006F19D0 /* likepic.png */; };
 		D6C5949F1D1831E9006F19D0 /* techtatvalogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6C5949C1D1831E9006F19D0 /* techtatvalogo.jpg */; };
 		D6C594A01D1831E9006F19D0 /* Comment.png in Resources */ = {isa = PBXBuildFile; fileRef = D6C5949D1D1831E9006F19D0 /* Comment.png */; };
-		D6C594D91D1976F8006F19D0 /* InstagramTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C594D81D1976F8006F19D0 /* InstagramTableViewController.m */; };
-		D6C594DD1D19771C006F19D0 /* InstagramTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C594DB1D19771C006F19D0 /* InstagramTableViewCell.m */; };
-		D6C594DE1D19771C006F19D0 /* InstagramTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C594DC1D19771C006F19D0 /* InstagramTableViewCell.xib */; };
 		D6C6B3CD1D99891D003C52A7 /* ResultsJsonDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C6B3CC1D99891D003C52A7 /* ResultsJsonDataModel.m */; };
 		D6D061261D782D8B00D9267E /* OnlineEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D061251D782D8B00D9267E /* OnlineEventsViewController.m */; };
 		D6DC67231D848AFB00D75A5B /* filledstar.png in Resources */ = {isa = PBXBuildFile; fileRef = D6DC67211D848AFB00D75A5B /* filledstar.png */; };
@@ -103,8 +107,6 @@
 		1828D8191D7476B000E0454F /* CategoriesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesTableViewCell.h; sourceTree = "<group>"; };
 		1828D81A1D7476B000E0454F /* CategoriesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesTableViewCell.m; sourceTree = "<group>"; };
 		1828D81B1D7476B000E0454F /* CategoriesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoriesTableViewCell.xib; sourceTree = "<group>"; };
-		184A2ADC1DA5ACDF00D589DE /* InstagramFullViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramFullViewController.h; sourceTree = "<group>"; };
-		184A2ADD1DA5ACDF00D589DE /* InstagramFullViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramFullViewController.m; sourceTree = "<group>"; };
 		184A2AEA1DA5C51100D589DE /* Snapchat-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Snapchat-100.png"; sourceTree = "<group>"; };
 		18541FDF1D6DD9370046EAD0 /* Favourites.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Favourites.xcdatamodel; sourceTree = "<group>"; };
 		18749BBE1D13F17600858B85 /* MoreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreTableViewController.h; sourceTree = "<group>"; };
@@ -153,6 +155,24 @@
 		1E39DD336457E8A5B4AD9BEC /* Pods-TechTatva '16UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechTatva '16UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TechTatva '16UITests/Pods-TechTatva '16UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		452DB319F49B8C6F35F9AEDA /* libPods-TechTatva '16UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TechTatva '16UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AF89144C0E8FCC01EF0FC16 /* libPods-TechTatva '16.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TechTatva '16.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		59544E071DA8A76F00BDA118 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		59544E081DA8A76F00BDA118 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		59544E0B1DA8A77400BDA118 /* ASMutableURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASMutableURLRequest.h; sourceTree = "<group>"; };
+		59544E0C1DA8A77400BDA118 /* ASMutableURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASMutableURLRequest.m; sourceTree = "<group>"; };
+		59544E0F1DA8A77900BDA118 /* CrossButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrossButton.h; sourceTree = "<group>"; };
+		59544E101DA8A77900BDA118 /* CrossButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrossButton.m; sourceTree = "<group>"; };
+		59544E131DA8A78100BDA118 /* InstagramData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramData.h; sourceTree = "<group>"; };
+		59544E141DA8A78100BDA118 /* InstagramData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramData.m; sourceTree = "<group>"; };
+		59544E151DA8A78100BDA118 /* ParallaxCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParallaxCollectionViewCell.h; sourceTree = "<group>"; };
+		59544E161DA8A78100BDA118 /* ParallaxCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParallaxCollectionViewCell.m; sourceTree = "<group>"; };
+		59544E191DA8A79000BDA118 /* InstagramDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InstagramDetailViewController.h; path = "UIImage+ImageEffects/InstagramDetailViewController.h"; sourceTree = "<group>"; };
+		59544E1A1DA8A79000BDA118 /* InstagramDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InstagramDetailViewController.m; path = "UIImage+ImageEffects/InstagramDetailViewController.m"; sourceTree = "<group>"; };
+		59544E1B1DA8A79000BDA118 /* InstagramRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InstagramRootViewController.h; path = "UIImage+ImageEffects/InstagramRootViewController.h"; sourceTree = "<group>"; };
+		59544E1C1DA8A79000BDA118 /* InstagramRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InstagramRootViewController.m; path = "UIImage+ImageEffects/InstagramRootViewController.m"; sourceTree = "<group>"; };
+		59544E1E1DA8A79000BDA118 /* InstagramV2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InstagramV2ViewController.h; path = "UIImage+ImageEffects/InstagramV2ViewController.h"; sourceTree = "<group>"; };
+		59544E221DA8A7A600BDA118 /* RoundedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundedLabel.h; sourceTree = "<group>"; };
+		59544E231DA8A7A600BDA118 /* RoundedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundedLabel.m; sourceTree = "<group>"; };
+		59544E251DA8A81A00BDA118 /* InstagramV2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramV2ViewController.m; sourceTree = "<group>"; };
 		9309D4D26842A1C03AFD9384 /* Pods-TechTatva '16UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechTatva '16UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TechTatva '16UITests/Pods-TechTatva '16UITests.release.xcconfig"; sourceTree = "<group>"; };
 		D5FF03F99F3281ADAB68B8C5 /* Pods-TechTatva '16Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechTatva '16Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TechTatva '16Tests/Pods-TechTatva '16Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D607A28B1D9FD10600CC01E2 /* AllEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllEventsViewController.h; sourceTree = "<group>"; };
@@ -169,8 +189,6 @@
 		D60BB7C21D72EF290083D0C9 /* Instagram@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Instagram@2x.png"; sourceTree = "<group>"; };
 		D60BB7C31D72EF290083D0C9 /* Results@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Results@2x.png"; sourceTree = "<group>"; };
 		D60BB7C81D72F08B0083D0C9 /* Category@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Category@2x.png"; sourceTree = "<group>"; };
-		D61DBBC81D38ACBF001BA98D /* instagramJsonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = instagramJsonModel.h; sourceTree = "<group>"; };
-		D61DBBC91D38ACBF001BA98D /* instagramJsonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = instagramJsonModel.m; sourceTree = "<group>"; };
 		D6247BF41D7B0C58007F7FF1 /* AboutUsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutUsTableViewController.h; path = ../AboutUsTableViewController.h; sourceTree = "<group>"; };
 		D6247BF51D7B0C58007F7FF1 /* AboutUsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutUsTableViewController.m; path = ../AboutUsTableViewController.m; sourceTree = "<group>"; };
 		D6247BF71D7B0E74007F7FF1 /* fb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fb@2x.png"; sourceTree = "<group>"; };
@@ -194,11 +212,6 @@
 		D6C5949B1D1831E9006F19D0 /* likepic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = likepic.png; sourceTree = "<group>"; };
 		D6C5949C1D1831E9006F19D0 /* techtatvalogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = techtatvalogo.jpg; sourceTree = "<group>"; };
 		D6C5949D1D1831E9006F19D0 /* Comment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Comment.png; sourceTree = "<group>"; };
-		D6C594D71D1976F8006F19D0 /* InstagramTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramTableViewController.h; sourceTree = "<group>"; };
-		D6C594D81D1976F8006F19D0 /* InstagramTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramTableViewController.m; sourceTree = "<group>"; };
-		D6C594DA1D19771C006F19D0 /* InstagramTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramTableViewCell.h; sourceTree = "<group>"; };
-		D6C594DB1D19771C006F19D0 /* InstagramTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramTableViewCell.m; sourceTree = "<group>"; };
-		D6C594DC1D19771C006F19D0 /* InstagramTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InstagramTableViewCell.xib; sourceTree = "<group>"; };
 		D6C6B3CB1D99891D003C52A7 /* ResultsJsonDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsJsonDataModel.h; sourceTree = "<group>"; };
 		D6C6B3CC1D99891D003C52A7 /* ResultsJsonDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsJsonDataModel.m; sourceTree = "<group>"; };
 		D6D061241D782D8B00D9267E /* OnlineEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlineEventsViewController.h; sourceTree = "<group>"; };
@@ -355,13 +368,18 @@
 		184A2ADB1DA5A11C00D589DE /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
-				D6C594D71D1976F8006F19D0 /* InstagramTableViewController.h */,
-				D6C594D81D1976F8006F19D0 /* InstagramTableViewController.m */,
-				D6C594DA1D19771C006F19D0 /* InstagramTableViewCell.h */,
-				D6C594DB1D19771C006F19D0 /* InstagramTableViewCell.m */,
-				D6C594DC1D19771C006F19D0 /* InstagramTableViewCell.xib */,
-				184A2ADC1DA5ACDF00D589DE /* InstagramFullViewController.h */,
-				184A2ADD1DA5ACDF00D589DE /* InstagramFullViewController.m */,
+				59544E191DA8A79000BDA118 /* InstagramDetailViewController.h */,
+				59544E1A1DA8A79000BDA118 /* InstagramDetailViewController.m */,
+				59544E1B1DA8A79000BDA118 /* InstagramRootViewController.h */,
+				59544E1C1DA8A79000BDA118 /* InstagramRootViewController.m */,
+				59544E1E1DA8A79000BDA118 /* InstagramV2ViewController.h */,
+				59544E251DA8A81A00BDA118 /* InstagramV2ViewController.m */,
+				59544E221DA8A7A600BDA118 /* RoundedLabel.h */,
+				59544E231DA8A7A600BDA118 /* RoundedLabel.m */,
+				59544E121DA8A78100BDA118 /* Instagram */,
+				59544E0E1DA8A77900BDA118 /* Cross Button */,
+				59544E0A1DA8A77400BDA118 /* ASMutableURLRequest */,
+				59544E061DA8A76F00BDA118 /* UIImage+ImageEffects */,
 			);
 			name = Instagram;
 			sourceTree = "<group>";
@@ -418,7 +436,6 @@
 				D6C6B3C71D9987FB003C52A7 /* Results Model */,
 				D69A1A8A1D995FE6001F9E7F /* Schedule Model */,
 				D640BF541D4FD67D006BA67C /* Events Model */,
-				D61DBBC71D38AC9D001BA98D /* Instagram Model */,
 				1868992D1D6E350500B82923 /* App Delegate */,
 				1868992C1D6E34F800B82923 /* Favourites Core Data Model */,
 				188F51E01D0F08ED0083169D /* Main.storyboard */,
@@ -446,30 +463,8 @@
 			isa = PBXGroup;
 			children = (
 				18C3F2141D931513007F33DB /* PrefixHeader.pch */,
-				D66BE63F1DA1315C005B2B39 /* Calendar Filled-50.png */,
-				D66BE63B1DA12FFE005B2B39 /* FilledFavourites.png */,
-				D66BE63C1DA12FFE005B2B39 /* Favourites.png */,
-				D6247BF71D7B0E74007F7FF1 /* fb@2x.png */,
-				D6247C011D7B145F007F7FF1 /* youtube.png */,
-				D6247BF91D7B100C007F7FF1 /* google+@2x.png */,
-				D6247BFB1D7B100C007F7FF1 /* twitter@2x.png */,
-				D60BB7B61D70C3A40083D0C9 /* Calendar-50.png */,
-				D60BB7B71D70C3A40083D0C9 /* location.png */,
-				D60BB7B81D70C3A40083D0C9 /* Phone Filled-50.png */,
-				D60BB7B91D70C3A40083D0C9 /* Time Filled-50.png */,
-				D60BB7BA1D70C3A40083D0C9 /* User Group Man Man-50.png */,
 				188F51E81D0F08ED0083169D /* Info.plist */,
-				D6C5949B1D1831E9006F19D0 /* likepic.png */,
-				D6DC67211D848AFB00D75A5B /* filledstar.png */,
-				D6DC67221D848AFB00D75A5B /* star.png */,
-				184A2AEA1DA5C51100D589DE /* Snapchat-100.png */,
-				D6C5949C1D1831E9006F19D0 /* techtatvalogo.jpg */,
-				D6C5949D1D1831E9006F19D0 /* Comment.png */,
-				D60BB7C81D72F08B0083D0C9 /* Category@2x.png */,
-				D60BB7C11D72EF290083D0C9 /* Events@2x.png */,
-				D60BB7C21D72EF290083D0C9 /* Instagram@2x.png */,
-				D60BB7C31D72EF290083D0C9 /* Results@2x.png */,
-				18749BC61D13F8FC00858B85 /* thumb_IMG_7632_1024.jpg */,
+				59544E271DA8A9FF00BDA118 /* images */,
 				188F51D81D0F08ED0083169D /* main.m */,
 			);
 			name = "Supporting Files";
@@ -532,6 +527,74 @@
 			name = "Dev Animations";
 			sourceTree = "<group>";
 		};
+		59544E061DA8A76F00BDA118 /* UIImage+ImageEffects */ = {
+			isa = PBXGroup;
+			children = (
+				59544E071DA8A76F00BDA118 /* UIImage+ImageEffects.h */,
+				59544E081DA8A76F00BDA118 /* UIImage+ImageEffects.m */,
+			);
+			path = "UIImage+ImageEffects";
+			sourceTree = "<group>";
+		};
+		59544E0A1DA8A77400BDA118 /* ASMutableURLRequest */ = {
+			isa = PBXGroup;
+			children = (
+				59544E0B1DA8A77400BDA118 /* ASMutableURLRequest.h */,
+				59544E0C1DA8A77400BDA118 /* ASMutableURLRequest.m */,
+			);
+			path = ASMutableURLRequest;
+			sourceTree = "<group>";
+		};
+		59544E0E1DA8A77900BDA118 /* Cross Button */ = {
+			isa = PBXGroup;
+			children = (
+				59544E0F1DA8A77900BDA118 /* CrossButton.h */,
+				59544E101DA8A77900BDA118 /* CrossButton.m */,
+			);
+			path = "Cross Button";
+			sourceTree = "<group>";
+		};
+		59544E121DA8A78100BDA118 /* Instagram */ = {
+			isa = PBXGroup;
+			children = (
+				59544E131DA8A78100BDA118 /* InstagramData.h */,
+				59544E141DA8A78100BDA118 /* InstagramData.m */,
+				59544E151DA8A78100BDA118 /* ParallaxCollectionViewCell.h */,
+				59544E161DA8A78100BDA118 /* ParallaxCollectionViewCell.m */,
+			);
+			path = Instagram;
+			sourceTree = "<group>";
+		};
+		59544E271DA8A9FF00BDA118 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				D66BE63F1DA1315C005B2B39 /* Calendar Filled-50.png */,
+				D66BE63B1DA12FFE005B2B39 /* FilledFavourites.png */,
+				D66BE63C1DA12FFE005B2B39 /* Favourites.png */,
+				D6247BF71D7B0E74007F7FF1 /* fb@2x.png */,
+				D6247C011D7B145F007F7FF1 /* youtube.png */,
+				D6247BF91D7B100C007F7FF1 /* google+@2x.png */,
+				D6247BFB1D7B100C007F7FF1 /* twitter@2x.png */,
+				D60BB7B61D70C3A40083D0C9 /* Calendar-50.png */,
+				D60BB7B71D70C3A40083D0C9 /* location.png */,
+				D60BB7B81D70C3A40083D0C9 /* Phone Filled-50.png */,
+				D60BB7B91D70C3A40083D0C9 /* Time Filled-50.png */,
+				D60BB7BA1D70C3A40083D0C9 /* User Group Man Man-50.png */,
+				D6C5949B1D1831E9006F19D0 /* likepic.png */,
+				D6DC67211D848AFB00D75A5B /* filledstar.png */,
+				D6DC67221D848AFB00D75A5B /* star.png */,
+				184A2AEA1DA5C51100D589DE /* Snapchat-100.png */,
+				D6C5949C1D1831E9006F19D0 /* techtatvalogo.jpg */,
+				D6C5949D1D1831E9006F19D0 /* Comment.png */,
+				D60BB7C81D72F08B0083D0C9 /* Category@2x.png */,
+				D60BB7C11D72EF290083D0C9 /* Events@2x.png */,
+				D60BB7C21D72EF290083D0C9 /* Instagram@2x.png */,
+				D60BB7C31D72EF290083D0C9 /* Results@2x.png */,
+				18749BC61D13F8FC00858B85 /* thumb_IMG_7632_1024.jpg */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		A92A2EFCB0014870CCB14960 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -543,15 +606,6 @@
 				9309D4D26842A1C03AFD9384 /* Pods-TechTatva '16UITests.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		D61DBBC71D38AC9D001BA98D /* Instagram Model */ = {
-			isa = PBXGroup;
-			children = (
-				D61DBBC81D38ACBF001BA98D /* instagramJsonModel.h */,
-				D61DBBC91D38ACBF001BA98D /* instagramJsonModel.m */,
-			);
-			name = "Instagram Model";
 			sourceTree = "<group>";
 		};
 		D640BF541D4FD67D006BA67C /* Events Model */ = {
@@ -709,7 +763,6 @@
 				D60BB7B51D70C0120083D0C9 /* EventsTableViewCell.xib in Resources */,
 				184A2AEB1DA5C51100D589DE /* Snapchat-100.png in Resources */,
 				188F51E71D0F08ED0083169D /* LaunchScreen.storyboard in Resources */,
-				D6C594DE1D19771C006F19D0 /* InstagramTableViewCell.xib in Resources */,
 				D6C5949E1D1831E9006F19D0 /* likepic.png in Resources */,
 				D66BE63D1DA12FFE005B2B39 /* FilledFavourites.png in Resources */,
 				D60BB7C91D72F08B0083D0C9 /* Category@2x.png in Resources */,
@@ -896,37 +949,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D61DBBCA1D38ACBF001BA98D /* instagramJsonModel.m in Sources */,
 				18FFC4B71DA886A4000CD00E /* Favourite+CoreDataClass.m in Sources */,
 				D68F16E31D9D1707007182C7 /* CategoriesJSONModel.m in Sources */,
 				18FFC4B11DA8858F000CD00E /* DevelopersViewController.m in Sources */,
-				184A2ADE1DA5ACDF00D589DE /* InstagramFullViewController.m in Sources */,
 				18749BCA1D14094700858B85 /* ResultsTableViewController.m in Sources */,
+				59544E0D1DA8A77400BDA118 /* ASMutableURLRequest.m in Sources */,
 				188F51DC1D0F08ED0083169D /* AppDelegate.m in Sources */,
 				D6247BF61D7B0C58007F7FF1 /* AboutUsTableViewController.m in Sources */,
 				D607A28D1D9FD10600CC01E2 /* AllEventsViewController.m in Sources */,
+				59544E241DA8A7A600BDA118 /* RoundedLabel.m in Sources */,
 				D6C0853D1D7EBCEE00FBD1BC /* FeedbackTableViewController.m in Sources */,
 				D640BF531D4FD5B4006BA67C /* EventsDetailsJSONModel.m in Sources */,
-				D6C594D91D1976F8006F19D0 /* InstagramTableViewController.m in Sources */,
 				181290C21D92C06200E5B740 /* Reachability.m in Sources */,
+				59544E261DA8A81A00BDA118 /* InstagramV2ViewController.m in Sources */,
 				1881A2151D13085800192BD1 /* EventsViewController.m in Sources */,
 				18FFC4C51DA89646000CD00E /* DevViewTableViewCell.m in Sources */,
+				59544E1F1DA8A79000BDA118 /* InstagramDetailViewController.m in Sources */,
 				18541FE01D6DD9370046EAD0 /* Favourites.xcdatamodeld in Sources */,
+				59544E181DA8A78100BDA118 /* ParallaxCollectionViewCell.m in Sources */,
 				D6E6326D1D7AC21B00E71851 /* RegistrationPageViewController.m in Sources */,
 				18FFC4B81DA886A4000CD00E /* Favourite+CoreDataProperties.m in Sources */,
 				18749BCE1D140AC600858B85 /* ResultsTableViewCell.m in Sources */,
 				18FFC4BB1DA88BB7000CD00E /* TrendingTableViewController.m in Sources */,
 				18FFC4AD1DA88164000CD00E /* FavouritesTableViewController.m in Sources */,
-				D6C594DD1D19771C006F19D0 /* InstagramTableViewCell.m in Sources */,
+				59544E201DA8A79000BDA118 /* InstagramRootViewController.m in Sources */,
+				59544E111DA8A77900BDA118 /* CrossButton.m in Sources */,
 				1828D81C1D7476B000E0454F /* CategoriesTableViewCell.m in Sources */,
 				188F51D91D0F08ED0083169D /* main.m in Sources */,
 				D6A2B8CA1D847415008DE478 /* AllEventsTableViewCell.m in Sources */,
 				D60BB7B41D70C0120083D0C9 /* EventsTableViewCell.m in Sources */,
+				59544E091DA8A76F00BDA118 /* UIImage+ImageEffects.m in Sources */,
 				D6C6B3CD1D99891D003C52A7 /* ResultsJsonDataModel.m in Sources */,
 				D6D061261D782D8B00D9267E /* OnlineEventsViewController.m in Sources */,
 				18749BC01D13F17600858B85 /* MoreTableViewController.m in Sources */,
 				18FFC4BF1DA89610000CD00E /* UITableView+Animations.m in Sources */,
 				D69A1A8D1D996021001F9E7F /* ScheduleJsonDataModel.m in Sources */,
+				59544E171DA8A78100BDA118 /* InstagramData.m in Sources */,
 				1881A20A1D0FCD8000192BD1 /* CategoriesTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -29,7 +29,9 @@
     [super viewDidLoad];
 
     [self setupSearchController];
-    
+	
+	[eventsTable registerNib:[UINib nibWithNibName:@"EventsTableViewCell" bundle:nil] forCellReuseIdentifier:@"eventsCell"];
+	
     [self loadFromApi];
 
 }
@@ -44,8 +46,8 @@
     tfield.backgroundColor = [UIColor colorWithWhite:0.85 alpha:1.0];
     self.searchController.searchBar.searchBarStyle = UISearchBarStyleProminent;
     self.searchController.searchBar.delegate = self;
-    self.searchController.searchBar.barTintColor = [UIColor whiteColor];
-    self.searchController.searchBar.tintColor = [UIColor blackColor];
+	self.searchController.searchBar.barTintColor = GLOBAL_BACK_COLOR;
+	self.searchController.searchBar.tintColor = GLOBAL_TINT_RED;
     self.searchController.dimsBackgroundDuringPresentation = NO;
     self.definesPresentationContext = YES;
     self.extendedLayoutIncludesOpaqueBars = YES;
@@ -107,8 +109,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     EventsTableViewCell *cell = (EventsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"eventsCell"];
-    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"EventsTableViewCell" owner:self options:nil];
-    cell = [nib objectAtIndex:0];
     if (cell == nil)
     {
         cell = [[EventsTableViewCell alloc] init];

@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://www.google.co.in"]]; //Enter the link here.
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://www.google.co.in"]]; // Enter the link here.
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [registrationWebView loadRequest:request];
     self.title = @"Register";

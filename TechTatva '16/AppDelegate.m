@@ -24,6 +24,41 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+	
+	
+	[SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeGradient];
+	[SVProgressHUD setBackgroundColor:GLOBAL_BACK_COLOR];
+	[SVProgressHUD setForegroundColor:GLOBAL_TINT_RED];
+	
+//	[[UISegmentedControl appearance] setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"ElliotSans-Medium" size:13.f], NSForegroundColorAttributeName: GLOBAL_TINT_RED} forState:UIControlStateNormal];
+//	[[UISegmentedControl appearance] setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"ElliotSans-Medium" size:13.f], NSForegroundColorAttributeName: [UIColor lightTextColor]} forState:UIControlStateHighlighted];
+	
+	[[UITextField appearance] setTextColor:GLOBAL_TINT_RED];
+	[[UITextField appearance] setTintColor:GLOBAL_TINT_RED];
+//	[[UITextField appearance] setFont:[UIFont fontWithName:@"ElliotSans-Regular" size:16.f]];
+	
+//	[[UILabel appearanceWhenContainedInInstancesOfClasses:@[[UITextField class]]] setFont:[UIFont fontWithName:@"ElliotSans-Regular" size:16.f]];
+	
+//	[[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"ElliotSans-Bold" size:18.f], NSForegroundColorAttributeName: GLOBAL_TINT_BLACK}];
+	
+	[[UINavigationBar appearance] setTintColor:GLOBAL_TINT_BLACK];
+	[[UINavigationBar appearance] setBarTintColor:GLOBAL_BACK_COLOR];
+	
+	[[UITabBar appearance] setTintColor:GLOBAL_TINT_RED];
+	[[UITabBar appearance] setBarTintColor:GLOBAL_BACK_COLOR];
+	
+	[[UIButton appearance] setTintColor:GLOBAL_TINT_BLACK];
+	[[UIButton appearance] setTitleColor:GLOBAL_TINT_BLACK forState:UIControlStateNormal];
+	
+	[[UITableViewCell appearance] setBackgroundColor:GLOBAL_BACK_COLOR];
+	[[UITableViewCell appearance] setTintColor:GLOBAL_TINT_RED];
+	
+	[[UITableView appearance] setBackgroundColor:GLOBAL_BACK_COLOR];
+	[[UITableView appearance] setTintColor:GLOBAL_TINT_RED];
+	[[UITableView appearance] setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+	[[UITableView appearance] setSeparatorColor:[UIColor darkGrayColor]];
+	
+	
     return YES;
 }
 

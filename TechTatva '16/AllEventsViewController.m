@@ -35,6 +35,7 @@
     favouritesArray = [NSMutableArray new];
     filteredEvents = [NSMutableArray new];
     allEventsSegmentControl.selectedSegmentIndex = 0;
+	allEventsSegmentControl.tintColor = GLOBAL_TINT_RED;
     
     [self loadFromApi];
     
@@ -50,7 +51,7 @@
 	[self.navigationController.navigationBar setTranslucent:NO];
 	[self.navigationController.navigationBar setShadowImage:[UIImage imageNamed:@"TransparentPixel"]];
 	[self.navigationController.navigationBar setBackgroundColor:GLOBAL_BACK_COLOR];
-	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"Pixel"] forBarMetrics:UIBarMetricsDefault];
+//	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"Pixel"] forBarMetrics:UIBarMetricsDefault];
 }
 
 - (void)setupSearchController
@@ -64,9 +65,9 @@
     self.searchController.searchBar.delegate = self;
 	self.searchController.searchBar.showsScopeBar = NO;
 	self.searchController.searchBar.scopeButtonTitles = @[@"DAY 1", @"DAY 2", @"DAY 3", @"DAY 4"];
-    self.searchController.searchBar.backgroundColor = [UIColor whiteColor];
-    self.searchController.searchBar.tintColor = [UIColor blackColor];
-	self.searchController.searchBar.barTintColor = [UIColor whiteColor];
+    self.searchController.searchBar.backgroundColor = GLOBAL_BACK_COLOR;
+    self.searchController.searchBar.tintColor = GLOBAL_TINT_RED;
+	self.searchController.searchBar.barTintColor = GLOBAL_BACK_COLOR;
     self.searchController.dimsBackgroundDuringPresentation = NO;
     self.definesPresentationContext = YES;
     allEventsTableView.tableHeaderView = self.searchController.searchBar;
@@ -293,6 +294,14 @@
         
         favouriteEvent.favourite = @"1";
         favouriteEvent.eventID = event.eventId;
+		favouriteEvent.eventName = event.eventName;
+		favouriteEvent.categoryID = event.catId;
+		favouriteEvent.categoryName = event.catName;
+		favouriteEvent.date = event.date;
+		favouriteEvent.startTime = event.sTime;
+		favouriteEvent.endTime = event.eTime;
+		favouriteEvent.location = event.place;
+		favouriteEvent.round = event.round;
         // CONTINUE
         
         if (![context save:&error])
@@ -325,6 +334,10 @@
     if ([indexPath compare:self.selectedIndexPath] == NSOrderedSame)
         return 235.f;
     return 66.f;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+	return [UIView new];
 }
 
 #pragma mark - Filtering
