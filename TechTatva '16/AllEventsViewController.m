@@ -27,6 +27,7 @@
     NSMutableArray *favouritesArray;
     NSMutableArray *filteredEvents;
     NSArray *array;
+    Reachability *reachability;
 }
 
 - (void)viewDidLoad
@@ -37,7 +38,13 @@
     allEventsSegmentControl.selectedSegmentIndex = 0;
 	allEventsSegmentControl.tintColor = GLOBAL_TINT_RED;
     
-    [self loadFromApi];
+    reachability = [Reachability reachabilityForInternetConnection];
+    if (reachability.isReachable)
+    {
+        [self loadFromApi];
+    }
+    else
+        [self loadFromCache];
     
     allEventsArray = [[NSArray alloc]initWithArray:fetchArray];
     searchedAllEventsArray = [[NSMutableArray alloc]initWithArray:allEventsArray];
@@ -52,6 +59,26 @@
 	[self.navigationController.navigationBar setShadowImage:[UIImage imageNamed:@"TransparentPixel"]];
 	[self.navigationController.navigationBar setBackgroundColor:GLOBAL_BACK_COLOR];
 //	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"Pixel"] forBarMetrics:UIBarMetricsDefault];
+}
+
+- (void) loadFromCache
+{
+    NSUserDefaults *events =[NSUserDefaults standardUserDefaults];
+    //    NSLog(@"CACHE %@", [categoryData objectForKey:@"category"]);
+    if ([events objectForKey:@"allevents"] != nil)
+    {
+        id savedData = [events objectForKey:@"allevents"];
+        id requiredArray = [savedData valueForKey:@"data"];
+        array = [ScheduleJsonDataModel getArrayFromJson:requiredArray];
+    }
+    SVHUD_HIDE;
+}
+
+- (void) saveLocalData:(id)jsonData
+{
+    NSUserDefaults *eventData = [NSUserDefaults standardUserDefaults];
+    [eventData setObject:jsonData forKey:@"allevents"];
+    [eventData synchronize];
 }
 
 - (void)setupSearchController
@@ -87,7 +114,7 @@
                 id jsonData = [NSJSONSerialization JSONObjectWithData:mydata options:kNilOptions error:&error];
                 id requiredArray = [jsonData valueForKey:@"data"];
                 array = [ScheduleJsonDataModel getArrayFromJson:requiredArray];
-                NSLog(@"ARRAYCOUNT %li", array.count);
+                [self saveLocalData:jsonData];
 //                filteredEvents = [array mutableCopy];
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self filterEventsForSelectedSegmentTitle:[allEventsSegmentControl titleForSegmentAtIndex:allEventsSegmentControl.selectedSegmentIndex]];

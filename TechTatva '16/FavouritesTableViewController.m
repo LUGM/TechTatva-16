@@ -119,6 +119,11 @@
     return (fetchArray.count > 0);
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    return  [UIView new];
+}
+
 - (void) rateEvent :(id) sender
 {
     if ([self checkTheDate])

@@ -10,6 +10,10 @@ target 'TechTatva \'16' do
 	pod 'SDWebImage', '~>3.7'
 	pod 'DZNEmptyDataSet'
 	pod 'KWTransition'
+  pod 'Firebase/Core'
+  pod 'Firebase/RemoteConfig'
+  pod 'Firebase'
+  pod 'Firebase/Database'
 
   target 'TechTatva \'16Tests' do
     inherit! :search_paths

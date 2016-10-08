@@ -46,7 +46,7 @@
 	self.searchBar.text = kTagToSearch;
 //	self.navigationItem.titleView = self.searchBar;
 	
-	self.navigationItem.title = @"Tech Tatva '16";
+	self.navigationItem.title = @"#techtatva16";
 	
 	[self refreshAction:nil];
 	

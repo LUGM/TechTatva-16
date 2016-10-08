@@ -16,30 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="12C-WR-Xlm">
-                            <rect key="frame" x="0.0" y="136" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </view>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell1" id="0y8-en-AC2" customClass="Cell">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0y8-en-AC2" id="58P-pM-zNN">
-                                    <frame key="frameInset" width="375" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEM-Cr-AYl">
-                                            <frame key="frameInset" minX="71" minY="11"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="ap7-x5-agp" id="S5w-2z-zLL"/>
                             <outlet property="delegate" destination="ap7-x5-agp" id="Run-ff-IGY"/>
@@ -99,16 +75,16 @@
         <scene sceneID="IAp-FG-C83">
             <objects>
                 <tableViewController id="TtJ-xJ-nYw" customClass="MoreTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="jOx-5G-cKe">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="jOx-5G-cKe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="moreCell" id="tu6-z2-cWt">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tu6-z2-cWt" id="5I2-vw-cbO">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -233,7 +209,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="j3b-UD-o5c">
-                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <string key="text">TechTatva is a national level technical fest in India organized by Manipal Institute of Technology students every year. With a plethora of events and workshops from all the spheres of Engineering organized by experts, TechTatva Fest witnesses mass participation from other colleges.
 
 Curiosity is the quality that forms the foundation of all the other milestones of innovation. The insatiable thirst for knowledge gives rise to a never ending chain of questions, which further lead to imagination, thinking, experimentation and implementation.
@@ -865,6 +841,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iDD-eN-iVI">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Uwt-GN-ar3" id="zPg-cA-ZgF"/>
                                     <outlet property="delegate" destination="Uwt-GN-ar3" id="ZkF-gN-QIm"/>
@@ -956,9 +933,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
         <scene sceneID="t6t-C4-dHj">
             <objects>
                 <navigationController storyboardIdentifier="categoryNav" title="Tech Tatva '16" automaticallyAdjustsScrollViewInsets="NO" id="SwR-le-mwe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Categories" image="Category.png" id="ADL-It-af6">
-                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Categories" image="Category.png" id="ADL-It-af6"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="91U-hZ-WSp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -977,9 +952,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
         <scene sceneID="l7P-FX-d3s">
             <objects>
                 <navigationController title="Tech Tatva '16" automaticallyAdjustsScrollViewInsets="NO" id="BLM-R3-bXL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="More" image="list" id="V3S-x0-rnw">
-                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="More" image="list" id="V3S-x0-rnw"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vTx-dg-Pjg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -998,9 +971,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
         <scene sceneID="T5f-aM-M3i">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ofk-ZU-3YD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Results" image="Results.png" id="tY2-Uq-8Vm">
-                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Results" image="Results.png" id="tY2-Uq-8Vm"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RMv-FE-gOf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1115,7 +1086,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
         <scene sceneID="7Re-Ea-G9M">
             <objects>
                 <tableViewController id="f6l-tT-H2q" customClass="FavouritesTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="kHb-v2-ekC">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="kHb-v2-ekC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1193,9 +1164,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
         <scene sceneID="2wr-tH-GAH">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I3L-2s-D2T" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Events" image="Events.png" id="a6a-4d-8Mf">
-                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Events" image="Events.png" id="a6a-4d-8Mf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ggI-qW-gIb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1734,9 +1703,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
         <scene sceneID="Ah7-xQ-IVM">
             <objects>
                 <navigationController storyboardIdentifier="InstagramV2VCNav" automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnSwipe="YES" id="pbC-Gj-0RN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Instagram" image="Instagram.png" id="91F-4w-49y">
-                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Instagram" image="Instagram.png" id="91F-4w-49y"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lhp-ch-Od4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

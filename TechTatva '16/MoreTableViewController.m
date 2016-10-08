@@ -15,6 +15,10 @@
 @interface MoreTableViewController ()
 {
     NSArray *labelArray;
+    Reachability *reachability;
+    
+    NSString *onlineeventsUrl;
+    NSString *registerUrl;
 }
 
 @end
@@ -32,6 +36,65 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.remoteConfig = [FIRRemoteConfig remoteConfig];
+    FIRRemoteConfigSettings *remoteConfigSettings = [[FIRRemoteConfigSettings alloc] initWithDeveloperModeEnabled:YES];
+    self.remoteConfig.configSettings = remoteConfigSettings;
+    
+    reachability = [Reachability reachabilityForInternetConnection];
+    if (reachability.isReachable)
+        [self fetchUrl];
+    else
+        [self useLocal];
+}
+
+- (void) fetchUrl
+{
+    SVHUD_SHOW;
+    [self.remoteConfig fetchWithExpirationDuration:0 completionHandler:^(FIRRemoteConfigFetchStatus status, NSError *error) {
+        if (status == FIRRemoteConfigFetchStatusSuccess) {
+            NSLog(@"Config fetched!");
+            [self.remoteConfig activateFetched];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                onlineeventsUrl = [NSString stringWithFormat:@"%@", self.remoteConfig[@"onlineevents"].stringValue];
+                registerUrl = [NSString stringWithFormat:@"%@", self.remoteConfig[@"register"].stringValue];
+                SVHUD_HIDE;
+                [[NSUserDefaults standardUserDefaults] setObject:onlineeventsUrl forKey:@"onlineevents"];
+                [[NSUserDefaults standardUserDefaults] setObject:registerUrl forKey:@"register"];
+            });
+        }
+        else {
+            NSLog(@"Config not fetched");
+            NSLog(@"Error %@", error.localizedDescription);
+            NSString *lastOnlineUrl = [[NSUserDefaults standardUserDefaults] objectForKey:@"onlineevents"];
+            if (lastOnlineUrl.length > 0)
+                onlineeventsUrl = lastOnlineUrl;
+            else
+                lastOnlineUrl = @"onlineevents.techtatva.in";
+            NSString *lastRegisterUrl = [[NSUserDefaults standardUserDefaults] objectForKey:@"register"];
+            if (lastRegisterUrl.length > 0)
+                registerUrl = lastRegisterUrl;
+            else
+                registerUrl = @"register.mitportals.in";
+        }
+    }];
+}
+
+- (void) useLocal
+{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        SVHUD_FAILURE(@"No Internet Connection!");
+    });
+    NSString *lastOnlineUrl = [[NSUserDefaults standardUserDefaults] objectForKey:@"onlineevents"];
+    if (lastOnlineUrl.length > 0)
+        onlineeventsUrl = lastOnlineUrl;
+    else
+        lastOnlineUrl = @"onlineevents.techtatva.in";
+    NSString *lastRegisterUrl = [[NSUserDefaults standardUserDefaults] objectForKey:@"register"];
+    if (lastRegisterUrl.length > 0)
+        registerUrl = lastRegisterUrl;
+    else
+        registerUrl = @"register.mitportals.in";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,7 +109,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 6;
+    return labelArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -54,10 +117,16 @@
     static NSString *simpleTableIdentifier = @"moreCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     cell.textLabel.text = [labelArray objectAtIndex:indexPath.row];
+    cell.textLabel.textAlignment = NSTextAlignmentCenter;
+    cell.textLabel.font = [UIFont systemFontOfSize:18.f weight:UIFontWeightMedium];
     
     // Configure the cell...
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 52.f;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -65,12 +134,18 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     if (indexPath.row == 0) {
-        UINavigationController *dest = [storyboard instantiateViewControllerWithIdentifier:@"onlineNav"];
-        [self presentViewController:dest animated:YES completion:nil];
+        if (reachability.isReachable)
+        {
+            UINavigationController *dest = [storyboard instantiateViewControllerWithIdentifier:@"onlineNav"];
+            [self presentViewController:dest animated:YES completion:nil];
+        }
     }
     else if (indexPath.row == 1) {
-        UINavigationController *dest = [storyboard instantiateViewControllerWithIdentifier:@"registerNav"];
-        [self presentViewController:dest animated:YES completion:nil];
+        if (reachability.isReachable)
+        {
+            UINavigationController *dest = [storyboard instantiateViewControllerWithIdentifier:@"registerNav"];
+            [self presentViewController:dest animated:YES completion:nil];
+        }
     }
     else if (indexPath.row == 2) {
         UINavigationController *dest = [storyboard instantiateViewControllerWithIdentifier:@"favouritesNav"];
@@ -100,8 +175,7 @@
 
 - (UIView *) tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
-    UIView *blankView = [[UIView alloc] initWithFrame:CGRectZero];
-    return blankView;
+    return [UIView new];
 }
 
 - (BOOL) checkTheDate

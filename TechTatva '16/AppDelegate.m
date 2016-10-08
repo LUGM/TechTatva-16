@@ -25,6 +25,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 	
+    [FIRApp configure];
 	
 	[SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeGradient];
 	[SVProgressHUD setBackgroundColor:GLOBAL_BACK_COLOR];

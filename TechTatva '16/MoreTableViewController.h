@@ -10,4 +10,6 @@
 
 @interface MoreTableViewController : UITableViewController
 
+@property (nonatomic, strong) FIRRemoteConfig *remoteConfig;
+
 @end

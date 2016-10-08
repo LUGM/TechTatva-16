@@ -22,14 +22,47 @@
 @end
 
 @implementation CategoriesTableViewController
+{
+    Reachability *reachability;
+}
 
 -(void)viewDidLoad
 {
-    [self loadFromApi];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"CategoriesTableViewCell" bundle:nil] forCellReuseIdentifier:@"categoriesCell"];
+    
+    reachability = [Reachability reachabilityForInternetConnection];
+    if (reachability.isReachable)
+    {
+        [self loadFromApi];
+    }
+    else
+        [self loadFromCache];
+}
+
+- (void) loadFromCache
+{
+    NSUserDefaults *categoryData =[NSUserDefaults standardUserDefaults];
+//    NSLog(@"CACHE %@", [categoryData objectForKey:@"category"]);
+    if ([categoryData objectForKey:@"category"] != nil)
+    {
+        id savedData = [categoryData objectForKey:@"category"];
+        id requiredArray = [savedData valueForKey:@"data"];
+        array = [CategoriesJSONModel getArrayFromJson:requiredArray];
+    }
+    SVHUD_HIDE;
+}
+
+- (void) saveLocalData:(id)jsonData
+{
+    NSUserDefaults *categoryData = [NSUserDefaults standardUserDefaults];
+    [categoryData setObject:jsonData forKey:@"category"];
+    [categoryData synchronize];
 }
 
 - (void) loadFromApi
 {
+    SVHUD_SHOW;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         @try {
             
@@ -42,7 +75,9 @@
                 id jsonData = [NSJSONSerialization JSONObjectWithData:mydata options:kNilOptions error:&error];
                 id requiredArray = [jsonData valueForKey:@"data"];
                 array = [CategoriesJSONModel getArrayFromJson:requiredArray];
+                [self saveLocalData:jsonData];
                 dispatch_async(dispatch_get_main_queue(), ^{
+                    SVHUD_HIDE;
                     [self.tableView reloadData];
                 });
             }
@@ -82,8 +117,6 @@
 {
     static NSString *simpleTableIdentifier = @"categoriesCell";
     CategoriesTableViewCell *cell = (CategoriesTableViewCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CategoriesTableViewCell" owner:self options:nil];
-    cell = [nib objectAtIndex:0];
     if (cell == nil)
     {
         cell = [[CategoriesTableViewCell alloc] init];
@@ -108,8 +141,7 @@
 
 - (UIView *) tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
-    UIView *blankView = [[UIView alloc] initWithFrame:CGRectZero];
-    return blankView;
+    return [UIView new];
 }
 
 @end

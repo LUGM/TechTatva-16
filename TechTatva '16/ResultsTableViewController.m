@@ -10,25 +10,50 @@
 #import "ResultsTableViewCell.h"
 #import "ResultsJsonDataModel.h"
 
-@interface ResultsTableViewController (){
+@interface ResultsTableViewController () <UISearchResultsUpdating, UISearchBarDelegate, UISearchControllerDelegate>
+{
     NSArray *label1Array;
     NSArray *label2Array;
     NSArray *array;
+    
+    NSMutableArray *filteredEvents;
 }
+
+@property (strong, nonatomic) UISearchController *searchController;
 
 @end
 
 @implementation ResultsTableViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
-    label1Array = [[NSArray alloc] init];
-    label2Array = [[NSArray alloc] init];
-    
-    label1Array = @[@"Yash", @"Manas", @"Abhishek"];
-    label2Array = @[@"Cathead", @"Organiser1", @"Organiser2"];
-    
+    [self setupSearchController];
+    [self loadFromApi];
+}
+
+- (void) setupSearchController
+{
+    self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+    self.searchController.searchResultsUpdater = self;
+    self.searchController.delegate = self;
+    // Get the searchbar's text field via KVO and set color
+    UITextField *tfield = [self.searchController.searchBar valueForKey:@"_searchField"];
+    tfield.backgroundColor = [UIColor colorWithWhite:0.85 alpha:1.0];
+    self.searchController.searchBar.searchBarStyle = UISearchBarStyleProminent;
+    self.searchController.searchBar.delegate = self;
+    self.searchController.searchBar.barTintColor = GLOBAL_BACK_COLOR;
+    self.searchController.searchBar.tintColor = GLOBAL_TINT_RED;
+    self.searchController.dimsBackgroundDuringPresentation = NO;
+    self.definesPresentationContext = YES;
+    self.extendedLayoutIncludesOpaqueBars = YES;
+    self.tableView.tableHeaderView = self.searchController.searchBar;
+}
+
+- (void) loadFromApi
+{
+    SVHUD_SHOW;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         @try {
             NSURL *myUrl = [[NSURL alloc]initWithString:@"http://api.mitportals.in/results/"];
@@ -40,8 +65,9 @@
                 id jsonData = [NSJSONSerialization JSONObjectWithData:mydata options:kNilOptions error:&error];
                 id requiredArray = [jsonData valueForKey:@"data"];
                 array = [ResultsJsonDataModel getArrayFromJson:requiredArray];
-                
+                filteredEvents = [array mutableCopy];
                 dispatch_async(dispatch_get_main_queue(), ^{
+                    SVHUD_HIDE;
                     [self.tableView reloadData];
                 });
             }
@@ -53,7 +79,6 @@
             
         }
     });
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -67,10 +92,11 @@
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
     if (array.count == 0)
         return 0;
-    return array.count;
+    return filteredEvents.count;
 }
 
 
@@ -82,10 +108,10 @@
     if (cell == nil) {
         cell = [[ResultsTableViewCell alloc] init];
     }
-    
-    cell.nameLabel1.text = [NSString stringWithFormat:@"Event : %@",[[array objectAtIndex:indexPath.row] event]];
-    cell.nameLabel2.text = [NSString stringWithFormat:@"Category : %@",[[array objectAtIndex:indexPath.row] category]];
-    cell.eveRound.text = [NSString stringWithFormat:@"Round : %@",[[array objectAtIndex:indexPath.row] round]];
+    ResultsJsonDataModel *model = [filteredEvents objectAtIndex:indexPath.row];
+    cell.nameLabel1.text = [NSString stringWithFormat:@"Event : %@", model.event];
+    cell.nameLabel2.text = [NSString stringWithFormat:@"Category : %@", model.category];
+    cell.eveRound.text = [NSString stringWithFormat:@"Round : %@", model.round];
     return cell;
 }
 
@@ -96,9 +122,9 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Result" message:[NSString stringWithFormat:@"Position : %@\nTeam ID : %@", [[array objectAtIndex:indexPath.row] standing], [[array objectAtIndex:indexPath.row] teamID]]
+    ResultsJsonDataModel *model = [filteredEvents objectAtIndex:indexPath.row];
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Result" message:[NSString stringWithFormat:@"Position : %@\nTeam ID : %@", model.standing, model.teamID]
                                                             preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
@@ -108,8 +134,41 @@
     [self presentViewController:alert animated:YES completion:nil];
 }
 
+# pragma mark - Search
 
+- (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
+    
+    UISearchBar *searchBar = searchController.searchBar;
+    if (searchBar.text.length > 0)
+    {
+        [self filterEventsForSearchString:searchBar.text andScopeBarTitle:searchBar.scopeButtonTitles[searchBar.selectedScopeButtonIndex]];
+    } else
+    {
+        filteredEvents = [NSMutableArray arrayWithArray:array];
+        [self.tableView reloadData];
+    }
+}
 
+- (void)filterEventsForSearchString:(NSString *)searchString andScopeBarTitle:(NSString *)scopeTitle
+{
+    filteredEvents = [NSMutableArray arrayWithArray:array];
+    [filteredEvents filterUsingPredicate:[NSPredicate predicateWithFormat:@"event contains[cd] %@ OR category contains[cd] %@", searchString, searchString, searchString, searchString]];
+    [self.tableView reloadData];
+}
+
+- (void)searchBar:(UISearchBar *)searchBar selectedScopeButtonIndexDidChange:(NSInteger)selectedScope
+{
+    if (searchBar.text.length > 0)
+        [self filterEventsForSearchString:searchBar.text andScopeBarTitle:searchBar.scopeButtonTitles[searchBar.selectedScopeButtonIndex]];
+    else
+        [self searchBarCancelButtonClicked:searchBar];
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    filteredEvents = [NSMutableArray arrayWithArray:array];
+    [self.tableView reloadData];
+}
 
 /*
 // Override to support conditional editing of the table view.

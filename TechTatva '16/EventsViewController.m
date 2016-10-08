@@ -10,11 +10,12 @@
 #import "EventsTableViewCell.h"
 #import "EventsDetailsJSONModel.h"
 
-@interface EventsViewController () <UISearchResultsUpdating, UISearchBarDelegate, UISearchControllerDelegate>
+@interface EventsViewController () <UISearchResultsUpdating, UISearchBarDelegate, UISearchControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 
 {
     NSArray *array;
     NSMutableArray *filteredEvents;
+    Reachability *reachability;
 }
 @property (nonatomic, strong) NSIndexPath *selectedIndexPath;
 @property (strong, nonatomic) UISearchController *searchController;
@@ -32,8 +33,34 @@
 	
 	[eventsTable registerNib:[UINib nibWithNibName:@"EventsTableViewCell" bundle:nil] forCellReuseIdentifier:@"eventsCell"];
 	
-    [self loadFromApi];
+    reachability = [Reachability reachabilityForInternetConnection];
+    if (reachability.isReachable)
+    {
+        [self loadFromApi];
+    }
+    else
+        [self loadFromCache];
 
+}
+
+- (void) loadFromCache
+{
+    NSUserDefaults *catEvents =[NSUserDefaults standardUserDefaults];
+    //    NSLog(@"CACHE %@", [categoryData objectForKey:@"category"]);
+    if ([catEvents objectForKey:@"catevents"] != nil)
+    {
+        id savedData = [catEvents objectForKey:@"catevents"];
+        id requiredArray = [savedData valueForKey:@"data"];
+        array = [EventsDetailsJSONModel getArrayFromJson:requiredArray];
+    }
+    SVHUD_HIDE;
+}
+
+- (void) saveLocalData:(id)jsonData
+{
+    NSUserDefaults *catEvents = [NSUserDefaults standardUserDefaults];
+    [catEvents setObject:jsonData forKey:@"catevents"];
+    [catEvents synchronize];
 }
 
 - (void) setupSearchController
@@ -56,6 +83,7 @@
 
 - (void) loadFromApi
 {
+    SVHUD_SHOW;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         @try
         {
@@ -68,6 +96,7 @@
                 id jsonData = [NSJSONSerialization JSONObjectWithData:mydata options:kNilOptions error:&error];
                 id requiredArray = [jsonData valueForKey:@"data"];
                 array = [EventsDetailsJSONModel getArrayFromJson:requiredArray];
+                [self saveLocalData:jsonData];
                 filteredEvents = [NSMutableArray new];
                 NSMutableArray *filter = [NSMutableArray arrayWithArray:array];
                 for (EventsDetailsJSONModel *dict in filter)
@@ -79,6 +108,7 @@
                 }
                 array = [filteredEvents copy];
                 dispatch_async(dispatch_get_main_queue(), ^{
+                    SVHUD_HIDE;
                     [eventsTable reloadData];
                 });
             }
@@ -166,16 +196,22 @@
     return 46.f;
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    return  [UIView new];
+}
+
+
 # pragma mark - Search
 
-- (void)updateSearchResultsForSearchController:(UISearchController *)searchController
-{
+- (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
+    
     UISearchBar *searchBar = searchController.searchBar;
     if (searchBar.text.length > 0)
     {
         [self filterEventsForSearchString:searchBar.text andScopeBarTitle:searchBar.scopeButtonTitles[searchBar.selectedScopeButtonIndex]];
     } else {
         filteredEvents = [NSMutableArray arrayWithArray:array];
+        [eventsTable reloadData];
     }
 }
 

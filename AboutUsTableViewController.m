@@ -10,7 +10,6 @@
 
 @interface AboutUsTableViewController ()
 
-
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *backButton;
 
 @end
