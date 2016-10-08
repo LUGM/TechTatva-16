@@ -19,6 +19,8 @@
     
     NSString *onlineeventsUrl;
     NSString *registerUrl;
+	
+	BOOL loadedFirebase;
 }
 
 @end
@@ -40,17 +42,21 @@
     self.remoteConfig = [FIRRemoteConfig remoteConfig];
     FIRRemoteConfigSettings *remoteConfigSettings = [[FIRRemoteConfigSettings alloc] initWithDeveloperModeEnabled:YES];
     self.remoteConfig.configSettings = remoteConfigSettings;
+	
+	loadedFirebase = NO;
     
     reachability = [Reachability reachabilityForInternetConnection];
-    if (reachability.isReachable)
+	if (reachability.isReachable) {
         [self fetchUrl];
-    else
+	} else {
         [self useLocal];
+	}
+
 }
 
 - (void) fetchUrl
 {
-    SVHUD_SHOW;
+//    SVHUD_SHOW;
     [self.remoteConfig fetchWithExpirationDuration:0 completionHandler:^(FIRRemoteConfigFetchStatus status, NSError *error) {
         if (status == FIRRemoteConfigFetchStatusSuccess) {
             NSLog(@"Config fetched!");
@@ -58,7 +64,8 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 onlineeventsUrl = [NSString stringWithFormat:@"%@", self.remoteConfig[@"onlineevents"].stringValue];
                 registerUrl = [NSString stringWithFormat:@"%@", self.remoteConfig[@"register"].stringValue];
-                SVHUD_HIDE;
+//                SVHUD_HIDE;
+				loadedFirebase = YES;
                 [[NSUserDefaults standardUserDefaults] setObject:onlineeventsUrl forKey:@"onlineevents"];
                 [[NSUserDefaults standardUserDefaults] setObject:registerUrl forKey:@"register"];
             });
@@ -119,7 +126,7 @@
     cell.textLabel.text = [labelArray objectAtIndex:indexPath.row];
     cell.textLabel.textAlignment = NSTextAlignmentCenter;
     cell.textLabel.font = [UIFont systemFontOfSize:18.f weight:UIFontWeightMedium];
-    
+	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     // Configure the cell...
     
     return cell;
@@ -133,14 +140,14 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    if (indexPath.row == 0) {
+    if (indexPath.row == 0 && loadedFirebase) {
         if (reachability.isReachable)
         {
             UINavigationController *dest = [storyboard instantiateViewControllerWithIdentifier:@"onlineNav"];
             [self presentViewController:dest animated:YES completion:nil];
         }
     }
-    else if (indexPath.row == 1) {
+    else if (indexPath.row == 1 && loadedFirebase) {
         if (reachability.isReachable)
         {
             UINavigationController *dest = [storyboard instantiateViewControllerWithIdentifier:@"registerNav"];

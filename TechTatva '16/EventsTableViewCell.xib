@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -71,16 +71,23 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ek-tn-I6w">
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="ffw-Ml-J0Y"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="K1h-U7-6kx" firstAttribute="top" secondItem="ud9-Hm-9hc" secondAttribute="bottom" constant="8" id="5lI-rI-FCH"/>
                     <constraint firstItem="CyH-mi-MXn" firstAttribute="leading" secondItem="f49-oe-kcA" secondAttribute="leadingMargin" id="6oC-6S-xmW"/>
                     <constraint firstItem="GWp-VF-I3a" firstAttribute="bottom" secondItem="9wb-Hh-mLN" secondAttribute="bottom" id="6ua-zu-UzC"/>
-                    <constraint firstItem="pOJ-FJ-bhm" firstAttribute="leading" secondItem="K1h-U7-6kx" secondAttribute="trailing" constant="16" id="7SY-YW-Cay"/>
+                    <constraint firstItem="pOJ-FJ-bhm" firstAttribute="leading" secondItem="K1h-U7-6kx" secondAttribute="trailing" constant="32" id="7SY-YW-Cay"/>
                     <constraint firstItem="ud9-Hm-9hc" firstAttribute="top" secondItem="9wb-Hh-mLN" secondAttribute="bottom" constant="8" id="7b5-lF-BMe"/>
                     <constraint firstItem="CyH-mi-MXn" firstAttribute="top" secondItem="9Fl-y7-TBa" secondAttribute="bottom" constant="8" id="85o-4j-RjC"/>
                     <constraint firstItem="9wb-Hh-mLN" firstAttribute="leading" secondItem="J77-ze-Sad" secondAttribute="leading" id="9Xq-mH-4Dt"/>
                     <constraint firstItem="9Fl-y7-TBa" firstAttribute="leading" secondItem="K1h-U7-6kx" secondAttribute="leading" id="AWt-SH-nkG"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="8ek-tn-I6w" secondAttribute="bottom" constant="-7" id="CWf-7Z-xHS"/>
                     <constraint firstItem="pOJ-FJ-bhm" firstAttribute="top" secondItem="K1h-U7-6kx" secondAttribute="top" id="G9V-yk-tbM"/>
                     <constraint firstItem="9wb-Hh-mLN" firstAttribute="top" secondItem="J77-ze-Sad" secondAttribute="bottom" constant="8" id="Hyd-Vg-DxG"/>
                     <constraint firstItem="J77-ze-Sad" firstAttribute="leading" secondItem="f49-oe-kcA" secondAttribute="leadingMargin" constant="12" id="LDA-QL-B86"/>
@@ -94,7 +101,9 @@
                     <constraint firstItem="GWp-VF-I3a" firstAttribute="leading" secondItem="9wb-Hh-mLN" secondAttribute="trailing" constant="8" id="fEW-Dh-zsR"/>
                     <constraint firstAttribute="trailingMargin" secondItem="GWp-VF-I3a" secondAttribute="trailing" constant="8" id="iCp-1q-wHn"/>
                     <constraint firstItem="GWp-VF-I3a" firstAttribute="top" secondItem="9wb-Hh-mLN" secondAttribute="top" id="iDg-bd-d7I"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="8ek-tn-I6w" secondAttribute="trailing" constant="-20" id="mU2-Az-Dc5"/>
                     <constraint firstItem="ud9-Hm-9hc" firstAttribute="leading" secondItem="9wb-Hh-mLN" secondAttribute="leading" id="mfy-Oe-CPF"/>
+                    <constraint firstItem="8ek-tn-I6w" firstAttribute="leading" secondItem="f49-oe-kcA" secondAttribute="leadingMargin" constant="-20" id="rWu-iY-yeT"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

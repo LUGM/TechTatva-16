@@ -41,6 +41,7 @@
     reachability = [Reachability reachabilityForInternetConnection];
     if (reachability.isReachable)
     {
+		SVHUD_SHOW;
         [self loadFromApi];
     }
     else
@@ -48,8 +49,6 @@
     
     allEventsArray = [[NSArray alloc]initWithArray:fetchArray];
     searchedAllEventsArray = [[NSMutableArray alloc]initWithArray:allEventsArray];
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyBoardShown:) name:UIKeyboardDidShowNotification object:nil];
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyBoardHidden:) name:UIKeyboardWillHideNotification object:nil];
 	
 	[allEventsTableView registerNib:[UINib nibWithNibName:@"AllEventsTableViewCell" bundle:nil] forCellReuseIdentifier:@"AllEveCell"];
     
@@ -58,7 +57,7 @@
 	[self.navigationController.navigationBar setTranslucent:NO];
 	[self.navigationController.navigationBar setShadowImage:[UIImage imageNamed:@"TransparentPixel"]];
 	[self.navigationController.navigationBar setBackgroundColor:GLOBAL_BACK_COLOR];
-//	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"Pixel"] forBarMetrics:UIBarMetricsDefault];
+	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"Pixel"] forBarMetrics:UIBarMetricsDefault];
 }
 
 - (void) loadFromCache
@@ -91,13 +90,15 @@
 	tfield.backgroundColor = [UIColor colorWithWhite:0.85 alpha:1.0];
     self.searchController.searchBar.delegate = self;
 	self.searchController.searchBar.showsScopeBar = NO;
-	self.searchController.searchBar.scopeButtonTitles = @[@"DAY 1", @"DAY 2", @"DAY 3", @"DAY 4"];
+//	self.searchController.searchBar.scopeButtonTitles = @[@"DAY 1", @"DAY 2", @"DAY 3", @"DAY 4"]; // FRAK THIS SHIT; I'LL FRAKKING PUT IT IN THE NAV BAR
     self.searchController.searchBar.backgroundColor = GLOBAL_BACK_COLOR;
     self.searchController.searchBar.tintColor = GLOBAL_TINT_RED;
 	self.searchController.searchBar.barTintColor = GLOBAL_BACK_COLOR;
     self.searchController.dimsBackgroundDuringPresentation = NO;
-    self.definesPresentationContext = YES;
-    allEventsTableView.tableHeaderView = self.searchController.searchBar;
+	self.searchController.hidesNavigationBarDuringPresentation = NO;
+    self.definesPresentationContext = NO;
+//    allEventsTableView.tableHeaderView = self.searchController.searchBar;
+	self.navigationItem.titleView = self.searchController.searchBar;
 }
 
 - (void) loadFromApi
@@ -116,6 +117,7 @@
                 array = [ScheduleJsonDataModel getArrayFromJson:requiredArray];
                 [self saveLocalData:jsonData];
 //                filteredEvents = [array mutableCopy];
+				SVHUD_HIDE;
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self filterEventsForSelectedSegmentTitle:[allEventsSegmentControl titleForSegmentAtIndex:allEventsSegmentControl.selectedSegmentIndex]];
                 });
@@ -130,46 +132,6 @@
     });
 }
 
--(void)keyBoardShown:(NSNotification *)note
-{
-    CGRect keyboardFrame;
-    [[[note userInfo]objectForKey:UIKeyboardFrameEndUserInfoKey]getValue:&keyboardFrame];
-    CGRect tableviewFrame = allEventsTableView.frame;
-    tableviewFrame.size.height -= keyboardFrame.size.height;
-    [allEventsTableView setFrame:tableviewFrame];
-}
-
--(void)keyBoardHidden:(NSNotification *)note
-{
-    [allEventsTableView setFrame:self.view.bounds];
-}
-
--(void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
-{
-    if(searchText.length == 0)
-    {
-        [searchedAllEventsArray removeAllObjects];
-        [searchedAllEventsArray addObjectsFromArray:allEventsArray];
-    }
-    else{
-        [searchedAllEventsArray removeAllObjects];
-        for(NSString *string in allEventsArray)
-        {
-            NSRange r = [string rangeOfString:searchText options:NSCaseInsensitiveSearch];
-            if(r.location != NSNotFound)
-            {
-                [searchedAllEventsArray addObject:string];
-            }
-        }
-    }
-    [allEventsTableView reloadData];
-}
-
--(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
-{
-    [eventsSearchBar resignFirstResponder];
-}
-
 - (BOOL)checkIfFavorite:(NSString *)eventID
 {
     NSFetchRequest *fetchFavourite = [NSFetchRequest fetchRequestWithEntityName:@"Favourite"];
@@ -181,23 +143,16 @@
 
 - (IBAction)allEventsSegmentChange:(id)sender
 {
-    if(allEventsSegmentControl.selectedSegmentIndex == 0)
-    {
+    if(allEventsSegmentControl.selectedSegmentIndex == 0) {
         NSLog(@"Day 1 selected.");
-    }
-    else if(allEventsSegmentControl.selectedSegmentIndex == 1)
-    {
+    } else if(allEventsSegmentControl.selectedSegmentIndex == 1) {
         NSLog(@"Day 2 selected.");
-    }
-    else if(allEventsSegmentControl.selectedSegmentIndex == 2)
-    {
+    } else if(allEventsSegmentControl.selectedSegmentIndex == 2) {
         NSLog(@"Day 3 selected.");
-    }
-    else if(allEventsSegmentControl.selectedSegmentIndex == 3)
-    {
+    } else if(allEventsSegmentControl.selectedSegmentIndex == 3) {
         NSLog(@"Day 4 selected.");
     }
-    [self filterEventsForSelectedSegmentTitle:[allEventsSegmentControl titleForSegmentAtIndex:allEventsSegmentControl.selectedSegmentIndex]];
+	[self filterEventsForSearchString:self.searchController.searchBar.text andScopeBarTitle:[allEventsSegmentControl titleForSegmentAtIndex:allEventsSegmentControl.selectedSegmentIndex]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -240,6 +195,10 @@
     [cell.rateEvent addTarget:self action:@selector(rateEvent:) forControlEvents:UIControlEventTouchUpInside];
     [cell.favouritesButton addTarget:self action:@selector(switchFavourites:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+	[self.searchController.searchBar resignFirstResponder];
 }
 
 - (BOOL) checkTheDate
@@ -399,7 +358,8 @@
             [self filterEventsForSearchString:searchBar.text andScopeBarTitle:[allEventsSegmentControl titleForSegmentAtIndex:allEventsSegmentControl.selectedSegmentIndex]];
     }
     else {
-        [self filterEventsForSelectedSegmentTitle:[allEventsSegmentControl titleForSegmentAtIndex:allEventsSegmentControl.selectedSegmentIndex]];
+        filteredEvents = [array mutableCopy];
+		[allEventsTableView reloadData];
     }
 }
 
@@ -412,17 +372,21 @@
         [self searchBarCancelButtonClicked:searchBar];
 }
 
-- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
-{
-    [self filterEventsForSelectedSegmentTitle:[allEventsSegmentControl titleForSegmentAtIndex:allEventsSegmentControl.selectedSegmentIndex]];
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+	filteredEvents = [array mutableCopy];
+	[allEventsTableView reloadData];
 }
 
-- (void)didPresentSearchController:(UISearchController *)searchController {
-	self.tableViewTopConstraint.constant = 4.f;
-}
-
-- (void)didDismissSearchController:(UISearchController *)searchController {
-	self.tableViewTopConstraint.constant = 0.f;
-}
+//- (void)didPresentSearchController:(UISearchController *)searchController {
+//	[UIView animateWithDuration:0.3 animations:^{
+//		self.tableViewTopConstraint.constant = 4.f;
+//	}];
+//}
+//
+//- (void)didDismissSearchController:(UISearchController *)searchController {
+//	[UIView animateWithDuration:0.3 animations:^{
+//		self.tableViewTopConstraint.constant = 0.f;
+//	}];
+//}
 
 @end

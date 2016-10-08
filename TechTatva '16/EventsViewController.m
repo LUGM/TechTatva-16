@@ -9,6 +9,7 @@
 #import "EventsViewController.h"
 #import "EventsTableViewCell.h"
 #import "EventsDetailsJSONModel.h"
+#import "DADataManager.h"
 
 @interface EventsViewController () <UISearchResultsUpdating, UISearchBarDelegate, UISearchControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 
@@ -34,33 +35,29 @@
 	[eventsTable registerNib:[UINib nibWithNibName:@"EventsTableViewCell" bundle:nil] forCellReuseIdentifier:@"eventsCell"];
 	
     reachability = [Reachability reachabilityForInternetConnection];
-    if (reachability.isReachable)
-    {
+    if (reachability.isReachable) {
+		  SVHUD_SHOW;
         [self loadFromApi];
-    }
-    else
+	} else {
         [self loadFromCache];
+	}
 
 }
 
 - (void) loadFromCache
 {
-    NSUserDefaults *catEvents =[NSUserDefaults standardUserDefaults];
-    //    NSLog(@"CACHE %@", [categoryData objectForKey:@"category"]);
-    if ([catEvents objectForKey:@"catevents"] != nil)
-    {
-        id savedData = [catEvents objectForKey:@"catevents"];
-        id requiredArray = [savedData valueForKey:@"data"];
-        array = [EventsDetailsJSONModel getArrayFromJson:requiredArray];
-    }
+	id jsonData = [[DADataManager sharedManager] fetchJSONFromDocumentsFileName:@"catevents.dat"];
+	id requiredArray = [jsonData valueForKey:@"data"];
+	array = [EventsDetailsJSONModel getArrayFromJson:requiredArray];
+	[self saveLocalData:jsonData];
+	filteredEvents = [[array filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"categoryEventId == %@", self.categoryID]] mutableCopy];
+	array = [filteredEvents copy];
+	[eventsTable reloadData];
     SVHUD_HIDE;
 }
 
-- (void) saveLocalData:(id)jsonData
-{
-    NSUserDefaults *catEvents = [NSUserDefaults standardUserDefaults];
-    [catEvents setObject:jsonData forKey:@"catevents"];
-    [catEvents synchronize];
+- (void) saveLocalData:(id)jsonData {
+	[[DADataManager sharedManager] saveObject:jsonData toDocumentsFile:@"catevents.dat"];
 }
 
 - (void) setupSearchController
@@ -94,18 +91,10 @@
             if (mydata!=nil)
             {
                 id jsonData = [NSJSONSerialization JSONObjectWithData:mydata options:kNilOptions error:&error];
+				[self saveLocalData:jsonData];
                 id requiredArray = [jsonData valueForKey:@"data"];
                 array = [EventsDetailsJSONModel getArrayFromJson:requiredArray];
-                [self saveLocalData:jsonData];
-                filteredEvents = [NSMutableArray new];
-                NSMutableArray *filter = [NSMutableArray arrayWithArray:array];
-                for (EventsDetailsJSONModel *dict in filter)
-                {
-                    if ([dict.categoryEventId isEqualToString:_categoryID])
-                    {
-                        [filteredEvents addObject:dict];
-                    }
-                }
+				filteredEvents = [[array filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"categoryEventId == %@", self.categoryID]] mutableCopy];
                 array = [filteredEvents copy];
                 dispatch_async(dispatch_get_main_queue(), ^{
                     SVHUD_HIDE;
@@ -166,10 +155,11 @@
 
 - (void) callEventHead:(id)sender
 {
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[sender tag] inSection:0];
+	NSIndexPath *indexPath = [eventsTable indexPathForRowAtPoint:[sender convertPoint:CGPointZero toView:eventsTable]];
     EventsDetailsJSONModel *event = [filteredEvents objectAtIndex:indexPath.row];
-    NSURL *phoneURL = [NSURL URLWithString:[NSString stringWithFormat:@"tel://%@", event.cntctno]];
-    [[UIApplication sharedApplication] openURL:phoneURL];
+	NSString *URLString = [NSString stringWithFormat:@"telprompt://+91%@", event.cntctno];
+	NSURL *URL = [NSURL URLWithString:[URLString stringByReplacingOccurrencesOfString:@" " withString:@""]];
+    [[UIApplication sharedApplication] openURL:URL];
 }
 
 - (void)didReceiveMemoryWarning {

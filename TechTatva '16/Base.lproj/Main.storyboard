@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="s3v-As-HPZ">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="s3v-As-HPZ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -12,10 +12,11 @@
         <scene sceneID="5WZ-28-hdL">
             <objects>
                 <tableViewController id="ap7-x5-agp" customClass="CategoriesTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="R8g-uq-Wkn">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="52" sectionHeaderHeight="28" sectionFooterHeight="28" id="R8g-uq-Wkn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <inset key="separatorInset" minX="64" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <connections>
                             <outlet property="dataSource" destination="ap7-x5-agp" id="S5w-2z-zLL"/>
                             <outlet property="delegate" destination="ap7-x5-agp" id="Run-ff-IGY"/>
@@ -39,11 +40,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hd0-hV-e9B">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="40" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hd0-hV-e9B">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="eBJ-IY-SG3" id="qoh-MM-ONX"/>
-                                    <outlet property="delegate" destination="eBJ-IY-SG3" id="WJZ-WM-Jga"/>
+                                    <outlet property="delegate" destination="eBJ-IY-SG3" id="cXx-3a-7rw"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -202,7 +203,7 @@
                             <tableViewSection headerTitle="About Us" id="8Bl-PI-Nq7">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="aboutCell" rowHeight="363" id="RAX-5X-tiz">
-                                        <rect key="frame" x="0.0" y="120" width="375" height="363"/>
+                                        <rect key="frame" x="0.0" y="119.5" width="375" height="363"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RAX-5X-tiz" id="oCs-ap-BEz">
                                             <frame key="frameInset" width="375" height="362"/>
@@ -231,22 +232,12 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                             <tableViewSection headerTitle="Follow Us" id="Lmx-l9-4ZD">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="aboutCell" rowHeight="56" id="9gh-Xi-Ae1">
-                                        <rect key="frame" x="0.0" y="539" width="375" height="56"/>
+                                        <rect key="frame" x="0.0" y="538.5" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9gh-Xi-Ae1" id="SL1-P4-qEs">
                                             <frame key="frameInset" width="375" height="55"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVI-JT-Y1s" userLabel="fbButton">
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="30" id="LeZ-Jw-P7H"/>
-                                                        <constraint firstAttribute="height" constant="30" id="Sk9-1K-ZRh"/>
-                                                    </constraints>
-                                                    <state key="normal" backgroundImage="fb.png"/>
-                                                    <connections>
-                                                        <action selector="facebookAction:" destination="8WT-jK-Sik" eventType="touchUpInside" id="edZ-xk-B5y"/>
-                                                    </connections>
-                                                </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNm-ts-OpP">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="UVA-zK-rv2"/>
@@ -287,18 +278,28 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                                                         <action selector="snapchatAction:" destination="8WT-jK-Sik" eventType="touchUpInside" id="kGA-Sa-hWA"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVI-JT-Y1s" userLabel="fbButton">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="LeZ-Jw-P7H"/>
+                                                        <constraint firstAttribute="height" constant="30" id="Sk9-1K-ZRh"/>
+                                                    </constraints>
+                                                    <state key="normal" backgroundImage="fb.png"/>
+                                                    <connections>
+                                                        <action selector="facebookAction:" destination="8WT-jK-Sik" eventType="touchUpInside" id="edZ-xk-B5y"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="hVI-JT-Y1s" firstAttribute="leading" secondItem="SL1-P4-qEs" secondAttribute="leadingMargin" constant="25" id="4fD-fP-qYJ"/>
-                                                <constraint firstItem="ygv-or-1AP" firstAttribute="centerY" secondItem="SL1-P4-qEs" secondAttribute="centerY" id="4gD-Vc-E0T"/>
-                                                <constraint firstItem="fJC-x6-MLU" firstAttribute="centerY" secondItem="SL1-P4-qEs" secondAttribute="centerY" id="JOz-Ni-fOz"/>
-                                                <constraint firstItem="fJC-x6-MLU" firstAttribute="leading" secondItem="eyU-CC-RDu" secondAttribute="trailing" constant="30" id="Rrj-Dx-AaD"/>
-                                                <constraint firstItem="eyU-CC-RDu" firstAttribute="leading" secondItem="ygv-or-1AP" secondAttribute="trailing" constant="30" id="VHP-s6-eHr"/>
-                                                <constraint firstItem="ygv-or-1AP" firstAttribute="leading" secondItem="tNm-ts-OpP" secondAttribute="trailing" constant="30" id="fCg-A7-l3W"/>
-                                                <constraint firstItem="tNm-ts-OpP" firstAttribute="leading" secondItem="hVI-JT-Y1s" secondAttribute="trailing" constant="30" id="pj3-Vd-eFw"/>
-                                                <constraint firstItem="tNm-ts-OpP" firstAttribute="centerY" secondItem="SL1-P4-qEs" secondAttribute="centerY" id="rV9-VS-mB0"/>
-                                                <constraint firstItem="hVI-JT-Y1s" firstAttribute="centerY" secondItem="SL1-P4-qEs" secondAttribute="centerY" id="t0k-pK-JKN"/>
-                                                <constraint firstItem="eyU-CC-RDu" firstAttribute="centerY" secondItem="SL1-P4-qEs" secondAttribute="centerY" id="tfb-ML-cZ5"/>
+                                                <constraint firstItem="tNm-ts-OpP" firstAttribute="centerY" secondItem="ygv-or-1AP" secondAttribute="centerY" id="50w-tv-OX4"/>
+                                                <constraint firstItem="ygv-or-1AP" firstAttribute="centerX" secondItem="SL1-P4-qEs" secondAttribute="centerX" id="ChH-ut-xNA"/>
+                                                <constraint firstItem="hVI-JT-Y1s" firstAttribute="centerY" secondItem="tNm-ts-OpP" secondAttribute="centerY" id="QOs-KU-lCm"/>
+                                                <constraint firstItem="tNm-ts-OpP" firstAttribute="leading" secondItem="hVI-JT-Y1s" secondAttribute="trailing" constant="30" id="ZPe-pb-6Pe"/>
+                                                <constraint firstItem="ygv-or-1AP" firstAttribute="leading" secondItem="tNm-ts-OpP" secondAttribute="trailing" constant="30" id="aVa-69-g8y"/>
+                                                <constraint firstItem="fJC-x6-MLU" firstAttribute="leading" secondItem="eyU-CC-RDu" secondAttribute="trailing" constant="30" id="bVD-yh-2hc"/>
+                                                <constraint firstItem="eyU-CC-RDu" firstAttribute="leading" secondItem="ygv-or-1AP" secondAttribute="trailing" constant="30" id="gLO-eO-KN5"/>
+                                                <constraint firstItem="fJC-x6-MLU" firstAttribute="centerY" secondItem="eyU-CC-RDu" secondAttribute="centerY" id="iR3-gc-VcZ"/>
+                                                <constraint firstItem="ygv-or-1AP" firstAttribute="centerY" secondItem="SL1-P4-qEs" secondAttribute="centerY" id="ksj-Xc-57g"/>
+                                                <constraint firstItem="eyU-CC-RDu" firstAttribute="centerY" secondItem="ygv-or-1AP" secondAttribute="centerY" id="s1B-Tr-QMn"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1022,15 +1023,15 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="hIm-gX-CVr" secondAttribute="trailing" constant="-20" id="7EZ-4W-cgq"/>
                                     <constraint firstAttribute="bottom" secondItem="Gpn-x2-A5D" secondAttribute="bottom" constant="8" id="SA9-bK-3fS"/>
-                                    <constraint firstItem="Gpn-x2-A5D" firstAttribute="top" secondItem="RHR-Gy-Kfh" secondAttribute="top" constant="8" id="ToR-cc-Jii"/>
-                                    <constraint firstAttribute="height" constant="44" id="dSC-bS-yaa"/>
+                                    <constraint firstItem="Gpn-x2-A5D" firstAttribute="top" secondItem="RHR-Gy-Kfh" secondAttribute="top" constant="2" id="ToR-cc-Jii"/>
+                                    <constraint firstAttribute="height" constant="36" id="dSC-bS-yaa"/>
                                     <constraint firstItem="hIm-gX-CVr" firstAttribute="leading" secondItem="RHR-Gy-Kfh" secondAttribute="leading" constant="-20" id="goq-ou-Sq2"/>
                                     <constraint firstAttribute="bottom" secondItem="hIm-gX-CVr" secondAttribute="bottom" id="se6-oN-sq3"/>
                                     <constraint firstAttribute="trailing" secondItem="Gpn-x2-A5D" secondAttribute="trailing" constant="8" id="wd2-WS-YTr"/>
                                     <constraint firstItem="Gpn-x2-A5D" firstAttribute="leading" secondItem="RHR-Gy-Kfh" secondAttribute="leading" constant="8" id="xeu-TD-qji"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="143" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z09-ML-YIf">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="143" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z09-ML-YIf">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="yeY-ev-aId" id="PV5-7k-7hS"/>

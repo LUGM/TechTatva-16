@@ -52,7 +52,7 @@
     cell.jobLabel.text = [jobsArray objectAtIndex:indexPath.row];
     cell.devImage.layer.masksToBounds = YES;
     cell.devImage.layer.cornerRadius = 45;
-//    cell.devImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png", [namesArray objectAtIndex:indexPath.row]]];
+    cell.devImage.image = [UIImage imageNamed:[namesArray objectAtIndex:indexPath.row]];
     [cell.nameLabel setTextColor:[UIColor blackColor]];
     
     return cell;

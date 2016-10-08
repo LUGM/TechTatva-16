@@ -123,7 +123,7 @@
     }
     CategoriesJSONModel *model = [array objectAtIndex:indexPath.row];
     cell.nameLabel.text = model.catName;
-    cell.categoryImage = nil;
+    cell.categoryImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@", model.catId]];
     return cell;
 }
 
