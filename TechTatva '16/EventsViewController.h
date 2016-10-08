@@ -17,5 +17,6 @@
 }
 
 @property (strong, nonatomic) NSString *categoryID;
+@property (strong, nonatomic) NSString *categoryName;
 
 @end

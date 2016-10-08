@@ -51,7 +51,7 @@
             </objects>
             <point key="canvasLocation" x="2450" y="-134"/>
         </scene>
-        <!--Events-->
+        <!--Events View Controller-->
         <scene sceneID="ETt-w8-Smw">
             <objects>
                 <viewController id="eBJ-IY-SG3" customClass="EventsViewController" sceneMemberID="viewController">
@@ -79,7 +79,7 @@
                             <constraint firstItem="CRZ-CJ-7Uh" firstAttribute="top" secondItem="hd0-hV-e9B" secondAttribute="bottom" id="k7s-PF-7Lr"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Events" id="gPF-1j-abf">
+                    <navigationItem key="navigationItem" id="gPF-1j-abf">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="C4j-pL-mmD">
                             <connections>
                                 <action selector="dismissVC:" destination="eBJ-IY-SG3" id="gK8-it-79v"/>

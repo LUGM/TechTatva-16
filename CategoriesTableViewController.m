@@ -73,7 +73,7 @@
     UINavigationController *navController = [storyboard instantiateViewControllerWithIdentifier:@"eventListNav"];
     EventsViewController *destController = [navController viewControllers][0];
     CategoriesJSONModel *model = [array objectAtIndex:indexPath.row];
-    destController.title = @"Category Events";
+    destController.title = model.catName;
     destController.categoryID = model.catId;
     [self presentViewController:navController animated:YES completion:nil];
 }
