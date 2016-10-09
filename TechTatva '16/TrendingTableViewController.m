@@ -24,7 +24,8 @@
 	BOOL loadedFirebase;
 }
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -54,25 +55,15 @@
 	self.tableView.rowHeight = UITableViewAutomaticDimension;
 }
 
-- (void) loadFromCache {
+- (void) loadFromCache
+{
 	NSUserDefaults *categoryData =[NSUserDefaults standardUserDefaults];
-	//    NSLog(@"CACHE %@", [categoryData objectForKey:@"category"]);
 	if ([categoryData objectForKey:@"category"] != nil)
 	{
 		id savedData = [categoryData objectForKey:@"category"];
 		id requiredArray = [savedData valueForKey:@"data"];
 		array = [CategoriesRatedJSONModel getArrayFromJson:requiredArray];
-//		CategoriesRatedJSONModel *turing;
-//		for (CategoriesRatedJSONModel *item in array) {
-//			if ([item.catName isEqualToString:@"Turing"]) {
-//				turing = item;
-//				break;
-//			}
-//		}
-//		[array removeObject:turing];
-//		[array insertObject:turing atIndex:(arc4random_uniform(3) + 3)];
 	}
-
 }
 
 - (void) loadTrending
@@ -89,7 +80,6 @@
 				for (id innerKey in catDetails)
 				{
 					NSInteger rate = [[[catDetails objectForKey:innerKey] objectForKey:@"rating"] integerValue];
-//					NSLog(@"rater woohoo %li", (long) rate);
 					[currentCat addScore:rate];
 				}
 			}
@@ -100,11 +90,11 @@
 			loadedFirebase = YES;
 			[self.tableView reloadData];
 		});
-//		NSLog(@"Firebase data: %@", data);
     }];
 }
 
-- (void) checkTheDate {
+- (void) checkTheDate
+{
     NSDate *now = [NSDate date];
     NSString *dateString = @"2016-10-12";
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -117,6 +107,11 @@
         [alert show];
         [self dismissViewControllerAnimated:YES completion:nil];
     }
+}
+
+- (IBAction)simonGoBack:(id)sender
+{
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

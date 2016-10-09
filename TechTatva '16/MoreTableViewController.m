@@ -163,16 +163,16 @@
         [self presentViewController:dest animated:YES completion:nil];
     }
     else if (indexPath.row == 4) {
-//        if ([self checkTheDate])
-//        {
+        if ([self checkTheDate])
+        {
             UINavigationController *dest = [storyboard instantiateViewControllerWithIdentifier:@"trendingNav"];
             [self presentViewController:dest animated:YES completion:nil];
-//        }
-//        else
-//        {
-//            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Too Early!" message:@"TechTatva 16 has not yet started. No categories are trending. Check back later" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-//            [alert show];
-//        }
+        }
+        else
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Too Early!" message:@"TechTatva 16 has not yet started. No categories are trending. Check back later" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alert show];
+        }
     }
     else if (indexPath.row == 5) {
         UINavigationController *dest = [storyboard instantiateViewControllerWithIdentifier:@"developersNav"];

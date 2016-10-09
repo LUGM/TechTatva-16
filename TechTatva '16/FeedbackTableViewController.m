@@ -41,7 +41,7 @@
     {
         FIRDatabaseReference *actualReference = [self.ref childByAutoId];
         NSString *rating = [NSString stringWithFormat:@"%ld", (long) self.favCount];
-        NSDictionary *upload = @{@"category":_nameOfCategory, @"rating":rating};
+        NSDictionary *upload = @{@"categoryName":_nameOfCategory, @"categoryID":_categoryId, @"rating":rating};
         [actualReference setValue:upload withCompletionBlock:^(NSError * _Nullable error, FIRDatabaseReference * _Nonnull ref) {
             NSString *alertMessage;
             NSString *alertTitle;
