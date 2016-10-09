@@ -809,6 +809,69 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
             </objects>
             <point key="canvasLocation" x="7919.1999999999998" y="2845.7271364317844"/>
         </scene>
+        <!--LUG Manipal-->
+        <scene sceneID="4HD-i5-KwA">
+            <objects>
+                <viewController id="S9L-Ny-fbm" customClass="EasterEggViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LMT-q1-3VI"/>
+                        <viewControllerLayoutGuide type="bottom" id="qnV-Ip-HJO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6jq-C5-Rrt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YVG-z6-ecw"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lsf-GS-rVb"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTt-bN-Ftv">
+                                <frame key="frameInset" minX="164" minY="146" width="46" height="46"/>
+                                <state key="normal" backgroundImage="fb.png"/>
+                                <connections>
+                                    <action selector="facebookButtonPressed:" destination="S9L-Ny-fbm" eventType="touchUpInside" id="qCO-lm-R1l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEG-gT-C5Z">
+                                <state key="normal" image="GitHub Filled-100.png"/>
+                                <connections>
+                                    <action selector="gitButtonPressed:" destination="S9L-Ny-fbm" eventType="touchUpInside" id="l50-Di-E3Y"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHAKE TO GO BACK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUJ-NW-2Gh">
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Lsf-GS-rVb" firstAttribute="leading" secondItem="6jq-C5-Rrt" secondAttribute="leadingMargin" constant="51" id="0AR-6t-cEU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YVG-z6-ecw" secondAttribute="trailing" constant="-16" id="2sY-K4-0wr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rUJ-NW-2Gh" secondAttribute="trailing" id="5Yr-ne-Wpa"/>
+                            <constraint firstItem="LEG-gT-C5Z" firstAttribute="top" secondItem="Lsf-GS-rVb" secondAttribute="bottom" constant="29" id="BlQ-YO-euK"/>
+                            <constraint firstItem="qnV-Ip-HJO" firstAttribute="top" secondItem="YVG-z6-ecw" secondAttribute="bottom" id="FcS-tr-8Cs"/>
+                            <constraint firstItem="YVG-z6-ecw" firstAttribute="leading" secondItem="6jq-C5-Rrt" secondAttribute="leadingMargin" constant="-16" id="J2F-BE-5vS"/>
+                            <constraint firstItem="LEG-gT-C5Z" firstAttribute="centerX" secondItem="Lsf-GS-rVb" secondAttribute="centerX" id="MQk-jH-Srl"/>
+                            <constraint firstItem="YVG-z6-ecw" firstAttribute="centerX" secondItem="6jq-C5-Rrt" secondAttribute="centerX" id="QOg-DD-w3D"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lsf-GS-rVb" secondAttribute="trailing" constant="52" id="Rxu-Bj-de0"/>
+                            <constraint firstItem="qnV-Ip-HJO" firstAttribute="top" secondItem="Lsf-GS-rVb" secondAttribute="bottom" constant="219" id="S2v-x6-sZL"/>
+                            <constraint firstItem="rUJ-NW-2Gh" firstAttribute="top" secondItem="LMT-q1-3VI" secondAttribute="bottom" constant="8" id="d5b-rh-j3h"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="rUJ-NW-2Gh" secondAttribute="leading" id="pjX-bs-fse"/>
+                            <constraint firstItem="Lsf-GS-rVb" firstAttribute="top" secondItem="LMT-q1-3VI" secondAttribute="bottom" constant="154" id="q3x-1c-dS5"/>
+                            <constraint firstItem="Lsf-GS-rVb" firstAttribute="top" secondItem="aTt-bN-Ftv" secondAttribute="bottom" constant="26" id="rg5-DI-IWD"/>
+                            <constraint firstItem="YVG-z6-ecw" firstAttribute="top" secondItem="LMT-q1-3VI" secondAttribute="bottom" id="vLE-iR-Qaz"/>
+                            <constraint firstItem="aTt-bN-Ftv" firstAttribute="centerX" secondItem="Lsf-GS-rVb" secondAttribute="centerX" id="zRT-tP-542"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="LUG Manipal" id="npF-Lc-Sug"/>
+                    <connections>
+                        <outlet property="backgroundImage" destination="YVG-z6-ecw" id="mwE-1B-YDK"/>
+                        <outlet property="logoImage" destination="Lsf-GS-rVb" id="n37-CT-3uH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LMC-ml-7lH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9928.7999999999993" y="2199.8500749625191"/>
+        </scene>
         <!--Schedule View Controller-->
         <scene sceneID="rCf-8E-DyO">
             <objects>
@@ -1723,10 +1786,29 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
             </objects>
             <point key="canvasLocation" x="1590" y="-878"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Jj6-ic-HqK">
+            <objects>
+                <navigationController storyboardIdentifier="easterEggNav" automaticallyAdjustsScrollViewInsets="NO" id="dMz-rd-jvp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7cx-4i-7vW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="S9L-Ny-fbm" kind="relationship" relationship="rootViewController" id="JMy-nZ-KfX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fjy-a8-LBP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8989.6000000000004" y="2199.8500749625191"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Category.png" width="25" height="25"/>
         <image name="Events.png" width="25" height="25"/>
+        <image name="GitHub Filled-100.png" width="50" height="50"/>
         <image name="Instagram.png" width="25" height="25"/>
         <image name="Results.png" width="25" height="25"/>
         <image name="Snapchat-100.png" width="100" height="100"/>

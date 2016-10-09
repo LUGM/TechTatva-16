@@ -331,6 +331,12 @@
 
 - (void)filterEventsForSearchString:(NSString *)searchString andScopeBarTitle:(NSString *)scopeTitle
 {
+    if ([searchString isEqualToString:@"Harambe"])
+    {
+        UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UINavigationController *navController = [storyboard instantiateViewControllerWithIdentifier:@"easterEggNav"];
+        [self presentViewController:navController animated:YES completion:nil];
+    }
     filteredEvents = [NSMutableArray arrayWithArray:array];
 	[filteredEvents sortUsingComparator:^NSComparisonResult(ScheduleJsonDataModel *obj1, ScheduleJsonDataModel *obj2) {
 		if ([obj1.catName isEqualToString:@"Turing"]) {
@@ -368,17 +374,5 @@
 	filteredEvents = [array mutableCopy];
 	[allEventsTableView reloadData];
 }
-
-//- (void)didPresentSearchController:(UISearchController *)searchController {
-//	[UIView animateWithDuration:0.3 animations:^{
-//		self.tableViewTopConstraint.constant = 4.f;
-//	}];
-//}
-//
-//- (void)didDismissSearchController:(UISearchController *)searchController {
-//	[UIView animateWithDuration:0.3 animations:^{
-//		self.tableViewTopConstraint.constant = 0.f;
-//	}];
-//}
 
 @end

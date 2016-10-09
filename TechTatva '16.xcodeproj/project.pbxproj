@@ -21,6 +21,12 @@
 		1828D81D1D7476B000E0454F /* CategoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1828D81B1D7476B000E0454F /* CategoriesTableViewCell.xib */; };
 		184A2AEB1DA5C51100D589DE /* Snapchat-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 184A2AEA1DA5C51100D589DE /* Snapchat-100.png */; };
 		18541FE01D6DD9370046EAD0 /* Favourites.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18541FDE1D6DD9370046EAD0 /* Favourites.xcdatamodeld */; };
+		185BD5E21DAACBA300DC2C9F /* EasterEggViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185BD5E11DAACBA300DC2C9F /* EasterEggViewController.m */; };
+		185BD5E71DAACDFE00DC2C9F /* GitHub Filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 185BD5E61DAACDFE00DC2C9F /* GitHub Filled-100.png */; };
+		185BD5EA1DAACF1000DC2C9F /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185BD5E91DAACF1000DC2C9F /* AudioController.m */; };
+		185BD5EC1DAAD1ED00DC2C9F /* hello.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 185BD5EB1DAAD1ED00DC2C9F /* hello.mp3 */; };
+		185BD5EF1DAAD25000DC2C9F /* linuxtux.png in Resources */ = {isa = PBXBuildFile; fileRef = 185BD5ED1DAAD25000DC2C9F /* linuxtux.png */; };
+		185BD5F01DAAD25000DC2C9F /* devimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 185BD5EE1DAAD25000DC2C9F /* devimg.png */; };
 		18749BC01D13F17600858B85 /* MoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18749BBF1D13F17600858B85 /* MoreTableViewController.m */; };
 		18749BC71D13F8FC00858B85 /* thumb_IMG_7632_1024.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18749BC61D13F8FC00858B85 /* thumb_IMG_7632_1024.jpg */; };
 		18749BCA1D14094700858B85 /* ResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18749BC91D14094700858B85 /* ResultsTableViewController.m */; };
@@ -127,6 +133,14 @@
 		1828D81B1D7476B000E0454F /* CategoriesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoriesTableViewCell.xib; sourceTree = "<group>"; };
 		184A2AEA1DA5C51100D589DE /* Snapchat-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Snapchat-100.png"; sourceTree = "<group>"; };
 		18541FDF1D6DD9370046EAD0 /* Favourites.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Favourites.xcdatamodel; sourceTree = "<group>"; };
+		185BD5E01DAACBA300DC2C9F /* EasterEggViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasterEggViewController.h; sourceTree = "<group>"; };
+		185BD5E11DAACBA300DC2C9F /* EasterEggViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasterEggViewController.m; sourceTree = "<group>"; };
+		185BD5E61DAACDFE00DC2C9F /* GitHub Filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GitHub Filled-100.png"; sourceTree = "<group>"; };
+		185BD5E81DAACF1000DC2C9F /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
+		185BD5E91DAACF1000DC2C9F /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioController.m; sourceTree = "<group>"; };
+		185BD5EB1DAAD1ED00DC2C9F /* hello.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hello.mp3; sourceTree = "<group>"; };
+		185BD5ED1DAAD25000DC2C9F /* linuxtux.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linuxtux.png; sourceTree = "<group>"; };
+		185BD5EE1DAAD25000DC2C9F /* devimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = devimg.png; sourceTree = "<group>"; };
 		18749BBE1D13F17600858B85 /* MoreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreTableViewController.h; sourceTree = "<group>"; };
 		18749BBF1D13F17600858B85 /* MoreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreTableViewController.m; sourceTree = "<group>"; };
 		18749BC61D13F8FC00858B85 /* thumb_IMG_7632_1024.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = thumb_IMG_7632_1024.jpg; sourceTree = "<group>"; };
@@ -423,6 +437,17 @@
 			name = Instagram;
 			sourceTree = "<group>";
 		};
+		185BD5E31DAACBAB00DC2C9F /* Easter Egg */ = {
+			isa = PBXGroup;
+			children = (
+				185BD5E81DAACF1000DC2C9F /* AudioController.h */,
+				185BD5E91DAACF1000DC2C9F /* AudioController.m */,
+				185BD5E01DAACBA300DC2C9F /* EasterEggViewController.h */,
+				185BD5E11DAACBA300DC2C9F /* EasterEggViewController.m */,
+			);
+			name = "Easter Egg";
+			sourceTree = "<group>";
+		};
 		1868992C1D6E34F800B82923 /* Favourites Core Data Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -495,6 +520,7 @@
 				18FFC4B21DA88596000CD00E /* Developers */,
 				18FFC4BC1DA88BCD000CD00E /* Trending */,
 				182782321DA8C5DF00BD8C34 /* Splash */,
+				185BD5E31DAACBAB00DC2C9F /* Easter Egg */,
 			);
 			path = "TechTatva '16";
 			sourceTree = "<group>";
@@ -502,6 +528,9 @@
 		188F51D71D0F08ED0083169D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				185BD5EB1DAAD1ED00DC2C9F /* hello.mp3 */,
+				185BD5ED1DAAD25000DC2C9F /* linuxtux.png */,
+				185BD5EE1DAAD25000DC2C9F /* devimg.png */,
 				59544E281DA9133C00BDA118 /* DADataManager */,
 				182782391DA8FA9F00BD8C34 /* GoogleService-Info.plist */,
 				18C3F2141D931513007F33DB /* PrefixHeader.pch */,
@@ -616,6 +645,7 @@
 				D66BE63C1DA12FFE005B2B39 /* Favourites.png */,
 				D6247BF71D7B0E74007F7FF1 /* fb@2x.png */,
 				D6247C011D7B145F007F7FF1 /* youtube.png */,
+				185BD5E61DAACDFE00DC2C9F /* GitHub Filled-100.png */,
 				D6247BF91D7B100C007F7FF1 /* google+@2x.png */,
 				D6247BFB1D7B100C007F7FF1 /* twitter@2x.png */,
 				D60BB7B61D70C3A40083D0C9 /* Calendar-50.png */,
@@ -818,6 +848,7 @@
 				D60BB7B51D70C0120083D0C9 /* EventsTableViewCell.xib in Resources */,
 				184A2AEB1DA5C51100D589DE /* Snapchat-100.png in Resources */,
 				188F51E71D0F08ED0083169D /* LaunchScreen.storyboard in Resources */,
+				185BD5EF1DAAD25000DC2C9F /* linuxtux.png in Resources */,
 				1827823A1DA8FA9F00BD8C34 /* GoogleService-Info.plist in Resources */,
 				D6C5949E1D1831E9006F19D0 /* likepic.png in Resources */,
 				D66BE63D1DA12FFE005B2B39 /* FilledFavourites.png in Resources */,
@@ -828,11 +859,14 @@
 				D60BB7BB1D70C3A40083D0C9 /* Calendar-50.png in Resources */,
 				D6C594A01D1831E9006F19D0 /* Comment.png in Resources */,
 				18749BC71D13F8FC00858B85 /* thumb_IMG_7632_1024.jpg in Resources */,
+				185BD5EC1DAAD1ED00DC2C9F /* hello.mp3 in Resources */,
 				D6A2B8CB1D847415008DE478 /* AllEventsTableViewCell.xib in Resources */,
 				D60BB7BD1D70C3A40083D0C9 /* Phone Filled-50.png in Resources */,
 				D6247BFE1D7B100C007F7FF1 /* twitter@2x.png in Resources */,
 				D60BB7C51D72EF290083D0C9 /* Events@2x.png in Resources */,
+				185BD5E71DAACDFE00DC2C9F /* GitHub Filled-100.png in Resources */,
 				D66BE63E1DA12FFE005B2B39 /* Favourites.png in Resources */,
+				185BD5F01DAAD25000DC2C9F /* devimg.png in Resources */,
 				D60BB7C71D72EF290083D0C9 /* Results@2x.png in Resources */,
 				D6DC67231D848AFB00D75A5B /* filledstar.png in Resources */,
 				188F51E41D0F08ED0083169D /* Assets.xcassets in Resources */,
@@ -1023,7 +1057,9 @@
 				18FFC4C51DA89646000CD00E /* DevViewTableViewCell.m in Sources */,
 				59544E1F1DA8A79000BDA118 /* InstagramDetailViewController.m in Sources */,
 				18541FE01D6DD9370046EAD0 /* Favourites.xcdatamodeld in Sources */,
+				185BD5EA1DAACF1000DC2C9F /* AudioController.m in Sources */,
 				59544E181DA8A78100BDA118 /* ParallaxCollectionViewCell.m in Sources */,
+				185BD5E21DAACBA300DC2C9F /* EasterEggViewController.m in Sources */,
 				D6E6326D1D7AC21B00E71851 /* RegistrationPageViewController.m in Sources */,
 				18FFC4B81DA886A4000CD00E /* Favourite+CoreDataProperties.m in Sources */,
 				18749BCE1D140AC600858B85 /* ResultsTableViewCell.m in Sources */,
