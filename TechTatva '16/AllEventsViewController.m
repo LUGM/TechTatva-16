@@ -119,7 +119,7 @@
 //                filteredEvents = [array mutableCopy];
 				SVHUD_HIDE;
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    [self filterEventsForSelectedSegmentTitle:[allEventsSegmentControl titleForSegmentAtIndex:allEventsSegmentControl.selectedSegmentIndex]];
+					[self filterEventsForSearchString:self.searchController.searchBar.text andScopeBarTitle:[allEventsSegmentControl titleForSegmentAtIndex:allEventsSegmentControl.selectedSegmentIndex]];
                 });
             }
         }
@@ -329,21 +329,21 @@
 
 #pragma mark - Filtering
 
-- (void)filterEventsForSelectedSegmentTitle:(NSString *)segmentTitle
-{
-    filteredEvents = [array mutableCopy];
-    if (allEventsSegmentControl.selectedSegmentIndex < 4)
-        [filteredEvents filterUsingPredicate:[NSPredicate predicateWithFormat:@"day == %@", [NSString stringWithFormat:@"%li", allEventsSegmentControl.selectedSegmentIndex+1]]];
-    [allEventsTableView reloadData];
-}
-
 - (void)filterEventsForSearchString:(NSString *)searchString andScopeBarTitle:(NSString *)scopeTitle
 {
     filteredEvents = [NSMutableArray arrayWithArray:array];
-    if (allEventsSegmentControl.selectedSegmentIndex != 4)
-        [filteredEvents filterUsingPredicate:[NSPredicate predicateWithFormat:@"(eventName contains[cd] %@ OR catName contains[cd] %@) AND day == %@", searchString, searchString, [scopeTitle substringFromIndex:4]]];
-    else
-        [filteredEvents filterUsingPredicate:[NSPredicate predicateWithFormat:@"eventName contains[cd] %@  OR catName contains[cd] %@", searchString, searchString]];
+	[filteredEvents sortUsingComparator:^NSComparisonResult(ScheduleJsonDataModel *obj1, ScheduleJsonDataModel *obj2) {
+		if ([obj1.catName isEqualToString:@"Turing"]) {
+			return NSOrderedAscending;
+		} else if ([obj2.catName isEqualToString:@"Turing"]) {
+			return NSOrderedDescending;
+		} return [obj1.eventName compare:obj2.eventName];
+	}];
+	if (allEventsSegmentControl.selectedSegmentIndex != 4)
+		[filteredEvents filterUsingPredicate:[NSPredicate predicateWithFormat:@"day == %@", [scopeTitle substringFromIndex:4]]];
+	if (searchString.length > 0) {
+			[filteredEvents filterUsingPredicate:[NSPredicate predicateWithFormat:@"eventName contains[cd] %@  OR catName contains[cd] %@", searchString, searchString]];
+	}
     [allEventsTableView reloadData];
 }
 
@@ -352,16 +352,7 @@
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController
 {
     UISearchBar *searchBar = searchController.searchBar;
-    if (searchBar.text.length > 0) {
-        if (searchBar.scopeButtonTitles.count > 0)
-            [self filterEventsForSearchString:searchBar.text andScopeBarTitle:searchBar.scopeButtonTitles[searchBar.selectedScopeButtonIndex]];
-        else
-            [self filterEventsForSearchString:searchBar.text andScopeBarTitle:[allEventsSegmentControl titleForSegmentAtIndex:allEventsSegmentControl.selectedSegmentIndex]];
-    }
-    else {
-        filteredEvents = [array mutableCopy];
-		[allEventsTableView reloadData];
-    }
+	[self filterEventsForSearchString:searchBar.text andScopeBarTitle:[allEventsSegmentControl titleForSegmentAtIndex:allEventsSegmentControl.selectedSegmentIndex]];
 }
 
 #pragma mark - Search bar delegate

@@ -11,10 +11,8 @@
 #import "CategoriesJSONModel.h"
 #import "EventsViewController.h"
 
-@interface CategoriesTableViewController()
-{
-    NSArray *categoriesArray ;
-    NSArray *array;
+@interface CategoriesTableViewController() {
+    NSMutableArray *array;
 }
 
 @property (nonatomic, strong) NSIndexPath *selectedIndexPath;
@@ -49,6 +47,15 @@
         id savedData = [categoryData objectForKey:@"category"];
         id requiredArray = [savedData valueForKey:@"data"];
         array = [CategoriesJSONModel getArrayFromJson:requiredArray];
+		CategoriesJSONModel *turing;
+		for (CategoriesJSONModel *item in array) {
+			if ([item.catName isEqualToString:@"Turing"]) {
+				turing = item;
+				break;
+			}
+		}
+		[array removeObject:turing];
+		[array insertObject:turing atIndex:(arc4random_uniform(3) + 3)];
     }
     SVHUD_HIDE;
 }
@@ -75,6 +82,15 @@
                 id jsonData = [NSJSONSerialization JSONObjectWithData:mydata options:kNilOptions error:&error];
                 id requiredArray = [jsonData valueForKey:@"data"];
                 array = [CategoriesJSONModel getArrayFromJson:requiredArray];
+				CategoriesJSONModel *turing;
+				for (CategoriesJSONModel *item in array) {
+					if ([item.catName isEqualToString:@"Turing"]) {
+						turing = item;
+						break;
+					}
+				}
+				[array removeObject:turing];
+				[array insertObject:turing atIndex:(arc4random_uniform(3) + 3)];
                 [self saveLocalData:jsonData];
                 dispatch_async(dispatch_get_main_queue(), ^{
                     SVHUD_HIDE;

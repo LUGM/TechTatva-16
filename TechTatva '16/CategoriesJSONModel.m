@@ -36,3 +36,32 @@
 }
 
 @end
+
+@implementation CategoriesRatedJSONModel
+
+- (instancetype)initWithData:(id)data {
+	self = [super initWithData:data];
+	self.score = 0.0;
+	self.totalRating = 0;
+	self.counter = 0;
+	return self;
+}
+
++ (NSMutableArray *)getArrayFromJson:(id)myData {
+	NSMutableArray *array = [NSMutableArray new];
+	for(NSDictionary *dict in myData)
+	{
+		CategoriesRatedJSONModel *mod = [[CategoriesRatedJSONModel alloc] initWithData:dict];
+		[array addObject:mod];
+	}
+	return array;
+}
+
+- (void)addScore:(NSInteger)score {
+	self.counter += 1;
+	self.totalRating += score;
+	self.score = (self.totalRating + 0.f)/self.counter;
+	NSLog(@"Added score to category %@, total = %li, average = %lf", self.catName, self.totalRating, self.score);
+}
+
+@end

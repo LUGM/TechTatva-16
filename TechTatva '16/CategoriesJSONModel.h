@@ -18,3 +18,13 @@
 +(NSMutableArray *)getArrayFromJson:(id)myData;
 
 @end
+
+@interface CategoriesRatedJSONModel : CategoriesJSONModel
+
+@property (nonatomic) CGFloat score;
+@property (nonatomic) NSInteger counter;
+@property (nonatomic) NSInteger totalRating;
+
+- (void)addScore:(NSInteger)score;
+
+@end

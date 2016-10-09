@@ -7,14 +7,22 @@
 //
 
 #import "TrendingTableViewController.h"
+#import "CategoriesJSONModel.h"
+#import "EventsViewController.h"
+#import "TrendingCatsTableViewCell.h"
 
-@interface TrendingTableViewController ()
+@interface TrendingTableViewController () {
+	NSMutableArray *array;
+}
 
 @property (strong, nonatomic) FIRDatabaseReference *ref;
 
 @end
 
-@implementation TrendingTableViewController
+@implementation TrendingTableViewController {
+	Reachability *reachability;
+	BOOL loadedFirebase;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,29 +32,79 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+	
+	[self.tableView registerNib:[UINib nibWithNibName:@"TrendingCatsTableViewCell" bundle:nil] forCellReuseIdentifier:@"categoriesCell"];
+	
+	reachability = [Reachability reachabilityForInternetConnection];
+	if (reachability.isReachable) {
+		[self loadFromCache];
+	} else {
+		SVHUD_FAILURE(@"Internet required for trending.");
+		[self dismissViewControllerAnimated:YES completion:nil];
+	}
+	
+	loadedFirebase = NO;
+	
     self.ref = [[FIRDatabase database] reference];
     [self checkTheDate];
     [self loadTrending];
+	
+	SVHUD_SHOW;
+	
+	self.tableView.rowHeight = UITableViewAutomaticDimension;
+}
+
+- (void) loadFromCache {
+	NSUserDefaults *categoryData =[NSUserDefaults standardUserDefaults];
+	//    NSLog(@"CACHE %@", [categoryData objectForKey:@"category"]);
+	if ([categoryData objectForKey:@"category"] != nil)
+	{
+		id savedData = [categoryData objectForKey:@"category"];
+		id requiredArray = [savedData valueForKey:@"data"];
+		array = [CategoriesRatedJSONModel getArrayFromJson:requiredArray];
+//		CategoriesRatedJSONModel *turing;
+//		for (CategoriesRatedJSONModel *item in array) {
+//			if ([item.catName isEqualToString:@"Turing"]) {
+//				turing = item;
+//				break;
+//			}
+//		}
+//		[array removeObject:turing];
+//		[array insertObject:turing atIndex:(arc4random_uniform(3) + 3)];
+	}
+
 }
 
 - (void) loadTrending
 {
     [self.ref observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
         NSDictionary *data = snapshot.value;
-        for (id key in data)
+        for (id catName in data)
         {
-            NSDictionary *temp = [data objectForKey:key];
-            for (id innerKey in temp)
-            {
-                NSInteger rate = [[[temp objectForKey:innerKey] objectForKey:@"rating"] integerValue];
-                NSLog(@"rater woohoo %li", (long) rate);
-            }
+			NSArray *filteredCat = [array filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"catName contains[cd] %@", catName]];
+			CategoriesRatedJSONModel *currentCat = [filteredCat firstObject];
+			if (currentCat != nil) {
+				NSDictionary *catDetails = [data objectForKey:catName];
+				NSLog(@"Category: %@", catName);
+				for (id innerKey in catDetails)
+				{
+					NSInteger rate = [[[catDetails objectForKey:innerKey] objectForKey:@"rating"] integerValue];
+//					NSLog(@"rater woohoo %li", (long) rate);
+					[currentCat addScore:rate];
+				}
+			}
         }
+		[array sortUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"score" ascending:NO]]];
+		dispatch_async(dispatch_get_main_queue(), ^{
+			SVHUD_HIDE;
+			loadedFirebase = YES;
+			[self.tableView reloadData];
+		});
+//		NSLog(@"Firebase data: %@", data);
     }];
 }
 
-- (void) checkTheDate
-{
+- (void) checkTheDate {
     NSDate *now = [NSDate date];
     NSString *dateString = @"2016-10-12";
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -69,75 +127,50 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 0;
+	return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+	return 3 * loadedFirebase;
 }
 
-- (IBAction)simonGoBack:(id)sender
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+	UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+	UINavigationController *navController = [storyboard instantiateViewControllerWithIdentifier:@"eventListNav"];
+	EventsViewController *destController = [navController viewControllers][0];
+	CategoriesJSONModel *model = [array objectAtIndex:indexPath.row];
+	destController.title = model.catName;
+	destController.categoryID = model.catId;
+	[self presentViewController:navController animated:YES completion:nil];
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
-{
-    return  [[UIView alloc] initWithFrame:CGRectZero];
-}
-
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
+	static NSString *simpleTableIdentifier = @"categoriesCell";
+	TrendingCatsTableViewCell *cell = (TrendingCatsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+	if (cell == nil) {
+		cell = [[TrendingCatsTableViewCell alloc] init];
+	}
+	CategoriesJSONModel *model = [array objectAtIndex:indexPath.row];
+	cell.catNameLabel.text = model.catName;
+	cell.catImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@", model.catId]];
+	cell.catDescLabel.text = model.catDesc;
+	return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+-(void) tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+	CategoriesJSONModel *model = [array objectAtIndex:indexPath.row];
+	UIAlertView * alert = [[UIAlertView alloc] initWithTitle:model.catName message:model.catDesc delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+	[alert show];
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+	return 60.f;
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+	return [UIView new];
 }
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -54,6 +54,8 @@
 		59544E241DA8A7A600BDA118 /* RoundedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 59544E231DA8A7A600BDA118 /* RoundedLabel.m */; };
 		59544E261DA8A81A00BDA118 /* InstagramV2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59544E251DA8A81A00BDA118 /* InstagramV2ViewController.m */; };
 		59544E2B1DA9133C00BDA118 /* DADataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 59544E2A1DA9133C00BDA118 /* DADataManager.m */; };
+		5990F1831DAAACB100A3D8BF /* TrendingCatsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5990F1811DAAACB100A3D8BF /* TrendingCatsTableViewCell.m */; };
+		5990F1841DAAACB100A3D8BF /* TrendingCatsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5990F1821DAAACB100A3D8BF /* TrendingCatsTableViewCell.xib */; };
 		62AC6DCAA199CFB35FD50E25 /* libPods-TechTatva '16.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0BA0276B019047FFBAD5AD /* libPods-TechTatva '16.a */; };
 		D607A28D1D9FD10600CC01E2 /* AllEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D607A28C1D9FD10600CC01E2 /* AllEventsViewController.m */; };
 		D60BB7B41D70C0120083D0C9 /* EventsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D60BB7B21D70C0120083D0C9 /* EventsTableViewCell.m */; };
@@ -189,6 +191,9 @@
 		59544E251DA8A81A00BDA118 /* InstagramV2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramV2ViewController.m; sourceTree = "<group>"; };
 		59544E291DA9133C00BDA118 /* DADataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DADataManager.h; sourceTree = "<group>"; };
 		59544E2A1DA9133C00BDA118 /* DADataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DADataManager.m; sourceTree = "<group>"; };
+		5990F1801DAAACB100A3D8BF /* TrendingCatsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendingCatsTableViewCell.h; sourceTree = "<group>"; };
+		5990F1811DAAACB100A3D8BF /* TrendingCatsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendingCatsTableViewCell.m; sourceTree = "<group>"; };
+		5990F1821DAAACB100A3D8BF /* TrendingCatsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrendingCatsTableViewCell.xib; sourceTree = "<group>"; };
 		9309D4D26842A1C03AFD9384 /* Pods-TechTatva '16UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechTatva '16UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TechTatva '16UITests/Pods-TechTatva '16UITests.release.xcconfig"; sourceTree = "<group>"; };
 		A3FE22D2C8719D49855D143B /* libPods-TechTatva '16UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TechTatva '16UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5FF03F99F3281ADAB68B8C5 /* Pods-TechTatva '16Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechTatva '16Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TechTatva '16Tests/Pods-TechTatva '16Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -302,6 +307,9 @@
 				1828D8191D7476B000E0454F /* CategoriesTableViewCell.h */,
 				1828D81A1D7476B000E0454F /* CategoriesTableViewCell.m */,
 				1828D81B1D7476B000E0454F /* CategoriesTableViewCell.xib */,
+				5990F1801DAAACB100A3D8BF /* TrendingCatsTableViewCell.h */,
+				5990F1811DAAACB100A3D8BF /* TrendingCatsTableViewCell.m */,
+				5990F1821DAAACB100A3D8BF /* TrendingCatsTableViewCell.xib */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -802,6 +810,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1827822E1DA8C5A600BD8C34 /* launchvideo.mp4 in Resources */,
+				5990F1841DAAACB100A3D8BF /* TrendingCatsTableViewCell.xib in Resources */,
 				D60BB7BE1D70C3A40083D0C9 /* Time Filled-50.png in Resources */,
 				D60BB7C61D72EF290083D0C9 /* Instagram@2x.png in Resources */,
 				D6247BF81D7B0E74007F7FF1 /* fb@2x.png in Resources */,
@@ -1003,6 +1012,7 @@
 				59544E0D1DA8A77400BDA118 /* ASMutableURLRequest.m in Sources */,
 				188F51DC1D0F08ED0083169D /* AppDelegate.m in Sources */,
 				D6247BF61D7B0C58007F7FF1 /* AboutUsTableViewController.m in Sources */,
+				5990F1831DAAACB100A3D8BF /* TrendingCatsTableViewCell.m in Sources */,
 				D607A28D1D9FD10600CC01E2 /* AllEventsViewController.m in Sources */,
 				59544E241DA8A7A600BDA118 /* RoundedLabel.m in Sources */,
 				D6C0853D1D7EBCEE00FBD1BC /* FeedbackTableViewController.m in Sources */,
