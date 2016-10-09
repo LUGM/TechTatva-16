@@ -703,7 +703,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter Your Thoughts" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="01r-CT-ADF">
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="132" id="LJo-FT-qh3"/>
                                                         <constraint firstAttribute="width" constant="327" id="xUV-we-KlK"/>
