@@ -32,5 +32,6 @@
 @property (strong, nonatomic) NSString *eventId;
 @property (strong, nonatomic) NSString *nameOfEvent;
 @property (strong, nonatomic) NSString *nameOfCategory;
+@property (strong, nonatomic) NSString *categoryId;
 
 @end

@@ -217,8 +217,8 @@
 
 - (void) rateEvent :(id) sender
 {
-    if ([self checkTheDate])
-    {
+//    if ([self checkTheDate])
+//    {
         NSIndexPath *indexPath = [allEventsTableView indexPathForRowAtPoint:[sender convertPoint:CGPointZero toView:allEventsTableView]];
         ScheduleJsonDataModel *event = [filteredEvents objectAtIndex:indexPath.row];
         UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
@@ -228,13 +228,14 @@
         destController.nameOfEvent = event.eventName;
         destController.nameOfCategory = event.catName;
         destController.eventId = event.eventId;
+        destController.categoryId = event.catId;
         [self presentViewController:navController animated:YES completion:nil];
-    }
-    else
-    {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Too Early!" message:@"TechTatva 16 has not yet started. No categories are trending. Check back later" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        [alert show];
-    }
+//    }
+//    else
+//    {
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Too Early!" message:@"TechTatva 16 has not yet started. No categories are trending. Check back later" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+//        [alert show];
+//    }
 }
 
 - (void) switchFavourites:(id) someObject

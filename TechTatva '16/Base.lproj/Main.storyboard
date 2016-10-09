@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="s3v-As-HPZ">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="s3v-As-HPZ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -203,7 +203,7 @@
                             <tableViewSection headerTitle="About Us" id="8Bl-PI-Nq7">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="aboutCell" rowHeight="363" id="RAX-5X-tiz">
-                                        <rect key="frame" x="0.0" y="119.5" width="375" height="363"/>
+                                        <rect key="frame" x="0.0" y="120" width="375" height="363"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RAX-5X-tiz" id="oCs-ap-BEz">
                                             <frame key="frameInset" width="375" height="362"/>
@@ -232,7 +232,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                             <tableViewSection headerTitle="Follow Us" id="Lmx-l9-4ZD">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="aboutCell" rowHeight="56" id="9gh-Xi-Ae1">
-                                        <rect key="frame" x="0.0" y="538.5" width="375" height="56"/>
+                                        <rect key="frame" x="0.0" y="539" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9gh-Xi-Ae1" id="SL1-P4-qEs">
                                             <frame key="frameInset" width="375" height="55"/>
@@ -612,7 +612,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                             <tableViewSection headerTitle="rate" footerTitle="" id="DOM-x2-8Hp">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="5TY-SJ-Dd3">
-                                        <rect key="frame" x="0.0" y="272" width="375" height="100"/>
+                                        <rect key="frame" x="0.0" y="271" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5TY-SJ-Dd3" id="U9X-tW-Qra">
                                             <frame key="frameInset" width="375" height="99"/>
@@ -696,7 +696,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                             <tableViewSection headerTitle="comments" id="IIu-oW-Otn">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="133" id="r1i-Xy-ZiX">
-                                        <rect key="frame" x="0.0" y="429" width="375" height="133"/>
+                                        <rect key="frame" x="0.0" y="427" width="375" height="133"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r1i-Xy-ZiX" id="iLT-A7-mho">
                                             <frame key="frameInset" width="375" height="132"/>
@@ -723,7 +723,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                             <tableViewSection headerTitle="submit" id="T9j-80-4j8">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="spW-hm-dnS">
-                                        <rect key="frame" x="0.0" y="619" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="616" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="spW-hm-dnS" id="xmd-6d-NiH">
                                             <frame key="frameInset" width="375" height="43"/>

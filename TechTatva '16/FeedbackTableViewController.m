@@ -10,6 +10,7 @@
 
 @interface FeedbackTableViewController ()
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *backButton;
+@property (strong, nonatomic) FIRDatabaseReference *ref;
 
 @end
 
@@ -20,6 +21,7 @@
     self.favCount = 0;
     self.eventName.text = _nameOfEvent;
     self.categoryName.text = _nameOfCategory;
+    self.ref = [[FIRDatabase database] referenceWithPath:_nameOfCategory];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,6 +37,32 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.section == 3)
+    {
+        FIRDatabaseReference *actualReference = [self.ref childByAutoId];
+        NSString *rating = [NSString stringWithFormat:@"%ld", (long) self.favCount];
+        NSDictionary *upload = @{@"category":_nameOfCategory, @"rating":rating};
+        [actualReference setValue:upload withCompletionBlock:^(NSError * _Nullable error, FIRDatabaseReference * _Nonnull ref) {
+            NSString *alertMessage;
+            NSString *alertTitle;
+            if (error)
+            {
+                alertMessage = @"Could not rate the event";
+                alertTitle = @"Error";
+            }
+            else
+            {
+                alertMessage = @"Rating completed successfully";
+                alertTitle = @"Success";
+            }
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:alertTitle message:alertMessage preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                [self dismissViewControllerAnimated:YES completion:nil];
+            }];
+            [alertController addAction:okAction];
+            [self presentViewController:alertController animated:YES completion:nil];
+        }];
+    }
 }
 
 - (IBAction)star1Pressed:(id)sender

@@ -10,6 +10,8 @@
 
 @interface TrendingTableViewController ()
 
+@property (strong, nonatomic) FIRDatabaseReference *ref;
+
 @end
 
 @implementation TrendingTableViewController
@@ -22,8 +24,25 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
+    self.ref = [[FIRDatabase database] reference];
     [self checkTheDate];
+    [self loadTrending];
+}
+
+- (void) loadTrending
+{
+    [self.ref observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        NSDictionary *data = snapshot.value;
+        for (id key in data)
+        {
+            NSDictionary *temp = [data objectForKey:key];
+            for (id innerKey in temp)
+            {
+                NSInteger rate = [[[temp objectForKey:innerKey] objectForKey:@"rating"] integerValue];
+                NSLog(@"rater woohoo %li", (long) rate);
+            }
+        }
+    }];
 }
 
 - (void) checkTheDate
