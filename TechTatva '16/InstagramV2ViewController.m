@@ -87,7 +87,7 @@
 	
 	instagramObjects = [NSMutableArray new];
 	
-	NSString *URLString = [NSString stringWithFormat:@"https://api.instagram.com/v1/tags/techtatva16/media/recent?access_token=630237785.f53975e.8dcfa635acf14fcbb99681c60519d04c"];
+	NSString *URLString = [NSString stringWithFormat:@""];
 	
 	nextURL = [NSURL URLWithString:URLString];
 	

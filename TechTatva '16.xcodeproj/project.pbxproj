@@ -16,7 +16,6 @@
 		182782341DA8C7A000BD8C34 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182782331DA8C7A000BD8C34 /* AVFoundation.framework */; };
 		182782361DA8C7A500BD8C34 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182782351DA8C7A500BD8C34 /* CoreGraphics.framework */; };
 		182782381DA8C7AA00BD8C34 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182782371DA8C7AA00BD8C34 /* AudioToolbox.framework */; };
-		1827823A1DA8FA9F00BD8C34 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 182782391DA8FA9F00BD8C34 /* GoogleService-Info.plist */; };
 		1828D81C1D7476B000E0454F /* CategoriesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828D81A1D7476B000E0454F /* CategoriesTableViewCell.m */; };
 		1828D81D1D7476B000E0454F /* CategoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1828D81B1D7476B000E0454F /* CategoriesTableViewCell.xib */; };
 		184A2AEB1DA5C51100D589DE /* Snapchat-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 184A2AEA1DA5C51100D589DE /* Snapchat-100.png */; };
@@ -127,7 +126,6 @@
 		182782331DA8C7A000BD8C34 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		182782351DA8C7A500BD8C34 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		182782371DA8C7AA00BD8C34 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		182782391DA8FA9F00BD8C34 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1828D8191D7476B000E0454F /* CategoriesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesTableViewCell.h; sourceTree = "<group>"; };
 		1828D81A1D7476B000E0454F /* CategoriesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesTableViewCell.m; sourceTree = "<group>"; };
 		1828D81B1D7476B000E0454F /* CategoriesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoriesTableViewCell.xib; sourceTree = "<group>"; };
@@ -532,7 +530,6 @@
 				185BD5ED1DAAD25000DC2C9F /* linuxtux.png */,
 				185BD5EE1DAAD25000DC2C9F /* devimg.png */,
 				59544E281DA9133C00BDA118 /* DADataManager */,
-				182782391DA8FA9F00BD8C34 /* GoogleService-Info.plist */,
 				18C3F2141D931513007F33DB /* PrefixHeader.pch */,
 				188F51E81D0F08ED0083169D /* Info.plist */,
 				1827822D1DA8C5A600BD8C34 /* launchvideo.mp4 */,
@@ -802,7 +799,6 @@
 				TargetAttributes = {
 					188F51D31D0F08ED0083169D = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 9P257W983B;
 					};
 					188F51EC1D0F08ED0083169D = {
 						CreatedOnToolsVersion = 7.3;
@@ -849,7 +845,6 @@
 				184A2AEB1DA5C51100D589DE /* Snapchat-100.png in Resources */,
 				188F51E71D0F08ED0083169D /* LaunchScreen.storyboard in Resources */,
 				185BD5EF1DAAD25000DC2C9F /* linuxtux.png in Resources */,
-				1827823A1DA8FA9F00BD8C34 /* GoogleService-Info.plist in Resources */,
 				D6C5949E1D1831E9006F19D0 /* likepic.png in Resources */,
 				D66BE63D1DA12FFE005B2B39 /* FilledFavourites.png in Resources */,
 				D60BB7C91D72F08B0083D0C9 /* Category@2x.png in Resources */,
@@ -1228,7 +1223,7 @@
 			baseConfigurationReference = E01D0203BC4C2BBAC2B42AE4 /* Pods-TechTatva '16.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9P257W983B;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TechTatva '16/PrefixHeader.pch";
 				INFOPLIST_FILE = "TechTatva '16/Info.plist";
@@ -1244,7 +1239,7 @@
 			baseConfigurationReference = 18CE6C3949F060D61B5D3837 /* Pods-TechTatva '16.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9P257W983B;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TechTatva '16/PrefixHeader.pch";
 				INFOPLIST_FILE = "TechTatva '16/Info.plist";

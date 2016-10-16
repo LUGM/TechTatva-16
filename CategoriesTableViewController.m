@@ -73,7 +73,7 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         @try {
             
-            NSURL *custumUrl = [[NSURL alloc]initWithString:@"http://api.mitportals.in/categories/"];
+            NSURL *custumUrl = [[NSURL alloc]initWithString:@""];
             NSData *mydata = [NSData dataWithContentsOfURL:custumUrl];
             NSError *error;
             

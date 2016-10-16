@@ -84,7 +84,7 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         @try
         {
-            NSURL *myUrl = [[NSURL alloc]initWithString:@"http://api.mitportals.in/events/"];
+            NSURL *myUrl = [[NSURL alloc]initWithString:@""];
             NSData *mydata = [NSData dataWithContentsOfURL:myUrl];
             NSError *error;
             

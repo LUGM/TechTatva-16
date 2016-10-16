@@ -124,14 +124,6 @@
 	return [self viewControllerAtIndex:index + 1];
 }
 
-//- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController {
-//	return self.instagramObjects.count;
-//}
-//
-//- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController {
-//	return self.presentationIndex;
-//}
-
 #pragma mark - Page view controller delegate
 
 - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray<UIViewController *> *)previousViewControllers transitionCompleted:(BOOL)completed {
