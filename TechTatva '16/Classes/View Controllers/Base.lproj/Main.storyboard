@@ -1,12 +1,34 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="s3v-As-HPZ">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="s3v-As-HPZ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNextCondensed.ttc">
+            <string>AvenirNextCondensed-Medium</string>
+            <string>AvenirNextCondensed-Regular</string>
+        </array>
+        <array key="Futura.ttc">
+            <string>Futura-Medium</string>
+        </array>
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+            <string>HelveticaNeue-Bold</string>
+        </array>
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Light</string>
+        </array>
+        <array key="Noteworthy.ttc">
+            <string>Noteworthy-Light</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Categories-->
         <scene sceneID="5WZ-28-hdL">
@@ -41,6 +63,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="40" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hd0-hV-e9B">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="667"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="eBJ-IY-SG3" id="qoh-MM-ONX"/>
@@ -82,10 +105,10 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="moreCell" id="tu6-z2-cWt">
-                                <rect key="frame" x="0.0" y="92" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tu6-z2-cWt" id="5I2-vw-cbO">
-                                    <frame key="frameInset" width="375" height="60"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -106,7 +129,7 @@
             <objects>
                 <navigationController storyboardIdentifier="registerNav" id="fsb-H1-86K" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="P3J-il-diQ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -130,6 +153,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uM9-aP-1em">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="677"/>
                                 <color key="backgroundColor" red="0.28958413004875183" green="0.31462949514389038" blue="0.32950475811958313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                         </subviews>
@@ -166,16 +190,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="9Gq-jv-KPC">
-                            <rect key="frame" x="0.0" y="136" width="375" height="44"/>
+                            <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="resultsCell" id="bTr-LG-ImB">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bTr-LG-ImB" id="gRA-oa-WIF">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -203,13 +227,14 @@
                             <tableViewSection headerTitle="About Us" id="8Bl-PI-Nq7">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="aboutCell" rowHeight="363" id="RAX-5X-tiz">
-                                        <rect key="frame" x="0.0" y="120" width="375" height="363"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="363"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RAX-5X-tiz" id="oCs-ap-BEz">
-                                            <frame key="frameInset" width="375" height="362"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="362.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="j3b-UD-o5c">
+                                                    <rect key="frame" x="18" y="18" width="339" height="326.5"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <string key="text">TechTatva is a national level technical fest in India organized by Manipal Institute of Technology students every year. With a plethora of events and workshops from all the spheres of Engineering organized by experts, TechTatva Fest witnesses mass participation from other colleges.
 
@@ -232,13 +257,14 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                             <tableViewSection headerTitle="Follow Us" id="Lmx-l9-4ZD">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="aboutCell" rowHeight="56" id="9gh-Xi-Ae1">
-                                        <rect key="frame" x="0.0" y="539" width="375" height="56"/>
+                                        <rect key="frame" x="0.0" y="474.5" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9gh-Xi-Ae1" id="SL1-P4-qEs">
-                                            <frame key="frameInset" width="375" height="55"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNm-ts-OpP">
+                                                    <rect key="frame" x="112.5" y="13" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="UVA-zK-rv2"/>
                                                         <constraint firstAttribute="height" constant="30" id="c5x-gm-HJl"/>
@@ -249,6 +275,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygv-or-1AP">
+                                                    <rect key="frame" x="172.5" y="13" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="cH0-nY-Czx"/>
                                                         <constraint firstAttribute="height" constant="30" id="l3s-Qx-USQ"/>
@@ -259,6 +286,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyU-CC-RDu">
+                                                    <rect key="frame" x="232.5" y="13" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="NkA-wA-ugt"/>
                                                         <constraint firstAttribute="width" constant="30" id="gDw-UV-SPC"/>
@@ -269,6 +297,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJC-x6-MLU">
+                                                    <rect key="frame" x="292.5" y="13" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="AVv-lF-K0E"/>
                                                         <constraint firstAttribute="height" constant="30" id="uO7-sc-P47"/>
@@ -279,6 +308,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVI-JT-Y1s" userLabel="fbButton">
+                                                    <rect key="frame" x="52.5" y="13" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="LeZ-Jw-P7H"/>
                                                         <constraint firstAttribute="height" constant="30" id="Sk9-1K-ZRh"/>
@@ -334,7 +364,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                 <navigationController storyboardIdentifier="aboutUsNav" id="lq2-L2-dbR" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="jkA-Ea-VG1"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ca5-Bf-9a9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -357,21 +387,21 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                             <tableViewSection id="TeH-3u-DC8">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="88" id="xtN-Bx-NEg">
-                                        <rect key="frame" x="0.0" y="64" width="375" height="88"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xtN-Bx-NEg" id="1Kz-WV-gGg">
-                                            <frame key="frameInset" width="375" height="87"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="87.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbp-tq-5NN">
-                                                    <frame key="frameInset" minX="33" minY="53" width="92.5" height="20.5"/>
+                                                    <rect key="frame" x="33" y="53" width="92.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfb-2a-N0J">
-                                                    <frame key="frameInset" minX="33" minY="18" width="119.5" height="20"/>
+                                                    <rect key="frame" x="33" y="18" width="119.5" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -381,21 +411,21 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="88" id="eHy-W9-B3K">
-                                        <rect key="frame" x="0.0" y="152" width="375" height="88"/>
+                                        <rect key="frame" x="0.0" y="88" width="375" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eHy-W9-B3K" id="5oh-pz-VdE">
-                                            <frame key="frameInset" width="375" height="87"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="87.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmh-1n-k6V">
-                                                    <frame key="frameInset" minX="33" minY="53" width="92.5" height="20.5"/>
+                                                    <rect key="frame" x="33" y="53" width="92.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Vt-uA-QGF">
-                                                    <frame key="frameInset" minX="33" minY="18" width="119.5" height="20"/>
+                                                    <rect key="frame" x="33" y="18" width="119.5" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -409,13 +439,14 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                             <tableViewSection headerTitle="Rate the app" id="QvA-U5-FoI">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="150" id="NDR-AM-JUK">
-                                        <rect key="frame" x="0.0" y="268" width="375" height="150"/>
+                                        <rect key="frame" x="0.0" y="204" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NDR-AM-JUK" id="YDT-nm-1ha">
-                                            <frame key="frameInset" width="375" height="149"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FqF-GA-lw1">
+                                                    <rect key="frame" x="45" y="58" width="45" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="45" id="hzH-Ue-Byi"/>
                                                         <constraint firstAttribute="height" constant="45" id="jo8-Cq-u6y"/>
@@ -426,6 +457,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfA-z8-VXz">
+                                                    <rect key="frame" x="165" y="58" width="45" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="45" id="HrE-xI-GV3"/>
                                                         <constraint firstAttribute="height" constant="45" id="qRu-fC-mXI"/>
@@ -436,6 +468,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJe-Dj-Bcz">
+                                                    <rect key="frame" x="225" y="58" width="45" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="45" id="6YD-AH-MWb"/>
                                                         <constraint firstAttribute="height" constant="45" id="ncb-tC-RRP"/>
@@ -446,6 +479,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hxl-Hw-HYD">
+                                                    <rect key="frame" x="285" y="58" width="45" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="45" id="DBU-05-U3Q"/>
                                                         <constraint firstAttribute="height" constant="45" id="Lv1-7N-hxs"/>
@@ -456,6 +490,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAj-Bx-Ewm">
+                                                    <rect key="frame" x="105" y="58" width="45" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="45" id="GgA-oS-MGf"/>
                                                         <constraint firstAttribute="height" constant="45" id="pII-7Y-4af"/>
@@ -485,13 +520,14 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                             <tableViewSection headerTitle="Comments" id="cka-9B-vIz">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="268" id="Ykz-v3-vDf">
-                                        <rect key="frame" x="0.0" y="446" width="375" height="268"/>
+                                        <rect key="frame" x="0.0" y="382" width="375" height="268"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ykz-v3-vDf" id="RS1-qV-ZIp">
-                                            <frame key="frameInset" width="375" height="267"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="267.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BSC-5c-7E4">
+                                                    <rect key="frame" x="38" y="21" width="299" height="128"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="128" id="Hu8-MD-Adn"/>
@@ -501,6 +537,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXH-CA-2gq">
+                                                    <rect key="frame" x="164.5" y="174" width="46" height="30"/>
                                                     <state key="normal" title="Button"/>
                                                     <connections>
                                                         <action selector="submitButton:" destination="1H3-9I-kuE" eventType="touchUpInside" id="8Wc-Bs-pk9"/>
@@ -562,13 +599,14 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                             <tableViewSection headerTitle="details" id="4MJ-bt-mEl">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="gQR-Mq-K3C">
-                                        <rect key="frame" x="0.0" y="120" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gQR-Mq-K3C" id="gLS-iq-aA2">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9Y-aU-pUe">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -576,8 +614,6 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="O9Y-aU-pUe" firstAttribute="top" secondItem="gLS-iq-aA2" secondAttribute="topMargin" constant="-8" id="1dY-s4-idg"/>
-                                                <constraint firstItem="O9Y-aU-pUe" firstAttribute="centerX" secondItem="gLS-iq-aA2" secondAttribute="centerX" id="Fan-0M-O3k"/>
-                                                <constraint firstItem="O9Y-aU-pUe" firstAttribute="centerY" secondItem="gLS-iq-aA2" secondAttribute="centerY" id="HJ2-vS-bmL"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="O9Y-aU-pUe" secondAttribute="trailing" constant="-8" id="RLJ-3O-a6S"/>
                                                 <constraint firstItem="O9Y-aU-pUe" firstAttribute="leading" secondItem="gLS-iq-aA2" secondAttribute="leadingMargin" constant="-8" id="cw8-OQ-LyB"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="O9Y-aU-pUe" secondAttribute="bottom" constant="-8" id="sfn-dP-gAP"/>
@@ -585,21 +621,20 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="UJU-tq-xjR">
-                                        <rect key="frame" x="0.0" y="164" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="99.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UJU-tq-xjR" id="K8d-q6-h5V">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXc-jc-p0L">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="aXc-jc-p0L" firstAttribute="centerX" secondItem="K8d-q6-h5V" secondAttribute="centerX" id="2zi-Vz-Stc"/>
-                                                <constraint firstItem="aXc-jc-p0L" firstAttribute="centerY" secondItem="K8d-q6-h5V" secondAttribute="centerY" id="AlW-4h-d1c"/>
                                                 <constraint firstItem="aXc-jc-p0L" firstAttribute="top" secondItem="K8d-q6-h5V" secondAttribute="topMargin" constant="-8" id="DUX-PC-eJ0"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="aXc-jc-p0L" secondAttribute="trailing" constant="-8" id="Ho8-hm-faS"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="aXc-jc-p0L" secondAttribute="bottom" constant="-8" id="Y0n-tE-OcR"/>
@@ -612,97 +647,89 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                             <tableViewSection headerTitle="rate" footerTitle="" id="DOM-x2-8Hp">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="5TY-SJ-Dd3">
-                                        <rect key="frame" x="0.0" y="272" width="375" height="100"/>
+                                        <rect key="frame" x="0.0" y="207" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5TY-SJ-Dd3" id="U9X-tW-Qra">
-                                            <frame key="frameInset" width="375" height="99"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oNq-QE-duH">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aM4-7G-ODd">
+                                                    <rect key="frame" x="39" y="27" width="45" height="45"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="45" id="Bam-5E-2aw"/>
-                                                        <constraint firstAttribute="width" constant="45" id="ll1-wk-7eJ"/>
+                                                        <constraint firstAttribute="height" constant="45" id="14N-IA-klt"/>
+                                                        <constraint firstAttribute="width" constant="45" id="scz-Ph-psu"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button" image="star.png"/>
+                                                    <state key="normal" image="star.png"/>
                                                     <connections>
-                                                        <action selector="star3Pressed:" destination="dZz-pA-cjm" eventType="touchUpInside" id="eRW-jB-m1R"/>
+                                                        <action selector="star1Pressed:" destination="dZz-pA-cjm" eventType="touchUpInside" id="OcX-sS-BvS"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LpI-5U-PKr">
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="45" id="Iq4-4F-Tqv"/>
-                                                        <constraint firstAttribute="width" constant="45" id="saK-aw-avO"/>
-                                                    </constraints>
-                                                    <state key="normal" title="Button" image="star.png"/>
+                                                    <rect key="frame" x="102" y="27" width="45" height="45"/>
+                                                    <state key="normal" image="star.png"/>
                                                     <connections>
                                                         <action selector="star2Pressed:" destination="dZz-pA-cjm" eventType="touchUpInside" id="wuO-Z6-sur"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oNq-QE-duH">
+                                                    <rect key="frame" x="165" y="27.5" width="45" height="45"/>
+                                                    <state key="normal" image="star.png"/>
+                                                    <connections>
+                                                        <action selector="star3Pressed:" destination="dZz-pA-cjm" eventType="touchUpInside" id="eRW-jB-m1R"/>
+                                                    </connections>
+                                                </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPx-lx-phl">
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="45" id="fyv-e7-0DI"/>
-                                                        <constraint firstAttribute="width" constant="45" id="sch-9n-k55"/>
-                                                    </constraints>
-                                                    <state key="normal" title="Button" image="star.png"/>
+                                                    <rect key="frame" x="228" y="27.5" width="45" height="45"/>
+                                                    <state key="normal" image="star.png"/>
                                                     <connections>
                                                         <action selector="star4Pressed:" destination="dZz-pA-cjm" eventType="touchUpInside" id="im5-ik-mMV"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zwn-ba-bGI">
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="45" id="dYJ-90-Lzw"/>
-                                                        <constraint firstAttribute="width" constant="45" id="lDO-jy-z96"/>
-                                                    </constraints>
-                                                    <state key="normal" title="Button" image="star.png"/>
+                                                    <rect key="frame" x="291" y="27.5" width="45" height="45"/>
+                                                    <state key="normal" image="star.png"/>
                                                     <connections>
                                                         <action selector="star5Pressed:" destination="dZz-pA-cjm" eventType="touchUpInside" id="2HF-aT-IVK"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aM4-7G-ODd">
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="45" id="14N-IA-klt"/>
-                                                        <constraint firstAttribute="width" constant="45" id="mvu-dl-KPb"/>
-                                                    </constraints>
-                                                    <state key="normal" title="Button" image="star.png"/>
-                                                    <connections>
-                                                        <action selector="star1Pressed:" destination="dZz-pA-cjm" eventType="touchUpInside" id="OcX-sS-BvS"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="LpI-5U-PKr" firstAttribute="leading" secondItem="aM4-7G-ODd" secondAttribute="trailing" constant="18" id="0pt-au-k6x"/>
-                                                <constraint firstItem="oNq-QE-duH" firstAttribute="bottom" secondItem="LpI-5U-PKr" secondAttribute="bottom" id="0tI-TU-eCI"/>
-                                                <constraint firstItem="oNq-QE-duH" firstAttribute="top" secondItem="LpI-5U-PKr" secondAttribute="top" id="1ye-Vq-FvF"/>
-                                                <constraint firstItem="tPx-lx-phl" firstAttribute="top" secondItem="oNq-QE-duH" secondAttribute="top" id="70c-EF-S1M"/>
-                                                <constraint firstItem="aM4-7G-ODd" firstAttribute="top" secondItem="U9X-tW-Qra" secondAttribute="topMargin" constant="17" id="7Qn-0q-XoD"/>
-                                                <constraint firstItem="tPx-lx-phl" firstAttribute="centerY" secondItem="oNq-QE-duH" secondAttribute="centerY" id="I3F-u1-8mH"/>
-                                                <constraint firstItem="zwn-ba-bGI" firstAttribute="leading" secondItem="tPx-lx-phl" secondAttribute="trailing" constant="19" id="NMP-B8-IoY"/>
-                                                <constraint firstItem="zwn-ba-bGI" firstAttribute="bottom" secondItem="tPx-lx-phl" secondAttribute="bottom" id="UnK-De-3Dg"/>
-                                                <constraint firstItem="zwn-ba-bGI" firstAttribute="centerY" secondItem="tPx-lx-phl" secondAttribute="centerY" id="Zwa-ym-Wkj"/>
-                                                <constraint firstItem="tPx-lx-phl" firstAttribute="leading" secondItem="oNq-QE-duH" secondAttribute="trailing" constant="22" id="aHI-T8-Kvo"/>
-                                                <constraint firstItem="oNq-QE-duH" firstAttribute="leading" secondItem="LpI-5U-PKr" secondAttribute="trailing" constant="18" id="c6f-dD-Mjd"/>
-                                                <constraint firstItem="LpI-5U-PKr" firstAttribute="bottom" secondItem="aM4-7G-ODd" secondAttribute="bottom" id="gcd-KP-v8a"/>
-                                                <constraint firstItem="LpI-5U-PKr" firstAttribute="centerY" secondItem="aM4-7G-ODd" secondAttribute="centerY" id="h5r-CD-33J"/>
+                                                <constraint firstItem="LpI-5U-PKr" firstAttribute="leading" secondItem="aM4-7G-ODd" secondAttribute="trailing" constant="18" id="A4T-R8-bEd"/>
+                                                <constraint firstItem="oNq-QE-duH" firstAttribute="height" secondItem="aM4-7G-ODd" secondAttribute="height" id="Ey6-gn-m9K"/>
+                                                <constraint firstItem="tPx-lx-phl" firstAttribute="height" secondItem="aM4-7G-ODd" secondAttribute="height" id="Olz-v0-4tF"/>
+                                                <constraint firstItem="zwn-ba-bGI" firstAttribute="centerY" secondItem="aM4-7G-ODd" secondAttribute="centerY" id="SEE-8A-spI"/>
+                                                <constraint firstItem="tPx-lx-phl" firstAttribute="centerY" secondItem="aM4-7G-ODd" secondAttribute="centerY" id="SrS-2F-Ud6"/>
+                                                <constraint firstItem="zwn-ba-bGI" firstAttribute="leading" secondItem="tPx-lx-phl" secondAttribute="trailing" constant="18" id="TIU-hl-vce"/>
+                                                <constraint firstItem="zwn-ba-bGI" firstAttribute="height" secondItem="aM4-7G-ODd" secondAttribute="height" id="VGi-eV-6tP"/>
+                                                <constraint firstItem="LpI-5U-PKr" firstAttribute="centerY" secondItem="aM4-7G-ODd" secondAttribute="centerY" id="Z3G-7G-18c"/>
+                                                <constraint firstItem="LpI-5U-PKr" firstAttribute="height" secondItem="aM4-7G-ODd" secondAttribute="height" id="h7r-Nk-d7e"/>
+                                                <constraint firstItem="tPx-lx-phl" firstAttribute="leading" secondItem="oNq-QE-duH" secondAttribute="trailing" constant="18" id="kAj-VI-DH5"/>
                                                 <constraint firstItem="aM4-7G-ODd" firstAttribute="leading" secondItem="U9X-tW-Qra" secondAttribute="leadingMargin" constant="31" id="kOb-C8-DgV"/>
-                                                <constraint firstItem="LpI-5U-PKr" firstAttribute="top" secondItem="aM4-7G-ODd" secondAttribute="top" id="lVA-sg-sj5"/>
-                                                <constraint firstItem="oNq-QE-duH" firstAttribute="centerY" secondItem="LpI-5U-PKr" secondAttribute="centerY" id="lwk-H6-Kda"/>
-                                                <constraint firstItem="zwn-ba-bGI" firstAttribute="top" secondItem="tPx-lx-phl" secondAttribute="top" id="mSo-dm-9ei"/>
-                                                <constraint firstItem="tPx-lx-phl" firstAttribute="bottom" secondItem="oNq-QE-duH" secondAttribute="bottom" id="wrk-9F-J7G"/>
+                                                <constraint firstItem="oNq-QE-duH" firstAttribute="leading" secondItem="LpI-5U-PKr" secondAttribute="trailing" constant="18" id="mSC-LQ-8t9"/>
+                                                <constraint firstItem="zwn-ba-bGI" firstAttribute="width" secondItem="aM4-7G-ODd" secondAttribute="width" id="qSp-9k-ean"/>
+                                                <constraint firstItem="oNq-QE-duH" firstAttribute="centerY" secondItem="aM4-7G-ODd" secondAttribute="centerY" id="wu1-1M-tEW"/>
+                                                <constraint firstItem="LpI-5U-PKr" firstAttribute="width" secondItem="aM4-7G-ODd" secondAttribute="width" id="x2Y-xp-fs3"/>
+                                                <constraint firstItem="tPx-lx-phl" firstAttribute="width" secondItem="aM4-7G-ODd" secondAttribute="width" id="xVl-97-mmQ"/>
+                                                <constraint firstItem="oNq-QE-duH" firstAttribute="width" secondItem="aM4-7G-ODd" secondAttribute="width" id="yjH-Rs-wW4"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="aM4-7G-ODd" firstAttribute="centerY" secondItem="5TY-SJ-Dd3" secondAttribute="centerY" id="qcf-ZF-UrD"/>
+                                        </constraints>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="comments" id="IIu-oW-Otn">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="133" id="r1i-Xy-ZiX">
-                                        <rect key="frame" x="0.0" y="429" width="375" height="133"/>
+                                        <rect key="frame" x="0.0" y="363" width="375" height="133"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r1i-Xy-ZiX" id="iLT-A7-mho">
-                                            <frame key="frameInset" width="375" height="132"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="132.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter Your Thoughts" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="01r-CT-ADF">
+                                                    <rect key="frame" x="24" y="0.5" width="327" height="132"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="132" id="LJo-FT-qh3"/>
@@ -723,13 +750,14 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                             <tableViewSection headerTitle="submit" id="T9j-80-4j8">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="spW-hm-dnS">
-                                        <rect key="frame" x="0.0" y="619" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="552" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="spW-hm-dnS" id="xmd-6d-NiH">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUBMIT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpP-WR-hsH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -740,8 +768,6 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                                                 <constraint firstItem="dpP-WR-hsH" firstAttribute="top" secondItem="xmd-6d-NiH" secondAttribute="topMargin" constant="-8" id="Maz-SK-gGr"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="dpP-WR-hsH" secondAttribute="trailing" constant="-8" id="N0Q-K3-U98"/>
                                                 <constraint firstItem="dpP-WR-hsH" firstAttribute="leading" secondItem="xmd-6d-NiH" secondAttribute="leadingMargin" constant="-8" id="NkD-KE-ZcF"/>
-                                                <constraint firstItem="dpP-WR-hsH" firstAttribute="centerY" secondItem="xmd-6d-NiH" secondAttribute="centerY" id="iZM-1m-BJh"/>
-                                                <constraint firstItem="dpP-WR-hsH" firstAttribute="centerX" secondItem="xmd-6d-NiH" secondAttribute="centerX" id="nBS-xt-BAK"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -789,6 +815,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tvm-x7-gzN">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -821,22 +848,32 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YVG-z6-ecw"/>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lsf-GS-rVb"/>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTt-bN-Ftv">
-                                <frame key="frameInset" minX="164" minY="146" width="46" height="46"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YVG-z6-ecw">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lsf-GS-rVb">
+                                <rect key="frame" x="67" y="218" width="240" height="230"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTt-bN-Ftv">
+                                <rect key="frame" x="164" y="146" width="46" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="H74-h7-dge"/>
+                                    <constraint firstAttribute="height" constant="46" id="K0M-np-Hht"/>
+                                </constraints>
                                 <state key="normal" backgroundImage="fb.png"/>
                                 <connections>
                                     <action selector="facebookButtonPressed:" destination="S9L-Ny-fbm" eventType="touchUpInside" id="qCO-lm-R1l"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEG-gT-C5Z">
+                                <rect key="frame" x="162" y="477" width="50" height="50"/>
                                 <state key="normal" image="GitHub Filled-100.png"/>
                                 <connections>
                                     <action selector="gitButtonPressed:" destination="S9L-Ny-fbm" eventType="touchUpInside" id="l50-Di-E3Y"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHAKE TO GO BACK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUJ-NW-2Gh">
+                                <rect key="frame" x="16" y="72" width="343" height="19.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -904,6 +941,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iDD-eN-iVI">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <connections>
@@ -914,8 +952,6 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="iDD-eN-iVI" firstAttribute="centerY" secondItem="P6a-qV-DWU" secondAttribute="centerY" id="D1g-dJ-okh"/>
-                            <constraint firstItem="iDD-eN-iVI" firstAttribute="centerX" secondItem="P6a-qV-DWU" secondAttribute="centerX" id="IHL-oQ-dTK"/>
                             <constraint firstItem="iDD-eN-iVI" firstAttribute="top" secondItem="DH4-rq-eKz" secondAttribute="bottom" constant="-64" id="S5C-oa-aKj"/>
                             <constraint firstItem="9vX-Fg-s0x" firstAttribute="top" secondItem="iDD-eN-iVI" secondAttribute="bottom" id="TXk-JW-fE6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iDD-eN-iVI" secondAttribute="trailing" constant="-20" id="hxN-fD-TWE"/>
@@ -942,7 +978,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
             <objects>
                 <navigationController id="bS0-XA-1KL" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Npc-fz-ns1">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -966,6 +1002,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4X-Vu-Fi6">
+                                <rect key="frame" x="-4" y="-1" width="383" height="678"/>
                                 <color key="backgroundColor" red="0.28958413004875183" green="0.31462949514389038" blue="0.32950475811958313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                         </subviews>
@@ -1000,7 +1037,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                     <tabBarItem key="tabBarItem" title="Categories" image="Category.png" id="ADL-It-af6"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="91U-hZ-WSp">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1019,7 +1056,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                     <tabBarItem key="tabBarItem" title="More" image="list" id="V3S-x0-rnw"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vTx-dg-Pjg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1038,7 +1075,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                     <tabBarItem key="tabBarItem" title="Results" image="Results.png" id="tY2-Uq-8Vm"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RMv-FE-gOf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1063,8 +1100,10 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RHR-Gy-Kfh">
+                                <rect key="frame" x="0.0" y="64" width="375" height="36"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Gpn-x2-A5D">
+                                        <rect key="frame" x="8" y="2" width="359" height="27"/>
                                         <segments>
                                             <segment title="DAY 1"/>
                                             <segment title="DAY 2"/>
@@ -1076,6 +1115,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                                         </connections>
                                     </segmentedControl>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hIm-gX-CVr">
+                                        <rect key="frame" x="-20" y="35" width="415" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="Chk-6b-2gh"/>
@@ -1095,6 +1135,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="143" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z09-ML-YIf">
+                                <rect key="frame" x="0.0" y="100" width="375" height="518"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="yeY-ev-aId" id="PV5-7k-7hS"/>
@@ -1181,10 +1222,10 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="KfX-6L-ZMO">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KfX-6L-ZMO" id="5EV-W8-0hL">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -1212,7 +1253,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qyR-kt-vAx" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="o1j-Vg-5bx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1231,7 +1272,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                     <tabBarItem key="tabBarItem" title="Events" image="Events.png" id="a6a-4d-8Mf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ggI-qW-gIb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1249,7 +1290,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                 <navigationController storyboardIdentifier="eventListNav" automaticallyAdjustsScrollViewInsets="NO" id="uoS-a6-4vc" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="beb-j3-bZ4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1267,7 +1308,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                 <navigationController storyboardIdentifier="feedbackNav" automaticallyAdjustsScrollViewInsets="NO" id="pM9-nq-nsP" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XNg-3Y-r50">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1285,7 +1326,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                 <navigationController storyboardIdentifier="onlineNav" automaticallyAdjustsScrollViewInsets="NO" id="p64-1g-qyz" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xus-ZI-32q">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1303,7 +1344,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                 <navigationController storyboardIdentifier="favouritesNav" automaticallyAdjustsScrollViewInsets="NO" id="hQA-s1-rEQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="x62-qZ-fL5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1321,7 +1362,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                 <navigationController storyboardIdentifier="trendingNav" automaticallyAdjustsScrollViewInsets="NO" id="zh5-Bz-Y4c" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="64H-c3-IJ9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1339,7 +1380,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                 <navigationController storyboardIdentifier="developersNav" automaticallyAdjustsScrollViewInsets="NO" id="lHo-Lu-4mU" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JJw-Cc-b2M">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1364,6 +1405,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NPF-nl-mFu">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="618"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="dgu-9h-2eh">
                                     <size key="itemSize" width="175" height="175"/>
@@ -1380,8 +1422,10 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aeJ-6K-yq8">
+                                                    <rect key="frame" x="-8" y="143" width="191" height="40"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tagsLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="1Nh-ba-gGV">
+                                                            <rect key="frame" x="8" y="0.0" width="175" height="40"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -1397,11 +1441,9 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="690" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fZX-Yv-02g" customClass="RoundedLabel">
+                                                    <rect key="frame" x="-2" y="-2" width="23" height="32"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="16" id="HsR-Sa-2ot"/>
-                                                        <constraint firstAttribute="width" constant="32" id="WsI-6v-kQz"/>
                                                         <constraint firstAttribute="height" constant="32" id="YHA-el-0cB"/>
-                                                        <constraint firstAttribute="width" constant="20" id="elD-4S-GPW"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="16"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1411,18 +1453,10 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                                                             <color key="value" red="0.20000000000000001" green="0.80000000000000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
-                                                    <variation key="default">
-                                                        <mask key="constraints">
-                                                            <exclude reference="HsR-Sa-2ot"/>
-                                                            <exclude reference="elD-4S-GPW"/>
-                                                        </mask>
-                                                    </variation>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Pab-nn-eEq" customClass="RoundedLabel">
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="120" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Pab-nn-eEq" customClass="RoundedLabel">
+                                                    <rect key="frame" x="154" y="-2" width="23" height="32"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="32" id="caj-6X-xsT"/>
-                                                        <constraint firstAttribute="width" constant="20" id="kfH-6D-HPf"/>
-                                                        <constraint firstAttribute="height" constant="16" id="lLS-bl-Lnm"/>
                                                         <constraint firstAttribute="height" constant="32" id="wjD-c7-zlI"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="16"/>
@@ -1433,12 +1467,6 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                                                             <color key="value" red="1" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
-                                                    <variation key="default">
-                                                        <mask key="constraints">
-                                                            <exclude reference="kfH-6D-HPf"/>
-                                                            <exclude reference="lLS-bl-Lnm"/>
-                                                        </mask>
-                                                    </variation>
                                                 </label>
                                             </subviews>
                                         </view>
@@ -1447,6 +1475,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                                             <constraint firstAttribute="topMargin" secondItem="Pab-nn-eEq" secondAttribute="top" constant="2" id="Cdh-z1-xEx"/>
                                             <constraint firstAttribute="leadingMargin" secondItem="fZX-Yv-02g" secondAttribute="leading" constant="2" id="M2B-c0-cov"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="Pab-nn-eEq" secondAttribute="trailing" constant="-2" id="Nd5-0m-Wv1"/>
+                                            <constraint firstItem="Pab-nn-eEq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fZX-Yv-02g" secondAttribute="trailing" constant="4" id="T8u-dG-SYL"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="aeJ-6K-yq8" secondAttribute="bottom" constant="-8" id="VqO-Sc-S3s"/>
                                             <constraint firstAttribute="topMargin" secondItem="fZX-Yv-02g" secondAttribute="top" constant="2" id="gQb-GJ-bpe"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="aeJ-6K-yq8" secondAttribute="trailing" constant="-8" id="r7t-wI-fDE"/>
@@ -1500,13 +1529,17 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                         <rect key="frame" x="0.0" y="0.0" width="360" height="640"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ayl-E0-5Kg"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ayl-E0-5Kg">
+                                <rect key="frame" x="-4" y="0.0" width="368" height="640"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gap-WO-b7f">
+                                <rect key="frame" x="16" y="20" width="328" height="328"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gap-WO-b7f" secondAttribute="height" multiplier="1:1" id="NfC-ul-qWR"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="tags label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="ICT-ls-2uH">
+                                <rect key="frame" x="56" y="570" width="248" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="kg1-6f-ggp"/>
                                 </constraints>
@@ -1515,6 +1548,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="69" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="EcO-q0-kp9" customClass="RoundedLabel">
+                                <rect key="frame" x="16" y="506" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="EcO-q0-kp9" secondAttribute="height" multiplier="1:1" id="2m5-Wr-xCh"/>
                                     <constraint firstAttribute="width" constant="42" id="2rC-Ig-npU"/>
@@ -1545,6 +1579,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@shorteswag" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="LKj-L3-0eS">
+                                <rect key="frame" x="84" y="521" width="192" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="xab-Al-qki"/>
                                 </constraints>
@@ -1553,6 +1588,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="caption text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="wiD-rV-KAv">
+                                <rect key="frame" x="24" y="356" width="312" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="NZQ-tV-8ah"/>
                                 </constraints>
@@ -1566,6 +1602,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="666" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="w0T-6h-65S" customClass="RoundedLabel">
+                                <rect key="frame" x="284" y="506" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="Ke8-Ch-3y3"/>
                                     <constraint firstAttribute="width" constant="35" id="ZvG-bs-JZ3"/>
@@ -1586,6 +1623,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                                 </variation>
                             </label>
                             <button opaque="NO" alpha="0.60000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpy-Fv-BQ7">
+                                <rect key="frame" x="12" y="580" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Rmi-Yz-EgX"/>
                                     <constraint firstAttribute="width" constant="40" id="kRW-VO-0Iy"/>
@@ -1602,6 +1640,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.60000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r44-NG-qlT">
+                                <rect key="frame" x="308" y="580" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="TBv-e5-51H"/>
                                     <constraint firstAttribute="width" constant="40" id="Xf9-V0-2WG"/>
@@ -1668,12 +1707,12 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                             <mask key="constraints">
                                 <exclude reference="B6f-dm-6du"/>
                                 <exclude reference="mal-JG-1fq"/>
+                                <exclude reference="bMh-Ea-uXt"/>
                                 <exclude reference="Ojb-74-l9S"/>
                                 <exclude reference="b6f-AN-94i"/>
                                 <exclude reference="fvf-B8-nio"/>
                                 <exclude reference="hgG-GJ-OgV"/>
                                 <exclude reference="mGy-95-Gxu"/>
-                                <exclude reference="bMh-Ea-uXt"/>
                                 <exclude reference="CLv-K3-PAO"/>
                                 <exclude reference="SjZ-nC-ngN"/>
                                 <exclude reference="eaH-fn-XkG"/>
@@ -1717,8 +1756,11 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="erj-nK-4yZ"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="erj-nK-4yZ">
+                                <rect key="frame" x="-20" y="-16" width="415" height="699"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WD7-GJ-J0x" customClass="CrossButton">
+                                <rect key="frame" x="327" y="20" width="32" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="32" id="NdV-ZE-Lso"/>
                                     <constraint firstAttribute="height" constant="32" id="atP-RF-YWF"/>
@@ -1770,7 +1812,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                     <tabBarItem key="tabBarItem" title="Instagram" image="Instagram.png" id="91F-4w-49y"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lhp-ch-Od4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.98823529409999999" green="0.97647058819999999" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
@@ -1792,7 +1834,7 @@ This year, we celebrate the spirit of being "Passionately Curious", something th
                 <navigationController storyboardIdentifier="easterEggNav" automaticallyAdjustsScrollViewInsets="NO" id="dMz-rd-jvp" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7cx-4i-7vW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
