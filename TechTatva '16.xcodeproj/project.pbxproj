@@ -147,8 +147,8 @@
 		18749BCB1D140AC600858B85 /* ResultsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsTableViewCell.h; sourceTree = "<group>"; };
 		18749BCC1D140AC600858B85 /* ResultsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsTableViewCell.m; sourceTree = "<group>"; };
 		18749BCD1D140AC600858B85 /* ResultsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultsTableViewCell.xib; sourceTree = "<group>"; };
-		1881A2081D0FCD8000192BD1 /* CategoriesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoriesTableViewController.h; path = CategoriesTableViewController.h; sourceTree = "<group>"; };
-		1881A2091D0FCD8000192BD1 /* CategoriesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoriesTableViewController.m; path = CategoriesTableViewController.m; sourceTree = "<group>"; };
+		1881A2081D0FCD8000192BD1 /* CategoriesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesTableViewController.h; sourceTree = "<group>"; };
+		1881A2091D0FCD8000192BD1 /* CategoriesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesTableViewController.m; sourceTree = "<group>"; };
 		1881A2131D13085800192BD1 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
 		1881A2141D13085800192BD1 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
 		188F51D41D0F08ED0083169D /* TechTatva '16.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TechTatva '16.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,11 +193,11 @@
 		59544E141DA8A78100BDA118 /* InstagramData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramData.m; sourceTree = "<group>"; };
 		59544E151DA8A78100BDA118 /* ParallaxCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParallaxCollectionViewCell.h; sourceTree = "<group>"; };
 		59544E161DA8A78100BDA118 /* ParallaxCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParallaxCollectionViewCell.m; sourceTree = "<group>"; };
-		59544E191DA8A79000BDA118 /* InstagramDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InstagramDetailViewController.h; path = InstagramDetailViewController.h; sourceTree = "<group>"; };
-		59544E1A1DA8A79000BDA118 /* InstagramDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InstagramDetailViewController.m; path = InstagramDetailViewController.m; sourceTree = "<group>"; };
-		59544E1B1DA8A79000BDA118 /* InstagramRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InstagramRootViewController.h; path = InstagramRootViewController.h; sourceTree = "<group>"; };
-		59544E1C1DA8A79000BDA118 /* InstagramRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InstagramRootViewController.m; path = InstagramRootViewController.m; sourceTree = "<group>"; };
-		59544E1E1DA8A79000BDA118 /* InstagramV2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InstagramV2ViewController.h; path = InstagramV2ViewController.h; sourceTree = "<group>"; };
+		59544E191DA8A79000BDA118 /* InstagramDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramDetailViewController.h; sourceTree = "<group>"; };
+		59544E1A1DA8A79000BDA118 /* InstagramDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramDetailViewController.m; sourceTree = "<group>"; };
+		59544E1B1DA8A79000BDA118 /* InstagramRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramRootViewController.h; sourceTree = "<group>"; };
+		59544E1C1DA8A79000BDA118 /* InstagramRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramRootViewController.m; sourceTree = "<group>"; };
+		59544E1E1DA8A79000BDA118 /* InstagramV2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramV2ViewController.h; sourceTree = "<group>"; };
 		59544E221DA8A7A600BDA118 /* RoundedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundedLabel.h; sourceTree = "<group>"; };
 		59544E231DA8A7A600BDA118 /* RoundedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundedLabel.m; sourceTree = "<group>"; };
 		59544E251DA8A81A00BDA118 /* InstagramV2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramV2ViewController.m; sourceTree = "<group>"; };
@@ -223,8 +223,8 @@
 		D60BB7C21D72EF290083D0C9 /* Instagram@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Instagram@2x.png"; sourceTree = "<group>"; };
 		D60BB7C31D72EF290083D0C9 /* Results@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Results@2x.png"; sourceTree = "<group>"; };
 		D60BB7C81D72F08B0083D0C9 /* Category@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Category@2x.png"; sourceTree = "<group>"; };
-		D6247BF41D7B0C58007F7FF1 /* AboutUsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutUsTableViewController.h; path = AboutUsTableViewController.h; sourceTree = "<group>"; };
-		D6247BF51D7B0C58007F7FF1 /* AboutUsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutUsTableViewController.m; path = AboutUsTableViewController.m; sourceTree = "<group>"; };
+		D6247BF41D7B0C58007F7FF1 /* AboutUsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsTableViewController.h; sourceTree = "<group>"; };
+		D6247BF51D7B0C58007F7FF1 /* AboutUsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsTableViewController.m; sourceTree = "<group>"; };
 		D6247BF71D7B0E74007F7FF1 /* fb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fb@2x.png"; sourceTree = "<group>"; };
 		D6247BF91D7B100C007F7FF1 /* google+@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "google+@2x.png"; sourceTree = "<group>"; };
 		D6247BFB1D7B100C007F7FF1 /* twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter@2x.png"; sourceTree = "<group>"; };
@@ -252,8 +252,8 @@
 		D6D061251D782D8B00D9267E /* OnlineEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlineEventsViewController.m; sourceTree = "<group>"; };
 		D6DC67211D848AFB00D75A5B /* filledstar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = filledstar.png; sourceTree = "<group>"; };
 		D6DC67221D848AFB00D75A5B /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
-		D6E6326B1D7AC21B00E71851 /* RegistrationPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegistrationPageViewController.h; path = RegistrationPageViewController.h; sourceTree = "<group>"; };
-		D6E6326C1D7AC21B00E71851 /* RegistrationPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegistrationPageViewController.m; path = RegistrationPageViewController.m; sourceTree = "<group>"; };
+		D6E6326B1D7AC21B00E71851 /* RegistrationPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationPageViewController.h; sourceTree = "<group>"; };
+		D6E6326C1D7AC21B00E71851 /* RegistrationPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationPageViewController.m; sourceTree = "<group>"; };
 		E01D0203BC4C2BBAC2B42AE4 /* Pods-TechTatva '16.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechTatva '16.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TechTatva '16/Pods-TechTatva '16.debug.xcconfig"; sourceTree = "<group>"; };
 		EE72E6A53052B6A6B327AC10 /* Pods-TechTatva '16Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechTatva '16Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TechTatva '16Tests/Pods-TechTatva '16Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -314,7 +314,6 @@
 				5990F1811DAAACB100A3D8BF /* TrendingCatsTableViewCell.m */,
 				5990F1821DAAACB100A3D8BF /* TrendingCatsTableViewCell.xib */,
 			);
-			name = Categories;
 			path = Categories;
 			sourceTree = "<group>";
 		};
@@ -327,7 +326,6 @@
 				1881A2131D13085800192BD1 /* EventsViewController.h */,
 				1881A2141D13085800192BD1 /* EventsViewController.m */,
 			);
-			name = "Category Events";
 			path = "Category Events";
 			sourceTree = "<group>";
 		};
@@ -340,7 +338,6 @@
 				D607A28B1D9FD10600CC01E2 /* AllEventsViewController.h */,
 				D607A28C1D9FD10600CC01E2 /* AllEventsViewController.m */,
 			);
-			name = Events;
 			path = Events;
 			sourceTree = "<group>";
 		};
@@ -350,7 +347,6 @@
 				D6C0853B1D7EBCEE00FBD1BC /* FeedbackTableViewController.h */,
 				D6C0853C1D7EBCEE00FBD1BC /* FeedbackTableViewController.m */,
 			);
-			name = Feedback;
 			path = Feedback;
 			sourceTree = "<group>";
 		};
@@ -360,7 +356,6 @@
 				D6247BF41D7B0C58007F7FF1 /* AboutUsTableViewController.h */,
 				D6247BF51D7B0C58007F7FF1 /* AboutUsTableViewController.m */,
 			);
-			name = "About Us";
 			path = "About Us";
 			sourceTree = "<group>";
 		};
@@ -373,7 +368,6 @@
 				18749BC81D14094700858B85 /* ResultsTableViewController.h */,
 				18749BC91D14094700858B85 /* ResultsTableViewController.m */,
 			);
-			name = Results;
 			path = Results;
 			sourceTree = "<group>";
 		};
@@ -383,7 +377,6 @@
 				181290C01D92C06200E5B740 /* Reachability.h */,
 				181290C11D92C06200E5B740 /* Reachability.m */,
 			);
-			name = Reachability;
 			path = Reachability;
 			sourceTree = "<group>";
 		};
@@ -393,7 +386,6 @@
 				D6E6326B1D7AC21B00E71851 /* RegistrationPageViewController.h */,
 				D6E6326C1D7AC21B00E71851 /* RegistrationPageViewController.m */,
 			);
-			name = Register;
 			path = Register;
 			sourceTree = "<group>";
 		};
@@ -403,7 +395,6 @@
 				D6D061241D782D8B00D9267E /* OnlineEventsViewController.h */,
 				D6D061251D782D8B00D9267E /* OnlineEventsViewController.m */,
 			);
-			name = "Online Events";
 			path = "Online Events";
 			sourceTree = "<group>";
 		};
@@ -413,7 +404,6 @@
 				18749BBE1D13F17600858B85 /* MoreTableViewController.h */,
 				18749BBF1D13F17600858B85 /* MoreTableViewController.m */,
 			);
-			name = More;
 			path = More;
 			sourceTree = "<group>";
 		};
@@ -429,7 +419,6 @@
 				59544E1E1DA8A79000BDA118 /* InstagramV2ViewController.h */,
 				59544E251DA8A81A00BDA118 /* InstagramV2ViewController.m */,
 			);
-			name = Instagram;
 			path = Instagram;
 			sourceTree = "<group>";
 		};
@@ -441,7 +430,6 @@
 				185BD5E01DAACBA300DC2C9F /* EasterEggViewController.h */,
 				185BD5E11DAACBA300DC2C9F /* EasterEggViewController.m */,
 			);
-			name = "Easter Egg";
 			path = "Easter Egg";
 			sourceTree = "<group>";
 		};
@@ -484,7 +472,6 @@
 				18C3F2141D931513007F33DB /* PrefixHeader.pch */,
 				188F51D81D0F08ED0083169D /* main.m */,
 			);
-			name = "Supporting Files";
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
@@ -512,7 +499,6 @@
 				18FFC4AB1DA88164000CD00E /* FavouritesTableViewController.h */,
 				18FFC4AC1DA88164000CD00E /* FavouritesTableViewController.m */,
 			);
-			name = Favourites;
 			path = Favourites;
 			sourceTree = "<group>";
 		};
@@ -525,7 +511,6 @@
 				18FFC4AF1DA8858F000CD00E /* DevelopersViewController.h */,
 				18FFC4B01DA8858F000CD00E /* DevelopersViewController.m */,
 			);
-			name = Developers;
 			path = Developers;
 			sourceTree = "<group>";
 		};
@@ -535,7 +520,6 @@
 				18FFC4B91DA88BB7000CD00E /* TrendingTableViewController.h */,
 				18FFC4BA1DA88BB7000CD00E /* TrendingTableViewController.m */,
 			);
-			name = Trending;
 			path = Trending;
 			sourceTree = "<group>";
 		};
@@ -578,7 +562,6 @@
 				D6247BFB1D7B100C007F7FF1 /* twitter@2x.png */,
 				D6247C011D7B145F007F7FF1 /* youtube.png */,
 			);
-			name = images;
 			path = images;
 			sourceTree = "<group>";
 		};
@@ -594,7 +577,6 @@
 				A289FC441F82114900E705F6 /* View Controllers */,
 				A289FC4B1F82167500E705F6 /* Views */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -607,7 +589,6 @@
 				185BD5EB1DAAD1ED00DC2C9F /* hello.mp3 */,
 				1827822D1DA8C5A600BD8C34 /* launchvideo.mp4 */,
 			);
-			name = Resources;
 			path = Resources;
 			sourceTree = "<group>";
 		};
@@ -619,7 +600,6 @@
 				A289FC4F1F8218AA00E705F6 /* Support Screens */,
 				188F51E01D0F08ED0083169D /* Main.storyboard */,
 			);
-			name = "View Controllers";
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
@@ -631,7 +611,6 @@
 				18FFC4BD1DA89610000CD00E /* UITableView+Animations.h */,
 				18FFC4BE1DA89610000CD00E /* UITableView+Animations.m */,
 			);
-			name = Categories;
 			path = Categories;
 			sourceTree = "<group>";
 		};
@@ -640,7 +619,6 @@
 			children = (
 				184A2AD71DA5A0EF00D589DE /* Reachability */,
 			);
-			name = "Third Party";
 			path = "Third Party";
 			sourceTree = "<group>";
 		};
@@ -657,7 +635,6 @@
 				D69A1A8B1D996021001F9E7F /* ScheduleJsonDataModel.h */,
 				D69A1A8C1D996021001F9E7F /* ScheduleJsonDataModel.m */,
 			);
-			name = Models;
 			path = Models;
 			sourceTree = "<group>";
 		};
@@ -667,7 +644,6 @@
 				188F51DA1D0F08ED0083169D /* AppDelegate.h */,
 				188F51DB1D0F08ED0083169D /* AppDelegate.m */,
 			);
-			name = Application;
 			path = Application;
 			sourceTree = "<group>";
 		};
@@ -677,7 +653,6 @@
 				59544E291DA9133C00BDA118 /* DADataManager.h */,
 				59544E2A1DA9133C00BDA118 /* DADataManager.m */,
 			);
-			name = "Data Managers";
 			path = "Data Managers";
 			sourceTree = "<group>";
 		};
@@ -686,7 +661,6 @@
 			children = (
 				59544E0A1DA8A77400BDA118 /* ASMutableURLRequest */,
 			);
-			name = Services;
 			path = Services;
 			sourceTree = "<group>";
 		};
@@ -699,7 +673,6 @@
 				59544E221DA8A7A600BDA118 /* RoundedLabel.h */,
 				59544E231DA8A7A600BDA118 /* RoundedLabel.m */,
 			);
-			name = Views;
 			path = Views;
 			sourceTree = "<group>";
 		};
@@ -709,7 +682,6 @@
 				59544E151DA8A78100BDA118 /* ParallaxCollectionViewCell.h */,
 				59544E161DA8A78100BDA118 /* ParallaxCollectionViewCell.m */,
 			);
-			name = Cells;
 			path = Cells;
 			sourceTree = "<group>";
 		};
@@ -722,7 +694,6 @@
 				184A2ADA1DA5A10F00D589DE /* More */,
 				184A2AD61DA59FD200D589DE /* Results */,
 			);
-			name = "Main Screens";
 			path = "Main Screens";
 			sourceTree = "<group>";
 		};
@@ -732,7 +703,6 @@
 				1827822F1DA8C5CB00BD8C34 /* SplashViewController.h */,
 				182782301DA8C5CB00BD8C34 /* SplashViewController.m */,
 			);
-			name = "Start Screens";
 			path = "Start Screens";
 			sourceTree = "<group>";
 		};
@@ -749,7 +719,6 @@
 				184A2AD81DA5A0FC00D589DE /* Register */,
 				18FFC4BC1DA88BCD000CD00E /* Trending */,
 			);
-			name = "Support Screens";
 			path = "Support Screens";
 			sourceTree = "<group>";
 		};
@@ -762,7 +731,6 @@
 				18FFC4B61DA886A4000CD00E /* Favourite+CoreDataProperties.m */,
 				18541FDE1D6DD9370046EAD0 /* Favourites.xcdatamodeld */,
 			);
-			name = "Core Data";
 			path = "Core Data";
 			sourceTree = "<group>";
 		};
@@ -1295,7 +1263,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/TechTatva '16/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TechTatva '16/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "TechTatva '16/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1311,7 +1279,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/TechTatva '16/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TechTatva '16/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "TechTatva '16/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
