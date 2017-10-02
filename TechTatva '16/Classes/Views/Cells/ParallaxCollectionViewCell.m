@@ -32,6 +32,7 @@
 }
 
 - (void)awakeFromNib {
+    [super awakeFromNib];
 	if (!self.parallaxImageView)
 		[self setupImageView];
 }
